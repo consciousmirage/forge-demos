@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Davis &amp; Sons Electrical — West Valley City Electrician, Former State Inspector</title>
+<meta name="description" content="Donny Davis spent years inspecting other electricians' work for the State of Utah. Now he does the work — to the same standard. 24/7 service in West Valley City, Magna, Taylorsville &amp; Salt Lake City. Call (801) 935-1221.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "Davis & Sons Electrical",
+  "telephone": "+18019351221",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "West Valley City",
+    "addressRegion": "UT",
+    "postalCode": "84128"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "44"
+  },
+  "areaServed": ["West Valley City UT", "Magna UT", "Taylorsville UT", "Salt Lake City UT"],
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "foundingDate": "2007"
+}
+</script>
+<style>
+:root{
+  --ink:#141414;
+  --ink-2:#1d1d1b;
+  --steel:#5d5b57;
+  --fog:#a8a5a0;
+  --paper:#ffffff;
+  --chalk:#f5f4f1;
+  --line:#e6e4df;
+  --line-dark:#2b2a27;
+  --accent:#ffb000;
+  --accent-hover:#ffc233;
+  --max:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Barlow',ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:16px;line-height:1.6;color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:60px; /* mobile call bar */
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* ------ type voices ------ */
+.label{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;
+  font-size:13px;letter-spacing:.14em;text-transform:uppercase;line-height:1.25;
+}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--steel)}
+.eyebrow::before{content:"";width:18px;height:2px;background:var(--accent);flex:none}
+h1{font-size:clamp(38px,9.5vw,80px);font-weight:700;line-height:1.04;letter-spacing:-.028em}
+h2{font-size:clamp(30px,4.5vw,52px);font-weight:700;line-height:1.08;letter-spacing:-.022em}
+h3{font-size:20px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.lead{font-size:18px;color:var(--steel);max-width:56ch}
+
+/* ------ buttons ------ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;
+  font-weight:600;font-size:16px;letter-spacing:.01em;line-height:1;
+  padding:17px 28px;min-height:50px;transition:background .15s,border-color .15s;
+  white-space:nowrap;
+}
+.btn svg{flex:none}
+.btn-accent{background:var(--accent);color:var(--ink)}
+.btn-accent:hover{background:var(--accent-hover)}
+.btn-ghost{border:1px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{border-color:#fff}
+
+/* ------ nav ------ */
+.nav{position:sticky;top:0;z-index:50;background:var(--paper);box-shadow:0 1px 0 var(--line)}
+.nav-inner{height:62px;display:flex;align-items:center;gap:24px;max-width:var(--max);margin:0 auto;padding:0 20px}
+.wordmark{display:flex;flex-direction:column;line-height:1;min-width:0}
+.wm-name{font-weight:700;font-size:17px;letter-spacing:-.015em;white-space:nowrap}
+.wm-sub{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin-top:4px;white-space:nowrap}
+.nav-links{display:none}
+.nav .btn{margin-left:auto;padding:12px 18px;font-size:15px;min-height:44px}
+.nav .call-full{display:none}
+
+/* ------ hero ------ */
+.hero{position:relative;min-height:88svh;display:flex;align-items:flex-end;background:var(--ink);overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 30%}
+.hero-scrim{position:absolute;inset:0;background:
+  linear-gradient(to top,rgba(8,8,8,.82) 0%,rgba(8,8,8,.25) 45%,rgba(8,8,8,.3) 100%),
+  linear-gradient(78deg,rgba(8,8,8,.88) 0%,rgba(8,8,8,.5) 55%,rgba(8,8,8,.18) 100%)}
+.hero-content{position:relative;width:100%;max-width:var(--max);margin:0 auto;padding:104px 20px 44px}
+.hero .eyebrow{color:rgba(255,255,255,.75);margin-bottom:18px}
+.hero h1{color:#fff;max-width:14ch}
+.hero .lead{color:rgba(255,255,255,.8);margin-top:16px;font-size:17px}
+.hero-rating{display:flex;align-items:center;gap:10px;margin-top:20px;color:#fff;font-weight:600;font-size:15px}
+.hero-rating .label{color:rgba(255,255,255,.65)}
+.stars{display:inline-flex;gap:2px}
+.stars svg{width:15px;height:15px;fill:var(--accent)}
+.hero-ctas{display:flex;flex-direction:column;gap:12px;margin-top:28px}
+.hero-ctas .btn{width:100%}
+
+/* ------ trust strip ------ */
+.trust{background:var(--paper);border-bottom:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:1fr;max-width:var(--max);margin:0 auto}
+.trust-cell{padding:22px 20px;border-top:1px solid var(--line)}
+.trust-cell:first-child{border-top:none}
+.trust-cell .label{color:var(--steel);margin-bottom:8px}
+.trust-cell strong{font-size:19px;font-weight:600;letter-spacing:-.01em;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+
+/* ------ sections ------ */
+section{padding:64px 0}
+.sec-head{max-width:62ch;margin-bottom:40px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head p{margin-top:16px}
+
+/* ------ services ------ */
+.services{background:var(--chalk)}
+.svc-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.svc-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:18px 20px;
+  display:grid;grid-template-columns:24px 1fr;column-gap:14px;align-items:center;
+  transition:border-color .15s;
+}
+.svc-card:hover{border-color:var(--ink)}
+.svc-card svg{width:24px;height:24px;stroke:var(--ink)}
+.svc-card h3{font-size:17px}
+.svc-card p{grid-column:1/-1;margin-top:10px;font-size:15px;color:var(--steel)}
+@media (min-width:480px){
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* ------ inspector / about ------ */
+.shop-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+.shop-copy .eyebrow{margin-bottom:16px}
+.shop-copy p{color:var(--steel);margin-top:16px}
+.stat-num{font-size:clamp(38px,5vw,64px);font-weight:700;line-height:1;letter-spacing:-.02em}
+.donny-plate{background:var(--chalk);border:1px solid var(--line);border-radius:2px;padding:8px 28px}
+.plate-row{padding:22px 0 20px;border-top:1px solid var(--line)}
+.plate-row:first-child{border-top:none}
+.plate-row .label{color:var(--steel);margin-top:8px}
+
+/* ------ work band ------ */
+.workband{padding-top:0}
+.work-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.work-item{position:relative;border-radius:2px;overflow:hidden}
+.work-item img{width:100%;height:260px;object-fit:cover;filter:saturate(.85) contrast(1.05)}
+.work-item figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:44px 20px 16px;color:#fff;
+  background:linear-gradient(to top,rgba(8,8,8,.85),rgba(8,8,8,0));
+}
+.work-item .label{color:rgba(255,255,255,.92)}
+
+/* ------ reviews (dark) ------ */
+.dark{background:var(--ink);color:#fff}
+.dark .eyebrow{color:var(--fog)}
+.dark .lead{color:var(--fog)}
+.rev-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.rev-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:2px;padding:24px;display:flex;flex-direction:column}
+.rev-card .stars{margin-bottom:16px}
+.rev-quote{font-size:17px;line-height:1.6;color:rgba(255,255,255,.92);flex:1}
+.rev-meta{margin-top:22px;padding-top:16px;border-top:1px solid var(--line-dark)}
+.rev-name{font-weight:600;font-size:14px}
+.rev-src{display:block;margin-top:5px;color:var(--fog)}
+.rev-link{display:inline-flex;align-items:center;gap:10px;margin-top:36px;font-weight:600;font-size:15px;color:#fff;border-bottom:1px solid var(--line-dark);padding-bottom:6px;min-height:44px;transition:border-color .15s}
+.rev-link:hover{border-color:var(--accent)}
+.rev-link svg{stroke:var(--accent)}
+
+/* ------ FAQ ------ */
+.faq-list{border-top:1px solid var(--line);max-width:760px}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list summary{
+  list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:20px 0;font-weight:600;font-size:17px;letter-spacing:-.01em;min-height:44px;
+}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";font-size:24px;font-weight:400;color:var(--steel);flex:none;line-height:1}
+.faq-list details[open] summary::after{content:"–"}
+.faq-list details p{color:var(--steel);padding:0 0 20px;max-width:60ch}
+
+/* ------ contact ------ */
+.contact{background:var(--chalk)}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:stretch}
+.c-row{padding:20px 0;border-top:1px solid var(--line)}
+.c-row:last-child{border-bottom:1px solid var(--line)}
+.c-row .label{color:var(--steel);margin-bottom:6px}
+.c-row p,.c-row a{font-size:17px;font-weight:500}
+.c-phone a{font-size:clamp(30px,8vw,42px);font-weight:700;letter-spacing:-.02em;line-height:1.1;display:inline-block;padding:4px 0}
+.c-phone a:hover{color:var(--steel)}
+.hours{width:100%;border-collapse:collapse;font-size:16px}
+.hours td{padding:3px 0;font-weight:500}
+.hours td:last-child{text-align:right;color:var(--steel)}
+.map{border-radius:2px;overflow:hidden;border:1px solid var(--line);min-height:320px}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(1) contrast(1.05);transition:filter .3s}
+.map:hover iframe{filter:none}
+
+/* ------ footer + final CTA ------ */
+.site-footer{background:var(--ink);color:#fff;padding:64px 0 32px}
+.foot-cta{padding-bottom:48px;border-bottom:1px solid var(--line-dark);margin-bottom:48px}
+.foot-cta h2{color:#fff;max-width:24ch}
+.foot-cta p{color:var(--fog);margin-top:14px;max-width:52ch}
+.foot-cta .btn{margin-top:28px;width:100%}
+.foot-grid{display:flex;flex-direction:column;gap:32px}
+.foot-fact{margin-top:14px;color:var(--fog);font-size:15px;max-width:46ch}
+.foot-meta .label{color:var(--fog)}
+.foot-meta a{font-weight:600;font-size:18px;display:inline-block;padding:6px 0}
+.foot-meta a:hover{color:var(--accent)}
+.foot-legal{margin-top:48px;padding-top:24px;border-top:1px solid var(--line-dark);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--fog)}
+
+/* ------ sticky mobile call bar ------ */
+.callbar{
+  display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;
+  background:var(--accent);color:var(--ink);height:60px;
+  align-items:center;justify-content:center;gap:10px;
+  font-weight:700;font-size:17px;letter-spacing:.01em;
+  box-shadow:0 -8px 24px rgba(0,0,0,.12);
+}
+.callbar svg{stroke:var(--ink)}
+
+/* ============ 768px+ ============ */
+@media (min-width:768px){
+  body{padding-bottom:0}
+  .callbar{display:none}
+  .wrap{padding:0 24px}
+  section{padding:96px 0}
+  .sec-head{margin-bottom:56px}
+  .nav-inner{height:68px;padding:0 24px;gap:40px}
+  .wm-name{font-size:19px}
+  .wm-sub{font-size:12.5px}
+  .nav-links{display:flex;gap:24px;margin-left:auto}
+  .nav-links a{font-weight:500;font-size:15px;letter-spacing:.01em;color:var(--ink);padding:8px 0;white-space:nowrap}
+  .nav-links a:hover{color:var(--steel)}
+  .nav .btn{margin-left:0}
+  .nav .call-full{display:inline}
+  .nav .call-short{display:none}
+  .hero{min-height:88vh}
+  .hero-content{padding:140px 24px 72px}
+  .hero .lead{font-size:18px}
+  .hero-ctas{flex-direction:row;gap:16px;margin-top:36px}
+  .hero-ctas .btn{width:auto}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-cell{padding:30px 24px;border-top:1px solid var(--line)}
+  .trust-cell:nth-child(-n+2){border-top:none}
+  .trust-cell:nth-child(even){border-left:1px solid var(--line)}
+  .svc-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+  .svc-card{display:block;padding:32px}
+  .svc-card svg{width:26px;height:26px;margin-bottom:16px}
+  .svc-card h3{font-size:20px;margin-bottom:8px}
+  .svc-card p{margin-top:0}
+  .work-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+  .work-item img{height:340px}
+  .rev-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+  .rev-card:last-child{grid-column:1/-1}
+  .contact-grid{grid-template-columns:1fr 1fr;gap:48px}
+  .map{min-height:460px}
+  .map iframe{min-height:460px}
+  .foot-cta .btn{width:auto}
+  .foot-grid{flex-direction:row;justify-content:space-between;align-items:flex-start;gap:40px}
+  .foot-meta{text-align:right}
+}
+
+/* ============ 1024px+ ============ */
+@media (min-width:1024px){
+  section{padding:120px 0}
+  .trust-grid{grid-template-columns:repeat(4,1fr)}
+  .trust-cell{border-top:none!important;border-left:1px solid var(--line)}
+  .trust-cell:first-child{border-left:none}
+  .svc-grid{grid-template-columns:repeat(4,1fr)}
+  .svc-card p{font-size:14.5px}
+  .shop-grid{grid-template-columns:1fr 1fr;gap:64px}
+  .donny-plate{padding:16px 40px}
+  .plate-row{padding:30px 0 28px}
+  .work-item img{height:420px}
+  #faq .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start}
+  #faq .sec-head{margin-bottom:0}
+  .faq-list{max-width:none}
+  .rev-grid{grid-template-columns:repeat(3,1fr)}
+  .rev-card:last-child{grid-column:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="wordmark" aria-label="Davis &amp; Sons Electrical — home">
+      <span class="wm-name">Davis &amp; Sons Electrical</span>
+      <span class="wm-sub">West Valley City · Est. 2007</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#donny">Why Donny</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:+18019351221" class="btn btn-accent">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="call-full">(801) 935-1221</span><span class="call-short">Call</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" style="padding:0">
+  <img class="hero-img" src="assets/hero-panel-work.jpg" alt="Electrician in a hard hat working inside a residential electrical panel" fetchpriority="high">
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="label eyebrow">Master electrician · West Valley City, Utah</p>
+    <h1>Wired by a former state electrical inspector.</h1>
+    <p class="lead">Donny Davis spent years inspecting other electricians' work for the State of Utah. Now he does the work — to the standard he used to enforce.</p>
+    <p class="hero-rating">
+      <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+      4.5 on Google <span class="label">· 44 reviews</span>
+    </p>
+    <div class="hero-ctas">
+      <a href="tel:+18019351221" class="btn btn-accent">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (801) 935-1221
+      </a>
+      <a href="#services" class="btn btn-ghost">See what we do</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust" role="region" aria-label="Why customers choose Davis &amp; Sons Electrical">
+  <div class="trust-grid">
+    <div class="trust-cell">
+      <p class="label">The owner</p>
+      <strong>Former state electrical inspector</strong>
+    </div>
+    <div class="trust-cell">
+      <p class="label">In the trade</p>
+      <strong>35 years · 2nd generation</strong>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Google rating</p>
+      <strong><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span> 4.5 · 44 reviews</strong>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Availability</p>
+      <strong>24/7 emergency · same-day</strong>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">What we do</p>
+      <h2>Panel to fixture, done to code.</h2>
+      <p class="lead">Every service below is work Donny does himself — to the letter of the code he spent years enforcing.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7.5h2.5"/><path d="M12.5 7.5H15"/><path d="M9 11.5h2.5"/><path d="M12.5 11.5H15"/><path d="M9 15.5h2.5"/><path d="M12.5 15.5H15"/></svg>
+        <h3>Panel &amp; Service Changes</h3>
+        <p>Panel upgrades and service changes done to code — by someone who used to enforce it.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <h3>Troubleshooting &amp; Service Calls</h3>
+        <p>Dead outlets, tripping breakers, mystery problems. Donny finds the real cause.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 5 13h6l-1 9 8-11h-6l1-9z"/></svg>
+        <h3>24/7 Emergency Service</h3>
+        <p>Electrical emergencies any hour, any day. Same-day service available.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 3l9 8"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg>
+        <h3>Basement &amp; Remodel Wiring</h3>
+        <p>Basement finishes and remodels wired right the first time — no callbacks.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="1"/><circle cx="12" cy="9" r="2"/><path d="M12 14v3"/></svg>
+        <h3>Switches, Outlets &amp; Specialty Plugs</h3>
+        <p>New circuits, replacements, and specialty plugs for shops, ranges, and EV-ready garages.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>
+        <h3>LED Replacement &amp; Upgrades</h3>
+        <p>LED retrofits and lighting upgrades that cut your power bill.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m4.9 4.9 1.4 1.4"/><path d="m17.7 17.7 1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/><path d="m6.3 17.7-1.4 1.4"/></svg>
+        <h3>Landscape Lighting &amp; Attic Fans</h3>
+        <p>Outdoor lighting that survives Utah winters, plus attic fans installed clean.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="1"/><path d="M9 2v4"/><path d="M15 2v4"/><path d="m8.5 13 2 2 4-4.5"/></svg>
+        <h3>Home-Sale Punch Lists</h3>
+        <p>Selling? Donny knocks out inspection repair lists fast, so your closing stays on schedule.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY DONNY -->
+<section id="donny">
+  <div class="wrap shop-grid">
+    <div class="shop-copy">
+      <p class="label eyebrow">Why Donny</p>
+      <h2>He inspected electrical work for the state. Now he does it.</h2>
+      <p>Donald "Donny" Davis is a second-generation master electrician with 35 years in the trade — including years spent as a state electrical inspector, checking other electricians' work for code compliance. He's seen every shortcut. He doesn't take any.</p>
+      <p>Since founding Davis &amp; Sons in 2007, he's run service calls across the Salt Lake Valley from West Valley City — panel changes, remodels, troubleshooting, and the middle-of-the-night emergencies. Read the reviews: customers don't ask for a company. They ask for Donny.</p>
+    </div>
+    <div class="donny-plate" role="list" aria-label="Donny Davis at a glance">
+      <div class="plate-row" role="listitem">
+        <p class="stat-num">35</p>
+        <p class="label">Years in the trade</p>
+      </div>
+      <div class="plate-row" role="listitem">
+        <p class="stat-num">2nd</p>
+        <p class="label">Generation master electrician</p>
+      </div>
+      <div class="plate-row" role="listitem">
+        <p class="stat-num">2007</p>
+        <p class="label">Founded in West Valley</p>
+      </div>
+      <div class="plate-row" role="listitem">
+        <p class="stat-num">24/7</p>
+        <p class="label">Emergency response</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK BAND -->
+<section class="workband" aria-label="The work">
+  <div class="wrap work-grid">
+    <figure class="work-item">
+      <img src="assets/work-panel-wiring.jpg" alt="Close-up of an industrial circuit breaker during a service change" loading="lazy">
+      <figcaption><p class="label">Panels &amp; service changes — wired to inspection standard</p></figcaption>
+    </figure>
+    <figure class="work-item">
+      <img src="assets/work-drill.jpg" alt="Electrician's drill in use during a remodel rough-in" loading="lazy">
+      <figcaption><p class="label">Remodels &amp; basements — clean rough-in, clean finish</p></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="dark" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Google reviews</p>
+      <h2>4.5 stars across 44 Google reviews.</h2>
+      <p class="lead">Word for word, from real customers in the Salt Lake Valley.</p>
+    </div>
+    <div class="rev-grid">
+      <blockquote class="rev-card">
+        <span class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+        <p class="rev-quote">"Donny is incredible. This is who you should seek out when you're looking for a highly experienced tradesman who does great work at more than reasonable prices."</p>
+        <footer class="rev-meta">
+          <p class="rev-name">Evan McCain</p>
+          <span class="label rev-src">Google review</span>
+        </footer>
+      </blockquote>
+      <blockquote class="rev-card">
+        <span class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+        <p class="rev-quote">"Donny was really great! When I called to schedule an appointment he was able to come out same day to diagnose our problem."</p>
+        <footer class="rev-meta">
+          <p class="rev-name">Brian DeSplinter</p>
+          <span class="label rev-src">Google review</span>
+        </footer>
+      </blockquote>
+      <blockquote class="rev-card">
+        <span class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+        <p class="rev-quote">"From the start, Donny and Emily were a joy to work with. Donny came out and gave me exactly what I asked for &hellip; He was very informative and gave great advice on all things electrical."</p>
+        <footer class="rev-meta">
+          <p class="rev-name">Myles Dorado</p>
+          <span class="label rev-src">Google review</span>
+        </footer>
+      </blockquote>
+    </div>
+    <a class="rev-link" href="https://search.google.com/local/reviews?placeid=ChIJzw3ETH2TUocR08lLNjpsXZY" target="_blank" rel="noopener">
+      Read all 44 reviews
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Common questions</p>
+      <h2>Straight answers.</h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>Can you come out today?</summary>
+        <p>Usually, yes. Same-day service is a core part of how Davis &amp; Sons operates, and emergencies get answered 24/7 — evenings, weekends, and holidays. Call (801) 935-1221 and Donny will tell you straight when he can be there.</p>
+      </details>
+      <details>
+        <summary>What areas do you cover?</summary>
+        <p>Based in West Valley City, serving Magna, Taylorsville, Salt Lake City, and the surrounding Salt Lake Valley.</p>
+      </details>
+      <details>
+        <summary>Who actually shows up to my house?</summary>
+        <p>Donny — the owner, a second-generation master electrician and former state electrical inspector. Not a rotating crew of subcontractors.</p>
+      </details>
+      <details>
+        <summary>Do you take small jobs?</summary>
+        <p>Yes. Switches, outlets, attic fans, single fixtures — service calls are the backbone of the business, not a nuisance.</p>
+      </details>
+      <details>
+        <summary>I'm selling my home and the inspector flagged electrical items. Can you fix them?</summary>
+        <p>That's a specialty. Donny spent years as a state electrical inspector, so he reads inspection reports fluently and knocks out punch lists fast enough to keep your closing on schedule.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Get in touch</p>
+      <h2>Calling is the fastest way.</h2>
+      <p class="lead">For emergencies, call any hour — phones answer 24/7. For everything else, weekdays 9 to 6.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="c-row c-phone">
+          <p class="label">Call Donny</p>
+          <a href="tel:+18019351221">(801) 935-1221</a>
+        </div>
+        <div class="c-row">
+          <p class="label">Based in</p>
+          <p>West Valley City, UT 84128</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Hours</p>
+          <table class="hours">
+            <tr><td>Mon–Fri</td><td>9am–6pm</td></tr>
+            <tr><td>Emergency service</td><td>24/7</td></tr>
+          </table>
+        </div>
+        <div class="c-row">
+          <p class="label">Service area</p>
+          <p>West Valley City · Magna · Taylorsville · Salt Lake City</p>
+        </div>
+      </div>
+      <div class="map">
+        <iframe src="https://maps.google.com/maps?q=West+Valley+City,+UT+84128&output=embed" title="Map showing Davis &amp; Sons Electrical in West Valley City" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER + FINAL CTA -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-cta">
+      <p class="label eyebrow" style="margin-bottom:16px">24/7 service</p>
+      <h2>Flickering lights? Dead outlet? Panel from 1978?</h2>
+      <p>Get it done to the inspector's standard. One call — the owner answers, the owner shows up, the owner does the work.</p>
+      <a href="tel:+18019351221" class="btn btn-accent">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (801) 935-1221
+      </a>
+    </div>
+    <div class="foot-grid">
+      <div>
+        <div class="wordmark" style="color:#fff">
+          <span class="wm-name">Davis &amp; Sons Electrical</span>
+          <span class="wm-sub" style="color:var(--fog)">West Valley City · Est. 2007</span>
+        </div>
+        <p class="foot-fact">Donald Davis — master electrician, 2nd generation, former state electrical inspector. Serving the Salt Lake Valley since 2007.</p>
+      </div>
+      <div class="foot-meta">
+        <p class="label">West Valley City, UT 84128</p>
+        <p style="margin-top:6px"><a href="tel:+18019351221">(801) 935-1221</a></p>
+        <p class="label" style="margin-top:10px">Mon–Fri 9–6 · 24/7 emergency</p>
+      </div>
+    </div>
+    <div class="foot-legal label">
+      <span>© 2026 Davis &amp; Sons Electrical</span>
+      <span>Master electrician · Est. 2007</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+18019351221" class="callbar" aria-label="Call Davis &amp; Sons Electrical at (801) 935-1221">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call Donny — (801) 935-1221
+</a>
+
+</body>
+</html>

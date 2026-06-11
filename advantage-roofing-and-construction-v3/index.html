@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advantage Roofing &amp; Construction — Salt Lake City Roofing, Family-Owned Since 1999</title>
+<meta name="description" content="Family-owned Salt Lake City roofing contractor since 1999. Owens Corning Preferred Contractor, 10-year workmanship guarantee, free roof inspections. Call (801) 599-6065.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "Advantage Roofing & Construction",
+  "telephone": "+18015996065",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Salt Lake City",
+    "addressRegion": "UT",
+    "postalCode": "84109"
+  },
+  "areaServed": ["Salt Lake City", "Millcreek", "Holladay", "Wasatch Front"],
+  "foundingDate": "1999"
+}
+</script>
+<style>
+/* ============ tokens ============ */
+:root{
+  --ink:#141414;
+  --ink-2:#1d1d1b;
+  --steel:#5d5b57;
+  --fog:#a8a5a0;
+  --paper:#ffffff;
+  --chalk:#f5f4f1;
+  --line:#e6e4df;
+  --line-dark:#2b2a27;
+  --accent:#e3933c;
+  --accent-hover:#eaa75f;
+  --max:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Barlow',ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:16px;line-height:1.6;color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:60px; /* mobile call bar */
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* ============ type voices (mobile-first) ============ */
+.label{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;
+  font-size:13px;letter-spacing:.14em;text-transform:uppercase;line-height:1.25;
+}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--steel)}
+.eyebrow::before{content:"";width:18px;height:2px;background:var(--accent);flex:none}
+h1{font-size:clamp(37px,9.6vw,84px);font-weight:700;line-height:1.04;letter-spacing:-.026em}
+h2{font-size:clamp(30px,7.6vw,52px);font-weight:700;line-height:1.08;letter-spacing:-.022em}
+h3{font-size:20px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.lead{font-size:17px;color:var(--steel);max-width:56ch}
+@media(min-width:768px){.lead{font-size:18px}}
+
+/* ============ buttons ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;
+  font-weight:600;font-size:16px;letter-spacing:.01em;line-height:1;
+  min-height:56px;padding:0 28px;transition:background .15s,border-color .15s,color .15s;
+}
+.btn svg{flex:none}
+.btn-accent{background:var(--accent);color:var(--ink)}
+.btn-accent:hover{background:var(--accent-hover)}
+.btn-ghost{border:1px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{border-color:#fff}
+
+/* ============ topbar ============ */
+.topbar{background:var(--ink);color:var(--fog)}
+.topbar-inner{
+  max-width:var(--max);margin:0 auto;padding:9px 20px;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.topbar .label{font-size:12px;letter-spacing:.12em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .tb-r{display:none}
+.topbar .tb-x{display:none}
+@media(min-width:768px){
+  .topbar .tb-r{display:block;flex:none}
+  .topbar .tb-x{display:inline}
+}
+
+/* ============ nav ============ */
+.nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.nav-inner{
+  height:64px;display:flex;align-items:center;gap:24px;
+  max-width:var(--max);margin:0 auto;padding:0 20px;
+}
+.wordmark{display:flex;flex-direction:column;line-height:1;min-width:0}
+.wm-name{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;
+  letter-spacing:.02em;text-transform:uppercase;
+}
+.wm-name span{color:var(--accent)}
+.wm-sub{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin-top:4px;white-space:nowrap;
+}
+.nav-links{display:none;gap:28px;margin-left:auto}
+.nav-links a{font-weight:500;font-size:15px;color:var(--ink);padding:8px 0}
+.nav-links a:hover{color:var(--steel)}
+.nav-call{
+  margin-left:auto;display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent);color:var(--ink);border-radius:999px;
+  font-weight:600;font-size:15px;min-height:44px;padding:0 18px;
+}
+.nav-call:hover{background:var(--accent-hover)}
+.nav-call .num{display:none}
+@media(min-width:480px){
+  .nav-call .num{display:inline}
+  .nav-call .word{display:none}
+}
+@media(min-width:768px){
+  .nav-links{display:flex;gap:18px}
+  .nav-links .nl-x{display:none}
+  .nav-call{margin-left:0}
+}
+@media(min-width:1024px){
+  .nav-links{gap:28px}
+  .nav-links .nl-x{display:block}
+  .nav-inner{height:68px;padding:0 24px}
+  .wm-name{font-size:26px}
+}
+
+/* ============ hero ============ */
+.hero{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:82svh;background:var(--ink);overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%}
+.hero-scrim{position:absolute;inset:0;background:
+  linear-gradient(to top,rgba(8,8,8,.82) 0%,rgba(8,8,8,.30) 45%,rgba(8,8,8,.34) 100%),
+  linear-gradient(78deg,rgba(8,8,8,.78) 0%,rgba(8,8,8,.42) 55%,rgba(8,8,8,.12) 100%);
+}
+.hero-content{position:relative;width:100%;max-width:var(--max);margin:0 auto;padding:88px 20px 56px}
+.hero .eyebrow{color:rgba(255,255,255,.75);margin-bottom:18px}
+.hero h1{color:#fff;max-width:20ch}
+.hero .lead{color:rgba(255,255,255,.80);margin-top:18px}
+.hero-ctas{display:flex;flex-direction:column;gap:12px;margin-top:32px}
+.hero-ctas .btn{width:100%}
+.hero-tag{
+  position:relative;display:flex;align-items:center;gap:10px;
+  max-width:var(--max);margin:0 auto;width:100%;padding:0 20px 18px;
+  color:rgba(255,255,255,.62);
+}
+.hero-tag::before{content:"";width:8px;height:8px;background:rgba(255,255,255,.62);flex:none}
+@media(min-width:768px){
+  .hero{min-height:86vh}
+  .hero-content{padding:140px 24px 72px}
+  .hero-ctas{flex-direction:row;gap:16px;margin-top:40px}
+  .hero-ctas .btn{width:auto}
+  .hero-tag{padding:0 24px 24px}
+}
+
+/* ============ trust strip ============ */
+.trust{border-bottom:1px solid var(--line);background:var(--paper)}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;max-width:var(--max);margin:0 auto}
+.trust-cell{padding:20px;border-top:1px solid var(--line)}
+.trust-cell:nth-child(-n+2){border-top:none}
+.trust-cell:nth-child(even){border-left:1px solid var(--line)}
+.trust-cell .label{color:var(--steel);margin-bottom:8px}
+.trust-cell strong{font-size:17px;font-weight:600;letter-spacing:-.01em;line-height:1.25;display:block}
+.trust-cell .sub{font-size:13px;color:var(--steel);margin-top:3px}
+.stars{display:inline-flex;gap:2px;margin-right:6px;vertical-align:-2px}
+.stars svg{width:15px;height:15px;fill:var(--accent)}
+@media(min-width:768px){
+  .trust-grid{grid-template-columns:repeat(4,1fr)}
+  .trust-cell{padding:30px 24px;border-top:none!important;border-left:1px solid var(--line)}
+  .trust-cell:first-child{border-left:none}
+  .trust-cell strong{font-size:19px}
+}
+
+/* ============ sections ============ */
+section{padding:64px 0}
+@media(min-width:768px){section{padding:112px 0}}
+.sec-head{max-width:62ch;margin-bottom:40px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head p{margin-top:16px}
+@media(min-width:768px){.sec-head{margin-bottom:64px}.sec-head .eyebrow{margin-bottom:20px}.sec-head p{margin-top:20px}}
+.band-chalk{background:var(--chalk)}
+.dark{background:var(--ink);color:#fff}
+.dark .lead{color:var(--fog)}
+.dark .eyebrow{color:var(--fog)}
+
+/* ============ services ============ */
+.svc-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.svc-card{background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:24px;transition:border-color .15s}
+.svc-card:hover{border-color:var(--ink)}
+.svc-card svg{width:28px;height:28px;stroke:var(--ink);margin-bottom:16px}
+.svc-card h3{margin-bottom:8px}
+.svc-card p{font-size:15px;color:var(--steel)}
+@media(min-width:640px){.svc-grid{grid-template-columns:1fr 1fr;gap:24px}.svc-card{padding:32px}}
+@media(min-width:1024px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ============ storm band ============ */
+.storm{position:relative;background:var(--ink);overflow:hidden;padding:72px 0}
+.storm-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:saturate(.8) contrast(1.05)}
+.storm-scrim{position:absolute;inset:0;background:linear-gradient(82deg,rgba(8,8,8,.92) 0%,rgba(8,8,8,.72) 55%,rgba(8,8,8,.45) 100%)}
+.storm-content{position:relative;max-width:var(--max);margin:0 auto;padding:0 20px}
+.storm .eyebrow{color:rgba(255,255,255,.75);margin-bottom:16px}
+.storm h2{color:#fff;max-width:18ch}
+.storm blockquote{margin-top:24px;max-width:52ch}
+.storm blockquote p{font-size:17px;line-height:1.6;color:rgba(255,255,255,.88)}
+.storm blockquote footer{margin-top:10px;color:rgba(255,255,255,.6)}
+.storm .btn{margin-top:32px;width:100%}
+@media(min-width:768px){
+  .storm{padding:112px 0}
+  .storm-content{padding:0 24px}
+  .storm .btn{width:auto}
+}
+
+/* ============ process ============ */
+.steps{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
+.step{padding:28px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:64px 1fr;gap:16px;align-items:start}
+.step-num{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:44px;line-height:1;
+  color:var(--ink);letter-spacing:-.01em;
+}
+.step h3{margin-bottom:6px}
+.step p{font-size:15px;color:var(--steel);max-width:52ch}
+.proof{
+  margin-top:40px;border:1px solid var(--line);border-left:3px solid var(--ink);
+  border-radius:2px;padding:24px;background:var(--chalk);
+}
+.proof p{font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.4}
+.proof footer{margin-top:10px;color:var(--steel)}
+@media(min-width:768px){
+  .step{grid-template-columns:96px 1fr;padding:36px 0}
+  .step-num{font-size:56px}
+  .proof{padding:32px;margin-top:56px}
+  .proof p{font-size:21px}
+}
+@media(min-width:1024px){
+  .steps{grid-template-columns:1fr 1fr;column-gap:64px}
+}
+
+/* ============ work gallery ============ */
+.work-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.work-card{border-radius:2px;overflow:hidden;border:1px solid var(--line);background:var(--paper)}
+.work-ph{overflow:hidden;aspect-ratio:4/3}
+.work-ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.88) contrast(1.05)}
+.work-ph--detail img{transform:scale(2.4);transform-origin:67% 30%}
+.work-cap{display:flex;align-items:center;gap:10px;padding:16px 18px;color:var(--steel)}
+.work-cap::before{content:"";width:8px;height:8px;background:var(--ink);flex:none}
+.work-quote{margin-top:32px;max-width:62ch}
+.work-quote .stars svg{width:16px;height:16px}
+.work-quote p{font-size:19px;line-height:1.55;letter-spacing:-.01em;font-weight:500;margin-top:12px}
+.work-quote footer{margin-top:12px;color:var(--steel)}
+@media(min-width:768px){
+  .work-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .work-quote{margin-top:48px}
+  .work-quote p{font-size:22px}
+}
+
+/* ============ owner (full-width editorial, no photo) ============ */
+.owner-copy .eyebrow{margin-bottom:16px}
+.owner-copy h2{max-width:18ch}
+.owner-copy p{color:var(--steel);margin-top:16px;max-width:62ch}
+.owner-stats{display:grid;grid-template-columns:1fr;gap:32px;margin-top:48px;padding-top:36px;border-top:1px solid var(--line)}
+.stat-num{font-size:clamp(48px,12vw,96px);font-weight:700;line-height:1;letter-spacing:-.025em}
+.stat .label{color:var(--steel);margin-top:10px;max-width:18ch}
+@media(min-width:768px){
+  .owner-copy p{margin-top:20px}
+  .owner-stats{grid-template-columns:repeat(3,1fr);gap:0;margin-top:64px;padding-top:48px}
+  .owner-stats .stat{border-left:1px solid var(--line);padding-left:32px}
+  .owner-stats .stat:first-child{border-left:none;padding-left:0}
+}
+
+/* ============ materials strip ============ */
+.mats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)}
+.mats-inner{max-width:var(--max);margin:0 auto;padding:32px 20px}
+.mats .label{color:var(--steel);margin-bottom:18px}
+.mats-row{display:grid;grid-template-columns:1fr;gap:0}
+.mat{padding:16px 0;border-top:1px solid var(--line)}
+.mat:first-child{border-top:none}
+.mat strong{font-size:21px;font-weight:700;letter-spacing:-.015em;display:block}
+.mat span{font-size:14px;color:var(--steel)}
+@media(min-width:768px){
+  .mats-inner{padding:40px 24px}
+  .mats-row{grid-template-columns:repeat(3,1fr);gap:24px}
+  .mat{border-top:none;border-left:1px solid var(--line);padding:8px 0 8px 24px}
+  .mat:first-child{border-left:none;padding-left:0}
+  .mat strong{font-size:24px}
+}
+
+/* ============ reviews ============ */
+.rev-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.rev-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:2px;padding:24px;display:flex;flex-direction:column}
+.rev-card .stars{margin-bottom:16px}
+.rev-quote{font-size:16px;line-height:1.6;color:rgba(255,255,255,.92);flex:1}
+.rev-meta{margin-top:24px;padding-top:16px;border-top:1px solid var(--line-dark)}
+.rev-name{font-weight:600;font-size:14px;color:#fff}
+.rev-src{display:block;margin-top:5px;color:var(--fog)}
+.rev-link{
+  display:inline-flex;align-items:center;gap:10px;margin-top:40px;min-height:44px;
+  font-weight:600;font-size:15px;color:#fff;border-bottom:1px solid var(--line-dark);transition:border-color .15s;
+}
+.rev-link:hover{border-color:#fff}
+.rev-link svg{stroke:currentColor}
+@media(min-width:640px){.rev-grid{grid-template-columns:1fr 1fr;gap:24px}.rev-card{padding:32px}}
+@media(min-width:1024px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ============ faq ============ */
+.faq-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
+.faq-photo{display:none;border-radius:2px;overflow:hidden}
+.faq-photo img{width:100%;height:100%;min-height:520px;object-fit:cover;filter:saturate(.85) contrast(1.05)}
+.faq-list{border-top:1px solid var(--line)}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list summary{
+  list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:20px 0;font-size:17px;font-weight:600;letter-spacing:-.01em;min-height:56px;
+}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";font-size:24px;font-weight:400;color:var(--steel);flex:none;line-height:1}
+.faq-list details[open] summary::after{content:"–"}
+.faq-list details p{padding:0 0 22px;color:var(--steel);max-width:58ch}
+@media(min-width:1024px){
+  .faq-grid{grid-template-columns:1fr 1.4fr;gap:64px}
+  .faq-photo{display:block}
+  .faq-list summary{font-size:19px;padding:24px 0}
+}
+
+/* ============ contact ============ */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:stretch}
+.c-row{padding:22px 0;border-top:1px solid var(--line)}
+.c-row:last-child{border-bottom:1px solid var(--line)}
+.c-row .label{color:var(--steel);margin-bottom:6px}
+.c-row p,.c-row a{font-size:17px;font-weight:500}
+.c-phone a{font-size:clamp(32px,9vw,44px);font-weight:700;letter-spacing:-.02em;line-height:1.1;display:inline-block;padding:4px 0}
+.c-phone a:hover{color:var(--steel)}
+.map{border-radius:2px;overflow:hidden;border:1px solid var(--line);min-height:320px}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(1) contrast(1.05);transition:filter .3s}
+.map:hover iframe{filter:none}
+@media(min-width:1024px){
+  .contact-grid{grid-template-columns:1fr 1fr;gap:64px}
+  .map,.map iframe{min-height:460px}
+}
+
+/* ============ footer ============ */
+footer.site{background:var(--ink);color:#fff;padding:56px 0}
+.foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
+.foot-fact{margin-top:14px;color:var(--fog);font-size:15px;max-width:44ch}
+.foot-meta .label{color:var(--fog)}
+.foot-meta a{font-weight:600;font-size:18px;display:inline-block;padding:6px 0}
+.foot-meta a:hover{color:var(--fog)}
+.foot-legal{
+  margin-top:48px;padding-top:24px;border-top:1px solid var(--line-dark);
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--fog);
+}
+@media(min-width:768px){footer.site{padding:72px 0}}
+
+/* ============ mobile call bar ============ */
+.callbar{
+  display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;
+  background:var(--accent);color:var(--ink);height:60px;
+  align-items:center;justify-content:center;gap:10px;
+  font-weight:700;font-size:17px;letter-spacing:.01em;
+  box-shadow:0 -8px 24px rgba(0,0,0,.12);
+}
+.callbar svg{stroke:var(--ink)}
+@media(min-width:768px){
+  .callbar{display:none}
+  body{padding-bottom:0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <p class="label">Owens Corning Preferred Contractor &nbsp;·&nbsp; BBB A+<span class="tb-x"> &nbsp;·&nbsp; 10-yr workmanship guarantee</span></p>
+    <p class="label tb-r">Se habla español</p>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="wordmark" aria-label="Advantage Roofing &amp; Construction — home">
+      <span class="wm-name">Advantage<span>.</span></span>
+      <span class="wm-sub">Roofing &amp; Construction · SLC</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#process" class="nl-x">Process</a>
+      <a href="#work">Our Work</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:+18015996065" class="nav-call">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="num">(801) 599-6065</span><span class="word">Call</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO — real Advantage re-roof (customer review photo) -->
+<section class="hero" style="padding:0">
+  <img class="hero-img" src="assets/real-reroof-presidential.jpg" alt="A Salt Lake City home re-roofed by Advantage Roofing &amp; Construction with Presidential shingles, American flag out front">
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="label eyebrow">Family-owned · Salt Lake City · Since 1999</p>
+    <h1>25 years of Salt&nbsp;Lake roofs. Jesse&rsquo;s still on every&nbsp;one.</h1>
+    <p class="lead">Advantage Roofing &amp; Construction is a family-owned Owens Corning Preferred Contractor with a 10-year workmanship guarantee — and a crew that leaves your yard exactly as they found it.</p>
+    <div class="hero-ctas">
+      <a href="tel:+18015996065" class="btn btn-accent">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Free inspection — (801) 599-6065
+      </a>
+      <a href="#work" class="btn btn-ghost">See recent work</a>
+    </div>
+  </div>
+  <p class="hero-tag label">Pictured: an Advantage re-roof — Presidential shingles, Salt Lake City</p>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust" role="region" aria-label="Credentials and ratings">
+  <div class="trust-grid">
+    <div class="trust-cell">
+      <p class="label">Yelp rating</p>
+      <strong><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>4.9</strong>
+      <p class="sub">9 reviews</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Better Business Bureau</p>
+      <strong>A+ rating</strong>
+      <p class="sub">Since 2001</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Manufacturer certified</p>
+      <strong>Owens Corning Preferred</strong>
+      <p class="sub">CertainTeed Select ShingleMaster</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Workmanship</p>
+      <strong>10-year guarantee</strong>
+      <p class="sub">On most work</p>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="band-chalk" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">What we do</p>
+      <h2>Roofs first. But there&rsquo;s little we haven&rsquo;t built.</h2>
+      <p class="lead">A licensed general contractor with a roofing specialty — so the same crew that re-roofs your house can frame your porch, hang your gutters, and flash your chimney right.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d='M2 12 12 3.5 22 12'/><path d='M5 9.5V20h14V9.5'/><path d='M16 5.5V4h2.5v3.5'/></svg>
+        <h3>Roof Replacement</h3>
+        <p>Complete tear-off and re-roof — most homes finished in about two days, with decking repairs flagged before work starts.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d='m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9'/><path d='m18 15 4-4'/><path d='m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12 8.4V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5'/></svg>
+        <h3>Roof Repair</h3>
+        <p>Leaks, flashing, vents, and missing shingles — fixed fast, and stood behind even years after the original install.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/><path d='M9 12l2 2 4-4'/></svg>
+        <h3>Wind &amp; Storm Damage</h3>
+        <p>Damage documented, repaired, and walked through with your insurance company — you don&rsquo;t fight that battle alone.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx='11' cy='11' r='7'/><path d='m21 21-4.3-4.3'/></svg>
+        <h3>Free Roof Inspections</h3>
+        <p>An honest look at what needs fixing now and what can wait — measured, photographed, and explained in plain English.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d='M3 5h18v4H3z'/><path d='M5 9v10'/><path d='M19 9v10'/><path d='M5 15h14'/></svg>
+        <h3>Gutters &amp; Sheet Metal</h3>
+        <p>Gutter cleaning and custom sheet metal work that finishes the roofline and keeps water away from the foundation.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d='M3 21h18'/><path d='M5 21V11l7-5 7 5v10'/><path d='M9 21v-5h6v5'/></svg>
+        <h3>Decks, Porches &amp; Carpentry</h3>
+        <p>Licensed for general building and carpentry — decks, pergolas, and porches built by the same in-house crew.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORM / INSURANCE BAND -->
+<section class="storm">
+  <img class="storm-img" src="assets/stock-tearoff.jpg" alt="Roofer standing on a shingle roof mid tear-off">
+  <div class="storm-scrim" aria-hidden="true"></div>
+  <div class="storm-content">
+    <p class="label eyebrow">Wind damage? Insurance claim?</p>
+    <h2>We document the damage and deal with your insurance.</h2>
+    <blockquote>
+      <p>&ldquo;Jeff with Advantage Roofing and Construction was very easy to work with and he dealt with my insurance! I had major wind damage&hellip; Erick and his crew were very fast, thorough, clean, friendly and very professional!&rdquo;</p>
+      <footer class="label">Corey H. · Murray, UT — Yelp review, May 2024</footer>
+    </blockquote>
+    <a href="tel:+18015996065" class="btn btn-accent">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call about storm damage
+    </a>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">The Advantage process</p>
+      <h2>From first call to final cleanup.</h2>
+      <p class="lead">No sales team, no pressure. The person who answers your call is the person who shows up on your roof.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <p class="step-num" aria-hidden="true">01</p>
+        <div>
+          <h3>Call the shop</h3>
+          <p>One number, answered by the people doing the work. Customers mention the fast call-backs in review after review.</p>
+        </div>
+      </div>
+      <div class="step">
+        <p class="step-num" aria-hidden="true">02</p>
+        <div>
+          <h3>Free inspection</h3>
+          <p>We climb the roof, measure, and take the time to investigate properly — then explain what needs fixing now and what can wait.</p>
+        </div>
+      </div>
+      <div class="step">
+        <p class="step-num" aria-hidden="true">03</p>
+        <div>
+          <h3>A straight estimate</h3>
+          <p>An honest number at a fair price. If something could change it — like hidden decking damage — you&rsquo;ll know before we start, not after.</p>
+        </div>
+      </div>
+      <div class="step">
+        <p class="step-num" aria-hidden="true">04</p>
+        <div>
+          <h3>Built fast, left clean</h3>
+          <p>Most re-roofs finish in about two days. The yard is left exactly as we found it — the neighbors&rsquo; yards too.</p>
+        </div>
+      </div>
+    </div>
+    <div class="proof">
+      <p>Estimate on Thursday. Crew on site Monday. Finished in under two days.</p>
+      <footer class="label">The actual timeline from Tom M.&rsquo;s five-star Yelp review, October 2021</footer>
+    </div>
+  </div>
+</section>
+
+<!-- OUR WORK -->
+<section class="band-chalk" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Recent work</p>
+      <h2>One customer&rsquo;s roof, porch, and deck.</h2>
+      <p class="lead">These photos weren&rsquo;t staged for a website — a Salt Lake City homeowner posted them with his five-star review in January 2026.</p>
+    </div>
+    <div class="work-grid">
+      <figure class="work-card">
+        <div class="work-ph work-ph--detail"><img src="assets/real-reroof-presidential.jpg" alt="Close-up detail of the gable and Presidential shingle coursing on an Advantage re-roof in Salt Lake City"></div>
+        <figcaption class="work-cap label">Re-roof detail — gable &amp; Presidential shingle coursing</figcaption>
+      </figure>
+      <figure class="work-card">
+        <div class="work-ph"><img src="assets/real-deck-pergola.jpg" alt="Two-level deck with timber pergola shading built by Advantage Roofing &amp; Construction"></div>
+        <figcaption class="work-cap label">Two-level deck &amp; pergola — same client, same crew</figcaption>
+      </figure>
+    </div>
+    <div class="work-quote">
+      <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+      <p>&ldquo;Absolutely the best quality, service and price. I can&rsquo;t say enough about these guys. They can build just about anything. My roof, my porch, my deck&hellip;&rdquo;</p>
+      <footer class="label">David M. · Salt Lake City — Yelp review, January 2026</footer>
+    </div>
+  </div>
+</section>
+
+<!-- OWNER -->
+<section id="about">
+  <div class="wrap">
+    <div class="owner-copy">
+      <p class="label eyebrow">The owner</p>
+      <h2>Jesse Wilkerson still works every job.</h2>
+      <p>Advantage has been family-owned since 1999. Jesse runs a small, highly trained in-house crew — the same people on every job, no subcontracted strangers — and he&rsquo;s on the jobsite working alongside them, not in an office across town.</p>
+      <p>The goal has always been simple: earn lifelong customers with quality and friendly service at an honest price. That&rsquo;s why the crew cleans up daily, walks the neighbors&rsquo; property lines for stray debris, and leaves your yard exactly as they found it.</p>
+    </div>
+    <div class="owner-stats">
+      <div class="stat">
+        <p class="stat-num">25+</p>
+        <p class="label">Years on Wasatch Front roofs</p>
+      </div>
+      <div class="stat">
+        <p class="stat-num">200+</p>
+        <p class="label">Permitted projects on public record</p>
+      </div>
+      <div class="stat">
+        <p class="stat-num">10-yr</p>
+        <p class="label">Workmanship guarantee on most work</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATERIALS STRIP -->
+<div class="mats" role="region" aria-label="Roofing systems installed">
+  <div class="mats-inner">
+    <p class="label">Certified installer — roofing systems we put on Wasatch Front homes</p>
+    <div class="mats-row">
+      <div class="mat"><strong>Owens Corning</strong><span>Preferred Contractor</span></div>
+      <div class="mat"><strong>CertainTeed</strong><span>Select ShingleMaster credential</span></div>
+      <div class="mat"><strong>Tamko</strong><span>Residential roofing systems</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<section class="dark" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Reviews</p>
+      <h2>4.9 stars on Yelp. Earned one roof at a time.</h2>
+      <p class="lead">Every word below is quoted verbatim from a real customer review.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;His crew was honestly the BEST construction crew I&rsquo;ve ever worked with&hellip; Jess always responded to calls right away, completed the work exactly when he said he would, for the price he said he would do it.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Dana R. — Salt Lake City</p>
+          <span class="rev-src label">Yelp review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;The roof we ended up with by Advantage was superior to the original and I could not be more pleased. They completed the entire project in just under two days and I would recommend this company to anyone.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Tom M. — Salt Lake City</p>
+          <span class="rev-src label">Yelp review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Jeff was awesome with communication — always responsive and kept us in the loop throughout the process&hellip; The crew did a solid job and everything turned out great. Would definitely recommend them!&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Anthony A. — shake roof tear-off &amp; re-roof</p>
+          <span class="rev-src label">Yelp review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;They did my roof in 2011. We have a small leak around the chimney. The company is great to respond. They came out, fixed the problem, no question asked. Great service. Will hire them again in 10 years.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Toan L. — Salt Lake City</p>
+          <span class="rev-src label">Yelp review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;They were able to take care of the vent and secured all the other ones. Total time from 1st call to completion, less than an hour!! Very impressed! BBB A+ rating.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Cindy K. — emergency vent repair before a storm</p>
+          <span class="rev-src label">Yelp review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;In the end, I&rsquo;m completely satisfied with the work done by Advantage Roofing. They cared about me before, during, and after the installation, and I feel very happy about the job they did.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Matthew H. — tear-off, re-roof &amp; attic insulation</p>
+          <span class="rev-src label">Yelp review</span>
+        </div>
+      </div>
+    </div>
+    <a class="rev-link" href="https://www.yelp.com/biz/advantage-roofing-and-construction-salt-lake-city-10" target="_blank" rel="noopener">
+      Read all 9 reviews on Yelp
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-photo">
+      <img src="assets/stock-rooflines.jpg" alt="Clean white gable rooflines against a blue sky">
+    </div>
+    <div>
+      <div class="sec-head">
+        <p class="label eyebrow">Straight answers</p>
+        <h2>What homeowners ask first.</h2>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>What does an inspection or estimate cost?</summary>
+          <p>Nothing. Inspections and estimates are free. You get an honest read on what needs fixing now and what can safely wait — no pressure either way.</p>
+        </details>
+        <details>
+          <summary>How long does a full re-roof take?</summary>
+          <p>Once the crew is on site, most residential re-roofs — tear-off included — finish in about two days.</p>
+        </details>
+        <details>
+          <summary>What warranty do I get?</summary>
+          <p>A 10-year workmanship guarantee on most work, on top of the manufacturer&rsquo;s warranty on the roofing system itself (Owens Corning, CertainTeed, or Tamko).</p>
+        </details>
+        <details>
+          <summary>Will you work with my insurance company?</summary>
+          <p>Yes. For wind, storm, and hail claims we document the damage and deal directly with your insurer so the claim reflects what your roof actually needs.</p>
+        </details>
+        <details>
+          <summary>Do you only do roofs?</summary>
+          <p>No — Advantage is a licensed general contractor with a carpentry specialty. Decks, porches, pergolas, gutters, and sheet metal are all built by the same in-house crew.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="band-chalk" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Free roof inspection</p>
+      <h2>Talk to the people on the roof.</h2>
+      <p class="lead">Calling is the fastest way to reach us — and the person who answers is the person who does the work. Se habla español.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="c-row c-phone">
+          <p class="label">Call us</p>
+          <a href="tel:+18015996065">(801) 599-6065</a>
+        </div>
+        <div class="c-row">
+          <p class="label">Based in</p>
+          <p>Salt Lake City, UT 84109</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Service area</p>
+          <p>Salt Lake City · Millcreek · Holladay · the Wasatch Front</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Scheduling</p>
+          <p>Call to schedule a free roof inspection</p>
+        </div>
+      </div>
+      <div class="map">
+        <iframe src="https://maps.google.com/maps?ll=40.7000,-111.8160&z=12&output=embed" title="Map showing Advantage Roofing &amp; Construction service area in Salt Lake City" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="wordmark" style="color:#fff">
+          <span class="wm-name">Advantage<span style="color:var(--accent)">.</span></span>
+          <span class="wm-sub" style="color:var(--fog)">Roofing &amp; Construction · Salt Lake City</span>
+        </div>
+        <p class="foot-fact">Family-owned &amp; operated since 1999. Owens Corning Preferred Contractor · CertainTeed Select ShingleMaster · BBB A+ rated.</p>
+      </div>
+      <div class="foot-meta">
+        <p class="label">Salt Lake City, UT 84109</p>
+        <p style="margin-top:6px"><a href="tel:+18015996065">(801) 599-6065</a></p>
+      </div>
+    </div>
+    <div class="foot-legal label">
+      <span>© 2026 Advantage Roofing &amp; Construction LLC</span>
+      <span>UT Contractor Lic. #4782800-5501 — B100 General Building · S280 Roofing</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+18015996065" class="callbar" aria-label="Call Advantage Roofing &amp; Construction at (801) 599-6065">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call — (801) 599-6065
+</a>
+
+</body>
+</html>

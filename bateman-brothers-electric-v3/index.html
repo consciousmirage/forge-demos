@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bateman Brothers Electric — Three Generations of Electricians in West Jordan, UT</title>
+<meta name="description" content="Bateman Brothers Electric — three generations of master electricians in West Jordan, Utah. Panels, rewires, hot tubs, generators &amp; lighting since 1996. Free estimates. Call (801) 231-4139.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "Bateman Brothers Electric, Inc.",
+  "telephone": "+18012314139",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "West Jordan",
+    "addressRegion": "UT",
+    "postalCode": "84081"
+  },
+  "areaServed": ["West Jordan UT", "South Jordan UT", "Sandy UT", "Salt Lake Valley"],
+  "openingHours": "Mo-Fr 08:00-17:00",
+  "foundingDate": "1996"
+}
+</script>
+<style>
+:root{
+  --ink:#141414;
+  --ink-2:#1d1d1b;
+  --steel:#5d5b57;
+  --fog:#a8a5a0;
+  --paper:#ffffff;
+  --chalk:#f5f4f1;
+  --line:#e6e4df;
+  --line-dark:#2b2a27;
+  --accent:#ffb000;
+  --accent-hover:#ffc233;
+  --max:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Barlow',ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:16px;line-height:1.6;color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:60px; /* mobile call bar */
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* ============ type voices ============ */
+.label{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;
+  font-size:14px;letter-spacing:.14em;text-transform:uppercase;line-height:1.25;
+}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--steel)}
+.eyebrow::before{content:"";width:18px;height:2px;background:var(--accent);flex:none}
+h1{font-size:clamp(38px,6.5vw,80px);font-weight:700;line-height:1.04;letter-spacing:-.028em}
+h2{font-size:clamp(32px,4.5vw,52px);font-weight:700;line-height:1.06;letter-spacing:-.022em}
+h3{font-size:20px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.lead{font-size:17px;color:var(--steel);max-width:56ch}
+
+/* ============ buttons ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;
+  font-weight:600;font-size:16px;letter-spacing:.01em;line-height:1;
+  padding:18px 30px;min-height:52px;transition:background .15s,border-color .15s,color .15s;
+  white-space:nowrap;
+}
+.btn svg{flex:none}
+.btn-accent{background:var(--accent);color:var(--ink)}
+.btn-accent:hover{background:var(--accent-hover)}
+.btn-ghost{border:1px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{border-color:#fff}
+
+/* ============ topbar (desktop only) ============ */
+.topbar{display:none}
+
+/* ============ nav ============ */
+.nav{position:sticky;top:0;z-index:50;background:var(--paper);box-shadow:0 1px 0 var(--line)}
+.nav-inner{height:64px;display:flex;align-items:center;gap:24px;max-width:var(--max);margin:0 auto;padding:0 20px}
+.wordmark{display:flex;flex-direction:column;line-height:1;min-width:0}
+.wm-name{font-weight:700;font-size:17px;letter-spacing:-.015em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wm-sub{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin-top:4px;white-space:nowrap}
+.nav-links{display:none}
+.nav .btn{margin-left:auto;padding:13px 20px;min-height:44px;font-size:15px}
+.call-full{display:none}
+
+/* ============ hero ============ */
+.hero{position:relative;min-height:calc(100svh - 64px);display:flex;align-items:flex-end;background:var(--ink);overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 30%}
+.hero-scrim{position:absolute;inset:0;
+  background:
+    linear-gradient(to top,rgba(8,8,8,.84) 0%,rgba(8,8,8,.28) 42%,rgba(8,8,8,.34) 100%),
+    linear-gradient(78deg,rgba(8,8,8,.88) 0%,rgba(8,8,8,.5) 55%,rgba(8,8,8,.18) 100%);
+}
+.hero-content{position:relative;width:100%;max-width:var(--max);margin:0 auto;padding:96px 20px 48px}
+.hero .eyebrow{color:rgba(255,255,255,.75);margin-bottom:20px}
+.hero h1{color:#fff;max-width:15ch}
+.hero .lead{color:rgba(255,255,255,.8);margin-top:18px}
+.hero-rating{display:flex;align-items:center;gap:10px;margin-top:22px;color:rgba(255,255,255,.88);font-size:15px;font-weight:500}
+.hero-rating strong{font-size:17px;font-weight:700;color:#fff}
+.hero-rating svg{fill:var(--accent);width:17px;height:17px;flex:none}
+.hero-rating a{border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:1px}
+.hero-rating a:hover{border-color:#fff}
+.hero-ctas{display:flex;flex-direction:column;gap:12px;margin-top:28px}
+.hero-ctas .btn{width:100%}
+
+/* ============ trust strip ============ */
+.trust{border-bottom:1px solid var(--line);background:var(--paper)}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;max-width:var(--max);margin:0 auto}
+.trust-cell{padding:22px 20px;border-top:1px solid var(--line)}
+.trust-cell:nth-child(-n+2){border-top:none}
+.trust-cell:nth-child(even){border-left:1px solid var(--line)}
+.trust-cell .label{color:var(--steel);margin-bottom:8px}
+.trust-cell strong{font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.3;display:block}
+
+/* ============ sections ============ */
+section{padding:64px 0}
+.sec-head{max-width:62ch;margin-bottom:44px}
+.sec-head .eyebrow{margin-bottom:18px}
+.sec-head .lead{margin-top:18px}
+
+/* ============ services ============ */
+.services{background:var(--chalk)}
+.svc-grid{display:grid;grid-template-columns:1fr;gap:20px}
+.svc-card{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:28px 24px;transition:border-color .15s}
+.svc-card:hover{border-color:var(--ink)}
+.svc-card svg{width:28px;height:28px;stroke:var(--ink);margin-bottom:18px}
+.svc-card h3{margin-bottom:8px;padding-right:90px}
+.svc-card p{font-size:16px;color:var(--steel)}
+.svc-tag{position:absolute;top:28px;right:24px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);border-bottom:2px solid var(--accent);padding-bottom:3px}
+.svc-also{margin-top:32px;padding-top:28px;border-top:1px solid var(--line)}
+.svc-also .label{color:var(--steel);margin-bottom:12px}
+.svc-also p{font-size:16px;color:var(--steel);max-width:75ch}
+.svc-also strong{color:var(--ink);font-weight:600}
+
+/* ============ work triptych ============ */
+.workband{padding:64px 0}
+.tri-grid{display:grid;grid-template-columns:1fr;gap:20px}
+.tri-grid figure{position:relative;border-radius:2px;overflow:hidden}
+.tri-grid img{width:100%;height:240px;object-fit:cover;filter:saturate(.85) contrast(1.05)}
+.tri-grid figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:36px 18px 14px;
+  background:linear-gradient(to top,rgba(8,8,8,.78),rgba(8,8,8,0));
+  color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:600;
+  font-size:14px;letter-spacing:.14em;text-transform:uppercase;
+  display:flex;align-items:center;gap:10px;
+}
+.tri-grid figcaption::before{content:"";width:14px;height:2px;background:var(--accent);flex:none}
+
+/* ============ about / shop ============ */
+.shop{background:var(--chalk)}
+.shop-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+.shop-photo{border-radius:2px;overflow:hidden}
+.shop-photo img{width:100%;height:300px;object-fit:cover;filter:saturate(.85) contrast(1.05)}
+.shop-copy .eyebrow{margin-bottom:18px}
+.shop-copy p{color:var(--steel);margin-top:18px;font-size:17px}
+.shop-stats{display:flex;gap:44px;margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
+.stat-num{font-size:clamp(40px,5vw,64px);font-weight:700;line-height:1;letter-spacing:-.02em}
+.stat .label{color:var(--steel);margin-top:10px}
+
+/* ============ proof (dark) ============ */
+.proof{background:var(--ink);color:#fff}
+.proof .eyebrow{color:var(--fog)}
+.proof .lead{color:var(--fog)}
+.rev-grid{display:grid;grid-template-columns:1fr;gap:20px}
+.rev-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:2px;padding:28px 24px;display:flex;flex-direction:column}
+.stars{display:inline-flex;gap:3px;margin-bottom:18px}
+.stars svg{width:15px;height:15px;fill:var(--accent)}
+.rev-quote{font-size:17px;line-height:1.65;color:rgba(255,255,255,.92);flex:1}
+.rev-meta{margin-top:24px;padding-top:18px;border-top:1px solid var(--line-dark)}
+.rev-name{font-weight:600;font-size:15px}
+.rev-src{display:block;margin-top:5px;color:var(--fog)}
+.rev-link{display:inline-flex;align-items:center;gap:10px;margin-top:36px;font-weight:600;font-size:16px;color:#fff;border-bottom:1px solid var(--line-dark);padding-bottom:6px;transition:border-color .15s}
+.rev-link:hover{border-color:var(--accent)}
+.rev-link svg{stroke:var(--accent);flex:none}
+.clients{margin-top:56px;padding-top:44px;border-top:1px solid var(--line-dark)}
+.clients > .label{color:var(--fog);margin-bottom:24px}
+.client-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line-dark)}
+.client-grid span{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;
+  letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.85);
+  padding:14px 4px;border-bottom:1px solid var(--line-dark);
+}
+.proof-stats{display:flex;flex-wrap:wrap;gap:40px;margin-top:40px}
+.proof-stats .stat-num{color:#fff}
+.proof-stats .label{color:var(--fog);margin-top:10px;max-width:20ch}
+.proof-note{margin-top:28px;font-size:14px;color:var(--fog);max-width:60ch}
+
+/* ============ contact ============ */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:stretch}
+.c-row{padding:22px 0;border-top:1px solid var(--line)}
+.c-row:last-child{border-bottom:1px solid var(--line)}
+.c-row .label{color:var(--steel);margin-bottom:8px}
+.c-row p,.c-row a{font-size:18px;font-weight:500}
+.c-phone a{font-size:clamp(32px,3.5vw,44px);font-weight:700;letter-spacing:-.02em;line-height:1.1;display:inline-block;padding:4px 0}
+.c-phone a:hover{color:var(--steel)}
+.c-note{font-size:15px;color:var(--steel);margin-top:6px}
+.map{border-radius:2px;overflow:hidden;border:1px solid var(--line);min-height:320px}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(1) contrast(1.05);transition:filter .3s}
+.map:hover iframe{filter:none}
+
+/* ============ CTA band ============ */
+.cta{position:relative;background:var(--ink);overflow:hidden}
+.cta-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 65%}
+.cta-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.86),rgba(8,8,8,.55))}
+.cta-content{position:relative;max-width:var(--max);margin:0 auto;padding:80px 20px;text-align:left}
+.cta .eyebrow{color:rgba(255,255,255,.75);margin-bottom:18px}
+.cta h2{color:#fff;max-width:18ch}
+.cta p{color:rgba(255,255,255,.8);margin-top:16px;font-size:17px;max-width:48ch}
+.cta .btn{margin-top:28px;width:100%}
+.cta-hours{margin-top:18px;color:rgba(255,255,255,.65)}
+
+/* ============ footer ============ */
+footer{background:var(--ink);color:#fff;padding:56px 0;border-top:1px solid var(--line-dark)}
+.foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
+.foot-fact{margin-top:14px;color:var(--fog);font-size:15px;max-width:42ch}
+.foot-meta .label{color:var(--fog)}
+.foot-meta a{font-weight:600;font-size:18px;display:inline-block;padding:6px 0}
+.foot-meta a:hover{color:var(--accent)}
+.foot-legal{margin-top:44px;padding-top:22px;border-top:1px solid var(--line-dark);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--fog)}
+
+/* ============ mobile call bar ============ */
+.callbar{
+  display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;
+  background:var(--accent);color:var(--ink);height:60px;
+  align-items:center;justify-content:center;gap:10px;
+  font-weight:700;font-size:17px;letter-spacing:.01em;
+  box-shadow:0 -8px 24px rgba(0,0,0,.12);
+}
+.callbar svg{stroke:var(--ink);flex:none}
+
+/* ============================================================
+   TABLET ≥ 768
+============================================================ */
+@media (min-width:768px){
+  body{padding-bottom:0}
+  .callbar{display:none}
+  .wrap{padding:0 24px}
+  section{padding:96px 0}
+  .sec-head{margin-bottom:56px}
+  .nav-inner{height:68px;padding:0 24px;gap:32px}
+  .wm-name{font-size:19px}
+  .call-full{display:inline}
+  .call-short{display:none}
+  .hero{min-height:82vh}
+  .hero-content{padding:140px 24px 72px}
+  .hero-ctas{flex-direction:row;gap:16px;margin-top:36px}
+  .hero-ctas .btn{width:auto}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .svc-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+  .tri-grid{grid-template-columns:repeat(3,1fr);gap:24px}
+  .tri-grid img{height:260px}
+  .shop-grid{grid-template-columns:1fr 1fr;gap:56px}
+  .shop-photo img{height:460px}
+  .rev-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+  .client-grid{grid-template-columns:repeat(3,1fr);column-gap:32px}
+  .contact-grid{grid-template-columns:1fr 1fr;gap:56px}
+  .map{min-height:440px}
+  .cta-content{padding:120px 24px}
+  .cta .btn{width:auto}
+  .trust-cell{padding:30px 24px}
+}
+
+/* ============================================================
+   DESKTOP ≥ 1024
+============================================================ */
+@media (min-width:1024px){
+  .topbar{display:block;background:var(--ink);color:var(--fog)}
+  .topbar-inner{max-width:var(--max);margin:0 auto;padding:9px 24px;display:flex;justify-content:space-between;gap:24px}
+  .nav-links{display:flex;gap:32px;margin-left:auto}
+  .nav-links a{font-weight:500;font-size:15px;letter-spacing:.01em;color:var(--ink);padding:10px 0}
+  .nav-links a:hover{color:var(--steel)}
+  .nav .btn{margin-left:0}
+  .hero{min-height:max(620px, calc(100vh - 103px))}
+  section{padding:120px 0}
+  .svc-grid{grid-template-columns:repeat(3,1fr)}
+  .rev-grid{grid-template-columns:repeat(3,1fr)}
+  .client-grid{grid-template-columns:repeat(4,1fr)}
+  .trust-grid{grid-template-columns:repeat(4,1fr)}
+  .trust-cell{border-top:none!important;border-left:1px solid var(--line)}
+  .trust-cell:first-child{border-left:none}
+  .tri-grid img{height:300px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner label">
+    <span>Licensed Utah electrical contractor &middot; E200 #311878-5501</span>
+    <span>Mon&ndash;Fri 8&ndash;5 &middot; West Jordan, UT</span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="wordmark" aria-label="Bateman Brothers Electric — home">
+      <span class="wm-name">Bateman Brothers Electric</span>
+      <span class="wm-sub">Three Generations &middot; Est. 1996</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:+18012314139" class="btn btn-accent">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="call-full">(801) 231-4139</span><span class="call-short">Call</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" style="padding:0">
+  <img class="hero-img" src="assets/hero.jpg" alt="Electrician in a hard hat wiring a service panel" fetchpriority="high">
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="label eyebrow">West Jordan, Utah &middot; Est. 1996</p>
+    <h1>Three generations of electricians on the Wasatch Front.</h1>
+    <p class="lead">Bateman Brothers Electric is Kelly and Lisa Bateman's family shop — master electricians handling panels, rewires, hot tubs, generators, and lighting across the Salt Lake Valley.</p>
+    <p class="hero-rating">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.26L21 9.27l-4.9 4.43L17.4 21 12 17.5 6.6 21l1.3-7.3L3 9.27l6.1-1.01z"/></svg>
+      <strong>4.6</strong>
+      <a href="https://reviews.birdeye.com/bateman-brothers-electric-148921669682921" target="_blank" rel="noopener">22 Google reviews</a>
+    </p>
+    <div class="hero-ctas">
+      <a href="tel:+18012314139" class="btn btn-accent">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (801) 231-4139
+      </a>
+      <a href="#contact" class="btn btn-ghost">Get a free estimate</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust" role="region" aria-label="Bateman Brothers Electric at a glance">
+  <div class="trust-grid">
+    <div class="trust-cell">
+      <p class="label">In business since</p>
+      <strong>1996 &mdash; 30 years</strong>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Utah license</p>
+      <strong>E200 #311878-5501</strong>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Permitted projects on record</p>
+      <strong>147 since 2018</strong>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Estimates</p>
+      <strong>Always free</strong>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">What we do</p>
+      <h2>Residential and commercial, panel to fixture.</h2>
+      <p class="lead">Licensed work, done to code, by the family that answers the phone.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <span class="svc-tag">Our specialty</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></svg>
+        <h3>Remodels &amp; Home Rewiring</h3>
+        <p>Kitchens, basements, whole-home rewires. It's been the heart of the shop since 1996.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7.5h2.5"/><path d="M12.5 7.5H15"/><path d="M9 11.5h2.5"/><path d="M12.5 11.5H15"/><path d="M9 15.5h2.5"/><path d="M12.5 15.5H15"/></svg>
+        <h3>Panel &amp; Service Upgrades</h3>
+        <p>Modern panels and service changes with the capacity for everything your home runs.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 5 13h6l-1 9 8-11h-6l1-9z"/></svg>
+        <h3>Troubleshooting &amp; Repairs</h3>
+        <p>Dead outlets, tripping breakers, flickering lights. We find the real cause and fix it.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8z"/></svg>
+        <h3>Hot Tub &amp; Spa Wiring</h3>
+        <p>Dedicated circuits, GFCI protection, and safe, code-compliant hookups for hot tubs and spas.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="16" height="10" rx="2"/><path d="M22 11v2"/><path d="M6.5 11v2"/><path d="M10.5 11v2"/><path d="M14.5 11v2"/></svg>
+        <h3>Generator Install &amp; Repair</h3>
+        <p>Backup generator installs and repairs so the power stays on when the grid doesn't.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>
+        <h3>Lighting Design, Security &amp; Landscape</h3>
+        <p>Indoor and outdoor lighting design — recessed, security, and landscape lighting that earns its keep.</p>
+      </div>
+    </div>
+    <div class="svc-also">
+      <p class="label">Also on the truck</p>
+      <p><strong>Home theater &amp; surround sound wiring</strong> &middot; <strong>Phone, TV &amp; data cabling</strong> &middot; <strong>Motor control work</strong> &middot; <strong>Commercial &amp; light industrial</strong> &middot; <strong>Rocky Mountain Power energy audits</strong> — let us show you how much you could be saving.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WORK TRIPTYCH -->
+<section class="workband" id="work" aria-label="The work">
+  <div class="wrap">
+    <div class="tri-grid">
+      <figure>
+        <img src="assets/panelwork.jpg" alt="Rows of breakers and labeled wiring inside an electrical cabinet" loading="lazy">
+        <figcaption>Panels &amp; service</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/wiring.jpg" alt="Electrician fastening a meter box to an exterior wall" loading="lazy">
+        <figcaption>Wiring &amp; troubleshooting</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/lighting.jpg" alt="Warm filament bulbs hanging in a dark room" loading="lazy">
+        <figcaption>Lighting design</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="shop" id="about">
+  <div class="wrap shop-grid">
+    <div class="shop-photo">
+      <img src="assets/shop.jpg" alt="A wall of well-used hand tools in a workshop" loading="lazy">
+    </div>
+    <div class="shop-copy">
+      <p class="label eyebrow">The shop</p>
+      <h2>A family name on every job since 1996.</h2>
+      <p>Bateman Brothers Electric is exactly what it sounds like — a Bateman family shop. Kelly Bateman incorporated the company in 1995 and has run it out of West Jordan ever since, with Lisa Bateman keeping the books and three generations of electrical service to the Wasatch Front behind the name.</p>
+      <p>There's no dispatcher and no sales quota. The master electrician who picks up the phone is the one who shows up — which is why, by our own count, 90% of our work comes from customers who've called before.</p>
+      <div class="shop-stats">
+        <div class="stat">
+          <p class="stat-num">30</p>
+          <p class="label">Years in West Jordan</p>
+        </div>
+        <div class="stat">
+          <p class="stat-num">90%</p>
+          <p class="label">Return customers</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF: REVIEWS + TRACK RECORD -->
+<section class="proof" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Reviews &amp; track record</p>
+      <h2>Thirty years of receipts.</h2>
+      <p class="lead">Rated 4.6 stars across 22 Google reviews — and a commercial client list most small shops can't match.</p>
+    </div>
+    <div class="rev-grid">
+      <article class="rev-card">
+        <div class="stars" aria-label="5 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L21 9.27l-4.9 4.43L17.4 21 12 17.5 6.6 21l1.3-7.3L3 9.27l6.1-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L21 9.27l-4.9 4.43L17.4 21 12 17.5 6.6 21l1.3-7.3L3 9.27l6.1-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L21 9.27l-4.9 4.43L17.4 21 12 17.5 6.6 21l1.3-7.3L3 9.27l6.1-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L21 9.27l-4.9 4.43L17.4 21 12 17.5 6.6 21l1.3-7.3L3 9.27l6.1-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L21 9.27l-4.9 4.43L17.4 21 12 17.5 6.6 21l1.3-7.3L3 9.27l6.1-1.01z"/></svg>
+        </div>
+        <p class="rev-quote">"Came out extremely quickly and got my garbage disposal power running again. Great professional workers Tadd came out and helped me he is a nice guy and did great work. Thanks Kelly!"</p>
+        <div class="rev-meta">
+          <p class="rev-name">Matt T.</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </article>
+      <article class="rev-card">
+        <div class="stars" aria-label="5 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L21 9.27l-4.9 4.43L17.4 21 12 17.5 6.6 21l1.3-7.3L3 9.27l6.1-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L21 9.27l-4.9 4.43L17.4 21 12 17.5 6.6 21l1.3-7.3L3 9.27l6.1-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L21 9.27l-4.9 4.43L17.4 21 12 17.5 6.6 21l1.3-7.3L3 9.27l6.1-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L21 9.27l-4.9 4.43L17.4 21 12 17.5 6.6 21l1.3-7.3L3 9.27l6.1-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L21 9.27l-4.9 4.43L17.4 21 12 17.5 6.6 21l1.3-7.3L3 9.27l6.1-1.01z"/></svg>
+        </div>
+        <p class="rev-quote">"Impressed with their punctuality, communication, professionalism and follow-up."</p>
+        <div class="rev-meta">
+          <p class="rev-name">C. A. Van Zante</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </article>
+      <article class="rev-card">
+        <div class="stars" aria-label="5 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L21 9.27l-4.9 4.43L17.4 21 12 17.5 6.6 21l1.3-7.3L3 9.27l6.1-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L21 9.27l-4.9 4.43L17.4 21 12 17.5 6.6 21l1.3-7.3L3 9.27l6.1-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L21 9.27l-4.9 4.43L17.4 21 12 17.5 6.6 21l1.3-7.3L3 9.27l6.1-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L21 9.27l-4.9 4.43L17.4 21 12 17.5 6.6 21l1.3-7.3L3 9.27l6.1-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26L21 9.27l-4.9 4.43L17.4 21 12 17.5 6.6 21l1.3-7.3L3 9.27l6.1-1.01z"/></svg>
+        </div>
+        <p class="rev-quote">"Great group of people. Always nice to see the Bateman's&hellip;"</p>
+        <div class="rev-meta">
+          <p class="rev-name">Paul Pritchett</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </article>
+    </div>
+    <a class="rev-link" href="https://reviews.birdeye.com/bateman-brothers-electric-148921669682921" target="_blank" rel="noopener">
+      Read all 22 reviews
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+    </a>
+    <div class="clients">
+      <p class="label">Commercial accounts we've wired</p>
+      <div class="client-grid">
+        <span>McDonald's</span>
+        <span>Cyprus Credit Union</span>
+        <span>Boise Cascade</span>
+        <span>BMC West</span>
+        <span>Extra Space Storage</span>
+        <span>Western Paper Co.</span>
+        <span>Zellerbach Paper Co.</span>
+        <span>Standard Supply</span>
+        <span>Paulsen Construction</span>
+        <span>Interwest Construction</span>
+        <span>Shurtleff &amp; Andrews</span>
+        <span>Poleti Clothing</span>
+      </div>
+      <div class="proof-stats">
+        <div class="stat">
+          <p class="stat-num">147</p>
+          <p class="label">Permitted projects on public record since 2018</p>
+        </div>
+        <div class="stat">
+          <p class="stat-num">E200</p>
+          <p class="label">Utah general electrical license #311878-5501</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Get in touch</p>
+      <h2>Call the shop. A Bateman picks up.</h2>
+      <p class="lead">Estimates are always free. Serving West Jordan, South Jordan, Sandy, and the Salt Lake Valley.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="c-row c-phone">
+          <p class="label">Call us</p>
+          <a href="tel:+18012314139">(801) 231-4139</a>
+          <p class="c-note">You'll talk to the electrician, not a call center.</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Based in</p>
+          <p>West Jordan, UT 84081</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Hours</p>
+          <p>Mon&ndash;Fri, 8am&ndash;5pm</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Service area</p>
+          <p>West Jordan &middot; South Jordan &middot; Sandy &middot; the Salt Lake Valley</p>
+        </div>
+      </div>
+      <div class="map">
+        <iframe src="https://maps.google.com/maps?q=West+Jordan,+UT+84081&output=embed" title="Map of West Jordan, Utah — Bateman Brothers Electric service area" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta" style="padding:0" aria-label="Free estimates">
+  <img class="cta-img" src="assets/home-dusk.jpg" alt="A home glowing with interior and exterior lighting at dusk" loading="lazy">
+  <div class="cta-scrim" aria-hidden="true"></div>
+  <div class="cta-content">
+    <p class="label eyebrow">Free estimates</p>
+    <h2>Need electrical work done right?</h2>
+    <p>Thirty years in, most of our jobs still start the same way — a neighbor calls, Kelly answers.</p>
+    <a href="tel:+18012314139" class="btn btn-accent">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (801) 231-4139
+    </a>
+    <p class="cta-hours label">Mon&ndash;Fri 8&ndash;5 &middot; West Jordan, UT</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="wordmark" style="color:#fff">
+          <span class="wm-name">Bateman Brothers Electric</span>
+          <span class="wm-sub" style="color:var(--fog)">Three Generations &middot; Est. 1996</span>
+        </div>
+        <p class="foot-fact">Family-owned and operated. Three generations of electrical service to the Wasatch Front.</p>
+      </div>
+      <div class="foot-meta">
+        <p class="label">West Jordan, UT 84081 &middot; Mon&ndash;Fri 8&ndash;5</p>
+        <p style="margin-top:8px"><a href="tel:+18012314139">(801) 231-4139</a></p>
+      </div>
+    </div>
+    <div class="foot-legal label">
+      <span>&copy; 2026 Bateman Brothers Electric, Inc.</span>
+      <span>Utah licensed electrical contractor &middot; E200 #311878-5501</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+18012314139" class="callbar" aria-label="Call Bateman Brothers Electric at (801) 231-4139">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call Bateman Brothers &mdash; (801) 231-4139
+</a>
+
+</body>
+</html>

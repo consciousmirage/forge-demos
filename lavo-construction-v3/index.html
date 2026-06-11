@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lavo Construction — Owner-Operated Remodeling in Draper, UT</title>
+<meta name="description" content="Bathrooms, kitchens, basements, stairs, paint, and the punch list — owner Oscar runs every Lavo Construction job himself. Licensed Utah contractor serving Draper, Sandy, South Jordan & Riverton. Call (385) 505-4388.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Lavo Construction",
+  "telephone": "+13855054388",
+  "address": {"@type": "PostalAddress","addressLocality": "Draper","addressRegion": "UT","postalCode": "84020"},
+  "areaServed": ["Draper UT","Sandy UT","South Jordan UT","Riverton UT"],
+  "openingHours": ["Mo-Fr 08:00-17:00","Sa 08:00-12:00"]
+}
+</script>
+<style>
+:root{
+  --ink:#141414;
+  --ink-2:#1d1d1b;
+  --steel:#5d5b57;
+  --fog:#a8a5a0;
+  --paper:#ffffff;
+  --chalk:#f5f4f1;
+  --line:#e6e4df;
+  --line-dark:#2b2a27;
+  --accent:#e29b6a;
+  --accent-hover:#eaae84;
+  --max:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Barlow',ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:16px;line-height:1.6;color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* ---- type voices ---- */
+.label{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;
+  font-size:13px;letter-spacing:.14em;text-transform:uppercase;line-height:1.25;
+}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--steel)}
+.eyebrow::before{content:"";width:18px;height:2px;background:var(--accent);flex:none}
+h1{font-size:clamp(40px,7vw,80px);font-weight:700;line-height:1.04;letter-spacing:-.03em}
+h2{font-size:clamp(32px,4.5vw,52px);font-weight:700;line-height:1.08;letter-spacing:-.022em}
+h3{font-size:20px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.lead{font-size:18px;color:var(--steel);max-width:56ch}
+
+/* ---- buttons ---- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;
+  font-weight:600;font-size:16px;letter-spacing:.01em;line-height:1;
+  padding:18px 30px;min-height:48px;transition:background .15s,border-color .15s,color .15s;
+  white-space:nowrap;
+}
+.btn svg{flex:none}
+.btn-accent{background:var(--accent);color:var(--ink)}
+.btn-accent:hover{background:var(--accent-hover)}
+.btn-ghost{border:1px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{border-color:#fff}
+
+/* ---- nav ---- */
+.nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.nav-inner{height:64px;display:flex;align-items:center;gap:32px;max-width:var(--max);margin:0 auto;padding:0 20px}
+.wordmark{display:flex;flex-direction:column;justify-content:center;line-height:1;min-width:0;min-height:44px}
+.wm-name{font-weight:700;font-size:18px;letter-spacing:-.015em;white-space:nowrap}
+.wm-sub{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin-top:4px;white-space:nowrap}
+.nav-links{display:flex;gap:28px;margin-left:auto}
+.nav-links a{font-weight:500;font-size:15px;color:var(--ink)}
+.nav-links a:hover{color:var(--steel)}
+.nav .btn{padding:13px 22px;font-size:14px;min-height:44px;margin-left:auto}
+.nav-links + .btn{margin-left:0}
+.call-short{display:none}
+
+/* ---- hero ---- */
+.hero{position:relative;min-height:calc(100svh - 64px);display:flex;align-items:flex-end;background:var(--ink);overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 45%}
+.hero-scrim{position:absolute;inset:0;
+  background:
+    linear-gradient(to top,rgba(8,8,8,.82) 0%,rgba(8,8,8,.25) 45%,rgba(8,8,8,.3) 100%),
+    linear-gradient(78deg,rgba(8,8,8,.82) 0%,rgba(8,8,8,.45) 52%,rgba(8,8,8,.12) 100%);
+}
+.hero-content{position:relative;width:100%;max-width:var(--max);margin:0 auto;padding:120px 20px 48px}
+.hero .eyebrow{color:rgba(255,255,255,.75);margin-bottom:20px}
+.hero h1{color:#fff;max-width:19ch}
+.hero .lead{color:rgba(255,255,255,.8);margin-top:20px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.hero-note{margin-top:22px;color:rgba(255,255,255,.55);font-size:14px}
+.hero-note a{color:rgba(255,255,255,.85);border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:1px}
+
+/* ---- spec strip ---- */
+.trust{border-bottom:1px solid var(--line);background:var(--paper)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);max-width:var(--max);margin:0 auto}
+.trust-cell{padding:30px 24px;border-left:1px solid var(--line)}
+.trust-cell:first-child{border-left:none}
+.trust-cell .label{color:var(--steel);margin-bottom:8px}
+.trust-cell strong{font-size:19px;font-weight:600;letter-spacing:-.01em;display:block}
+.trust-cell .sub{font-size:14px;color:var(--steel);margin-top:3px}
+.stars{display:inline-flex;gap:2px;vertical-align:-1px;margin-right:6px}
+.stars svg{width:15px;height:15px;fill:var(--accent)}
+
+/* ---- sections ---- */
+section{padding:96px 0}
+.sec-head{max-width:64ch;margin-bottom:56px}
+.sec-head .eyebrow{margin-bottom:18px}
+.sec-head p{margin-top:18px}
+.dark{background:var(--ink);color:#fff}
+.dark .eyebrow{color:var(--fog)}
+.dark .lead{color:var(--fog)}
+
+/* ---- service photo cards ---- */
+.services{background:var(--chalk)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc-card{background:var(--paper);border:1px solid var(--line);border-radius:2px;overflow:hidden;transition:border-color .15s;display:flex;flex-direction:column}
+.svc-card:hover{border-color:var(--ink)}
+.svc-photo{aspect-ratio:4/3;overflow:hidden}
+.svc-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.05)}
+.svc-body{padding:24px 24px 28px}
+.svc-body h3{margin-bottom:8px}
+.svc-body p{font-size:15px;color:var(--steel)}
+
+/* ---- before / after ---- */
+.ba-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;align-items:start}
+.ba-item{position:relative}
+.ba-item img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px;filter:saturate(.85) contrast(1.05)}
+.ba-tag{position:absolute;top:14px;left:14px;z-index:1;background:var(--ink);color:#fff;padding:7px 12px 6px;border-radius:2px}
+.ba-tag.after{border-left:3px solid var(--accent);color:var(--accent)}
+.ba-cap{font-size:14px;color:var(--steel);margin-top:12px;line-height:1.5}
+.ba-cap em{font-style:normal;color:var(--ink);font-weight:500}
+
+/* ---- process ---- */
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.proc-step{border-top:1px solid var(--line);padding-top:24px}
+.proc-num{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:var(--steel)}
+.proc-step img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px;margin:18px 0 20px;filter:saturate(.85) contrast(1.05)}
+.proc-step h3{margin-bottom:8px}
+.proc-step p{font-size:15px;color:var(--steel)}
+.midcta{margin-top:64px;border:1px solid var(--line);border-radius:2px;padding:36px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:var(--chalk)}
+.midcta-txt strong{display:block;font-size:22px;font-weight:600;letter-spacing:-.01em}
+.midcta-txt span{color:var(--steel);font-size:15px}
+
+/* ---- reviews ---- */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rev-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:2px;padding:32px;display:flex;flex-direction:column}
+.rev-card .stars{margin-bottom:18px}
+.rev-quote{font-size:17px;line-height:1.6;color:rgba(255,255,255,.92);flex:1}
+.rev-meta{margin-top:26px;padding-top:18px;border-top:1px solid var(--line-dark)}
+.rev-name{font-weight:600;font-size:14px}
+.rev-src{display:block;margin-top:5px;color:var(--fog)}
+.pull{margin-top:56px;padding-top:48px;border-top:1px solid var(--line-dark);max-width:780px}
+.pull blockquote{font-size:clamp(22px,3vw,30px);font-weight:500;line-height:1.35;letter-spacing:-.015em;color:#fff}
+.pull figcaption{margin-top:18px;color:var(--fog)}
+.rev-link{display:inline-flex;align-items:center;gap:10px;margin-top:48px;font-weight:600;font-size:15px;color:#fff;border-bottom:1px solid var(--line-dark);padding-bottom:6px;transition:border-color .15s}
+.rev-link:hover{border-color:var(--accent)}
+.rev-link svg{stroke:var(--accent)}
+
+/* ---- about Oscar ---- */
+.shop-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.shop-photo{border-radius:2px;overflow:hidden}
+.shop-photo img{width:100%;height:100%;min-height:520px;object-fit:cover;filter:saturate(.85) contrast(1.05)}
+.shop-copy .eyebrow{margin-bottom:18px}
+.shop-copy p{color:var(--steel);margin-top:18px}
+.shop-stats{display:flex;gap:48px;margin-top:44px;padding-top:36px;border-top:1px solid var(--line)}
+.stat-num{font-size:clamp(38px,4.5vw,56px);font-weight:700;line-height:1;letter-spacing:-.02em}
+.stat .label{color:var(--steel);margin-top:10px}
+
+/* ---- gallery ---- */
+.gallery{background:var(--chalk);padding-bottom:104px}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gal-grid img{width:100%;height:100%;object-fit:cover;border-radius:2px;filter:saturate(.85) contrast(1.05)}
+.gal-tall{grid-row:span 2}
+.gal-grid > *{aspect-ratio:1/1}
+.gal-grid .gal-tall{aspect-ratio:auto}
+
+/* ---- contact ---- */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:stretch}
+.c-row{padding:24px 0;border-top:1px solid var(--line)}
+.c-row:last-child{border-bottom:1px solid var(--line)}
+.c-row .label{color:var(--steel);margin-bottom:8px}
+.c-row p,.c-row a{font-size:17px;font-weight:500}
+.c-phone a{display:inline-block;font-size:clamp(30px,3.5vw,42px);font-weight:700;letter-spacing:-.02em;line-height:1.1;padding:4px 0;min-height:44px}
+.c-phone a:hover{color:var(--steel)}
+.c-row .c-sub{font-size:14px;color:var(--steel);font-weight:400;margin-top:4px}
+.hours{width:100%;border-collapse:collapse;font-size:16px}
+.hours td{padding:3px 0;font-weight:500}
+.hours td:last-child{text-align:right;color:var(--steel)}
+.map{border-radius:2px;overflow:hidden;border:1px solid var(--line);min-height:420px}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;filter:grayscale(1) contrast(1.05);transition:filter .3s}
+.map:hover iframe{filter:none}
+
+/* ---- footer ---- */
+footer{background:var(--ink);color:#fff;padding:72px 0}
+.foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap}
+.foot-fact{margin-top:14px;color:var(--fog);font-size:15px;max-width:46ch}
+.foot-meta{text-align:right}
+.foot-meta .label{color:var(--fog)}
+.foot-meta a{font-weight:600;font-size:18px}
+.foot-meta a:hover{color:var(--accent)}
+.foot-towns{margin-top:44px;padding-top:24px;border-top:1px solid var(--line-dark);color:var(--fog)}
+.foot-legal{margin-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--fog)}
+.foot-legal a{border-bottom:1px solid var(--line-dark)}
+.foot-legal a:hover{color:#fff}
+
+/* ---- mobile call bar ---- */
+.callbar{display:none}
+
+/* ================= responsive ================= */
+@media (max-width:1020px){
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .proc-grid{grid-template-columns:repeat(2,1fr);row-gap:40px}
+  .rev-grid{grid-template-columns:1fr;max-width:680px}
+  .shop-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
+  .shop-photo img{min-height:380px}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-cell{border-left:none;border-top:1px solid var(--line)}
+  .trust-cell:nth-child(even){border-left:1px solid var(--line)}
+  .trust-cell:nth-child(-n+2){border-top:none}
+  .gal-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:768px){
+  section{padding:64px 0}
+  .nav-links{display:none}
+  .hero{min-height:calc(100svh - 64px)}
+  .hero h1 br{display:none}
+  .hero-content{padding:96px 20px calc(40px + 60px)}
+  .hero-ctas .btn{width:100%}
+  .sec-head{margin-bottom:40px}
+  .ba-grid{grid-template-columns:1fr}
+  .ba-item img{aspect-ratio:5/4}
+  .shop-stats{gap:32px;flex-wrap:wrap}
+  .midcta{padding:28px 24px}
+  .midcta .btn{width:100%}
+  .foot-meta{text-align:left}
+  body{padding-bottom:60px}
+  .callbar{
+    display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;
+    background:var(--accent);color:var(--ink);height:60px;
+    align-items:center;justify-content:center;gap:10px;
+    font-weight:700;font-size:17px;letter-spacing:.01em;
+    box-shadow:0 -8px 24px rgba(0,0,0,.12);
+  }
+  .callbar svg{stroke:var(--ink)}
+}
+@media (max-width:640px){
+  .svc-grid{grid-template-columns:1fr}
+  .trust-grid{grid-template-columns:1fr}
+  .trust-cell{border-left:none!important;border-top:1px solid var(--line);padding:20px}
+  .trust-cell:first-child{border-top:none}
+  .proc-grid{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+}
+@media (max-width:480px){
+  .call-full{display:none}
+  .call-short{display:inline}
+  .nav .btn{padding:12px 20px}
+  .wm-sub{letter-spacing:.16em}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="wordmark" aria-label="Lavo Construction — home">
+      <span class="wm-name">Lavo Construction</span>
+      <span class="wm-sub">Owner-Operated · Draper, UT</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#transformation">Before &amp; After</a>
+      <a href="#process">Process</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:+13855054388" class="btn btn-accent">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="call-full">(385) 505-4388</span><span class="call-short">Call</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO — Lavo's own photo: marble shower + vanity remodel (Yelp) -->
+<section class="hero" style="padding:0">
+  <img class="hero-img" src="assets/yelp_16.jpg" alt="Marble-tile walk-in shower with glass panel and white vanity, remodeled by Lavo Construction" fetchpriority="high">
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="label eyebrow">Lavo Construction · Draper, Utah</p>
+    <h1>The owner shows up. <br>The work shows&nbsp;it.</h1>
+    <p class="lead">Bathrooms, kitchens, basements, paint, and the punch list — Oscar runs every Lavo job himself, from the first walkthrough to the final coat.</p>
+    <div class="hero-ctas">
+      <a href="tel:+13855054388" class="btn btn-accent">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (385) 505-4388
+      </a>
+      <a href="#work" class="btn btn-ghost">See the work</a>
+    </div>
+    <p class="hero-note">Every photo on this page is a real Lavo job. <a href="https://www.yelp.com/biz_photos/lavo-construction-draper-3">All 68 are on Yelp.</a></p>
+  </div>
+</section>
+
+<!-- SPEC STRIP -->
+<div class="trust" role="region" aria-label="Lavo Construction credentials">
+  <div class="trust-grid">
+    <div class="trust-cell">
+      <p class="label">Licensed Utah Contractor</p>
+      <strong>#14251752-5501</strong>
+      <p class="sub">State of Utah</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Ownership</p>
+      <strong>Owner-operated</strong>
+      <p class="sub">Oscar is on every job</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">On Yelp</p>
+      <strong><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>4.7 · 13 reviews</strong>
+      <p class="sub">As of June 2026</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Hours</p>
+      <strong>Mon–Fri 8–5 · Sat 8–12</strong>
+      <p class="sub">Free estimates</p>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES — photo cards, all Lavo's own work -->
+<section class="services" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">What Oscar builds</p>
+      <h2>Six trades. One set of&nbsp;hands.</h2>
+      <p class="lead">No crews you've never met, no handoffs. The work below is photographed straight off Lavo's own jobs around the south valley.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <div class="svc-photo"><img src="assets/yelp_28.jpg" alt="Walk-in shower in marble-look tile with recessed niche, built by Lavo Construction" loading="lazy"></div>
+        <div class="svc-body">
+          <h3>Bathroom remodels</h3>
+          <p>Demo to grout — tubs, showers, tile, vanities, and glass, finished clean.</p>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-photo"><img src="assets/yelp_10.jpg" alt="Remodeled kitchen with wood cabinets and island, by Lavo Construction" loading="lazy"></div>
+        <div class="svc-body">
+          <h3>Kitchen remodels</h3>
+          <p>Cabinets, counters, backsplash, and lighting — built around how you cook.</p>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-photo"><img src="assets/yelp_23.jpg" alt="Finished basement hallway with new doors and wood flooring, by Lavo Construction" loading="lazy"></div>
+        <div class="svc-body">
+          <h3>Basement finishes</h3>
+          <p>Framing, drywall, doors, and floors — unfinished space turned into rooms you use.</p>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-photo"><img src="assets/yelp_09.jpg" alt="Custom open staircase with wood treads and black steel balusters, by Lavo Construction" loading="lazy"></div>
+        <div class="svc-body">
+          <h3>Stairs &amp; railings</h3>
+          <p>Open-tread stairs, steel balusters, and railing work most handymen won't touch.</p>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-photo"><img src="assets/yelp_11.jpg" alt="Built-in media wall with electric fireplace and lit shelving niches, by Lavo Construction" loading="lazy"></div>
+        <div class="svc-body">
+          <h3>Built-ins &amp; fireplace walls</h3>
+          <p>Media walls, lit niches, and crown molding with tight, clean joints.</p>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-photo"><img src="assets/yelp_18.jpg" alt="Deep green painted accent wall with built-in fireplace, painted by Lavo Construction" loading="lazy"></div>
+        <div class="svc-body">
+          <h3>Paint, trim &amp; repairs</h3>
+          <p>Interior and exterior paint, baseboard, drywall, doors — and the small jobs other contractors won't take.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER — Lavo's own captioned photos -->
+<section id="transformation">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Recent transformation</p>
+      <h2>One bathroom, start to&nbsp;finish.</h2>
+      <p class="lead">Three photos Oscar posted from the same job — captions are his.</p>
+    </div>
+    <div class="ba-grid">
+      <figure class="ba-item">
+        <span class="ba-tag label">Before</span>
+        <img src="assets/yelp_02.jpg" alt="Bathroom before remodel: dated vanity, mirror and shower curtain" loading="lazy">
+        <figcaption class="ba-cap"><em>“Before remodeling same bathroom”</em> — builder-grade vanity, curtain rod, no storage.</figcaption>
+      </figure>
+      <figure class="ba-item">
+        <span class="ba-tag after label">After</span>
+        <img src="assets/yelp_01.jpg" alt="Bathroom after remodel: navy accent wall, pedestal sink, subway-tiled tub surround and brass sconces" loading="lazy">
+        <figcaption class="ba-cap"><em>“After beautiful remodeling and a new customer happy”</em> — navy accent wall, subway-tiled tub, brass fixtures.</figcaption>
+      </figure>
+      <figure class="ba-item">
+        <span class="ba-tag after label">After</span>
+        <img src="assets/yelp_03.jpg" alt="Same remodeled bathroom from the doorway: glass shower door and gold-framed mirror" loading="lazy">
+        <figcaption class="ba-cap"><em>“After and finish remodeling”</em> — the same room from the door: new glass, new light, new everything.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="services" id="process" style="background:var(--chalk)">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">How a Lavo job runs</p>
+      <h2>Four steps. No mystery.</h2>
+      <p class="lead">One Yelp reviewer counted: Oscar was “the first of four painters to give an estimate … in less than one day.” That speed is the whole system.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="proc-step">
+        <p class="proc-num">STEP 01</p>
+        <img src="assets/yelp_15.jpg" alt="Built-in cabinet framing in progress on a Lavo Construction job" loading="lazy">
+        <h3>Call or text Oscar</h3>
+        <p>You talk to the person who'll do the work — not a dispatcher. Photos by text are welcome.</p>
+      </div>
+      <div class="proc-step">
+        <p class="proc-num">STEP 02</p>
+        <img src="assets/yelp_19.jpg" alt="Mudroom built-in under construction with tile staged on a Lavo job" loading="lazy">
+        <h3>Walkthrough &amp; a straight bid</h3>
+        <p>A free estimate with honest numbers — reviewers call his bids “clear” and “honest.”</p>
+      </div>
+      <div class="proc-step">
+        <p class="proc-num">STEP 03</p>
+        <img src="assets/yelp_12.jpg" alt="Kitchen sink cabinet mid-install with drills still on site" loading="lazy">
+        <h3>The build</h3>
+        <p>Oscar on site, on time — often starting within days of the walkthrough.</p>
+      </div>
+      <div class="proc-step">
+        <p class="proc-num">STEP 04</p>
+        <img src="assets/yelp_05.jpg" alt="Finished attic bathroom with soaking tub, shop vacuum still on site for cleanup" loading="lazy">
+        <h3>Final walkthrough</h3>
+        <p>The punch list gets closed and the site gets cleaned before he calls it done.</p>
+      </div>
+    </div>
+    <div class="midcta">
+      <div class="midcta-txt">
+        <strong>Walk the job with Oscar this week.</strong>
+        <span>Free estimates · Mon–Fri 8–5, Sat 8–12</span>
+      </div>
+      <a href="tel:+13855054388" class="btn btn-accent">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (385) 505-4388
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="dark" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">In their words</p>
+      <h2>13 reviews. One pattern: he shows up.</h2>
+      <p class="lead">Every quote below is verbatim from Lavo Construction's Yelp page.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <span class="stars" aria-label="5 star review"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">“Remodeled our basement and he did an excellent job. Shows up on time and pays attention to every detail and honest with his bids and prices. He is a great communicator and very upbeat and positive to work with. We had a great overall experience with Oscar at Lavo Construction and we highly recommend him and his services.”</p>
+        <div class="rev-meta">
+          <p class="rev-name">Jacque L. — Draper, UT</p>
+          <span class="rev-src label">Yelp · Feb 2026</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-label="5 star review"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">“Oscar was a pleasure to work with. His bid on a large painting job was clear and arrived quickly: he was the first of four painters to give an estimate through Yelp … His work exceeded all expectations. I was so impressed from the outset that I expanded the project by 50%.”</p>
+        <div class="rev-meta">
+          <p class="rev-name">Amnon S. — Salt Lake City, UT</p>
+          <span class="rev-src label">Yelp · Feb 2025</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-label="5 star review"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">“Oscar did a couple of separate projects for us (drywall and baseboard replacement, and an outdoor fence). He did great work, was reliable, and always showed up on time. Highly recommend!”</p>
+        <div class="rev-meta">
+          <p class="rev-name">Katia B. — Salt Lake City, UT</p>
+          <span class="rev-src label">Yelp · Oct 2025</span>
+        </div>
+      </div>
+    </div>
+    <figure class="pull">
+      <blockquote>“I almost hate to leave such a good review because I don't want him to get so busy that he doesn't have time to do our repairs!”</blockquote>
+      <figcaption class="label">Debra J. — American Fork, UT · Yelp, Jul 2024</figcaption>
+    </figure>
+    <a class="rev-link" href="https://www.yelp.com/biz/lavo-construction-draper-3">
+      Read all 13 reviews on Yelp
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT OSCAR -->
+<section id="about">
+  <div class="wrap shop-grid">
+    <div class="shop-photo">
+      <img src="assets/yelp_06.jpg" alt="Oscar's job site mid-build: custom steel staircase install with his Milwaukee tool bag" loading="lazy">
+    </div>
+    <div class="shop-copy">
+      <p class="label eyebrow">About Lavo</p>
+      <h2>The guy who bids your job is the guy who builds&nbsp;it.</h2>
+      <p>Lavo Construction is Oscar — a licensed Utah contractor based in Draper who answers his own phone, writes his own bids, and swings his own hammer. No sales layer, no rotating crews.</p>
+      <p>Read the reviews and one phrase keeps coming back: <em>shows up on time</em>. Fast responses, honest numbers, and a clean site at the end — that's the whole pitch, and his customers wrote it for him.</p>
+      <div class="shop-stats">
+        <div class="stat">
+          <p class="stat-num">4.7</p>
+          <p class="label">Yelp rating · 13 reviews</p>
+        </div>
+        <div class="stat">
+          <p class="stat-num">68</p>
+          <p class="label">Job photos on Yelp</p>
+        </div>
+        <div class="stat">
+          <p class="stat-num">1</p>
+          <p class="label">Owner on every job</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" aria-label="More Lavo Construction project photos">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:40px">
+      <p class="label eyebrow">From the job sites</p>
+      <h2>More of the work.</h2>
+    </div>
+    <div class="gal-grid">
+      <div class="gal-tall"><img src="assets/yelp_21.jpg" alt="Slate-tiled exterior porch steps by Lavo Construction" loading="lazy"></div>
+      <div><img src="assets/yelp_29.jpg" alt="Two-story home exterior with dark modern siding, a Lavo Construction project" loading="lazy"></div>
+      <div><img src="assets/yelp_13.jpg" alt="Remodeled bathroom with double vanity and large-format tile floor" loading="lazy"></div>
+      <div class="gal-tall"><img src="assets/yelp_26.jpg" alt="Bedroom with new sliding barn door and wood flooring" loading="lazy"></div>
+      <div><img src="assets/yelp_25.jpg" alt="Bathroom vanity with new countertop and fixtures" loading="lazy"></div>
+      <div><img src="assets/yelp_22.jpg" alt="Finished basement room with new wood floor and fresh paint" loading="lazy"></div>
+      <div><img src="assets/yelp_17.jpg" alt="Garage interior finished with fresh drywall and paint" loading="lazy"></div>
+      <div><img src="assets/yelp_27.jpg" alt="Long bathroom vanity with white counter after remodel" loading="lazy"></div>
+      <div><img src="assets/yelp_24.jpg" alt="New wood-floor hallway leading to a remodeled bathroom" loading="lazy"></div>
+      <div><img src="assets/yelp_08.jpg" alt="Kitchen corner with two-tone cabinets and subway-tile backsplash after remodel" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Get the walkthrough</p>
+      <h2>Call Oscar. Text him photos.</h2>
+      <p class="lead">No forms, no call centers — the number below rings the owner. Serving Draper, Sandy, South Jordan &amp; Riverton.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="c-row c-phone">
+          <p class="label">Call or text</p>
+          <a href="tel:+13855054388">(385) 505-4388</a>
+          <p class="c-sub">Texting photos of your project is the fastest way to a bid.</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Hours</p>
+          <table class="hours">
+            <tr><td>Monday – Friday</td><td>8:00 AM – 5:00 PM</td></tr>
+            <tr><td>Saturday</td><td>8:00 AM – 12:00 PM</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+          </table>
+        </div>
+        <div class="c-row">
+          <p class="label">Based in</p>
+          <p>Draper, UT 84020</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Good to know</p>
+          <p>Free estimates · Accepts Zelle · Licensed Utah contractor #14251752-5501</p>
+        </div>
+      </div>
+      <div class="map">
+        <iframe src="https://maps.google.com/maps?q=Draper,+UT+84020&output=embed" title="Map showing Lavo Construction's Draper, Utah service area" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="wordmark" style="color:#fff">
+          <span class="wm-name">Lavo Construction</span>
+          <span class="wm-sub" style="color:var(--fog)">Owner-Operated · Draper, UT</span>
+        </div>
+        <p class="foot-fact">Bathrooms · Kitchens · Basements · Stairs &amp; railings · Built-ins · Tile · Paint, trim &amp; repairs</p>
+      </div>
+      <div class="foot-meta">
+        <p class="label">Utah Contractor #14251752-5501</p>
+        <p style="margin-top:10px"><a href="tel:+13855054388">(385) 505-4388</a></p>
+      </div>
+    </div>
+    <div class="foot-towns label">Serving Draper · Sandy · South Jordan · Riverton · and the Salt Lake south valley</div>
+    <div class="foot-legal label">
+      <span>© 2026 Lavo Construction</span>
+      <a href="https://www.yelp.com/biz/lavo-construction-draper-3">Lavo Construction on Yelp</a>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+13855054388" class="callbar" aria-label="Call Lavo Construction at (385) 505-4388">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call Oscar — (385) 505-4388
+</a>
+
+</body>
+</html>

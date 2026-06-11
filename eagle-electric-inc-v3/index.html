@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eagle Electric Inc — Commercial Electrical Contractor, Midvale UT · Since 1987</title>
+<meta name="description" content="Commercial electric work done with pride since 1987. New construction, remodels, tenant improvements &amp; 24-hour service in the Salt Lake Valley. Call (801) 255-8089.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "Eagle Electric Inc",
+  "telephone": "+18012558089",
+  "url": "https://www.eagle-electric-inc.net/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "7000 S Commerce Park Dr Ste 100",
+    "addressLocality": "Midvale",
+    "addressRegion": "UT",
+    "postalCode": "84047"
+  },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "31" },
+  "openingHours": "Mo-Th 07:00-16:30",
+  "foundingDate": "1987"
+}
+</script>
+<style>
+:root{
+  --ink:#141414;
+  --ink-2:#1d1d1b;
+  --steel:#5d5b57;
+  --fog:#a8a5a0;
+  --paper:#ffffff;
+  --chalk:#f5f4f1;
+  --line:#e6e4df;
+  --line-dark:#2b2a27;
+  --accent:#ffb000;
+  --accent-hover:#ffc23d;
+  --max:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Barlow',ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:16px;line-height:1.6;color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* ---------- type voices ---------- */
+.label{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;
+  font-size:13px;letter-spacing:.14em;text-transform:uppercase;line-height:1.3;
+}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--steel)}
+.eyebrow::before{content:"";width:18px;height:2px;background:var(--accent);flex:none}
+.dark .eyebrow{color:var(--fog)}
+h1{font-size:clamp(40px,9.5vw,80px);font-weight:700;line-height:1.04;letter-spacing:-.03em}
+h2{font-size:clamp(32px,4.5vw,52px);font-weight:700;line-height:1.07;letter-spacing:-.022em}
+h3{font-size:20px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.lead{font-size:18px;color:var(--steel);max-width:56ch}
+.dark .lead{color:var(--fog)}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;
+  font-weight:600;font-size:16px;letter-spacing:.01em;line-height:1;
+  padding:17px 28px;min-height:50px;transition:background .15s,border-color .15s;
+  white-space:nowrap;
+}
+.btn svg{flex:none}
+.btn-accent{background:var(--accent);color:var(--ink)}
+.btn-accent:hover{background:var(--accent-hover)}
+.btn-ghost{border:1px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{border-color:#fff}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:50;background:var(--paper);box-shadow:0 1px 0 var(--line)}
+.nav-inner{height:64px;display:flex;align-items:center;gap:24px;max-width:var(--max);margin:0 auto;padding:0 20px}
+.nav-logo img{height:38px;width:auto}
+.nav-links{display:none}
+.nav .btn{margin-left:auto;padding:13px 20px;font-size:15px;min-height:44px}
+.call-short{display:inline}
+.call-full{display:none}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:86svh;display:flex;align-items:flex-end;background:var(--ink);overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero-scrim{position:absolute;inset:0;
+  background:
+    linear-gradient(to top,rgba(8,8,8,.85) 0%,rgba(8,8,8,.35) 45%,rgba(8,8,8,.45) 100%),
+    linear-gradient(78deg,rgba(8,8,8,.88) 0%,rgba(8,8,8,.5) 55%,rgba(8,8,8,.2) 100%);
+}
+.hero-content{position:relative;width:100%;max-width:var(--max);margin:0 auto;padding:120px 20px 56px}
+.hero .eyebrow{color:rgba(255,255,255,.75);margin-bottom:20px}
+.hero h1{color:#fff;max-width:14ch}
+.hero .lead{color:rgba(255,255,255,.8);margin-top:20px}
+.hero-ctas{display:flex;flex-direction:column;gap:12px;margin-top:32px}
+.hero-ctas .btn{width:100%}
+
+/* ---------- trust strip ---------- */
+.trust{border-bottom:1px solid var(--line);background:var(--paper)}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;max-width:var(--max);margin:0 auto}
+.trust-cell{padding:22px 20px;border-top:1px solid var(--line)}
+.trust-cell:nth-child(-n+2){border-top:none}
+.trust-cell:nth-child(even){border-left:1px solid var(--line)}
+.trust-cell .label{color:var(--steel);margin-bottom:8px}
+.trust-cell strong{font-size:19px;font-weight:600;letter-spacing:-.01em;display:flex;align-items:center;gap:8px;flex-wrap:wrap;line-height:1.25}
+.stars{display:inline-flex;gap:2px}
+.stars svg{width:15px;height:15px;fill:var(--accent)}
+
+/* ---------- sections ---------- */
+section{padding:64px 0}
+.sec-head{max-width:62ch;margin-bottom:40px}
+.sec-head .eyebrow{margin-bottom:18px}
+.sec-head p{margin-top:18px}
+.dark{background:var(--ink);color:#fff}
+
+/* ---------- services ---------- */
+.services{background:var(--chalk)}
+.svc-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.svc-card{background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:24px;transition:border-color .15s}
+.svc-card:hover{border-color:var(--ink)}
+.svc-card svg{width:26px;height:26px;stroke:var(--ink);margin-bottom:16px}
+.svc-card h3{margin-bottom:8px}
+.svc-card p{font-size:16px;color:var(--steel)}
+.svc-note{margin-top:28px;padding-top:24px;border-top:1px solid var(--line);color:var(--steel);font-size:16px;max-width:62ch}
+.svc-note strong{color:var(--ink);font-weight:600}
+
+/* ---------- work ---------- */
+.work-grid{display:grid;grid-template-columns:1fr;gap:24px}
+.work-grid figure{margin:0}
+.work-grid img{width:100%;border-radius:2px;aspect-ratio:16/10;object-fit:cover}
+.work-grid img,.story-photo img,.c-visual img{filter:saturate(.85) contrast(1.05)}
+.work-grid figcaption{margin-top:12px}
+.work-grid figcaption .label{color:var(--steel)}
+.work-grid figcaption p{margin-top:4px}
+.work-grid figcaption strong{display:block;font-size:17px;font-weight:600;letter-spacing:-.01em;margin-top:6px;color:var(--ink)}
+
+/* ---------- rates ---------- */
+.rates{background:var(--chalk)}
+.rate-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.rate-card{background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:24px}
+.rate-card .label{color:var(--steel)}
+.rate-card .rate-num{font-size:clamp(36px,8vw,52px);font-weight:700;line-height:1;letter-spacing:-.02em;color:var(--ink);margin-top:14px}
+.rate-num span{font-size:17px;font-weight:500;letter-spacing:0;color:var(--steel)}
+.rate-card p:not(.rate-num){font-size:16px;color:var(--steel);margin-top:10px}
+.rate-fine{margin-top:24px;font-size:14px;color:var(--steel)}
+
+/* ---------- story ---------- */
+.story-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+.story-photo img{width:100%;border-radius:2px}
+.story-photo figcaption{margin-top:10px;color:var(--steel)}
+.story-copy .eyebrow{margin-bottom:18px}
+.story-copy p{color:var(--steel);margin-top:18px}
+.story-copy p strong{color:var(--ink);font-weight:600}
+.timeline{margin-top:36px;border-top:1px solid var(--line)}
+.tl-row{display:flex;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.tl-year{font-weight:700;font-size:18px;letter-spacing:-.01em;flex:0 0 56px}
+.tl-row p{font-size:16px;color:var(--steel);line-height:1.5;align-self:center}
+
+/* ---------- reviews ---------- */
+.rev-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.rev-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:2px;padding:24px;display:flex;flex-direction:column}
+.rev-card .stars{margin-bottom:18px}
+.rev-quote{font-size:17px;line-height:1.65;color:rgba(255,255,255,.92);flex:1}
+.rev-meta{margin-top:24px;padding-top:18px;border-top:1px solid var(--line-dark)}
+.rev-name{font-weight:600;font-size:14px}
+.rev-src{display:block;margin-top:5px;color:var(--fog)}
+.rev-link{display:inline-flex;align-items:center;gap:10px;margin-top:40px;font-weight:600;font-size:15px;color:#fff;border-bottom:1px solid var(--line-dark);padding-bottom:6px;min-height:44px;transition:border-color .15s}
+.rev-link:hover{border-color:var(--accent)}
+.rev-link svg{stroke:var(--accent)}
+
+/* ---------- community ---------- */
+.community{border-bottom:1px solid var(--line)}
+.community-grid{display:grid;grid-template-columns:1fr}
+.community p.copy{color:var(--steel);max-width:62ch;margin-top:18px}
+.orgs{display:flex;flex-wrap:wrap;gap:10px 0;margin-top:28px}
+.orgs span{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);padding:6px 14px;border-left:1px solid var(--line)}
+.orgs span:first-child{border-left:none;padding-left:0}
+
+/* ---------- contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
+.c-row{padding:22px 0;border-top:1px solid var(--line)}
+.c-row:last-child{border-bottom:1px solid var(--line)}
+.c-row .label{color:var(--steel);margin-bottom:8px}
+.c-row p,.c-row a{font-size:17px;font-weight:500}
+.c-row .sub{display:block;font-size:14px;font-weight:400;color:var(--steel);margin-top:4px}
+.c-phone a{font-size:clamp(32px,8.5vw,42px);font-weight:700;letter-spacing:-.02em;line-height:1.1;display:inline-block;padding:4px 0}
+.c-phone a:hover{color:var(--steel)}
+.hours{width:100%;border-collapse:collapse;font-size:16px}
+.hours td{padding:4px 0;font-weight:500}
+.hours td:last-child{text-align:right;color:var(--steel)}
+.c-visual img{width:100%;border-radius:2px}
+.c-visual figcaption{margin-top:10px;color:var(--steel)}
+.map{border-radius:2px;overflow:hidden;border:1px solid var(--line);margin-top:24px;background:var(--chalk)}
+.map iframe{width:100%;height:320px;border:0;display:block;filter:grayscale(1) contrast(1.05);transition:filter .3s}
+.map:hover iframe{filter:none}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#fff;padding:56px 0 48px}
+.foot-grid{display:flex;flex-direction:column;gap:32px}
+.foot-logo img{height:56px;width:auto}
+.foot-fact{margin-top:16px;color:var(--fog);font-size:15px;max-width:46ch}
+.foot-meta .label{color:var(--fog);line-height:1.8}
+.foot-meta a{display:inline-block;font-weight:600;font-size:18px;padding:12px 0}
+.foot-meta a:hover{color:var(--accent)}
+.foot-legal{margin-top:40px;padding-top:24px;border-top:1px solid var(--line-dark);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--fog)}
+
+/* ---------- mobile call bar ---------- */
+body{padding-bottom:60px}
+.callbar{
+  display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;
+  background:var(--accent);color:var(--ink);height:60px;
+  align-items:center;justify-content:center;gap:10px;
+  font-weight:700;font-size:17px;letter-spacing:.01em;
+  box-shadow:0 -8px 24px rgba(0,0,0,.12);
+}
+.callbar svg{stroke:var(--ink)}
+
+/* ============ 768px+ ============ */
+@media (min-width:768px){
+  .wrap{padding:0 24px}
+  body{padding-bottom:0}
+  .callbar{display:none}
+  section{padding:96px 0}
+  .sec-head{margin-bottom:56px}
+  .nav-inner{height:68px;padding:0 24px;gap:32px}
+  .nav-logo img{height:44px}
+  .nav-links{display:flex;gap:18px;margin-left:auto}
+  .nav-links a{font-weight:500;font-size:15px;letter-spacing:.01em;color:var(--ink);white-space:nowrap;padding:12px 0}
+  .nav-links a:hover{color:var(--steel)}
+  .nav .btn{margin-left:0}
+  .call-short{display:none}
+  .call-full{display:inline}
+  .hero{min-height:80vh}
+  .hero-content{padding:140px 24px 72px}
+  .hero-ctas{flex-direction:row;gap:16px;margin-top:40px}
+  .hero-ctas .btn{width:auto}
+  .trust-grid{grid-template-columns:repeat(4,1fr)}
+  .trust-cell{padding:30px 24px;border-top:none!important;border-left:1px solid var(--line)}
+  .trust-cell:first-child{border-left:none}
+  .svc-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+  .svc-card{padding:32px}
+  .work-grid{grid-template-columns:repeat(2,1fr)}
+  .work-grid figure.feature{grid-column:1/-1}
+  .work-grid figure.feature img{aspect-ratio:21/10}
+  .rate-grid{grid-template-columns:repeat(3,1fr);gap:24px}
+  .rate-card{padding:32px}
+  .story-grid{grid-template-columns:1fr 1fr;gap:56px}
+  .rev-grid{grid-template-columns:repeat(3,1fr);gap:24px}
+  .rev-card{padding:32px}
+  .community-grid{grid-template-columns:1.4fr 1fr;gap:56px;align-items:center}
+  .community-grid .orgs{margin-top:0;flex-direction:column;gap:0;align-self:center}
+  .community-grid .orgs span{border-left:none;border-top:1px solid var(--line);padding:9px 0}
+  .community-grid .orgs span:first-child{border-top:none;padding-left:0}
+  .contact-grid{grid-template-columns:1fr 1fr;gap:56px}
+  .map iframe{height:380px}
+  .foot-grid{flex-direction:row;justify-content:space-between;align-items:flex-start}
+  .foot-meta{text-align:right}
+}
+
+/* ============ 1024px+ ============ */
+@media (min-width:1024px){
+  section{padding:120px 0}
+  .nav-links{gap:30px}
+  .svc-grid{grid-template-columns:repeat(3,1fr)}
+  .hero{min-height:88vh}
+  .story-grid{gap:72px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="Eagle Electric Inc — home">
+      <img src="assets/logo-ink.png" alt="Eagle Electric Inc logo — eagle head with lightning bolt" width="433" height="150">
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#rates">Rates</a>
+      <a href="#story">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:+18012558089" class="btn btn-accent">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="call-full">(801) 255-8089</span><span class="call-short">Call</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" style="padding:0" aria-label="Eagle Electric Inc">
+  <img class="hero-img" src="assets/work-garage.jpg" alt="Conduit runs and electrical panel wall installed by Eagle Electric in a Salt Lake Valley parking structure" fetchpriority="high">
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="label eyebrow">Licensed Utah electrical contractor · Midvale</p>
+    <h1>Commercial electric work. Done with pride since 1987.</h1>
+    <p class="lead">New construction, remodels, and tenant improvements across the Salt Lake Valley — backed by a 24-hour service department and a 5.0-star record.</p>
+    <div class="hero-ctas">
+      <a href="tel:+18012558089" class="btn btn-accent">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (801) 255-8089
+      </a>
+      <a href="#work" class="btn btn-ghost">See our work</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust" role="region" aria-label="Eagle Electric Inc at a glance">
+  <div class="trust-grid">
+    <div class="trust-cell">
+      <p class="label">Founded in Midvale</p>
+      <strong>1987 — 39 years</strong>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Customer rating</p>
+      <strong><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span> 5.0 · 31 reviews</strong>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Ownership</p>
+      <strong>Employee-owned since 2011</strong>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Service department</p>
+      <strong>24-hour service</strong>
+    </div>
+  </div>
+</div>
+<!-- /TRUST -->
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">What we do</p>
+      <h2>From design build to the service call.</h2>
+      <p class="lead">Expert electrical installations for new and remodel commercial construction — with our own crews, our own equipment, and a service department that answers around the clock.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20h20"/><path d="M5 20V8.5L12 4l7 4.5V20"/><path d="M9 20v-6h6v6"/><path d="M12 4v4"/></svg>
+        <h3>New Commercial Construction</h3>
+        <p>Complete electrical for ground-up commercial buildings — from underground rough-in to final trim and inspection.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        <h3>Commercial Remodel &amp; Tenant Improvement</h3>
+        <p>Office, retail, and industrial spaces re-wired and re-lit for new tenants — on the GC's schedule, not ours.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4"/><path d="M5.2 5.2l2.8 2.8"/><path d="M18.8 5.2L16 8"/><path d="M3 13h4"/><path d="M17 13h4"/><path d="M8 13a4 4 0 0 1 8 0"/><path d="M5 17h14"/><path d="M7 21h10"/></svg>
+        <h3>Parking Lot &amp; Site Lighting</h3>
+        <p>Pole bases, photocells, LED retrofits — lots that stay bright, safe, and cheap to run. A specialty for decades.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <h3>24-Hour Commercial Service</h3>
+        <p>A full service department, day and night. When a building goes dark, you reach a person — not a voicemail.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 22l5-5"/><path d="M5.5 13.5L10 18l-2.5 2.5a3.18 3.18 0 0 1-4.5-4.5z"/><path d="M14 4l6 6"/><path d="M10 8l8 8 4-4-8-8z"/></svg>
+        <h3>Site Work &amp; Excavation</h3>
+        <p>Our own excavating equipment and operators — trenching, conduit, and underground feeders without subcontract delays.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9.5 9-7 9 7V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M13 10l-3 4h4l-3 4"/></svg>
+        <h3>Residential Service Calls</h3>
+        <p>Commercial is the specialty, but homeowners across the valley have trusted our service techs for decades.</p>
+      </div>
+    </div>
+    <p class="svc-note"><strong>General contractors:</strong> free estimates on new and remodel commercial projects. Send plans any time — Mon–Thu, 7:00–4:30.</p>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Our work</p>
+      <h2>Real jobs. Our own photos.</h2>
+      <p class="lead">No stock photography here — this is Eagle Electric's actual work around the Salt Lake Valley.</p>
+    </div>
+    <div class="work-grid">
+      <figure class="feature">
+        <img src="assets/work-trusses.jpg" alt="Suspended square LED fixtures installed by Eagle Electric among exposed timber trusses in a commercial hall" loading="lazy">
+        <figcaption>
+          <p class="label">Commercial lighting</p>
+          <strong>Architectural LED pendants, hung straight and wired clean through exposed timber trusses.</strong>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="assets/work-hall.jpg" alt="Wide view of the finished commercial hall with layered suspended lighting by Eagle Electric" loading="lazy">
+        <figcaption>
+          <p class="label">New construction</p>
+          <strong>The same hall, finished — every fixture level, every run hidden.</strong>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="assets/work-outlet.jpg" alt="A burned-out receptacle found and replaced by an Eagle Electric service technician" loading="lazy">
+        <figcaption>
+          <p class="label">Service department</p>
+          <strong>A burned receptacle our service tech caught before it became a fire. This is why the 24-hour line exists.</strong>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- RATES -->
+<section class="rates" id="rates">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Straightforward rates</p>
+      <h2>We publish our rates. Most shops won't.</h2>
+      <p class="lead">No mystery invoices. These are the same numbers we quote on the phone.</p>
+    </div>
+    <div class="rate-grid">
+      <div class="rate-card">
+        <p class="label">Regular hours · Mon–Thu 7:00–4:30</p>
+        <p class="rate-num">$98<span> / man / hour</span></p>
+        <p>Scheduled service and small projects during the work week.</p>
+      </div>
+      <div class="rate-card">
+        <p class="label">After hours &amp; weekends</p>
+        <p class="rate-num">$225<span> first hour</span></p>
+        <p>Then $150 / man / hour after the first. Nights, Fridays, and weekends.</p>
+      </div>
+      <div class="rate-card">
+        <p class="label">Holiday emergency</p>
+        <p class="rate-num">$275<span> first hour</span></p>
+        <p>Then $200 / man / hour after the first. We still answer on holidays.</p>
+      </div>
+    </div>
+    <p class="rate-fine">One-hour minimum on service calls. Free estimates for general contractors on commercial projects.</p>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+  <div class="wrap story-grid">
+    <figure class="story-photo">
+      <img src="assets/van.jpg" alt="Eagle Electric Inc service van with the company's eagle and lightning wrap — design build, new construction, remodels, 24 hr. service" loading="lazy">
+      <figcaption class="label">The eagle on the van — you've probably seen it around the valley.</figcaption>
+    </figure>
+    <div class="story-copy">
+      <p class="label eyebrow">Since 1987</p>
+      <h2>Founded by one electrician. Bought by the crew who built it.</h2>
+      <p><strong>Kurt Brooks</strong> started Eagle Electric in 1987 on three things: integrity, service, and craftsmanship. In 2011, the key employees who had spent their careers here bought the company from him — and kept running it the same way.</p>
+      <p>Today it's led by <strong>Trent Lovendahl</strong> and <strong>Doug Hawkes</strong>, with <strong>Jodie Turner</strong> running the office — the same Jodie customers call out by name in reviews. Most of the core crew has been here more than a decade.</p>
+      <div class="timeline">
+        <div class="tl-row"><span class="tl-year">1987</span><p>Kurt Brooks founds Eagle Electric in the Salt Lake Valley.</p></div>
+        <div class="tl-row"><span class="tl-year">1996</span><p>Moves into the current shop at 7000 Commerce Park Drive, Midvale.</p></div>
+        <div class="tl-row"><span class="tl-year">2011</span><p>Key employees purchase the company and carry on the name.</p></div>
+        <div class="tl-row"><span class="tl-year">2026</span><p>39 years in. Still answering the phone at 2 a.m.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="dark" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Reviews</p>
+      <h2>5.0 stars. Earned one job at a time.</h2>
+      <p class="lead">Word for word from Eagle Electric's 31 customer reviews.</p>
+    </div>
+    <div class="rev-grid">
+      <article class="rev-card">
+        <div class="stars" aria-label="5 star review"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="rev-quote">"Whether it's been small questions or big projects they've always done a stellar job and I will keep using them in the future. Fantastic company, they really treat you right."</p>
+        <div class="rev-meta">
+          <p class="rev-name">Verified customer · Feb 2025</p>
+          <span class="label rev-src">BestProsInTown review</span>
+        </div>
+      </article>
+      <article class="rev-card">
+        <div class="stars" aria-label="5 star review"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="rev-quote">"These guys are absolutely amazing. So knowledgeable and just such good people Jodie in the office has to be one of my favorite human beings ever. I would recommend them to any of my friends or family."</p>
+        <div class="rev-meta">
+          <p class="rev-name">Verified customer · Aug 2024</p>
+          <span class="label rev-src">BestProsInTown review</span>
+        </div>
+      </article>
+      <article class="rev-card">
+        <div class="stars" aria-label="5 star review"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="rev-quote">"We've used Eagle Electric, in our home, several times over the last 5 years, and have always been very pleased with their work. They've done a variety of projects, and they've all been done well."</p>
+        <div class="rev-meta">
+          <p class="rev-name">Verified customer · Aug 2021</p>
+          <span class="label rev-src">BestProsInTown review</span>
+        </div>
+      </article>
+    </div>
+    <a class="rev-link" href="https://www.bestprosintown.com/ut/midvale/eagle-electric-inc-/" target="_blank" rel="noopener">
+      Read all 31 reviews
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+<!-- /REVIEWS -->
+
+<!-- COMMUNITY -->
+<section class="community" aria-label="Trade associations and community">
+  <div class="wrap community-grid">
+    <div>
+      <p class="label eyebrow">Part of the trade</p>
+      <h2 style="margin-top:18px">Card-carrying, valley-rooted.</h2>
+      <p class="copy">Eagle Electric holds memberships across the industry's professional associations — and gives back the same way it works: quietly and consistently. The crew runs toy drives for Shriners Hospital, fills Operation Santa wish lists, supports Hogle Zoo and Children and the Earth, and sits on Granite School District's Construction Business Advisory Board to bring new electricians into the trade.</p>
+    </div>
+    <div class="orgs" role="list" aria-label="Professional association memberships">
+      <span role="listitem">IEC</span>
+      <span role="listitem">IAEI</span>
+      <span role="listitem">AGC of Utah</span>
+      <span role="listitem">CFMA</span>
+      <span role="listitem">ASPE</span>
+      <span role="listitem">NAWIC</span>
+      <span role="listitem">Rotary Club</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Contact</p>
+      <h2>Talk to a real person.</h2>
+      <p class="lead">Calling is fastest — for emergencies, the line answers around the clock. You can also text the same number.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="c-row c-phone">
+          <p class="label">Call or text</p>
+          <a href="tel:+18012558089">(801) 255-8089</a>
+        </div>
+        <div class="c-row">
+          <p class="label">The shop · since 1996</p>
+          <p>7000 S Commerce Park Dr, Ste 100<span class="sub">Midvale, UT 84047</span></p>
+        </div>
+        <div class="c-row">
+          <p class="label">Hours</p>
+          <table class="hours">
+            <tr><td>Mon–Thu</td><td>7:00am – 4:30pm</td></tr>
+            <tr><td>Fri–Sun</td><td>Closed</td></tr>
+            <tr><td>Emergency service</td><td>24 hours</td></tr>
+          </table>
+        </div>
+        <div class="c-row">
+          <p class="label">Service area</p>
+          <p>Midvale · Sandy · Murray · the Salt Lake Valley</p>
+        </div>
+      </div>
+      <div>
+        <figure class="c-visual">
+          <img src="assets/building.jpg" alt="Eagle Electric's office at 70th Commerce Park Plaza in Midvale, Utah" loading="lazy">
+          <figcaption class="label">70th Commerce Park Plaza — look for the eagle on the door.</figcaption>
+        </figure>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?origin=mfe&pb=!1m2!2m1!1s7000+Commerce+Park+Dr,+Midvale,+UT+84047" title="Map showing Eagle Electric Inc in Midvale" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-logo">
+        <img src="assets/logo-white.png" alt="Eagle Electric Inc" width="433" height="150">
+        <p class="foot-fact">Licensed Utah electrical contractor. Founded by Kurt Brooks in 1987, employee-owned since 2011 — commercial electric work done with pride.</p>
+      </div>
+      <div class="foot-meta">
+        <p class="label">7000 S Commerce Park Dr, Ste 100<br>Midvale, UT 84047</p>
+        <p style="margin-top:10px"><a href="tel:+18012558089">(801) 255-8089</a></p>
+      </div>
+    </div>
+    <div class="foot-legal label">
+      <span>© 2026 Eagle Electric Inc</span>
+      <span>Mon–Thu 7:00–4:30 · 24-hr emergency</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+18012558089" class="callbar" aria-label="Call Eagle Electric Inc at (801) 255-8089">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call Eagle — (801) 255-8089
+</a>
+
+</body>
+</html>

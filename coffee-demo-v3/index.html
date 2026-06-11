@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coffee Garden — 9th &amp; 9th, Salt Lake City · Espresso &amp; In-House Bakery Since 1993</title>
+<meta name="description" content="Coffee Garden has anchored Salt Lake City's 9th & 9th neighborhood since 1993. Espresso, in-house pastries, and a patio full of regulars — open until 9 pm every night. 878 E 900 S, SLC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#191511;
+  --ink-2:#241f19;
+  --steel:#5d564b;
+  --fog:#aaa297;
+  --paper:#faf8f2;
+  --chalk:#f1ebdf;
+  --line:#e4ddcd;
+  --line-dark:#352e26;
+  --accent:#c47b35;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',sans-serif;font-size:16px;line-height:1.6;color:var(--ink);background:var(--paper)}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--steel);margin-bottom:20px}
+.eyebrow::before{content:"";width:18px;height:2px;background:var(--accent)}
+.dark .eyebrow{color:var(--fog)}
+h1,h2{font-family:'Fraunces',serif;font-weight:600}
+h1{font-size:clamp(40px,6.5vw,76px);line-height:1.04;letter-spacing:-.02em}
+h2{font-size:clamp(30px,4.2vw,48px);line-height:1.08;letter-spacing:-.015em}
+h3{font-size:20px;font-weight:600;letter-spacing:-.01em;line-height:1.3}
+.body-lg{font-size:18px}
+section{padding:96px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:15px 30px;font-family:'Barlow',sans-serif;font-weight:600;font-size:16px;letter-spacing:.01em;text-decoration:none;border:1px solid transparent;white-space:nowrap}
+.btn-accent{background:var(--accent);color:var(--ink)}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-ink{background:transparent;color:var(--ink);border-color:var(--ink)}
+.stars{color:var(--accent);letter-spacing:2px;font-size:15px}
+.treated{filter:saturate(.88) contrast(1.05);border-radius:2px}
+
+/* announcement */
+.announce{background:var(--ink);color:var(--fog);text-align:center;padding:9px 16px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 1px 0 var(--line)}
+.nav-inner{display:flex;align-items:center;gap:28px;height:68px}
+.wordmark{text-decoration:none;line-height:1.05}
+.wordmark .wm-name{font-family:'Fraunces',serif;font-weight:600;font-size:21px;letter-spacing:-.01em;display:block}
+.wordmark .wm-sub{color:var(--steel);font-size:11px}
+.nav-links{display:flex;gap:24px;margin-left:auto}
+.nav-links a{text-decoration:none;font-weight:500;font-size:15px}
+.nav-rating{color:var(--steel);font-size:14px;font-weight:500;white-space:nowrap}
+.nav-rating .stars{font-size:13px}
+.nav .btn{padding:11px 22px;font-size:15px}
+
+/* hero */
+.hero{position:relative;min-height:82vh;display:flex;align-items:flex-end;background:var(--ink)}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(78deg,rgba(12,9,6,.88) 0%,rgba(12,9,6,.5) 55%,rgba(12,9,6,.22) 100%)}
+.hero-scrim::after{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(to top,rgba(12,9,6,.75),transparent)}
+.hero-content{position:relative;padding:0 0 72px;color:#fff}
+.hero-content .eyebrow{color:var(--fog)}
+.hero-sub{margin-top:22px;max-width:54ch;color:rgba(255,255,255,.8)}
+.hero-ctas{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+
+/* locator line (Sey move) */
+.locator{padding:40px 0;border-bottom:1px solid var(--line)}
+.locator p{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(18px,2.6vw,28px);letter-spacing:-.01em;line-height:1.4}
+.locator a{text-decoration:none;border-bottom:2px solid var(--line);white-space:nowrap}
+.locator .dot{color:var(--steel);padding:0 .35em}
+
+/* spec plate */
+.plate{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.plate-cell{padding:28px 24px;border-left:1px solid var(--line)}
+.plate-cell:first-child{border-left:0}
+.plate-cell .label{color:var(--steel);margin-bottom:6px}
+.plate-cell strong{font-size:20px;font-weight:600;letter-spacing:-.01em}
+
+/* menu */
+.menu-band{background:var(--chalk)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.menu-list{list-style:none}
+.menu-list li{display:flex;justify-content:space-between;gap:24px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line)}
+.menu-list li:first-child{border-top:1px solid var(--line)}
+.menu-item-name{font-family:'Fraunces',serif;font-weight:600;font-size:21px;letter-spacing:-.01em;white-space:nowrap}
+.menu-item-note{color:var(--steel);font-size:15px;text-align:right;max-width:30ch}
+.menu-link{display:inline-block;margin-top:28px;font-weight:600;text-decoration:none;border-bottom:2px solid var(--ink);padding-bottom:2px}
+.menu-photo{height:100%;max-height:640px;width:100%;object-fit:cover}
+
+/* favorite band */
+.dark{background:var(--ink);color:#fff}
+.fav .split{align-items:center}
+.fav p{color:rgba(255,255,255,.82)}
+.fav .pull{margin-top:30px;padding-top:26px;border-top:1px solid var(--line-dark)}
+.fav .pull blockquote{font-size:18px;color:rgba(255,255,255,.92)}
+.fav .pull figcaption{margin-top:10px;color:var(--fog)}
+.fav-photo{width:100%;max-height:600px;object-fit:cover;object-position:center 65%}
+
+/* story */
+.story .split{align-items:center}
+.story p{color:var(--steel);margin-top:18px}
+.stat{margin-top:40px}
+.stat strong{font-size:clamp(44px,5vw,64px);font-weight:700;letter-spacing:-.02em;line-height:1;display:block;font-family:'Barlow',sans-serif}
+.stat .label{color:var(--steel);margin-top:8px}
+.story-photo{width:100%;max-height:660px;object-fit:cover}
+
+/* gallery */
+.gallery{padding-top:0}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.gallery-grid img{width:100%;aspect-ratio:1;object-fit:cover}
+
+/* reviews */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.review-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:2px;padding:32px;display:flex;flex-direction:column;gap:18px}
+.review-card blockquote{font-size:17px;color:rgba(255,255,255,.92);flex:1}
+.review-attrib strong{display:block;font-size:14px}
+.review-attrib span{color:var(--fog)}
+.reviews-link{display:inline-block;margin-top:40px;color:#fff;font-weight:600;text-decoration:none;border-bottom:2px solid rgba(255,255,255,.6);padding-bottom:2px}
+
+/* visit */
+.visit{background:var(--chalk)}
+.visit .split{gap:64px;align-items:start}
+.data-row{padding:22px 0;border-bottom:1px solid var(--line)}
+.data-row:first-of-type{border-top:1px solid var(--line)}
+.data-row .label{color:var(--steel);margin-bottom:8px}
+.visit-phone{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(28px,3.6vw,40px);letter-spacing:-.015em;text-decoration:none}
+.visit-addr{text-decoration:none;font-size:18px;font-weight:500}
+.hours-table{width:100%;border-collapse:collapse;font-size:15px}
+.hours-table td{padding:6px 0}
+.hours-table td:last-child{text-align:right;color:var(--steel)}
+.visit .btn{margin-top:28px}
+.map{position:relative;display:block;border-radius:2px;overflow:hidden;border:1px solid var(--line)}
+.map img{width:100%;height:100%;object-fit:cover}
+.map .pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:6px}
+.map .pin-label{background:var(--ink);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:7px 12px;border-radius:2px;white-space:nowrap}
+.map .pin-dot{width:14px;height:14px;border-radius:50%;background:var(--ink);border:3px solid var(--paper);box-shadow:0 0 0 1px var(--ink)}
+.map .map-credit{position:absolute;right:0;bottom:0;background:rgba(250,248,242,.85);color:var(--steel);font-size:11px;padding:3px 8px}
+
+/* instagram */
+.ig-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.ig-link{font-weight:600;text-decoration:none;border-bottom:2px solid var(--ink);padding-bottom:2px;white-space:nowrap}
+.ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.ig-grid img{width:100%;aspect-ratio:1;object-fit:cover}
+
+/* footer */
+footer{background:var(--ink);color:#fff;padding:80px 0 64px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px}
+.foot-wordmark{font-family:'Fraunces',serif;font-weight:600;font-size:24px}
+.foot-cred{color:var(--fog);margin-top:10px;max-width:36ch}
+.foot-col .label{color:var(--fog);margin-bottom:14px}
+.foot-col p,.foot-col a{color:rgba(255,255,255,.85);text-decoration:none;font-size:15px}
+.foot-col p{margin-bottom:8px}
+.copyright{margin-top:56px;padding-top:24px;border-top:1px solid var(--line-dark);color:var(--fog);font-size:13px}
+
+/* sticky mobile bar */
+.mobile-bar{display:none}
+
+@media (max-width:980px){
+  .split{grid-template-columns:1fr;gap:40px}
+  .menu-photo,.story-photo,.fav-photo{max-height:440px}
+  .story .split > img{order:-1}
+  .reviews-grid{grid-template-columns:1fr}
+  .plate{grid-template-columns:1fr 1fr}
+  .plate-cell:nth-child(3){border-left:0}
+  .plate-cell:nth-child(n+3){border-top:1px solid var(--line)}
+  .foot-grid{grid-template-columns:1fr;gap:36px}
+  .gallery-grid,.ig-grid{grid-template-columns:1fr 1fr}
+  .nav-links,.nav-rating{display:none}
+  .map{max-height:480px}
+  .map img{max-height:480px;object-fit:cover;object-position:center}
+}
+@media (max-width:767px){
+  section{padding:64px 0}
+  .wrap{padding:0 20px}
+  body{padding-bottom:58px}
+  .hero{min-height:78vh}
+  .hero-content{padding-bottom:56px}
+  .hero-ctas .btn{width:100%}
+  .locator p{font-size:18px}
+  .locator .dot{display:block;height:0;overflow:hidden}
+  .locator span.seg{display:block;padding:3px 0}
+  .menu-list li{flex-direction:column;gap:4px}
+  .menu-item-note{text-align:left;max-width:none}
+  .map{max-height:420px}
+  .map img{max-height:420px;object-position:center}
+  .mobile-bar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;height:58px;box-shadow:0 -8px 24px rgba(0,0,0,.12)}
+  .mobile-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:15px;text-decoration:none}
+  .mobile-bar .mb-dir{background:var(--ink);color:#fff}
+  .mobile-bar .mb-order{background:var(--accent);color:var(--ink)}
+}
+</style>
+</head>
+<body>
+
+<div class="announce label">Open until 9 pm every night — 9th &amp; 9th and Downtown SLC</div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="wordmark" href="#top">
+      <span class="wm-name">coffee garden</span>
+      <span class="wm-sub label">Est. 1993 · Salt Lake City</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#menu">Menu</a>
+      <a href="#story">Story</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <span class="nav-rating"><span class="stars">★★★★★</span> 4.6 · 1,582 Google reviews</span>
+    <a class="btn btn-accent" href="https://coffeegardenslc.mobilebytes.com">Order Ahead</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" style="padding:0">
+    <img class="hero-img" src="assets/hero-counter.jpg" alt="Inside Coffee Garden — the espresso neon sign glowing over the counter, chalkboard menus, and the in-house pastry case">
+    <div class="hero-scrim"></div>
+    <div class="wrap hero-content">
+      <p class="eyebrow label">9th &amp; 9th · Salt Lake City</p>
+      <h1>The living room of<br>9th &amp; 9th. Since 1993.</h1>
+      <p class="body-lg hero-sub">Espresso pulled all day, pastries baked in-house every morning, and a patio that fills with regulars — until 9 pm, every night of the week.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-accent" href="https://coffeegardenslc.mobilebytes.com">Order Ahead</a>
+        <a class="btn btn-ghost" href="#menu">See the Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="locator">
+    <div class="wrap">
+      <p>
+        <span class="seg"><a href="https://maps.google.com/?q=878+E+900+S,+Salt+Lake+City,+UT+84105">878 E 900 S, Salt Lake City</a></span><span class="dot">·</span>
+        <span class="seg">Mon–Sat 6 am – 9 pm · Sun 7 am – 9 pm</span><span class="dot">·</span>
+        <span class="seg"><a href="tel:8013553425">(801) 355-3425</a></span>
+      </p>
+    </div>
+  </div>
+
+  <div class="plate wrap" style="padding-left:0;padding-right:0">
+    <div class="plate-cell"><p class="label">Open since</p><strong>May 1993</strong></div>
+    <div class="plate-cell"><p class="label">Google rating</p><strong><span class="stars">★</span> 4.6 · 1,582 reviews</strong></div>
+    <div class="plate-cell"><p class="label">The bakery</p><strong>Baked in-house daily</strong></div>
+    <div class="plate-cell"><p class="label">Every night</p><strong>Open until 9 pm</strong></div>
+  </div>
+
+  <section class="menu-band" id="menu">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow label">The Menu</p>
+        <h2>From the bar and the bakery.</h2>
+        <ul class="menu-list" style="margin-top:36px">
+          <li><span class="menu-item-name">Vanilla Latte</span><span class="menu-item-note">The drink regulars order on repeat — whole milk, house vanilla.</span></li>
+          <li><span class="menu-item-name">Almond Croissant</span><span class="menu-item-note">Buttery, flaky, baked in-house every morning.</span></li>
+          <li><span class="menu-item-name">Cold Brew</span><span class="menu-item-note">Smooth and strong — try it with toasted almond syrup.</span></li>
+          <li><span class="menu-item-name">Quiche</span><span class="menu-item-note">The savory standby reviewers rave about.</span></li>
+          <li><span class="menu-item-name">Raspberry Olive Oil Cake</span><span class="menu-item-note">Straight from the bakery case.</span></li>
+          <li><span class="menu-item-name">French Macarons</span><span class="menu-item-note">Classic macarons, hand made in-house.</span></li>
+        </ul>
+        <a class="menu-link" href="https://coffeegardenslc.mobilebytes.com">Full menu + order ahead →</a>
+      </div>
+      <img class="menu-photo treated" src="assets/pastry-case.jpg" alt="Coffee Garden's bakery case — croissants, macarons in every color, cakes, eclairs, and olive oil cake, all baked in-house">
+    </div>
+  </section>
+
+  <section class="dark fav">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow label">Regulars' Favorite</p>
+        <h2>The lattes.</h2>
+        <p class="body-lg" style="margin-top:22px;max-width:48ch">Thirty-three years behind the espresso bar will teach you exactly how a latte should taste — house vanilla, earl grey, or a classic. Order it hot at the counter or ahead for pickup.</p>
+        <figure class="pull">
+          <blockquote>“The raspberry olive oil cake and earl grey tea latte was perfection!”</blockquote>
+          <figcaption class="label">Nikki G. · Salt Lake City — Yelp review</figcaption>
+        </figure>
+      </div>
+      <img class="fav-photo treated" src="assets/vanilla-latte.jpg" alt="A vanilla latte with fern latte art on Coffee Garden's patio">
+    </div>
+  </section>
+
+  <section class="story" id="story">
+    <div class="wrap split">
+      <img class="story-photo treated" src="assets/storefront-patio.jpg" alt="Coffee Garden's storefront and patio at 9th and 9th, with people at tables under a summer sky">
+      <div>
+        <p class="eyebrow label">Since May 1993</p>
+        <h2>Same corner, same ovens, for 33 years.</h2>
+        <p>Alan Hebertson and Dieter Sellmair opened Coffee Garden in May 1993, and it has anchored the 9th &amp; 9th neighborhood ever since — espresso, scratch baking, and rotating local art on the walls.</p>
+        <p>Everything in the pastry case is made in-house, from almond croissants to hand-made French macarons. In warm weather the patio along 9th South fills with regulars and visitors seven days a week — and a second shop now pours downtown at 254 S Main.</p>
+        <div class="stat">
+          <strong>33</strong>
+          <p class="label">Years at 9th &amp; 9th</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" aria-label="Inside Coffee Garden">
+    <div class="wrap gallery-grid">
+      <img class="treated" src="assets/interior-tables.jpg" alt="The long center tables inside Coffee Garden on a busy evening">
+      <img class="treated" src="assets/art-wall.jpg" alt="The rotating local art wall — dozens of portrait prints on the exposed brick">
+      <img class="treated" src="assets/interior-blossom.jpg" alt="People at tables beneath the cherry-blossom panels inside Coffee Garden">
+      <img class="treated" src="assets/patio-cup.jpg" alt="A Coffee Garden to-go cup on a patio table along 9th South">
+    </div>
+  </section>
+
+  <section class="dark" id="reviews">
+    <div class="wrap">
+      <p class="eyebrow label">What the neighborhood says</p>
+      <h2>4.6 stars on Google. Loved on Yelp.</h2>
+      <div class="reviews-grid">
+        <article class="review-card">
+          <p class="stars" aria-label="5 stars">★★★★★</p>
+          <blockquote>“This is my spot! It's rare to find a place that you can frequent and have such genuinely nice interactions with the people who work there.”</blockquote>
+          <p class="review-attrib"><strong>Phylicia M.</strong> <span class="label">San Diego, CA · Yelp review</span></p>
+        </article>
+        <article class="review-card">
+          <p class="stars" aria-label="5 stars">★★★★★</p>
+          <blockquote>“A legacy of fabulous coffee, pastries and baked goods, wonderful baristas and wait staff. The perfect meeting place 7 days a week.”</blockquote>
+          <p class="review-attrib"><strong>Robin P.</strong> <span class="label">Salt Lake City, UT · Yelp review</span></p>
+        </article>
+        <article class="review-card">
+          <p class="stars" aria-label="5 stars">★★★★★</p>
+          <blockquote>“Their croissants are to die for, specifically the almond croissant. perfect mix of buttery, flakey, and sweet. I have also been loving their cold brew.”</blockquote>
+          <p class="review-attrib"><strong>Jenny S.</strong> <span class="label">St. George, UT · Yelp review</span></p>
+        </article>
+      </div>
+      <a class="reviews-link" href="https://www.google.com/maps/place/Coffee+Garden/@40.7495455,-111.8658347,17z/">Read all 1,582 Google reviews →</a>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow label">Visit</p>
+        <h2>The corner of 9th&nbsp;&amp;&nbsp;9th.</h2>
+        <div class="data-row" style="margin-top:36px">
+          <p class="label">Address</p>
+          <a class="visit-addr" href="https://maps.google.com/?q=878+E+900+S,+Salt+Lake+City,+UT+84105">878 E 900 S, Salt Lake City, UT 84105</a>
+        </div>
+        <div class="data-row">
+          <p class="label">Phone</p>
+          <a class="visit-phone" href="tel:8013553425">(801) 355-3425</a>
+        </div>
+        <div class="data-row">
+          <p class="label">Hours</p>
+          <table class="hours-table">
+            <tr><td>Monday – Saturday</td><td>6:00 am – 9:00 pm</td></tr>
+            <tr><td>Sunday</td><td>7:00 am – 9:00 pm</td></tr>
+          </table>
+        </div>
+        <div class="data-row">
+          <p class="label">Parking</p>
+          <p style="color:var(--steel);font-size:15px">Small lot behind the shop off 900 South; street spots out front fill fast — most regulars walk or bike in.</p>
+        </div>
+        <div class="data-row">
+          <p class="label">Downtown</p>
+          <p style="color:var(--steel);font-size:15px">Second location at 254 S Main St, Salt Lake City.</p>
+        </div>
+        <a class="btn btn-ink" href="https://maps.google.com/?q=878+E+900+S,+Salt+Lake+City,+UT+84105">Get Directions</a>
+      </div>
+      <a class="map" href="https://maps.google.com/?q=Coffee+Garden,+878+E+900+S,+Salt+Lake+City,+UT+84105" aria-label="Open Coffee Garden's location in Google Maps">
+        <img src="assets/map.png" alt="Street map of the 9th and 9th neighborhood showing Coffee Garden at 878 E 900 S, two blocks east of Liberty Park">
+        <span class="pin"><span class="pin-label">Coffee Garden</span><span class="pin-dot"></span></span>
+        <span class="map-credit">Map © OpenStreetMap contributors</span>
+      </a>
+    </div>
+  </section>
+
+  <section aria-label="Instagram">
+    <div class="wrap">
+      <div class="ig-head">
+        <div>
+          <p class="eyebrow label">On Instagram</p>
+          <h2>@coffeegardenslc</h2>
+        </div>
+        <a class="ig-link" href="https://www.instagram.com/coffeegardenslc">Follow along →</a>
+      </div>
+      <div class="ig-grid">
+        <img class="treated" src="assets/branded-cup.jpg" alt="A Coffee Garden branded to-go cup on the patio">
+        <img class="treated" src="assets/latte-scone.jpg" alt="A caramel latte beside a blueberry scone and peanut butter bar on a wood table">
+        <img class="treated" src="assets/cold-brew.jpg" alt="Cold brew with a banana muffin and a s'mores macaron on the patio">
+        <img class="treated" src="assets/bean-wall.jpg" alt="The whole-bean coffee wall stocked with roasted beans and Coffee Garden tumblers">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="foot-wordmark">coffee garden</p>
+        <p class="foot-cred">Family-owned &amp; operated by Alan Hebertson and Dieter Sellmair since May 1993.</p>
+      </div>
+      <div class="foot-col">
+        <p class="label">Find us</p>
+        <p><a href="https://maps.google.com/?q=878+E+900+S,+Salt+Lake+City,+UT+84105">878 E 900 S, Salt Lake City, UT 84105</a></p>
+        <p>254 S Main St, Salt Lake City, UT</p>
+        <p><a href="tel:8013553425">(801) 355-3425</a></p>
+        <p><a href="https://www.instagram.com/coffeegardenslc">Instagram — @coffeegardenslc</a></p>
+      </div>
+      <div class="foot-col">
+        <p class="label">Hours</p>
+        <p>Mon – Sat · 6 am – 9 pm</p>
+        <p>Sunday · 7 am – 9 pm</p>
+        <p style="margin-top:14px"><a href="https://coffeegardenslc.mobilebytes.com">Order ahead for pickup</a></p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Coffee Garden · Salt Lake City, Utah</p>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="mb-dir" href="https://maps.google.com/?q=878+E+900+S,+Salt+Lake+City,+UT+84105">Directions</a>
+  <a class="mb-order" href="https://coffeegardenslc.mobilebytes.com">Order Ahead</a>
+</div>
+
+</body>
+</html>
