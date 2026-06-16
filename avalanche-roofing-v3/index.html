@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avalanche Roofing Services — West Valley City &amp; SLC Roofing, GAF Certified, Family-Owned Since 2017</title>
+<meta name="description" content="Family-owned, GAF-Certified roofing in West Valley City &amp; the Salt Lake Valley since 2017. 4.9 stars across 96 reviews, BBB A+. Free, fair bids. Call (801) 599-1805.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "Avalanche Roofing Services LLC",
+  "telephone": "+18015991805",
+  "email": "Avalancheroofingslc@yahoo.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3755 W Rancho Vista Ln",
+    "addressLocality": "West Valley City",
+    "addressRegion": "UT",
+    "postalCode": "84120"
+  },
+  "areaServed": ["West Valley City", "Salt Lake City", "Wasatch Front"],
+  "foundingDate": "2017",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "96"
+  },
+  "openingHours": ["Mo-Fr 07:30-17:00", "Sa 07:30-15:30"]
+}
+</script>
+<style>
+/* ============ tokens ============ */
+:root{
+  --ink:#16181b;
+  --ink-2:#1f2226;
+  --steel:#5a6470;
+  --fog:#a6acb4;
+  --paper:#ffffff;
+  --chalk:#f4f5f6;
+  --line:#e4e6e9;
+  --line-dark:#2c3036;
+  --accent:#c8202e;
+  --accent-hover:#a91824;
+  --max:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Barlow',ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:16px;line-height:1.6;color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:60px; /* mobile call bar */
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* ============ type voices (mobile-first) ============ */
+.label{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;
+  font-size:13px;letter-spacing:.14em;text-transform:uppercase;line-height:1.25;
+}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--steel)}
+.eyebrow::before{content:"";width:18px;height:2px;background:var(--accent);flex:none}
+h1{font-size:clamp(37px,9.4vw,82px);font-weight:700;line-height:1.04;letter-spacing:-.026em}
+h2{font-size:clamp(30px,7.4vw,52px);font-weight:700;line-height:1.08;letter-spacing:-.022em}
+h3{font-size:20px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.lead{font-size:17px;color:var(--steel);max-width:56ch}
+@media(min-width:768px){.lead{font-size:18px}}
+
+/* ============ buttons ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;
+  font-weight:600;font-size:16px;letter-spacing:.01em;line-height:1.1;text-align:center;
+  min-height:56px;padding:0 26px;transition:background .15s,border-color .15s,color .15s;
+}
+.btn svg{flex:none}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-hover)}
+.btn-ghost{border:1px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+
+/* ============ topbar ============ */
+.topbar{background:var(--ink);color:var(--fog)}
+.topbar-inner{
+  max-width:var(--max);margin:0 auto;padding:9px 20px;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.topbar .label{font-size:12px;letter-spacing:.12em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .tb-r{display:none}
+.topbar .tb-x{display:none}
+@media(min-width:768px){
+  .topbar .tb-r{display:block;flex:none}
+  .topbar .tb-x{display:inline}
+}
+
+/* ============ nav ============ */
+.nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.nav-inner{
+  height:64px;display:flex;align-items:center;gap:24px;
+  max-width:var(--max);margin:0 auto;padding:0 20px;
+}
+.wordmark{display:flex;flex-direction:column;line-height:1;min-width:0}
+.wm-name{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;
+  letter-spacing:.03em;text-transform:uppercase;
+}
+.wm-name span{color:var(--accent)}
+.wm-sub{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--steel);margin-top:4px;white-space:nowrap;
+}
+.nav-links{display:none;gap:28px;margin-left:auto}
+.nav-links a{font-weight:500;font-size:15px;color:var(--ink);padding:8px 0}
+.nav-links a:hover{color:var(--steel)}
+.nav-call{
+  margin-left:auto;display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent);color:#fff;border-radius:999px;
+  font-weight:600;font-size:15px;min-height:44px;padding:0 18px;
+}
+.nav-call:hover{background:var(--accent-hover)}
+.nav-call .num{display:none}
+@media(min-width:480px){
+  .nav-call .num{display:inline}
+  .nav-call .word{display:none}
+}
+@media(min-width:768px){
+  .nav-links{display:flex;gap:18px}
+  .nav-links .nl-x{display:none}
+  .nav-call{margin-left:0}
+}
+@media(min-width:1024px){
+  .nav-links{gap:28px}
+  .nav-links .nl-x{display:block}
+  .nav-inner{height:68px;padding:0 24px}
+  .wm-name{font-size:26px}
+}
+
+/* ============ hero ============ */
+.hero{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:82svh;background:var(--ink);overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.hero-scrim{position:absolute;inset:0;background:
+  linear-gradient(to top,rgba(10,11,13,.86) 0%,rgba(10,11,13,.34) 46%,rgba(10,11,13,.30) 100%),
+  linear-gradient(78deg,rgba(10,11,13,.80) 0%,rgba(10,11,13,.42) 55%,rgba(10,11,13,.12) 100%);
+}
+.hero-content{position:relative;width:100%;max-width:var(--max);margin:0 auto;padding:84px 20px 28px}
+.hero .eyebrow{color:rgba(255,255,255,.78);margin-bottom:18px}
+.hero h1{color:#fff;max-width:18ch}
+.hero .lead{color:rgba(255,255,255,.82);margin-top:18px}
+.hero-ctas{display:flex;flex-direction:column;gap:12px;margin-top:30px}
+.hero-ctas .btn{width:100%}
+.hero-tag{
+  position:relative;display:flex;align-items:center;gap:10px;
+  max-width:var(--max);margin:0 auto;width:100%;padding:0 20px 18px;
+  color:rgba(255,255,255,.6);
+}
+.hero-tag::before{content:"";width:8px;height:8px;background:rgba(255,255,255,.6);flex:none}
+@media(min-width:768px){
+  .hero{min-height:88vh}
+  .hero-content{padding:140px 24px 56px}
+  .hero-ctas{flex-direction:row;gap:16px;margin-top:40px}
+  .hero-ctas .btn{width:auto}
+  .hero-tag{padding:0 24px 24px}
+}
+
+/* ============ trust strip ============ */
+.trust{border-bottom:1px solid var(--line);background:var(--paper)}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;max-width:var(--max);margin:0 auto}
+.trust-cell{padding:20px;border-top:1px solid var(--line)}
+.trust-cell:nth-child(-n+2){border-top:none}
+.trust-cell:nth-child(even){border-left:1px solid var(--line)}
+.trust-cell .label{color:var(--steel);margin-bottom:8px}
+.trust-cell strong{font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.2;display:block}
+.trust-cell .sub{font-size:13px;color:var(--steel);margin-top:3px}
+.stars{display:inline-flex;gap:2px;margin-right:6px;vertical-align:-2px}
+.stars svg{width:15px;height:15px;fill:var(--accent)}
+@media(min-width:768px){
+  .trust-grid{grid-template-columns:repeat(4,1fr)}
+  .trust-cell{padding:30px 24px;border-top:none!important;border-left:1px solid var(--line)}
+  .trust-cell:first-child{border-left:none}
+  .trust-cell strong{font-size:20px}
+}
+
+/* ============ sections ============ */
+section{padding:64px 0}
+@media(min-width:768px){section{padding:112px 0}}
+.sec-head{max-width:62ch;margin-bottom:40px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head p{margin-top:16px}
+@media(min-width:768px){.sec-head{margin-bottom:64px}.sec-head .eyebrow{margin-bottom:20px}.sec-head p{margin-top:20px}}
+.band-chalk{background:var(--chalk)}
+.dark{background:var(--ink);color:#fff}
+.dark .lead{color:var(--fog)}
+.dark .eyebrow{color:var(--fog)}
+
+/* ============ services ============ */
+.svc-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.svc-card{background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:24px;transition:border-color .15s}
+.svc-card:hover{border-color:var(--ink)}
+.svc-card svg{width:28px;height:28px;stroke:var(--ink);margin-bottom:16px}
+.svc-card h3{margin-bottom:8px}
+.svc-card p{font-size:15px;color:var(--steel)}
+@media(min-width:640px){.svc-grid{grid-template-columns:1fr 1fr;gap:24px}.svc-card{padding:32px}}
+@media(min-width:1024px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ============ storm / promise band ============ */
+.storm{position:relative;background:var(--ink);overflow:hidden;padding:72px 0}
+.storm-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:saturate(.82) contrast(1.05)}
+.storm-scrim{position:absolute;inset:0;background:linear-gradient(82deg,rgba(10,11,13,.92) 0%,rgba(10,11,13,.72) 55%,rgba(10,11,13,.45) 100%)}
+.storm-content{position:relative;max-width:var(--max);margin:0 auto;padding:0 20px}
+.storm .eyebrow{color:rgba(255,255,255,.78);margin-bottom:16px}
+.storm h2{color:#fff;max-width:18ch}
+.storm blockquote{margin-top:24px;max-width:52ch}
+.storm blockquote p{font-size:17px;line-height:1.6;color:rgba(255,255,255,.9)}
+.storm blockquote footer{margin-top:10px;color:rgba(255,255,255,.62)}
+.storm .btn{margin-top:32px;width:100%}
+@media(min-width:768px){
+  .storm{padding:112px 0}
+  .storm-content{padding:0 24px}
+  .storm .btn{width:auto}
+}
+
+/* ============ process ============ */
+.steps{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
+.step{padding:28px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:64px 1fr;gap:16px;align-items:start}
+.step-num{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:44px;line-height:1;
+  color:var(--ink);letter-spacing:-.01em;
+}
+.step h3{margin-bottom:6px}
+.step p{font-size:15px;color:var(--steel);max-width:52ch}
+.proof{
+  margin-top:40px;border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:2px;padding:24px;background:var(--chalk);
+}
+.proof p{font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.4}
+.proof footer{margin-top:10px;color:var(--steel)}
+@media(min-width:768px){
+  .step{grid-template-columns:96px 1fr;padding:36px 0}
+  .step-num{font-size:56px}
+  .proof{padding:32px;margin-top:56px}
+  .proof p{font-size:21px}
+}
+@media(min-width:1024px){
+  .steps{grid-template-columns:1fr 1fr;column-gap:64px}
+}
+
+/* ============ work gallery ============ */
+.work-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.work-card{border-radius:2px;overflow:hidden;border:1px solid var(--line);background:var(--paper)}
+.work-ph{overflow:hidden;aspect-ratio:4/3}
+.work-ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.04)}
+.work-cap{display:flex;align-items:center;gap:10px;padding:16px 18px;color:var(--steel)}
+.work-cap::before{content:"";width:8px;height:8px;background:var(--accent);flex:none}
+.work-quote{margin-top:32px;max-width:62ch}
+.work-quote .stars svg{width:16px;height:16px}
+.work-quote p{font-size:19px;line-height:1.55;letter-spacing:-.01em;font-weight:500;margin-top:12px}
+.work-quote footer{margin-top:12px;color:var(--steel)}
+@media(min-width:768px){
+  .work-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .work-quote{margin-top:48px}
+  .work-quote p{font-size:22px}
+}
+
+/* ============ owner split (real branded-trucks photo) ============ */
+.owner-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+.owner-photo{border-radius:2px;overflow:hidden;border:1px solid var(--line)}
+.owner-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 55%;filter:saturate(.9) contrast(1.04)}
+.owner-copy .eyebrow{margin-bottom:16px}
+.owner-copy h2{max-width:16ch}
+.owner-copy p{color:var(--steel);margin-top:16px;max-width:54ch}
+.owner-stats{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
+.stat-num{font-size:clamp(40px,11vw,72px);font-weight:700;line-height:1;letter-spacing:-.025em}
+.stat .label{color:var(--steel);margin-top:10px;max-width:16ch}
+@media(min-width:768px){
+  .owner-copy p{margin-top:20px}
+  .owner-stats{grid-template-columns:repeat(3,1fr);gap:0;margin-top:48px;padding-top:40px}
+  .owner-stats .stat{border-left:1px solid var(--line);padding-left:28px}
+  .owner-stats .stat:first-child{border-left:none;padding-left:0}
+}
+@media(min-width:1024px){
+  .owner-grid{grid-template-columns:0.95fr 1.05fr;gap:64px}
+  .owner-photo img{aspect-ratio:auto;min-height:520px}
+}
+
+/* ============ credentials strip ============ */
+.mats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)}
+.mats-inner{max-width:var(--max);margin:0 auto;padding:32px 20px}
+.mats .label{color:var(--steel);margin-bottom:18px}
+.mats-row{display:grid;grid-template-columns:1fr;gap:0}
+.mat{padding:16px 0;border-top:1px solid var(--line)}
+.mat:first-child{border-top:none}
+.mat strong{font-size:21px;font-weight:700;letter-spacing:-.015em;display:block}
+.mat span{font-size:14px;color:var(--steel)}
+@media(min-width:768px){
+  .mats-inner{padding:40px 24px}
+  .mats-row{grid-template-columns:repeat(4,1fr);gap:24px}
+  .mat{border-top:none;border-left:1px solid var(--line);padding:8px 0 8px 24px}
+  .mat:first-child{border-left:none;padding-left:0}
+  .mat strong{font-size:23px}
+}
+
+/* ============ reviews ============ */
+.rev-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.rev-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:2px;padding:24px;display:flex;flex-direction:column}
+.rev-card .stars{margin-bottom:16px}
+.rev-quote{font-size:16px;line-height:1.6;color:rgba(255,255,255,.92);flex:1}
+.rev-meta{margin-top:24px;padding-top:16px;border-top:1px solid var(--line-dark)}
+.rev-name{font-weight:600;font-size:14px;color:#fff}
+.rev-src{display:block;margin-top:5px;color:var(--fog)}
+.rev-link{
+  display:inline-flex;align-items:center;gap:10px;margin-top:40px;min-height:44px;
+  font-weight:600;font-size:15px;color:#fff;border-bottom:1px solid var(--line-dark);transition:border-color .15s;
+}
+.rev-link:hover{border-color:#fff}
+.rev-link svg{stroke:currentColor}
+@media(min-width:640px){.rev-grid{grid-template-columns:1fr 1fr;gap:24px}.rev-card{padding:32px}}
+@media(min-width:1024px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ============ faq ============ */
+.faq-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
+.faq-photo{display:none;border-radius:2px;overflow:hidden}
+.faq-photo img{width:100%;height:100%;min-height:520px;object-fit:cover;filter:saturate(.9) contrast(1.04)}
+.faq-list{border-top:1px solid var(--line)}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list summary{
+  list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:20px 0;font-size:17px;font-weight:600;letter-spacing:-.01em;min-height:56px;
+}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";font-size:24px;font-weight:400;color:var(--steel);flex:none;line-height:1}
+.faq-list details[open] summary::after{content:"\2013"}
+.faq-list details p{padding:0 0 22px;color:var(--steel);max-width:58ch}
+@media(min-width:1024px){
+  .faq-grid{grid-template-columns:1fr 1.4fr;gap:64px}
+  .faq-photo{display:block}
+  .faq-list summary{font-size:19px;padding:24px 0}
+}
+
+/* ============ contact ============ */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:stretch}
+.c-row{padding:22px 0;border-top:1px solid var(--line)}
+.c-row:last-child{border-bottom:1px solid var(--line)}
+.c-row .label{color:var(--steel);margin-bottom:6px}
+.c-row p,.c-row a{font-size:17px;font-weight:500}
+.c-phone a{font-size:clamp(32px,9vw,44px);font-weight:700;letter-spacing:-.02em;line-height:1.1;display:inline-block;padding:4px 0}
+.c-phone a:hover{color:var(--accent)}
+.hours-tbl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:16px}
+.hours-tbl .d{color:var(--steel)}
+.map{border-radius:2px;overflow:hidden;border:1px solid var(--line);min-height:320px}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(1) contrast(1.05);transition:filter .3s}
+.map:hover iframe{filter:none}
+@media(min-width:1024px){
+  .contact-grid{grid-template-columns:1fr 1fr;gap:64px}
+  .map,.map iframe{min-height:460px}
+}
+
+/* ============ footer ============ */
+footer.site{background:var(--ink);color:#fff;padding:56px 0}
+.foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
+.foot-fact{margin-top:14px;color:var(--fog);font-size:15px;max-width:46ch}
+.foot-meta .label{color:var(--fog)}
+.foot-meta a{font-weight:600;font-size:18px;display:inline-block;padding:6px 0}
+.foot-meta a:hover{color:var(--fog)}
+.foot-legal{
+  margin-top:48px;padding-top:24px;border-top:1px solid var(--line-dark);
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--fog);
+}
+@media(min-width:768px){footer.site{padding:72px 0}}
+
+/* ============ mobile call bar ============ */
+.callbar{
+  display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;
+  background:var(--accent);color:#fff;height:60px;
+  align-items:center;justify-content:center;gap:10px;
+  font-weight:700;font-size:17px;letter-spacing:.01em;
+  box-shadow:0 -8px 24px rgba(0,0,0,.16);
+}
+.callbar svg{stroke:#fff}
+@media(min-width:768px){
+  .callbar{display:none}
+  body{padding-bottom:0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <p class="label">GAF Certified&trade; Contractor &nbsp;&middot;&nbsp; BBB A+<span class="tb-x"> &nbsp;&middot;&nbsp; Family-owned since 2017</span></p>
+    <p class="label tb-r">West Valley City &middot; Wasatch Front</p>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="wordmark" aria-label="Avalanche Roofing Services — home">
+      <span class="wm-name">Avalanche<span>.</span></span>
+      <span class="wm-sub">Roofing Services &middot; West Valley City</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#process" class="nl-x">Process</a>
+      <a href="#work">Our Work</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:+18015991805" class="nav-call">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="num">(801) 599-1805</span><span class="word">Call</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO — real Avalanche roof: charcoal shingles, white house, Wasatch backdrop -->
+<section class="hero" style="padding:0">
+  <img class="hero-img" src="assets/charcoal-shingle-roof-mountains.jpg" alt="A charcoal architectural shingle roof installed by Avalanche Roofing on a white West Valley City home, with the Wasatch mountains behind it">
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="label eyebrow">Family-owned &middot; West Valley City &middot; Since 2017</p>
+    <h1>Wasatch-tough roofs, done right the first time.</h1>
+    <p class="lead">Avalanche Roofing is a GAF-Certified, family-owned crew serving the Salt Lake Valley. Honest work, a fair bid within 24 hours, and a yard left spotless when we&rsquo;re done.</p>
+    <div class="hero-ctas">
+      <a href="tel:+18015991805" class="btn btn-accent">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Free estimate — (801) 599-1805
+      </a>
+      <a href="#work" class="btn btn-ghost">See our work</a>
+    </div>
+  </div>
+  <p class="hero-tag label">Pictured: an Avalanche re-roof &mdash; charcoal architectural shingles, Salt Lake Valley</p>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust" role="region" aria-label="Credentials and ratings">
+  <div class="trust-grid">
+    <div class="trust-cell">
+      <p class="label">Customer rating</p>
+      <strong><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>4.9</strong>
+      <p class="sub">96 reviews</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Manufacturer certified</p>
+      <strong>GAF Certified&trade;</strong>
+      <p class="sub">System Plus warranty available</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Better Business Bureau</p>
+      <strong>A+ rating</strong>
+      <p class="sub">Accredited since 2017</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Utah licensed</p>
+      <strong>Lic. #10413278-5501</strong>
+      <p class="sub">Class S280 Roofing</p>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="band-chalk" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">What we do</p>
+      <h2>Every roof on the Wasatch Front, residential to commercial.</h2>
+      <p class="lead">One in-house crew &mdash; no subcontractors, no piece-rate. From a full tear-off to a leak repair, the same team that bids your roof is the team that finishes it.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d='M2 12 12 3.5 22 12'/><path d='M5 9.5V20h14V9.5'/><path d='M16 5.5V4h2.5v3.5'/></svg>
+        <h3>Roof Replacement</h3>
+        <p>Full tear-off and a new GAF shingle system &mdash; qualifying installs are eligible for the GAF System Plus limited warranty. Many re-roofs are done in a single day.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d='m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9'/><path d='m18 15 4-4'/><path d='m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12 8.4V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5'/></svg>
+        <h3>Roof Repair</h3>
+        <p>Leaks, storm and wind damage, and missing or worn shingles &mdash; fixed fast so a small problem stays a small problem.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d='M3 7h18v10H3z'/><path d='M3 11h18'/><path d='M8 7V5'/><path d='M16 7V5'/></svg>
+        <h3>Flat &amp; Commercial Roofing</h3>
+        <p>TPO membrane, EPDM, PVC, IB, and metal roofing systems for flat and low-slope commercial buildings across the valley.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d='M3 5h18v4H3z'/><path d='M5 9v10'/><path d='M19 9v10'/><path d='M5 15h14'/></svg>
+        <h3>Seamless Rain Gutters</h3>
+        <p>New seamless gutter installation and gutter clean-out to move water off the roof and away from your foundation.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z'/><path d='m7.5 4.27 9 5.15'/><path d='M3.3 7 12 12l8.7-5'/><path d='M12 22V12'/></svg>
+        <h3>Swamp Cooler Removal</h3>
+        <p>Removing an old evaporative cooler before a re-roof &mdash; a common Utah job we handle as part of the project, sealed clean.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d='M20 6 9 17l-5-5'/></svg>
+        <h3>Job-Site Clean-Up</h3>
+        <p>Thorough clean-up after every job &mdash; the part customers mention most. Nails magnet-swept, debris hauled, yard left how we found it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE / DRONE BAND -->
+<section class="storm">
+  <img class="storm-img" src="assets/shingle-roof-mountain-backdrop.jpg" alt="Aerial view of a finished architectural shingle roof by Avalanche Roofing in a Salt Lake Valley neighborhood with mountains behind">
+  <div class="storm-scrim" aria-hidden="true"></div>
+  <div class="storm-content">
+    <p class="label eyebrow">A fair bid within 24 hours</p>
+    <h2>On time, on budget, cleaned up right.</h2>
+    <blockquote>
+      <p>&ldquo;Alex was quick to go out and evaluate the roof, provided a fair and competitive bid within 24 hours, completed the work by the date he promised and for the price he quoted.&rdquo;</p>
+      <footer class="label">C. Bunt &mdash; Google review (Local Guide)</footer>
+    </blockquote>
+    <a href="tel:+18015991805" class="btn btn-accent">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Get my free 24-hour bid
+    </a>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">How it works</p>
+      <h2>From first call to final cleanup.</h2>
+      <p class="lead">No pressure, no sales team. You talk to the Martinez crew that does the work &mdash; and you get a straight answer.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <p class="step-num" aria-hidden="true">01</p>
+        <div>
+          <h3>Call for a free look</h3>
+          <p>One number, answered by the family that runs the crew. We come out and evaluate the roof &mdash; no charge.</p>
+        </div>
+      </div>
+      <div class="step">
+        <p class="step-num" aria-hidden="true">02</p>
+        <div>
+          <h3>A fair bid within 24 hours</h3>
+          <p>A competitive, honest number &mdash; usually back to you within a day. No surprises buried in the fine print.</p>
+        </div>
+      </div>
+      <div class="step">
+        <p class="step-num" aria-hidden="true">03</p>
+        <div>
+          <h3>Built on the date promised</h3>
+          <p>Done by the day we said, for the price we quoted. Many full re-roofs &mdash; tear-off included &mdash; finish in a single day.</p>
+        </div>
+      </div>
+      <div class="step">
+        <p class="step-num" aria-hidden="true">04</p>
+        <div>
+          <h3>Left exceptionally clean</h3>
+          <p>The clean-up customers single out review after review. We leave your property the way we found it.</p>
+        </div>
+      </div>
+    </div>
+    <div class="proof">
+      <p>&ldquo;Needed my roof done quickly and affordable. They met my expectations &mdash; had it all tore off and shingles back on in one day!&rdquo;</p>
+      <footer class="label">Kathy K. &mdash; verified review, June 2024</footer>
+    </div>
+  </div>
+</section>
+
+<!-- OUR WORK -->
+<section class="band-chalk" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Recent work</p>
+      <h2>Real Avalanche roofs around the valley.</h2>
+      <p class="lead">A few jobs from the Avalanche crew &mdash; new builds, re-roofs, and the kind of clean detail that holds up to a Utah winter.</p>
+    </div>
+    <div class="work-grid">
+      <figure class="work-card">
+        <div class="work-ph"><img src="assets/new-construction-roof.jpg" alt="A new-construction West Valley City home with a fresh Avalanche Roofing shingle roof on freshly sheathed walls"></div>
+        <figcaption class="work-cap label">New-construction re-roof &mdash; West Valley City</figcaption>
+      </figure>
+      <figure class="work-card">
+        <div class="work-ph"><img src="assets/shingle-roof-vents-closeup.jpg" alt="Close-up of a finished Avalanche shingle roof with clean vent installs against fall trees"></div>
+        <figcaption class="work-cap label">Finished shingle &amp; vent detail</figcaption>
+      </figure>
+    </div>
+    <div class="work-quote">
+      <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+      <p>&ldquo;I was impressed with their quality of workmanship&hellip; Alex and his team went the extra mile to insure the quality of work was to my expectations.&rdquo;</p>
+      <footer class="label">Dean J. &mdash; verified review</footer>
+    </div>
+  </div>
+</section>
+
+<!-- OWNER / FAMILY (real branded-trucks photo) -->
+<section id="about">
+  <div class="wrap">
+    <div class="owner-grid">
+      <div class="owner-photo">
+        <img src="assets/avalanche-trucks-branded.jpg" alt="Two Avalanche Roofing Services branded work trucks parked on a West Valley City job site">
+      </div>
+      <div class="owner-copy">
+        <p class="label eyebrow">The Martinez family</p>
+        <h2>Run by the people on your roof.</h2>
+        <p>Avalanche Roofing has been family-owned since 2017 &mdash; Mario, Alex, and Richard Martinez. Customers describe the same old-fashioned values in review after review: hard work, honesty, and integrity. When you call, you reach the family that runs the crew.</p>
+        <p>Every employee is hourly &mdash; no subcontractors, no piece-rate &mdash; so the people who bid your roof are the people who build it. That&rsquo;s how a nine-year-old roofer holds a 4.9-star average across 96 reviews.</p>
+        <div class="owner-stats">
+          <div class="stat">
+            <p class="stat-num">9</p>
+            <p class="label">Years roofing the Wasatch Front</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num">4.9&#9733;</p>
+            <p class="label">Across 96 customer reviews</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num">A+</p>
+            <p class="label">BBB accredited since 2017</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS STRIP -->
+<div class="mats" role="region" aria-label="Credentials and certifications">
+  <div class="mats-inner">
+    <p class="label">Certified, accredited, and licensed in Utah</p>
+    <div class="mats-row">
+      <div class="mat"><strong>GAF Certified&trade;</strong><span>System Plus limited warranty available</span></div>
+      <div class="mat"><strong>BBB A+</strong><span>Accredited since 2017</span></div>
+      <div class="mat"><strong>Lic. #10413278-5501</strong><span>Utah Class S280 Roofing</span></div>
+      <div class="mat"><strong>4.9&#9733; / 96</strong><span>Google &amp; GAF reviews</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<section class="dark" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Reviews</p>
+      <h2>4.9 stars, earned one roof at a time.</h2>
+      <p class="lead">Every word below is quoted verbatim from a real Avalanche customer review.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Alex was wonderful to work with. He was very professional and very informed of the products for our new roof&hellip; His crew showed up on time, finished on time and the clean up was exceptional. We are so happy with our new roof!&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Eileen Walker</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Alex and his team were great to work with. I&rsquo;ve used them on several projects over the years and they have been consistent every time&hellip; completed the work by the date he promised and for the price he quoted. Thank you!&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">C. Bunt</p>
+          <span class="rev-src label">Google review &middot; Local Guide</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Mario, Alex and Richard Martinez have old fashioned values like HARD WORK, HONESTY and INTEGRITY. If you are looking for an honest hard working contractor this is your company.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Ken P.</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Needed my roof done quickly and affordable. They met my expectations. The roof looks great and had it all tore off and shingles back on in one day!&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Kathy K.</p>
+          <span class="rev-src label">Verified review &middot; June 2024</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;I was impressed with their quality of workmanship&hellip; Alex and his team went the extra mile to insure the quality of work was to my expectations.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Dean J.</p>
+          <span class="rev-src label">Verified review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Hire them! Great price, fabulous work, honest people &mdash; loved all the workers.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Stephen H.</p>
+          <span class="rev-src label">BBB review</span>
+        </div>
+      </div>
+    </div>
+    <a class="rev-link" href="https://www.google.com/maps/search/Avalanche+Roofing+Services+West+Valley+City" target="_blank" rel="noopener">
+      Read all 96 reviews on Google
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-photo">
+      <img src="assets/shingle-roof-mountain-backdrop.jpg" alt="A finished Avalanche shingle roof in a Salt Lake Valley neighborhood">
+    </div>
+    <div>
+      <div class="sec-head">
+        <p class="label eyebrow">Straight answers</p>
+        <h2>What homeowners ask first.</h2>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>What does an estimate cost?</summary>
+          <p>Nothing. Estimates are free, and customers report a fair, competitive bid back within about 24 hours of the visit.</p>
+        </details>
+        <details>
+          <summary>How long does a full re-roof take?</summary>
+          <p>Many residential re-roofs &mdash; tear-off included &mdash; are finished in a single day. We&rsquo;ll give you a realistic timeline with your bid.</p>
+        </details>
+        <details>
+          <summary>Are you a GAF-certified roofer?</summary>
+          <p>Yes. Avalanche is a GAF Certified&trade; contractor, which means qualifying roof systems are eligible for the GAF System Plus limited warranty.</p>
+        </details>
+        <details>
+          <summary>Do you do flat and commercial roofs?</summary>
+          <p>Yes &mdash; TPO membrane, EPDM, PVC, IB, and metal systems for flat and low-slope commercial buildings, alongside our residential shingle work.</p>
+        </details>
+        <details>
+          <summary>Who actually does the work?</summary>
+          <p>The Martinez family crew. Every employee is hourly &mdash; no subcontractors, no piece-rate &mdash; so the team that bids your roof is the team that builds it.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="band-chalk" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Free estimate</p>
+      <h2>Call the Avalanche crew.</h2>
+      <p class="lead">Calling is the fastest way to reach us &mdash; the person who answers is part of the family that does the work.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="c-row c-phone">
+          <p class="label">Call us</p>
+          <a href="tel:+18015991805">(801) 599-1805</a>
+        </div>
+        <div class="c-row">
+          <p class="label">Email</p>
+          <a href="mailto:Avalancheroofingslc@yahoo.com">Avalancheroofingslc@yahoo.com</a>
+        </div>
+        <div class="c-row">
+          <p class="label">Based in</p>
+          <p>3755 W Rancho Vista Ln, West Valley City, UT 84120</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Service area</p>
+          <p>West Valley City &middot; Salt Lake City &middot; the Wasatch Front</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Hours</p>
+          <div class="hours-tbl">
+            <span class="d">Mon&ndash;Fri</span><span>7:30 AM &ndash; 5:00 PM</span>
+            <span class="d">Saturday</span><span>7:30 AM &ndash; 3:30 PM</span>
+            <span class="d">Sunday</span><span>Closed</span>
+          </div>
+        </div>
+      </div>
+      <div class="map">
+        <iframe src="https://maps.google.com/maps?q=West+Valley+City+UT+84120&z=12&output=embed" title="Map showing Avalanche Roofing Services service area in West Valley City, Utah" referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="wordmark" style="color:#fff">
+          <span class="wm-name">Avalanche<span style="color:var(--accent)">.</span></span>
+          <span class="wm-sub" style="color:var(--fog)">Roofing Services &middot; West Valley City</span>
+        </div>
+        <p class="foot-fact">Family-owned &amp; operated since 2017 by the Martinez family. GAF Certified&trade; &middot; BBB A+ accredited &middot; 4.9&#9733; across 96 reviews.</p>
+      </div>
+      <div class="foot-meta">
+        <p class="label">West Valley City, UT 84120</p>
+        <p style="margin-top:6px"><a href="tel:+18015991805">(801) 599-1805</a></p>
+      </div>
+    </div>
+    <div class="foot-legal label">
+      <span>&copy; 2026 Avalanche Roofing Services LLC</span>
+      <span>UT Contractor Lic. #10413278-5501 &mdash; Class S280 Roofing</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+18015991805" class="callbar" aria-label="Call Avalanche Roofing Services at (801) 599-1805">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call &mdash; (801) 599-1805
+</a>
+
+</body>
+</html>
