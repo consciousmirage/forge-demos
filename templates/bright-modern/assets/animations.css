@@ -1,0 +1,87 @@
+/* ============================================================
+   Peak 11 Media — Motion Layer (v3 standard)
+   Self-contained. GPU-only (transform/opacity). No layout shift.
+   Progressive enhancement: content is fully visible if JS never runs.
+   Honors prefers-reduced-motion. ~2KB. No libraries.
+   ------------------------------------------------------------
+   How it works:
+   - JS adds class `js-anim` to <html> the instant it runs (before paint).
+   - Reveal styles ONLY apply when `.js-anim` is present, so a JS failure
+     leaves every element at its natural, fully-visible state.
+   - Elements occupy their final box at all times; we only fade + nudge
+     within that box, so there is zero layout shift / CLS.
+   ============================================================ */
+
+/* Hover lift — applies regardless of JS (pure CSS enhancement).
+   Cards: soft shadow + 2px rise. Buttons: 2px rise + slightly deeper shadow.
+   Uses transform/box-shadow only; will-change kept off to avoid layer bloat. */
+.svc-card,
+.rev-card,
+.review-card,
+.work-card{
+  transition: transform .25s cubic-bezier(.2,.6,.2,1),
+              box-shadow .25s cubic-bezier(.2,.6,.2,1),
+              border-color .15s ease;
+}
+.svc-card:hover,
+.rev-card:hover,
+.review-card:hover,
+.work-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -12px rgba(10,11,13,.22);
+}
+
+.btn{
+  transition: background .15s ease, border-color .15s ease, color .15s ease,
+              transform .2s cubic-bezier(.2,.6,.2,1), box-shadow .2s cubic-bezier(.2,.6,.2,1);
+}
+.btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px -12px rgba(10,11,13,.35);
+}
+.btn:active{ transform: translateY(0); box-shadow: none; }
+
+/* ---- Scroll reveal (only when JS is active) ---- */
+.js-anim [data-reveal]{
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .55s cubic-bezier(.2,.6,.2,1),
+              transform .55s cubic-bezier(.2,.6,.2,1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.js-anim [data-reveal].is-in{
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/* Lighter, faster motion on small screens (buttery mobile). */
+@media (max-width: 640px){
+  .js-anim [data-reveal]{
+    transform: translateY(12px);
+    transition-duration: .45s;
+  }
+  .svc-card:hover, .rev-card:hover, .review-card:hover,
+  .work-card:hover, .btn:hover{ transform: none; box-shadow: none; }
+}
+
+/* ---- Accessibility: fully disable motion ---- */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto !important; }
+  .js-anim [data-reveal]{
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto;
+  }
+  .svc-card, .rev-card, .review-card, .work-card, .btn{
+    transition: border-color .15s ease, background .15s ease,
+                color .15s ease !important;
+  }
+  .svc-card:hover, .rev-card:hover, .review-card:hover,
+  .work-card:hover, .btn:hover, .btn:active{
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumen Dental Co. — Modern Dentistry &amp; Orthodontics in Salt Lake City</title>
+<meta name="description" content="Lumen Dental Co. — gentle, modern dentistry and clear-aligner orthodontics. Same-day visits, transparent pricing, and a calm experience designed around you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/animations.css">
+<style>
+:root{
+  --paper:#ffffff;
+  --tint:#f5f7ff;        /* soft accent-washed band */
+  --tint-2:#eef2ff;      /* chip wash */
+  --ink:#0f172a;         /* slate-900 headings */
+  --body:#475569;        /* slate-600 body */
+  --muted:#94a3b8;       /* slate-400 */
+  --line:#e8edf6;        /* hairline */
+  --accent:#4f46e5;      /* indigo 600 */
+  --accent-2:#6366f1;    /* indigo 500 */
+  --accent-deep:#4338ca; /* indigo 700 hover */
+  --cyan:#06b6d4;
+  --amber:#f59e0b;
+  --max:1180px;
+  --shadow-card:0 22px 44px -28px rgba(15,23,42,.30);
+  --shadow-soft:0 10px 30px -18px rgba(15,23,42,.22);
+  --ring:0 0 0 1px var(--line);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Plus Jakarta Sans',ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:16px;line-height:1.6;color:var(--body);background:var(--paper);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+
+/* ---------- type voices ---------- */
+h1,h2,h3,.display{font-family:'Space Grotesk',ui-sans-serif,system-ui,sans-serif;color:var(--ink)}
+h1{font-size:clamp(38px,8.4vw,72px);font-weight:700;line-height:1.04;letter-spacing:-.03em}
+h2{font-size:clamp(30px,5.4vw,48px);font-weight:700;line-height:1.08;letter-spacing:-.025em;color:var(--ink)}
+h3{font-size:20px;font-weight:600;line-height:1.25;letter-spacing:-.01em;color:var(--ink)}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:13px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--accent);
+}
+.eyebrow::before{content:"";width:22px;height:2px;border-radius:2px;background:var(--accent);flex:none}
+.lead{font-size:clamp(16px,2.6vw,19px);color:var(--body);line-height:1.6;max-width:52ch}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  border-radius:999px;font-weight:700;font-size:15px;line-height:1;
+  padding:16px 26px;white-space:nowrap;cursor:pointer;border:1px solid transparent;
+}
+.btn svg{flex:none}
+.btn-accent{background:var(--accent);color:#fff;box-shadow:0 14px 26px -14px rgba(79,70,229,.7)}
+.btn-accent:hover{background:var(--accent-deep)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line);box-shadow:var(--shadow-soft)}
+.btn-ghost:hover{border-color:#cdd6ea}
+.btn-white{background:#fff;color:var(--accent)}
+.btn-white:hover{background:#f1f3ff}
+.btn-clear{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.45)}
+.btn-clear:hover{background:rgba(255,255,255,.2)}
+
+/* ---------- sticky nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:60;
+  background:rgba(255,255,255,.82);backdrop-filter:saturate(180%) blur(14px);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{height:66px;display:flex;align-items:center;gap:28px;max-width:var(--max);margin:0 auto;padding:0 22px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand .mark{
+  width:34px;height:34px;border-radius:11px;flex:none;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  display:grid;place-items:center;color:#fff;box-shadow:0 8px 18px -8px rgba(79,70,229,.8);
+}
+.brand .mark svg{width:18px;height:18px}
+.brand .name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.02em;color:var(--ink)}
+.nav-links{display:flex;gap:30px;margin-left:auto}
+.nav-links a{font-weight:600;font-size:15px;color:var(--body)}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-cta .btn{padding:12px 20px;font-size:14px}
+.nav-phone{display:none;font-weight:700;color:var(--ink);font-size:15px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding:64px 0 76px;background:var(--paper)}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(70px);z-index:0;pointer-events:none}
+.hero::before{width:520px;height:520px;top:-180px;right:-140px;background:rgba(99,102,241,.20)}
+.hero::after{width:440px;height:440px;bottom:-200px;left:-160px;background:rgba(6,182,212,.16)}
+.hero .wrap{position:relative;z-index:1}
+.hero-grid{display:grid;gap:40px}
+.rate-chip{
+  display:inline-flex;align-items:center;gap:9px;background:var(--tint-2);
+  border:1px solid #dfe4fb;border-radius:999px;padding:7px 14px 7px 9px;
+  font-weight:600;font-size:13.5px;color:var(--ink);margin-bottom:22px;
+}
+.rate-chip .stars{display:inline-flex;gap:1px}
+.rate-chip .stars svg{width:14px;height:14px;fill:var(--amber)}
+.hero h1{margin-bottom:20px}
+.hero h1 .hl{color:var(--accent)}
+.hero .lead{margin-bottom:30px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:13px;margin-bottom:26px}
+.hero-assure{display:flex;flex-wrap:wrap;gap:8px 20px}
+.hero-assure span{display:inline-flex;align-items:center;gap:7px;font-weight:600;font-size:14px;color:var(--body)}
+.hero-assure svg{width:17px;height:17px;color:var(--accent);flex:none}
+
+/* hero media */
+.hero-media{position:relative}
+.hero-photo{
+  position:relative;border-radius:26px;overflow:hidden;box-shadow:var(--shadow-card);
+  background:linear-gradient(160deg,#e9edff,#dbe6ff);aspect-ratio:4/3.4;
+}
+.hero-photo .ph-illu{position:absolute;inset:0}
+.float-badge{
+  position:absolute;left:-12px;bottom:22px;background:#fff;border-radius:18px;
+  box-shadow:var(--shadow-card);padding:14px 16px;display:flex;align-items:center;gap:12px;
+  border:1px solid var(--line);
+}
+.float-badge .fb-ic{width:42px;height:42px;border-radius:13px;background:var(--tint-2);display:grid;place-items:center;color:var(--accent);flex:none}
+.float-badge .fb-ic svg{width:22px;height:22px}
+.float-badge .fb-n{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:21px;color:var(--ink);line-height:1}
+.float-badge .fb-l{font-size:12.5px;font-weight:600;color:var(--muted);margin-top:3px}
+.float-badge.tr{left:auto;right:-10px;bottom:auto;top:18px}
+
+/* ---------- marquee / partners ---------- */
+.partners{padding:30px 0 6px;border-top:1px solid var(--line)}
+.partners p{text-align:center;font-weight:600;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.partner-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 26px}
+.partner-row span{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:17px;color:#aab4c8;letter-spacing:-.01em}
+
+/* ---------- stat band ---------- */
+.stats{padding:14px 0}
+.stat-card{
+  background:var(--tint);border:1px solid var(--line);border-radius:26px;
+  padding:38px 26px;display:grid;grid-template-columns:repeat(2,1fr);gap:30px 18px;
+}
+.stat .n{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(34px,6vw,46px);line-height:1;color:var(--accent);letter-spacing:-.02em}
+.stat:nth-child(2) .n{color:var(--cyan)}
+.stat:nth-child(3) .n{color:var(--ink)}
+.stat:nth-child(4) .n{color:var(--amber)}
+.stat .l{margin-top:9px;font-weight:600;font-size:14px;color:var(--body)}
+
+/* ---------- section frame ---------- */
+section{padding:74px 0}
+.sec-head{max-width:60ch;margin-bottom:42px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head p{margin-top:16px;font-size:17px;color:var(--body)}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+.center .lead,.center p{margin-left:auto;margin-right:auto}
+
+/* ---------- services ---------- */
+.svc-grid{display:grid;grid-template-columns:1fr;gap:20px}
+.svc-card{
+  background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;
+  box-shadow:var(--shadow-soft);
+}
+.svc-ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;margin-bottom:18px;background:var(--tint-2);color:var(--accent)}
+.svc-ic svg{width:26px;height:26px}
+.svc-card:nth-child(2) .svc-ic{background:#e4fbff;color:var(--cyan)}
+.svc-card:nth-child(3) .svc-ic{background:#fff3df;color:var(--amber)}
+.svc-card:nth-child(5) .svc-ic{background:#e4fbff;color:var(--cyan)}
+.svc-card:nth-child(6) .svc-ic{background:#fff3df;color:var(--amber)}
+.svc-card h3{margin-bottom:8px}
+.svc-card p{font-size:15px}
+
+/* ---------- feature rows ---------- */
+.feature{display:grid;gap:32px;align-items:center}
+.feature + .feature{margin-top:64px}
+.feat-media{
+  border-radius:26px;overflow:hidden;box-shadow:var(--shadow-card);
+  background:linear-gradient(160deg,#e9edff,#dde9ff);aspect-ratio:5/4;position:relative;
+}
+.feature.alt .feat-media{background:linear-gradient(160deg,#e2fbff,#e8edff)}
+.check-list{list-style:none;margin-top:22px;display:grid;gap:14px}
+.check-list li{display:flex;gap:12px;font-weight:500;font-size:15.5px;color:var(--body)}
+.check-list .ck{width:24px;height:24px;border-radius:8px;background:var(--tint-2);color:var(--accent);display:grid;place-items:center;flex:none}
+.check-list .ck svg{width:15px;height:15px}
+.feature .eyebrow{margin-bottom:14px}
+.feature h2{margin-bottom:14px}
+
+/* ---------- process band ---------- */
+.process{background:linear-gradient(180deg,var(--tint),#fff)}
+.steps{display:grid;gap:18px}
+.step{
+  background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;
+  box-shadow:var(--shadow-soft);position:relative;
+}
+.step .num{
+  width:44px;height:44px;border-radius:13px;background:var(--accent);color:#fff;
+  font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:19px;
+  display:grid;place-items:center;margin-bottom:16px;box-shadow:0 12px 22px -12px rgba(79,70,229,.8);
+}
+.step h3{margin-bottom:7px}
+.step p{font-size:15px}
+
+/* ---------- testimonials ---------- */
+.rev-grid{display:grid;gap:20px}
+.rev-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow-soft)}
+.rev-card .stars{display:flex;gap:2px;margin-bottom:14px}
+.rev-card .stars svg{width:17px;height:17px;fill:var(--amber)}
+.rev-card blockquote{font-size:16px;color:var(--ink);line-height:1.55;font-weight:500;margin-bottom:18px}
+.rev-who{display:flex;align-items:center;gap:12px}
+.rev-av{width:44px;height:44px;border-radius:50%;flex:none;display:grid;place-items:center;color:#fff;font-weight:700;font-family:'Space Grotesk',sans-serif}
+.rev-who .rn{font-weight:700;color:var(--ink);font-size:15px}
+.rev-who .rr{font-size:13px;color:var(--muted);font-weight:600}
+
+/* ---------- CTA band ---------- */
+.cta{padding:78px 0}
+.cta-card{
+  position:relative;overflow:hidden;border-radius:30px;padding:54px 28px;text-align:center;
+  background:linear-gradient(135deg,var(--accent) 0%,#6d28d9 58%,var(--accent-2) 100%);
+  box-shadow:0 40px 70px -36px rgba(79,70,229,.7);
+}
+.cta-card::before,.cta-card::after{content:"";position:absolute;border-radius:50%;filter:blur(46px)}
+.cta-card::before{width:300px;height:300px;top:-120px;right:-80px;background:rgba(255,255,255,.18)}
+.cta-card::after{width:260px;height:260px;bottom:-120px;left:-70px;background:rgba(6,182,212,.30)}
+.cta-card *{position:relative;z-index:1}
+.cta-card h2{color:#fff;margin-bottom:14px}
+.cta-card p{color:rgba(255,255,255,.9);font-size:17px;max-width:46ch;margin:0 auto 26px}
+.cta-btns{display:flex;flex-wrap:wrap;gap:13px;justify-content:center}
+
+/* ---------- footer ---------- */
+footer{background:#fff;border-top:1px solid var(--line);padding:54px 0 110px}
+.foot-grid{display:grid;gap:34px}
+.foot-brand .brand{margin-bottom:14px}
+.foot-brand p{font-size:14.5px;max-width:34ch}
+.foot-col h4{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:14px;letter-spacing:-.01em}
+.foot-col a,.foot-col p{display:block;font-size:14.5px;color:var(--body);margin-bottom:10px}
+.foot-col a:hover{color:var(--accent)}
+.foot-bottom{margin-top:36px;padding-top:22px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:13.5px;color:var(--muted)}
+
+/* ---------- sticky mobile call bar ---------- */
+.callbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:70;
+  background:rgba(255,255,255,.92);backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;
+}
+.callbar .btn{flex:1;padding:15px}
+.callbar .btn-accent{box-shadow:none}
+
+/* ---------- responsive ---------- */
+@media(min-width:760px){
+  .wrap{padding:0 32px}
+  .nav-inner{padding:0 32px}
+  .stat-card{grid-template-columns:repeat(4,1fr);padding:44px 36px}
+  .svc-grid{grid-template-columns:repeat(2,1fr);gap:22px}
+  .rev-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .foot-grid{grid-template-columns:1.6fr 1fr 1fr 1fr}
+  .cta-card{padding:64px 48px}
+  section{padding:88px 0}
+}
+@media(min-width:1000px){
+  .nav-phone{display:block}
+  .callbar{display:none}
+  .hero{padding:78px 0 92px}
+  .hero-grid{grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+  .hero .lead{margin-bottom:34px}
+  .partners{padding:36px 0 10px}
+  .svc-grid{grid-template-columns:repeat(3,1fr)}
+  .rev-grid{grid-template-columns:repeat(3,1fr)}
+  .feature{grid-template-columns:1fr 1fr;gap:56px}
+  .feature.alt .feat-text{order:2}
+  .feature.alt .feat-media{order:1}
+  .feat-media{aspect-ratio:1/1}
+  section{padding:104px 0}
+  body{padding-bottom:0}
+}
+body{padding-bottom:74px}
+@media(min-width:1000px){body{padding-bottom:0}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 3c2.2 0 3.5 1.2 4.6 1.2C18.4 4.2 20 5.4 20 8.4c0 3.4-1.4 5.6-2.4 8.2-.7 1.8-1.2 4.2-2.6 4.2-1.2 0-1.3-2.4-3-2.4s-1.8 2.4-3 2.4c-1.4 0-1.9-2.4-2.6-4.2C5.4 14 4 11.8 4 8.4 4 5.4 5.6 4.2 7.4 4.2 8.5 4.2 9.8 3 12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="name">Lumen Dental</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Lumen</a>
+      <a href="#process">Visits</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+18015550142">(801) 555-0142</a>
+      <a class="btn btn-accent" href="#book">Book a visit</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <span class="rate-chip">
+          <span class="stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg>
+          </span>
+          4.9 from 1,200+ Salt Lake patients
+        </span>
+        <h1>Modern dentistry that feels <span class="hl">refreshingly calm.</span></h1>
+        <p class="lead">Gentle cleanings, clear-aligner orthodontics, and same-day care — delivered with transparent pricing and zero pressure. Your healthiest smile starts here.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-accent" href="#book">Book a free consult
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="tel:+18015550142">Call (801) 555-0142</a>
+        </div>
+        <div class="hero-assure">
+          <span><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Most insurance accepted</span>
+          <span><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Same-day emergencies</span>
+          <span><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>0% financing</span>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-photo" role="img" aria-label="Bright, modern Lumen Dental treatment suite">
+          <svg class="ph-illu" viewBox="0 0 400 340" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#eef2ff"/><stop offset="1" stop-color="#dbe6ff"/>
+              </linearGradient>
+            </defs>
+            <rect width="400" height="340" fill="url(#hg)"/>
+            <circle cx="300" cy="80" r="120" fill="#c7d2fe" opacity=".55"/>
+            <circle cx="90" cy="280" r="90" fill="#a5f3fc" opacity=".45"/>
+            <g transform="translate(150 110)">
+              <path d="M50 6c9 0 14 5 19 5C77 11 84 16 84 28c0 14-6 23-10 34-3 7-5 17-11 17-5 0-5-10-13-10s-8 10-13 10c-6 0-8-10-11-17C8 51 2 42 2 28 2 16 9 11 17 11c5 0 10-5 19-5z" fill="#fff" stroke="#4f46e5" stroke-width="3" stroke-linejoin="round"/>
+            </g>
+          </svg>
+        </div>
+        <div class="float-badge tr">
+          <span class="fb-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><div class="fb-n">15 min</div><div class="fb-l">Avg wait time</div></div>
+        </div>
+        <div class="float-badge">
+          <span class="fb-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.4-9.3-9C1.2 8.7 2.9 5 6.6 5 9 5 10.5 7 12 7s3-2 5.4-2c3.7 0 5.4 3.7 3.9 7-2.3 4.6-9.3 9-9.3 9z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+          <div><div class="fb-n">98%</div><div class="fb-l">Painless visits</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- partners -->
+    <div class="partners">
+      <p>Trusted &amp; in-network with</p>
+      <div class="partner-row">
+        <span>Delta Dental</span><span>Cigna</span><span>Aetna</span><span>MetLife</span><span>Guardian</span><span>CareCredit</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAT BAND -->
+<section class="stats" aria-label="Practice highlights">
+  <div class="wrap">
+    <div class="stat-card">
+      <div class="stat"><div class="n">18k+</div><div class="l">Smiles cared for</div></div>
+      <div class="stat"><div class="n">4.9★</div><div class="l">Average patient rating</div></div>
+      <div class="stat"><div class="n">12 yrs</div><div class="l">Serving Salt Lake City</div></div>
+      <div class="stat"><div class="n">Same-day</div><div class="l">Emergency appointments</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">What we do</span>
+      <h2>Complete care for the whole family</h2>
+      <p>From routine checkups to clear-aligner orthodontics, everything happens under one calm, modern roof.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c2 0 3 1.2 4.4 1.2C18 4.2 19.5 5.4 19.5 8c0 3.2-1.3 5.2-2.2 7.6-.6 1.6-1.1 3.8-2.4 3.8-1.1 0-1.2-2.2-2.9-2.2s-1.7 2.2-2.9 2.2c-1.3 0-1.8-2.2-2.4-3.8C5.8 13.2 4.5 11.2 4.5 8 4.5 5.4 6 4.2 7.6 4.2 8.6 4.2 10 3 12 3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <h3>Cleanings &amp; checkups</h3>
+        <p>Gentle hygiene visits with digital X-rays and a friendly, no-judgment exam every time.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8l8-4 8 4-8 4-8-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4 8v6l8 4 8-4V8" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <h3>Clear-aligner orthodontics</h3>
+        <p>Straighten your smile invisibly with a custom aligner plan and remote check-ins.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l2 4 4 .5-3 3 .8 4-3.8-2-3.8 2 .8-4-3-3 4-.5 2-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <h3>Cosmetic &amp; whitening</h3>
+        <p>Veneers, bonding, and pro whitening that look natural and brighten in a single visit.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.4-9.3-9C1.2 8.7 2.9 5 6.6 5 9 5 10.5 7 12 7s3-2 5.4-2c3.7 0 5.4 3.7 3.9 7-2.3 4.6-9.3 9-9.3 9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <h3>Kids &amp; family dentistry</h3>
+        <p>Calm, playful visits that help little ones build lifelong healthy-smile habits.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L4.5 13H11l-1 9 8.5-11H12l1-9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <h3>Same-day emergencies</h3>
+        <p>Cracked, aching, or knocked-out? Call before noon and we'll usually see you today.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12a9 9 0 1018 0 9 9 0 00-18 0z" stroke="currentColor" stroke-width="1.8"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Implants &amp; restoration</h3>
+        <p>Permanent, natural-looking implants and crowns to restore a complete, confident bite.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE ROWS -->
+<section id="why">
+  <div class="wrap">
+    <div class="feature">
+      <div class="feat-text">
+        <span class="eyebrow">Why Lumen</span>
+        <h2>A dental visit designed to lower your shoulders</h2>
+        <p>We rebuilt the dental experience from the chair up — bright open suites, noise-cancelling headphones, and a team that explains every step before it happens. No surprises, no upsell.</p>
+        <ul class="check-list">
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Up-front pricing you approve before we begin</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Gentle, sedation-friendly options for anxious patients</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Same-team continuity — you see a face you know</li>
+        </ul>
+      </div>
+      <div class="feat-media" role="img" aria-label="Calm modern waiting lounge">
+        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="400" height="400" fill="#e9edff"/>
+          <circle cx="110" cy="120" r="130" fill="#c7d2fe" opacity=".6"/>
+          <circle cx="300" cy="300" r="120" fill="#a5f3fc" opacity=".5"/>
+          <rect x="120" y="150" width="160" height="110" rx="20" fill="#fff" opacity=".9"/>
+          <rect x="146" y="180" width="108" height="12" rx="6" fill="#c7d2fe"/>
+          <rect x="146" y="204" width="76" height="12" rx="6" fill="#dde3ff"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="feature alt">
+      <div class="feat-text">
+        <span class="eyebrow">Technology</span>
+        <h2>Faster, more accurate, less invasive</h2>
+        <p>Digital scanners replace goopy molds, low-radiation imaging shows the full picture in seconds, and same-day crowns mean fewer trips back. Modern tools, gentler appointments.</p>
+        <ul class="check-list">
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>3D intraoral scans — no messy impressions</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Same-day crowns milled in-office</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>90% lower-radiation digital X-rays</li>
+        </ul>
+      </div>
+      <div class="feat-media" role="img" aria-label="Modern dental technology">
+        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="400" height="400" fill="#e2fbff"/>
+          <circle cx="290" cy="110" r="130" fill="#a5f3fc" opacity=".6"/>
+          <circle cx="100" cy="300" r="120" fill="#c7d2fe" opacity=".55"/>
+          <rect x="130" y="140" width="140" height="140" rx="24" fill="#fff" opacity=".92"/>
+          <circle cx="200" cy="210" r="38" fill="none" stroke="#06b6d4" stroke-width="8"/>
+          <path d="M188 210l9 9 18-18" stroke="#4f46e5" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="process">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Your first visit</span>
+      <h2>Booking takes about two minutes</h2>
+      <p class="lead">Three simple steps from hello to a healthier smile — most new patients are seen within the week.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Tell us about you</h3>
+        <p>Book online or call. Share your insurance and what's bugging you — we handle the paperwork.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Come in &amp; relax</h3>
+        <p>Meet your dentist, get a gentle exam and digital scan, and review a clear, up-front plan.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Leave smiling</h3>
+        <p>Most care happens same-day. We map out next steps and any financing — no pressure, ever.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Patient love</span>
+      <h2>Salt Lake's most-recommended smile team</h2>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg></div>
+        <blockquote>"I genuinely used to dread the dentist. The team at Lumen walked me through everything and I felt zero anxiety. My cleaning was painless and quick."</blockquote>
+        <div class="rev-who"><span class="rev-av" style="background:linear-gradient(135deg,#4f46e5,#6366f1)">MR</span><div><div class="rn">Maya R.</div><div class="rr">Sugar House</div></div></div>
+      </div>
+      <div class="rev-card">
+        <div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg></div>
+        <blockquote>"Did clear aligners here and the remote check-ins were so convenient. Straight teeth in 9 months and the pricing was exactly what they quoted up front."</blockquote>
+        <div class="rev-who"><span class="rev-av" style="background:linear-gradient(135deg,#06b6d4,#0ea5e9)">DT</span><div><div class="rn">Devin T.</div><div class="rr">Downtown SLC</div></div></div>
+      </div>
+      <div class="rev-card">
+        <div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.5-5 4.3 1.6 6.4L12 16.9 5.9 19.2 7.5 12.8l-5-4.3 6.6-.5z"/></svg></div>
+        <blockquote>"Cracked a molar on a Saturday and they got me in same-day. Calm, fast, and they sorted my insurance for me. My whole family comes here now."</blockquote>
+        <div class="rev-who"><span class="rev-av" style="background:linear-gradient(135deg,#f59e0b,#f97316)">CP</span><div><div class="rn">Carla P.</div><div class="rr">Millcreek</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="book" class="cta">
+  <div class="wrap">
+    <div class="cta-card">
+      <h2>Ready for a smile you'll love?</h2>
+      <p>New-patient consults are free, and we'll have your appointment booked in minutes. Most insurance accepted, financing available.</p>
+      <div class="cta-btns">
+        <a class="btn btn-white" href="tel:+18015550142">Call (801) 555-0142</a>
+        <a class="btn btn-clear" href="mailto:hello@lumendental.co">Request an appointment</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#">
+          <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c2.2 0 3.5 1.2 4.6 1.2C18.4 4.2 20 5.4 20 8.4c0 3.4-1.4 5.6-2.4 8.2-.7 1.8-1.2 4.2-2.6 4.2-1.2 0-1.3-2.4-3-2.4s-1.8 2.4-3 2.4c-1.4 0-1.9-2.4-2.6-4.2C5.4 14 4 11.8 4 8.4 4 5.4 5.6 4.2 7.4 4.2 8.5 4.2 9.8 3 12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+          <span class="name">Lumen Dental</span>
+        </a>
+        <p>Gentle, modern dentistry and orthodontics for Salt Lake City families.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Care</h4>
+        <a href="#services">Cleanings &amp; checkups</a>
+        <a href="#services">Clear aligners</a>
+        <a href="#services">Cosmetic &amp; whitening</a>
+        <a href="#services">Emergencies</a>
+      </div>
+      <div class="foot-col">
+        <h4>Practice</h4>
+        <a href="#why">Why Lumen</a>
+        <a href="#process">Your first visit</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#book">Book online</a>
+      </div>
+      <div class="foot-col">
+        <h4>Visit us</h4>
+        <p>248 Highland Dr<br>Salt Lake City, UT 84106</p>
+        <a href="tel:+18015550142">(801) 555-0142</a>
+        <a href="mailto:hello@lumendental.co">hello@lumendental.co</a>
+        <p>Mon–Fri 8am–6pm · Sat 9am–2pm</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Lumen Dental Co. All rights reserved.</span>
+      <span>Privacy · Terms · Accessibility</span>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CALL BAR -->
+<div class="callbar">
+  <a class="btn btn-ghost" href="#book">Book visit</a>
+  <a class="btn btn-accent" href="tel:+18015550142">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Call now
+  </a>
+</div>
+
+<script src="assets/animations.js" defer></script>
+</body>
+</html>
