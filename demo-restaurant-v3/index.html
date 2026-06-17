@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ogie's Cafe — Redwood Road, West Valley City · Family-Owned Diner Since 1983</title>
+<meta name="description" content="Ogie's Cafe has anchored the corner of 3500 South & Redwood Road in West Valley City since 1983. Huge portions, hand-cut fries, all-day breakfast, and coffee that never drops below half a cup. 3515 S Redwood Rd — open at 6 am every day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1a1411;
+  --ink-2:#241c17;
+  --steel:#5e554b;
+  --fog:#a9a094;
+  --paper:#faf6ee;
+  --chalk:#f1e9da;
+  --line:#e3d9c7;
+  --line-dark:#352c23;
+  --accent:#d39a1e;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',sans-serif;font-size:16px;line-height:1.6;color:var(--ink);background:var(--paper)}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--steel);margin-bottom:20px}
+.eyebrow::before{content:"";width:18px;height:2px;background:var(--accent)}
+.dark .eyebrow{color:var(--fog)}
+h1,h2{font-family:'Fraunces',serif;font-weight:600}
+h1{font-size:clamp(40px,6.5vw,76px);line-height:1.04;letter-spacing:-.02em}
+h2{font-size:clamp(30px,4.2vw,48px);line-height:1.08;letter-spacing:-.015em}
+h3{font-size:20px;font-weight:600;letter-spacing:-.01em;line-height:1.3}
+.body-lg{font-size:18px}
+section{padding:96px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:15px 30px;font-family:'Barlow',sans-serif;font-weight:600;font-size:16px;letter-spacing:.01em;text-decoration:none;border:1px solid transparent;white-space:nowrap}
+.btn-accent{background:var(--accent);color:var(--ink)}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-ink{background:transparent;color:var(--ink);border-color:var(--ink)}
+.stars{color:var(--accent);letter-spacing:2px;font-size:15px}
+.treated{filter:saturate(.9) contrast(1.04);border-radius:2px}
+
+/* announcement */
+.announce{background:var(--ink);color:var(--fog);text-align:center;padding:9px 16px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 1px 0 var(--line)}
+.nav-inner{display:flex;align-items:center;gap:28px;height:68px}
+.wordmark{text-decoration:none;line-height:1.05}
+.wordmark .wm-name{font-family:'Fraunces',serif;font-weight:600;font-size:21px;letter-spacing:-.01em;display:block}
+.wordmark .wm-sub{color:var(--steel);font-size:11px}
+.nav-links{display:flex;gap:24px;margin-left:auto}
+.nav-links a{text-decoration:none;font-weight:500;font-size:15px}
+.nav-rating{color:var(--steel);font-size:14px;font-weight:500;white-space:nowrap}
+.nav-rating .stars{font-size:13px}
+.nav .btn{padding:11px 22px;font-size:15px}
+
+/* hero */
+.hero{position:relative;min-height:82vh;display:flex;align-items:flex-end;background:var(--ink)}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(78deg,rgba(14,10,7,.9) 0%,rgba(14,10,7,.55) 55%,rgba(14,10,7,.22) 100%)}
+.hero-scrim::after{content:"";position:absolute;inset:auto 0 0 0;height:42%;background:linear-gradient(to top,rgba(14,10,7,.78),transparent)}
+.hero-content{position:relative;padding:0 0 72px;color:#fff}
+.hero-content .eyebrow{color:var(--fog)}
+.hero-sub{margin-top:22px;max-width:54ch;color:rgba(255,255,255,.82)}
+.hero-ctas{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+
+/* locator line */
+.locator{padding:40px 0;border-bottom:1px solid var(--line)}
+.locator p{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(18px,2.6vw,28px);letter-spacing:-.01em;line-height:1.4}
+.locator a{text-decoration:none;border-bottom:2px solid var(--line);white-space:nowrap}
+.locator .dot{color:var(--steel);padding:0 .35em}
+
+/* spec plate */
+.plate{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.plate-cell{padding:28px 24px;border-left:1px solid var(--line)}
+.plate-cell:first-child{border-left:0}
+.plate-cell .label{color:var(--steel);margin-bottom:6px}
+.plate-cell strong{font-size:20px;font-weight:600;letter-spacing:-.01em}
+
+/* menu */
+.menu-band{background:var(--chalk)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.menu-list{list-style:none}
+.menu-list li{display:flex;justify-content:space-between;gap:20px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line)}
+.menu-list li:first-child{border-top:1px solid var(--line)}
+.menu-item-head{display:flex;align-items:baseline;gap:12px;flex:1;min-width:0}
+.menu-item-name{font-family:'Fraunces',serif;font-weight:600;font-size:20px;letter-spacing:-.01em}
+.menu-item-note{color:var(--steel);font-size:14px}
+.menu-item-price{font-family:'Barlow',sans-serif;font-weight:600;font-size:17px;white-space:nowrap;color:var(--ink)}
+.menu-link{display:inline-block;margin-top:28px;font-weight:600;text-decoration:none;border-bottom:2px solid var(--ink);padding-bottom:2px}
+.menu-photo{height:100%;max-height:640px;width:100%;object-fit:cover}
+
+/* favorite band */
+.dark{background:var(--ink);color:#fff}
+.fav .split{align-items:center}
+.fav p{color:rgba(255,255,255,.84)}
+.fav .pull{margin-top:30px;padding-top:26px;border-top:1px solid var(--line-dark)}
+.fav .pull blockquote{font-size:18px;color:rgba(255,255,255,.92)}
+.fav .pull figcaption{margin-top:10px;color:var(--fog)}
+.fav-photo{width:100%;max-height:600px;object-fit:cover;object-position:center 60%}
+
+/* story */
+.story .split{align-items:center}
+.story p{color:var(--steel);margin-top:18px}
+.stat{margin-top:40px}
+.stat strong{font-size:clamp(44px,5vw,64px);font-weight:700;letter-spacing:-.02em;line-height:1;display:block;font-family:'Barlow',sans-serif}
+.stat .label{color:var(--steel);margin-top:8px}
+.story-photo{width:100%;max-height:660px;object-fit:cover}
+
+/* gallery */
+.gallery{padding-top:0}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.gallery-grid img{width:100%;aspect-ratio:1;object-fit:cover}
+
+/* reviews */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.review-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:2px;padding:32px;display:flex;flex-direction:column;gap:18px}
+.review-card blockquote{font-size:17px;color:rgba(255,255,255,.92);flex:1}
+.review-attrib strong{display:block;font-size:14px}
+.review-attrib span{color:var(--fog)}
+.reviews-link{display:inline-block;margin-top:40px;color:#fff;font-weight:600;text-decoration:none;border-bottom:2px solid rgba(255,255,255,.6);padding-bottom:2px}
+
+/* visit */
+.visit{background:var(--chalk)}
+.visit .split{gap:64px;align-items:start}
+.data-row{padding:22px 0;border-bottom:1px solid var(--line)}
+.data-row:first-of-type{border-top:1px solid var(--line)}
+.data-row .label{color:var(--steel);margin-bottom:8px}
+.visit-phone{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(28px,3.6vw,40px);letter-spacing:-.015em;text-decoration:none}
+.visit-addr{text-decoration:none;font-size:18px;font-weight:500}
+.hours-table{width:100%;border-collapse:collapse;font-size:15px}
+.hours-table td{padding:6px 0}
+.hours-table td:last-child{text-align:right;color:var(--steel)}
+.visit .btn{margin-top:28px}
+.map{position:relative;display:block;border-radius:2px;overflow:hidden;border:1px solid var(--line)}
+.map img{width:100%;height:100%;object-fit:cover;filter:grayscale(.25) contrast(1.04)}
+.map .pin{position:absolute;left:34%;top:50%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:6px}
+.map .pin-label{background:var(--ink);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:7px 12px;border-radius:2px;white-space:nowrap}
+.map .pin-dot{width:14px;height:14px;border-radius:50%;background:var(--ink);border:3px solid var(--paper);box-shadow:0 0 0 1px var(--ink)}
+.map .map-credit{position:absolute;right:0;bottom:0;background:rgba(250,246,238,.85);color:var(--steel);font-size:11px;padding:3px 8px}
+
+/* footer */
+footer{background:var(--ink);color:#fff;padding:80px 0 64px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px}
+.foot-wordmark{font-family:'Fraunces',serif;font-weight:600;font-size:24px}
+.foot-cred{color:var(--fog);margin-top:10px;max-width:38ch}
+.foot-col .label{color:var(--fog);margin-bottom:14px}
+.foot-col p,.foot-col a{color:rgba(255,255,255,.85);text-decoration:none;font-size:15px}
+.foot-col p{margin-bottom:8px}
+.copyright{margin-top:56px;padding-top:24px;border-top:1px solid var(--line-dark);color:var(--fog);font-size:13px}
+.copyright .credit{color:rgba(255,255,255,.6)}
+
+/* sticky mobile bar */
+.mobile-bar{display:none}
+
+@media (max-width:980px){
+  .split{grid-template-columns:1fr;gap:40px}
+  .menu-photo,.story-photo,.fav-photo{max-height:440px}
+  .story .split > img{order:-1}
+  .reviews-grid{grid-template-columns:1fr}
+  .plate{grid-template-columns:1fr 1fr}
+  .plate-cell:nth-child(3){border-left:0}
+  .plate-cell:nth-child(n+3){border-top:1px solid var(--line)}
+  .foot-grid{grid-template-columns:1fr;gap:36px}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .nav-links,.nav-rating{display:none}
+  .map{max-height:480px}
+  .map img{max-height:480px;object-fit:cover;object-position:center}
+}
+@media (max-width:767px){
+  section{padding:64px 0}
+  .wrap{padding:0 20px}
+  body{padding-bottom:58px}
+  .hero{min-height:80vh}
+  .hero-content{padding-bottom:56px}
+  .hero-ctas .btn{width:100%}
+  .locator p{font-size:18px}
+  .locator .dot{display:block;height:0;overflow:hidden}
+  .locator span.seg{display:block;padding:3px 0}
+  .menu-list li{flex-direction:column;gap:6px;align-items:stretch}
+  .menu-item-head{flex-direction:column;gap:3px}
+  .menu-item-price{align-self:flex-start}
+  .map{max-height:420px}
+  .map img{max-height:420px;object-position:center}
+  .mobile-bar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;height:58px;box-shadow:0 -8px 24px rgba(0,0,0,.14)}
+  .mobile-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:15px;text-decoration:none}
+  .mobile-bar .mb-dir{background:var(--ink);color:#fff}
+  .mobile-bar .mb-call{background:var(--accent);color:var(--ink)}
+}
+</style>
+</head>
+<body>
+
+<div class="announce label">Open at 6 am every day — breakfast &amp; lunch on Redwood Road since 1983</div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="wordmark" href="#top">
+      <span class="wm-name">Ogie's Cafe</span>
+      <span class="wm-sub label">Est. 1983 · West Valley City</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#menu">Menu</a>
+      <a href="#story">Story</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <span class="nav-rating"><span class="stars">★★★★★</span> 4.6 · 2,900+ reviews</span>
+    <a class="btn btn-accent" href="tel:8019736455">Call (801) 973-6455</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" style="padding:0">
+    <img class="hero-img" src="assets/storefront.jpg" alt="Ogie's Cafe storefront on Redwood Road — the classic red diner sign reading Ogie's, Est. 1963, above the white picket-fenced patio">
+    <div class="hero-scrim"></div>
+    <div class="wrap hero-content">
+      <p class="eyebrow label">3500 South &amp; Redwood Road · West Valley City</p>
+      <h1>The West Valley<br>diner since 1983.</h1>
+      <p class="body-lg hero-sub">Two eggs, a mountain of hashbrowns, hand-cut fries, and a coffee cup that never drops below half — a true family-owned greasy spoon, open at 6 am every single day.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-accent" href="tel:8019736455">Call (801) 973-6455</a>
+        <a class="btn btn-ghost" href="#menu">See the Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="locator">
+    <div class="wrap">
+      <p>
+        <span class="seg"><a href="https://maps.google.com/?q=3515+S+Redwood+Rd,+West+Valley+City,+UT+84119">3515 S Redwood Rd, West Valley City</a></span><span class="dot">·</span>
+        <span class="seg">Mon–Fri 6 am – 2 pm · Sat–Sun 6 am – 3 pm</span><span class="dot">·</span>
+        <span class="seg"><a href="tel:8019736455">(801) 973-6455</a></span>
+      </p>
+    </div>
+  </div>
+
+  <div class="plate wrap" style="padding-left:0;padding-right:0">
+    <div class="plate-cell"><p class="label">Open since</p><strong>1983</strong></div>
+    <div class="plate-cell"><p class="label">Google rating</p><strong><span class="stars">★</span> 4.6 · 2,900+ reviews</strong></div>
+    <div class="plate-cell"><p class="label">The portions</p><strong>You'll leave full</strong></div>
+    <div class="plate-cell"><p class="label">Every day</p><strong>Open at 6 am</strong></div>
+  </div>
+
+  <section class="menu-band" id="menu">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow label">The Menu</p>
+        <h2>Breakfast served all day.</h2>
+        <ul class="menu-list" style="margin-top:34px">
+          <li>
+            <span class="menu-item-head"><span class="menu-item-name">Ogie's Special</span><span class="menu-item-note">Two eggs, sausage, ham &amp; bacon over hashbrowns, with toast.</span></span>
+            <span class="menu-item-price">$12.25</span>
+          </li>
+          <li>
+            <span class="menu-item-head"><span class="menu-item-name">Special Burrito</span><span class="menu-item-note">Ham, hashbrowns &amp; scrambled eggs smothered in green chili and cheese.</span></span>
+            <span class="menu-item-price">$12.25</span>
+          </li>
+          <li>
+            <span class="menu-item-head"><span class="menu-item-name">Veggie Skillet</span><span class="menu-item-note">Peppers, onions, mushrooms, tomatoes &amp; avocado over hashbrowns.</span></span>
+            <span class="menu-item-price">$11.75</span>
+          </li>
+          <li>
+            <span class="menu-item-head"><span class="menu-item-name">Huevos Rancheros</span><span class="menu-item-note">Flour tortilla with beans, cheese, eggs, hashbrowns &amp; sour cream.</span></span>
+            <span class="menu-item-price">$12.25</span>
+          </li>
+          <li>
+            <span class="menu-item-head"><span class="menu-item-name">Tall Stack Buttermilk Pancakes</span><span class="menu-item-note">Three from-scratch cakes. Add two eggs &amp; bacon.</span></span>
+            <span class="menu-item-price">$8.99</span>
+          </li>
+          <li>
+            <span class="menu-item-head"><span class="menu-item-name">French Toast, Full Order</span><span class="menu-item-note">Thick-cut, dusted, served with real syrup.</span></span>
+            <span class="menu-item-price">$6.99</span>
+          </li>
+        </ul>
+        <p style="margin-top:24px;color:var(--steel);font-size:15px">Plus three-egg omelets, country fried steak, waffles, sandwiches &amp; a full lunch menu — call ahead for to-go.</p>
+        <a class="menu-link" href="tel:8019736455">Call to order to-go →</a>
+      </div>
+      <img class="menu-photo treated" src="assets/special-burrito.jpg" alt="Ogie's Special Burrito — a plate-sized burrito of ham, hashbrowns and eggs smothered in green chili and melted cheese, topped with bacon">
+    </div>
+  </section>
+
+  <section class="dark fav">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow label">What people drive across town for</p>
+        <h2>The portions.</h2>
+        <p class="body-lg" style="margin-top:22px;max-width:48ch">Forty years of feeding West Valley taught Ogie's exactly how big a breakfast should be. Reviewers say the same thing on repeat: you will not leave hungry, and your coffee never goes cold.</p>
+        <figure class="pull">
+          <blockquote>“If you go away hungry then it's your fault because of the amount of food they give. One of the best places in Salt Lake for breakfast.”</blockquote>
+          <figcaption class="label">John H. · Tripadvisor review</figcaption>
+        </figure>
+      </div>
+      <img class="fav-photo treated" src="assets/patio-breakfast.jpg" alt="A full Ogie's breakfast on the patio — eggs, a heap of hashbrowns, bacon, buttered toast and a mug of coffee">
+    </div>
+  </section>
+
+  <section class="story" id="story">
+    <div class="wrap split">
+      <img class="story-photo treated" src="assets/patio-diners.jpg" alt="Ogie's red-umbrella patio on a summer day, tables full of regulars eating breakfast along Redwood Road">
+      <div>
+        <p class="eyebrow label">Since 1983</p>
+        <h2>A West Valley original, run by the same family.</h2>
+        <p>George and Karee Marinos opened Ogie's at the corner of 3500 South and Redwood Road in 1983 — “a mom-and-pop place, a greasy spoon, just breakfast and lunch.” Forty-one years later it's still exactly that, and still in the family.</p>
+        <p>The name comes from a nickname George's older brothers gave him on a 1963 family trip to Yellowstone. Today his daughter Cami runs the floor, with cooks and servers who've been here fifteen to twenty years. As George puts it, “I think it's just a friendly place.”</p>
+        <div class="stat">
+          <strong>41</strong>
+          <p class="label">Years on Redwood Road</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" aria-label="The food at Ogie's Cafe">
+    <div class="wrap gallery-grid">
+      <img class="treated" src="assets/french-toast.jpg" alt="An order of golden French toast dusted with powdered sugar, beside ham and eggs">
+      <img class="treated" src="assets/veggie-skillet.jpg" alt="The veggie skillet — peppers, mushrooms, onions and tomatoes under two over-easy eggs">
+      <img class="treated" src="assets/club-sandwich.jpg" alt="A stacked triple-decker club sandwich with a heap of hand-cut fries">
+      <img class="treated" src="assets/yogurt-granola.jpg" alt="House yogurt with granola and fresh strawberries, blueberries and grapes">
+    </div>
+  </section>
+
+  <section class="dark" id="reviews">
+    <div class="wrap">
+      <p class="eyebrow label">What the regulars say</p>
+      <h2>4.6 stars across 2,900+ reviews.</h2>
+      <div class="reviews-grid">
+        <article class="review-card">
+          <p class="stars" aria-label="5 stars">★★★★★</p>
+          <blockquote>“The food here is consistently hot, fresh, and absolutely delicious. The portions are massive, giving you incredible value.”</blockquote>
+          <p class="review-attrib"><strong>J. T.</strong> <span class="label">Tripadvisor review</span></p>
+        </article>
+        <article class="review-card">
+          <p class="stars" aria-label="5 stars">★★★★★</p>
+          <blockquote>“This is a true locals-only hole-in-the-wall dive cafe that is hands down some of the best food, service and fun.”</blockquote>
+          <p class="review-attrib"><strong>Pietro D.</strong> <span class="label">Tripadvisor review</span></p>
+        </article>
+        <article class="review-card">
+          <p class="stars" aria-label="5 stars">★★★★★</p>
+          <blockquote>“Service was excellent, food was excellent and the portions are huge and more than fairly priced.”</blockquote>
+          <p class="review-attrib"><strong>Steve S.</strong> <span class="label">Tripadvisor review</span></p>
+        </article>
+        <article class="review-card">
+          <p class="stars" aria-label="5 stars">★★★★★</p>
+          <blockquote>“The portion was huge, the ham was moist and full of flavor, and even though it was busy, we only waited a couple of minutes.”</blockquote>
+          <p class="review-attrib"><strong>Ralph A.</strong> <span class="label">Tripadvisor review</span></p>
+        </article>
+        <article class="review-card">
+          <p class="stars" aria-label="5 stars">★★★★★</p>
+          <blockquote>“I left well-nourished and delighted. You can hear almost everyone talking and the sound gives the place a soul.”</blockquote>
+          <p class="review-attrib"><strong>Arthur F.</strong> <span class="label">Tripadvisor review</span></p>
+        </article>
+        <article class="review-card">
+          <p class="stars" aria-label="5 stars">★★★★★</p>
+          <blockquote>“Breakfast that will fill you up. Portions are big and the prices are small.”</blockquote>
+          <p class="review-attrib"><strong>Discover16</strong> <span class="label">Tripadvisor review</span></p>
+        </article>
+      </div>
+      <a class="reviews-link" href="https://www.google.com/maps/search/Ogie's+Cafe+3515+S+Redwood+Rd+West+Valley+City">Read all the reviews on Google →</a>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow label">Visit</p>
+        <h2>3500 South &amp; Redwood Road.</h2>
+        <div class="data-row" style="margin-top:36px">
+          <p class="label">Address</p>
+          <a class="visit-addr" href="https://maps.google.com/?q=3515+S+Redwood+Rd,+West+Valley+City,+UT+84119">3515 S Redwood Rd, West Valley City, UT 84119</a>
+        </div>
+        <div class="data-row">
+          <p class="label">Phone</p>
+          <a class="visit-phone" href="tel:8019736455">(801) 973-6455</a>
+        </div>
+        <div class="data-row">
+          <p class="label">Hours</p>
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>6:00 am – 2:00 pm</td></tr>
+            <tr><td>Saturday – Sunday</td><td>6:00 am – 3:00 pm</td></tr>
+          </table>
+        </div>
+        <div class="data-row">
+          <p class="label">Good to know</p>
+          <p style="color:var(--steel);font-size:15px">Cash-friendly neighborhood diner with its own lot and a covered patio out front. Breakfast is served all day — call ahead and your to-go order will be hot when you arrive.</p>
+        </div>
+        <a class="btn btn-ink" href="https://maps.google.com/?q=3515+S+Redwood+Rd,+West+Valley+City,+UT+84119">Get Directions</a>
+      </div>
+      <a class="map" href="https://maps.google.com/?q=Ogie's+Cafe,+3515+S+Redwood+Rd,+West+Valley+City,+UT+84119" aria-label="Open Ogie's Cafe location in Google Maps">
+        <img src="assets/map.png" alt="Street map showing Ogie's Cafe at the corner of 3500 South and Redwood Road in West Valley City">
+        <span class="pin"><span class="pin-label">Ogie's Cafe</span><span class="pin-dot"></span></span>
+        <span class="map-credit">Map © OpenStreetMap contributors</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="foot-wordmark">Ogie's Cafe</p>
+        <p class="foot-cred">Family-owned &amp; operated by the Marinos family on Redwood Road since 1983.</p>
+      </div>
+      <div class="foot-col">
+        <p class="label">Find us</p>
+        <p><a href="https://maps.google.com/?q=3515+S+Redwood+Rd,+West+Valley+City,+UT+84119">3515 S Redwood Rd, West Valley City, UT 84119</a></p>
+        <p><a href="tel:8019736455">(801) 973-6455</a></p>
+      </div>
+      <div class="foot-col">
+        <p class="label">Hours</p>
+        <p>Mon – Fri · 6 am – 2 pm</p>
+        <p>Sat – Sun · 6 am – 3 pm</p>
+        <p style="margin-top:14px"><a href="tel:8019736455">Call ahead for to-go orders</a></p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Ogie's Cafe · West Valley City, Utah &nbsp;·&nbsp; <span class="credit">Site by Peak 11 Media</span></p>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="mb-dir" href="https://maps.google.com/?q=3515+S+Redwood+Rd,+West+Valley+City,+UT+84119">Directions</a>
+  <a class="mb-call" href="tel:8019736455">Call (801) 973-6455</a>
+</div>
+
+</body>
+</html>
