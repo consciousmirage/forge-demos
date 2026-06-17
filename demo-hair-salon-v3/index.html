@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Strand Salon — Millcreek &amp; Salt Lake City Hair Salon, 5.0 Stars, 18+ Years</title>
+<meta name="description" content="Hair, color &amp; skin care in Millcreek, UT for 18+ years. Owner-run, 5.0 stars across 68 Google reviews. Color correction, highlights, cuts, perms, facials. Walk-ins welcome. Call (801) 485-1425.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "The Strand Salon",
+  "telephone": "+18014851425",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1565 E 3900 S",
+    "addressLocality": "Millcreek",
+    "addressRegion": "UT",
+    "postalCode": "84124"
+  },
+  "areaServed": ["Millcreek", "Salt Lake City", "Holladay", "Salt Lake Valley"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "68"
+  },
+  "openingHours": ["Tu 09:00-17:00", "We 09:00-20:00", "Th 09:00-17:00", "Fr 09:00-17:00", "Sa 09:00-17:00"]
+}
+</script>
+<style>
+/* ============ tokens ============ */
+:root{
+  --ink:#1a1614;
+  --ink-2:#241e1b;
+  --steel:#6a615b;
+  --fog:#ada49d;
+  --paper:#faf8f5;
+  --chalk:#f1ece5;
+  --line:#e6ded4;
+  --line-dark:#352d28;
+  --accent:#9a3b54;
+  --accent-hover:#7e2e44;
+  --max:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Barlow',ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:16px;line-height:1.6;color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:60px; /* mobile call bar */
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* ============ type voices (mobile-first) ============ */
+.label{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;
+  font-size:13px;letter-spacing:.14em;text-transform:uppercase;line-height:1.25;
+}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--steel)}
+.eyebrow::before{content:"";width:18px;height:2px;background:var(--accent);flex:none}
+h1{font-family:'Fraunces',serif;font-size:clamp(38px,9.6vw,80px);font-weight:600;line-height:1.04;letter-spacing:-.018em}
+h2{font-family:'Fraunces',serif;font-size:clamp(30px,7vw,50px);font-weight:600;line-height:1.08;letter-spacing:-.014em}
+h3{font-size:20px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.lead{font-size:17px;color:var(--steel);max-width:56ch}
+@media(min-width:768px){.lead{font-size:18px}}
+
+/* ============ buttons ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;
+  font-weight:600;font-size:16px;letter-spacing:.01em;line-height:1.1;text-align:center;
+  min-height:56px;padding:0 26px;transition:background .15s,border-color .15s,color .15s;
+}
+.btn svg{flex:none}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-hover)}
+.btn-ghost{border:1px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+
+/* ============ topbar ============ */
+.topbar{background:var(--ink);color:var(--fog)}
+.topbar-inner{
+  max-width:var(--max);margin:0 auto;padding:9px 20px;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.topbar .label{font-size:12px;letter-spacing:.12em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .tb-r{display:none}
+.topbar .tb-x{display:none}
+@media(min-width:768px){
+  .topbar .tb-r{display:block;flex:none}
+  .topbar .tb-x{display:inline}
+}
+
+/* ============ nav ============ */
+.nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.nav-inner{
+  height:64px;display:flex;align-items:center;gap:24px;
+  max-width:var(--max);margin:0 auto;padding:0 20px;
+}
+.wordmark{display:flex;flex-direction:column;line-height:1;min-width:0}
+.wm-name{
+  font-family:'Fraunces',serif;font-weight:600;font-size:23px;
+  letter-spacing:-.01em;
+}
+.wm-name span{color:var(--accent)}
+.wm-sub{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--steel);margin-top:4px;white-space:nowrap;
+}
+.nav-links{display:none;gap:28px;margin-left:auto}
+.nav-links a{font-weight:500;font-size:15px;color:var(--ink);padding:8px 0}
+.nav-links a:hover{color:var(--accent)}
+.nav-call{
+  margin-left:auto;display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent);color:#fff;border-radius:999px;
+  font-weight:600;font-size:15px;min-height:44px;padding:0 18px;
+}
+.nav-call:hover{background:var(--accent-hover)}
+.nav-call .num{display:none}
+@media(min-width:480px){
+  .nav-call .num{display:inline}
+  .nav-call .word{display:none}
+}
+@media(min-width:768px){
+  .nav-links{display:flex;gap:18px}
+  .nav-links .nl-x{display:none}
+  .nav-call{margin-left:0}
+}
+@media(min-width:1024px){
+  .nav-links{gap:28px}
+  .nav-links .nl-x{display:block}
+  .nav-inner{height:68px;padding:0 24px}
+  .wm-name{font-size:25px}
+}
+
+/* ============ hero ============ */
+.hero{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:84svh;background:var(--ink);overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 46%;filter:saturate(.92) contrast(1.03)}
+.hero-scrim{position:absolute;inset:0;background:
+  linear-gradient(to top,rgba(18,14,12,.88) 0%,rgba(18,14,12,.34) 48%,rgba(18,14,12,.34) 100%),
+  linear-gradient(78deg,rgba(18,14,12,.82) 0%,rgba(18,14,12,.42) 55%,rgba(18,14,12,.14) 100%);
+}
+.hero-content{position:relative;width:100%;max-width:var(--max);margin:0 auto;padding:84px 20px 26px}
+.hero .eyebrow{color:rgba(255,255,255,.80);margin-bottom:18px}
+.hero h1{color:#fff;max-width:16ch}
+.hero .lead{color:rgba(255,255,255,.84);margin-top:18px}
+.hero-ctas{display:flex;flex-direction:column;gap:12px;margin-top:30px}
+.hero-ctas .btn{width:100%}
+.hero-tag{
+  position:relative;display:flex;align-items:center;gap:10px;
+  max-width:var(--max);margin:0 auto;width:100%;padding:0 20px 18px;
+  color:rgba(255,255,255,.6);
+}
+.hero-tag::before{content:"";width:8px;height:8px;background:rgba(255,255,255,.6);flex:none}
+@media(min-width:768px){
+  .hero{min-height:88vh}
+  .hero-content{padding:140px 24px 56px}
+  .hero-ctas{flex-direction:row;gap:16px;margin-top:40px}
+  .hero-ctas .btn{width:auto}
+  .hero-tag{padding:0 24px 24px}
+}
+
+/* ============ trust strip ============ */
+.trust{border-bottom:1px solid var(--line);background:var(--paper)}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;max-width:var(--max);margin:0 auto}
+.trust-cell{padding:20px;border-top:1px solid var(--line)}
+.trust-cell:nth-child(-n+2){border-top:none}
+.trust-cell:nth-child(even){border-left:1px solid var(--line)}
+.trust-cell .label{color:var(--steel);margin-bottom:8px}
+.trust-cell strong{font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.2;display:block}
+.trust-cell .sub{font-size:13px;color:var(--steel);margin-top:3px}
+.stars{display:inline-flex;gap:2px;margin-right:6px;vertical-align:-2px}
+.stars svg{width:15px;height:15px;fill:var(--accent)}
+@media(min-width:768px){
+  .trust-grid{grid-template-columns:repeat(4,1fr)}
+  .trust-cell{padding:30px 24px;border-top:none!important;border-left:1px solid var(--line)}
+  .trust-cell:first-child{border-left:none}
+  .trust-cell strong{font-size:20px}
+}
+
+/* ============ sections ============ */
+section{padding:64px 0}
+@media(min-width:768px){section{padding:112px 0}}
+.sec-head{max-width:62ch;margin-bottom:40px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head p{margin-top:16px}
+@media(min-width:768px){.sec-head{margin-bottom:64px}.sec-head .eyebrow{margin-bottom:20px}.sec-head p{margin-top:20px}}
+.band-chalk{background:var(--chalk)}
+.dark{background:var(--ink);color:#fff}
+.dark .lead{color:var(--fog)}
+.dark .eyebrow{color:var(--fog)}
+
+/* ============ services ============ */
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.svc-card{background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:20px 18px;transition:border-color .15s}
+.svc-card:hover{border-color:var(--ink)}
+.svc-card svg{width:26px;height:26px;stroke:var(--accent);margin-bottom:14px}
+.svc-card h3{margin-bottom:6px;font-size:17px}
+.svc-card p{font-size:14px;color:var(--steel)}
+.svc-price{display:block;margin-top:12px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.04em;color:var(--ink)}
+@media(min-width:768px){
+  .svc-grid{grid-template-columns:repeat(3,1fr);gap:24px}
+  .svc-card{padding:32px}
+  .svc-card svg{width:28px;height:28px;margin-bottom:16px}
+  .svc-card h3{font-size:20px;margin-bottom:8px}
+  .svc-card p{font-size:15px}
+  .svc-price{font-size:16px;margin-top:16px}
+}
+.svc-note{margin-top:28px;font-size:14px;color:var(--steel)}
+
+/* ============ promise band ============ */
+.storm{position:relative;background:var(--ink);overflow:hidden;padding:72px 0}
+.storm-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:saturate(.86) contrast(1.04)}
+.storm-scrim{position:absolute;inset:0;background:linear-gradient(82deg,rgba(18,14,12,.93) 0%,rgba(18,14,12,.74) 55%,rgba(18,14,12,.48) 100%)}
+.storm-content{position:relative;max-width:var(--max);margin:0 auto;padding:0 20px}
+.storm .eyebrow{color:rgba(255,255,255,.80);margin-bottom:16px}
+.storm h2{color:#fff;max-width:18ch}
+.storm blockquote{margin-top:24px;max-width:52ch}
+.storm blockquote p{font-family:'Fraunces',serif;font-size:21px;line-height:1.45;color:rgba(255,255,255,.94);font-weight:500}
+.storm blockquote footer{margin-top:14px;color:rgba(255,255,255,.62)}
+.storm .btn{margin-top:32px;width:100%}
+@media(min-width:768px){
+  .storm{padding:112px 0}
+  .storm-content{padding:0 24px}
+  .storm blockquote p{font-size:25px}
+  .storm .btn{width:auto}
+}
+
+/* ============ work gallery ============ */
+.work-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.work-card{border-radius:2px;overflow:hidden;border:1px solid var(--line);background:var(--paper)}
+.work-ph{overflow:hidden;aspect-ratio:4/3}
+.work-ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.92) contrast(1.03)}
+.work-ph.tall{aspect-ratio:3/4}
+.work-cap{display:flex;align-items:center;gap:10px;padding:16px 18px;color:var(--steel)}
+.work-cap::before{content:"";width:8px;height:8px;background:var(--accent);flex:none}
+.work-quote{margin-top:32px;max-width:62ch}
+.work-quote .stars svg{width:16px;height:16px}
+.work-quote p{font-family:'Fraunces',serif;font-size:21px;line-height:1.45;font-weight:500;margin-top:12px}
+.work-quote footer{margin-top:12px;color:var(--steel)}
+@media(min-width:768px){
+  .work-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .work-quote{margin-top:48px}
+  .work-quote p{font-size:25px}
+}
+@media(min-width:1024px){
+  .work-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* ============ owner split ============ */
+.owner-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+.owner-photo{border-radius:2px;overflow:hidden;border:1px solid var(--line)}
+.owner-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 50%;filter:saturate(.92) contrast(1.03)}
+.owner-copy .eyebrow{margin-bottom:16px}
+.owner-copy h2{max-width:16ch}
+.owner-copy p{color:var(--steel);margin-top:16px;max-width:54ch}
+.owner-stats{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
+.stat-num{font-family:'Fraunces',serif;font-size:clamp(40px,11vw,68px);font-weight:600;line-height:1;letter-spacing:-.02em}
+.stat .label{color:var(--steel);margin-top:10px;max-width:16ch}
+@media(min-width:768px){
+  .owner-copy p{margin-top:20px}
+  .owner-stats{grid-template-columns:repeat(3,1fr);gap:0;margin-top:48px;padding-top:40px}
+  .owner-stats .stat{border-left:1px solid var(--line);padding-left:28px}
+  .owner-stats .stat:first-child{border-left:none;padding-left:0}
+}
+@media(min-width:1024px){
+  .owner-grid{grid-template-columns:1.05fr .95fr;gap:64px}
+  .owner-photo img{aspect-ratio:auto;min-height:520px}
+}
+
+/* ============ reviews ============ */
+.rev-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.rev-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:2px;padding:24px;display:flex;flex-direction:column}
+.rev-card .stars{margin-bottom:16px}
+.rev-quote{font-size:16px;line-height:1.6;color:rgba(255,255,255,.92);flex:1}
+.rev-meta{margin-top:24px;padding-top:16px;border-top:1px solid var(--line-dark)}
+.rev-name{font-weight:600;font-size:14px;color:#fff}
+.rev-src{display:block;margin-top:5px;color:var(--fog)}
+.rev-link{
+  display:inline-flex;align-items:center;gap:10px;margin-top:40px;min-height:44px;
+  font-weight:600;font-size:15px;color:#fff;border-bottom:1px solid var(--line-dark);transition:border-color .15s;
+}
+.rev-link:hover{border-color:#fff}
+.rev-link svg{stroke:currentColor}
+@media(min-width:640px){.rev-grid{grid-template-columns:1fr 1fr;gap:24px}.rev-card{padding:32px}}
+@media(min-width:1024px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ============ contact ============ */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:stretch}
+.c-row{padding:22px 0;border-top:1px solid var(--line)}
+.c-row:last-child{border-bottom:1px solid var(--line)}
+.c-row .label{color:var(--steel);margin-bottom:6px}
+.c-row p,.c-row a{font-size:17px;font-weight:500}
+.c-phone a{font-size:clamp(32px,9vw,44px);font-weight:700;letter-spacing:-.02em;line-height:1.1;display:inline-block;padding:4px 0}
+.c-phone a:hover{color:var(--accent)}
+.hours-tbl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:16px}
+.hours-tbl .d{color:var(--steel)}
+.map{border-radius:2px;overflow:hidden;border:1px solid var(--line);min-height:320px}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(1) contrast(1.05);transition:filter .3s}
+.map:hover iframe{filter:none}
+@media(min-width:1024px){
+  .contact-grid{grid-template-columns:1fr 1fr;gap:64px}
+  .map,.map iframe{min-height:460px}
+}
+
+/* ============ footer ============ */
+footer.site{background:var(--ink);color:#fff;padding:56px 0}
+.foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
+.foot-fact{margin-top:14px;color:var(--fog);font-size:15px;max-width:46ch}
+.foot-meta .label{color:var(--fog)}
+.foot-meta a{font-weight:600;font-size:18px;display:inline-block;padding:6px 0}
+.foot-meta a:hover{color:var(--fog)}
+.foot-legal{
+  margin-top:48px;padding-top:24px;border-top:1px solid var(--line-dark);
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--fog);
+}
+.foot-legal a{color:var(--fog)}
+.foot-legal a:hover{color:#fff}
+@media(min-width:768px){footer.site{padding:72px 0}}
+
+/* ============ mobile call bar ============ */
+.callbar{
+  display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;
+  background:var(--accent);color:#fff;height:60px;
+  align-items:center;justify-content:center;gap:10px;
+  font-weight:700;font-size:17px;letter-spacing:.01em;
+  box-shadow:0 -8px 24px rgba(0,0,0,.16);
+}
+.callbar svg{stroke:#fff}
+@media(min-width:768px){
+  .callbar{display:none}
+  body{padding-bottom:0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <p class="label">Owner-run since 2007 &nbsp;&middot;&nbsp; 5.0&#9733; on Google<span class="tb-x"> &nbsp;&middot;&nbsp; Walk-ins welcome</span></p>
+    <p class="label tb-r">Millcreek &middot; Salt Lake Valley</p>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="wordmark" aria-label="The Strand Salon — home">
+      <span class="wm-name">The Strand<span>.</span></span>
+      <span class="wm-sub">Salon &middot; Millcreek, UT</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#gallery" class="nl-x">The Salon</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Visit</a>
+    </nav>
+    <a href="tel:+18014851425" class="nav-call">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="num">(801) 485-1425</span><span class="word">Call</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" style="padding:0">
+  <img class="hero-img" src="assets/hero-salon.jpg" alt="The styling floor at The Strand Salon in Millcreek, Utah, with chairs lined up at a long mirror">
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="label eyebrow">Owner-run in Millcreek for 18+ years</p>
+    <h1>The chair that knows your hair.</h1>
+    <p class="lead">The Strand Salon has quietly earned a perfect 5.0 across 68 Google reviews &mdash; with clients who&rsquo;ve trusted the same stylists for 13, 20, even 25 years. Color, cuts, and skin care, all in one neighborhood spot.</p>
+    <div class="hero-ctas">
+      <a href="tel:+18014851425" class="btn btn-accent">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Book a chair — (801) 485-1425
+      </a>
+      <a href="#services" class="btn btn-ghost">See services &amp; prices</a>
+    </div>
+  </div>
+  <p class="hero-tag label">5.0&#9733; across 68 Google reviews &middot; Walk-ins welcome</p>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust" role="region" aria-label="Reputation and details">
+  <div class="trust-grid">
+    <div class="trust-cell">
+      <p class="label">Google rating</p>
+      <strong><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>5.0</strong>
+      <p class="sub">68 reviews</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">In the neighborhood</p>
+      <strong>18+ years</strong>
+      <p class="sub">Same Millcreek location</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Booking</p>
+      <strong>Walk-ins welcome</strong>
+      <p class="sub">Or call to reserve</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">For everyone</p>
+      <strong>Men, women &amp; kids</strong>
+      <p class="sub">Hair &amp; skin care</p>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="band-chalk" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Services &amp; pricing</p>
+      <h2>Hair and skin care, fairly priced.</h2>
+      <p class="lead">A full menu under one roof &mdash; cut, color, perms, styling, and skin care &mdash; without the boutique markup. Reviewers say it best: &ldquo;fair price, kind people, and they are good at what they do.&rdquo;</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88"/><path d="M14.47 14.48 20 20"/><path d="M8.12 8.12 12 12"/></svg>
+        <h3>Haircuts</h3>
+        <p>Cuts for women, men, and kids &mdash; from a trim to a full restyle.</p>
+        <span class="svc-price">Women $35&ndash;$55 &middot; Men $30&ndash;$40 &middot; Kids $25&ndash;$30</span>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 3 2 5 2 8a5 5 0 0 0 10 0c0-3 2-5 2-8a7 7 0 0 0-7-7z"/><path d="M12 12v6"/></svg>
+        <h3>Color &amp; Correction</h3>
+        <p>Solid color, corrective color, and trending shades. Clients call it the best color correction in the valley.</p>
+        <span class="svc-price">Solid color $60&ndash;$70+ &middot; with cut $85+</span>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20s2-8 8-8 8 8 8 8"/><path d="M8 4l2 4"/><path d="M14 4l-2 4"/><path d="M12 2v6"/></svg>
+        <h3>Highlights &amp; Weaves</h3>
+        <p>Partial and full weaves to brighten naturally dark hair without the damage.</p>
+        <span class="svc-price">Partial $70&ndash;$80+ &middot; Full $80&ndash;$100+</span>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12a4 4 0 0 1 8 0 4 4 0 0 0 8 0"/><path d="M5 18a4 4 0 0 1 8 0 4 4 0 0 0 8 0"/></svg>
+        <h3>Perms</h3>
+        <p>Soft, lasting curl &mdash; cut included &mdash; for shorter or longer hair.</p>
+        <span class="svc-price">Short hair $75 &middot; Long hair $100</span>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6l-1 5H10z"/><path d="M10 8c-2 3-3 7-3 10a5 5 0 0 0 10 0c0-3-1-7-3-10"/></svg>
+        <h3>Wash &amp; Style</h3>
+        <p>A wash and blow-dry to finish &mdash; the relaxing scalp massage clients keep mentioning.</p>
+        <span class="svc-price">Style $35&ndash;$60</span>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01"/><path d="M15 9h.01"/></svg>
+        <h3>Skin Care</h3>
+        <p>Basic facials, facial peels, microdermabrasion, and facial waxing.</p>
+        <span class="svc-price">Ask in salon</span>
+      </div>
+    </div>
+    <p class="svc-note label">Prices vary with hair length &amp; condition &mdash; call (801) 485-1425 for an exact quote.</p>
+  </div>
+</section>
+
+<!-- PROMISE / COLOR BAND -->
+<section class="storm">
+  <img class="storm-img" src="assets/work-color.jpg" alt="The styling stations and mirrors inside The Strand Salon">
+  <div class="storm-scrim" aria-hidden="true"></div>
+  <div class="storm-content">
+    <p class="label eyebrow">Why people stay for decades</p>
+    <h2>The best in color correction &mdash; and a stylist who listens.</h2>
+    <blockquote>
+      <p>&ldquo;Karen has been cutting, highlighting and styling my hair for 13 years. She is progressive and keeps up with the latest trends&hellip; She is a great listener and always gives me the look and style I want.&rdquo;</p>
+      <footer class="label">Robyn R. &mdash; Google review</footer>
+    </blockquote>
+    <a href="tel:+18014851425" class="btn btn-accent">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Book your appointment
+    </a>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Inside the salon</p>
+      <h2>A calm chair on 3900 South.</h2>
+      <p class="lead">No rush, no upsell &mdash; clean, friendly, and &ldquo;has everything you need.&rdquo; Here&rsquo;s a look at the work and the space.</p>
+    </div>
+    <div class="work-grid">
+      <figure class="work-card">
+        <div class="work-ph tall"><img src="assets/work-style.jpg" alt="A Strand stylist blow-drying a smiling client's hair at the salon"></div>
+        <figcaption class="work-cap label">Cut, color &amp; a finish blow-out</figcaption>
+      </figure>
+      <figure class="work-card">
+        <div class="work-ph tall"><img src="assets/work-finished.jpg" alt="A client relaxing at the wash bowl during a service at The Strand Salon"></div>
+        <figcaption class="work-cap label">The wash &amp; scalp massage clients love</figcaption>
+      </figure>
+      <figure class="work-card">
+        <div class="work-ph tall"><img src="assets/strand-exterior.jpg" alt="The exterior of The Strand Salon at 1565 E 3900 S in Millcreek, Utah, with walk-ins welcome signage"></div>
+        <figcaption class="work-cap label">Find us at 1565 E 3900 S, Millcreek</figcaption>
+      </figure>
+    </div>
+    <div class="work-quote">
+      <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+      <p>&ldquo;It&rsquo;s clean, friendly and has everything you need! Stephanie is my spirit animal &mdash; she always makes my wild color ideas come out perfect.&rdquo;</p>
+      <footer class="label">Heather L. &mdash; Google review &middot; Local Guide</footer>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / OWNER -->
+<section class="band-chalk" id="about">
+  <div class="wrap">
+    <div class="owner-grid">
+      <div class="owner-photo">
+        <img src="assets/interior.jpg" alt="The interior styling floor of The Strand Salon with mirrors and chairs">
+      </div>
+      <div class="owner-copy">
+        <p class="label eyebrow">About The Strand</p>
+        <h2>Run by the stylists in the chairs.</h2>
+        <p>For over 18 years, The Strand Salon has brought &ldquo;beauty and confidence to the Salt Lake Valley&rdquo; from the same building on 3900 South. Owner Karen has been behind the chair the whole time &mdash; long enough that some clients have followed her for 20 and 25 years.</p>
+        <p>It&rsquo;s the kind of neighborhood salon where walk-ins are welcome, the prices are fair, and the person who answers the phone is the person who&rsquo;ll do your hair. Hair and skin care, all in one place.</p>
+        <div class="owner-stats">
+          <div class="stat">
+            <p class="stat-num">18+</p>
+            <p class="label">Years on 3900 South</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num">5.0&#9733;</p>
+            <p class="label">Across 68 Google reviews</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num">25yr</p>
+            <p class="label">Longest client relationship</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="dark" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Reviews</p>
+      <h2>A perfect 5.0, earned over decades.</h2>
+      <p class="lead">Every word below is quoted verbatim from a real Strand Salon review.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;My hairdresser Stephanie is here and I&rsquo;ve always loved it. It&rsquo;s clean, friendly and has everything you need! Stephanie is my spirit animal she always makes my wild color ideas come out perfect.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Heather Lloyd</p>
+          <span class="rev-src label">Google review &middot; Local Guide</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Karen is the best. She&rsquo;s the only one I trust with my hair. I&rsquo;ve been to a lot of different people in different parts of the country, and she&rsquo;s still my favorite. Always a five star experience.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Evana Mauriz</p>
+          <span class="rev-src label">Google review &middot; Local Guide</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;I love Mia she&rsquo;s been doing my hair for about 20 years she always does such a great job.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Kimberly Rosenlund</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Karen is simply the best in color correction.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Diana Walk</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Been seeing Karen for 20 yrs now and won&rsquo;t go to anyone else!&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Alisha Baker</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Fair price kind people and they are good at what they do.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Wesley Marshall</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+    </div>
+    <a class="rev-link" href="https://www.google.com/maps/place/The+Strand+Salon/@40.6874129,-111.8463484,17z/data=!4m6!3m5!1s0x8752601f78eec4e9:0xd1e2ecb13721e848!8m2!3d40.6874129!4d-111.8463484!16s%2Fg%2F1hc2y3vsx" target="_blank" rel="noopener">
+      Read all 68 reviews on Google
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Visit the salon</p>
+      <h2>Walk in, or call ahead.</h2>
+      <p class="lead">We&rsquo;re on 3900 South in Millcreek, between Highland Drive and 1500 East. Calling is the quickest way to grab a chair.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="c-row c-phone">
+          <p class="label">Call us</p>
+          <a href="tel:+18014851425">(801) 485-1425</a>
+        </div>
+        <div class="c-row">
+          <p class="label">Find us</p>
+          <p>1565 E 3900 S, Millcreek, UT 84124</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Serving</p>
+          <p>Millcreek &middot; Salt Lake City &middot; Holladay &middot; the Salt Lake Valley</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Hours</p>
+          <div class="hours-tbl">
+            <span class="d">Monday</span><span>Closed</span>
+            <span class="d">Tuesday</span><span>9:00 AM &ndash; 5:00 PM</span>
+            <span class="d">Wednesday</span><span>9:00 AM &ndash; 8:00 PM</span>
+            <span class="d">Thursday</span><span>9:00 AM &ndash; 5:00 PM</span>
+            <span class="d">Friday</span><span>9:00 AM &ndash; 5:00 PM</span>
+            <span class="d">Saturday</span><span>9:00 AM &ndash; 5:00 PM</span>
+            <span class="d">Sunday</span><span>Closed</span>
+          </div>
+        </div>
+      </div>
+      <div class="map">
+        <iframe src="https://maps.google.com/maps?q=1565+E+3900+S+Millcreek+UT+84124&z=15&output=embed" title="Map showing The Strand Salon at 1565 E 3900 S, Millcreek, Utah" referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="wordmark" style="color:#fff">
+          <span class="wm-name">The Strand<span style="color:var(--accent)">.</span></span>
+          <span class="wm-sub" style="color:var(--fog)">Salon &middot; Millcreek, UT</span>
+        </div>
+        <p class="foot-fact">Bringing beauty and confidence to the Salt Lake Valley for 18+ years. Owner-run &middot; 5.0&#9733; across 68 Google reviews &middot; walk-ins welcome.</p>
+      </div>
+      <div class="foot-meta">
+        <p class="label">1565 E 3900 S, Millcreek, UT 84124</p>
+        <p style="margin-top:6px"><a href="tel:+18014851425">(801) 485-1425</a></p>
+      </div>
+    </div>
+    <div class="foot-legal label">
+      <span>&copy; 2026 The Strand Salon</span>
+      <span>Demo site by <a href="#">Peak 11 Media</a></span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+18014851425" class="callbar" aria-label="Call The Strand Salon at (801) 485-1425">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call — (801) 485-1425
+</a>
+
+</body>
+</html>
