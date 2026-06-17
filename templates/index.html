@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Peak 11 Media — Template Styles</title>
+<meta name="description" content="Premium website design directions by Peak 11 Media. We pick the right vibe per client — not one cookie-cutter template." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #10151c;
+    --slate: #5a6573;
+    --line: #e6e9ee;
+    --bg: #f6f8fb;
+    --card: #ffffff;
+    --peak: #1f3a5f;     /* alpine deep blue */
+    --peak-2: #2f5e8a;   /* glacier blue */
+    --accent: #c9a14a;   /* summit gold */
+    --radius: 18px;
+    --shadow: 0 1px 2px rgba(16,21,28,.04), 0 12px 40px rgba(16,21,28,.08);
+    --shadow-lg: 0 2px 4px rgba(16,21,28,.06), 0 24px 60px rgba(16,21,28,.14);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  header {
+    background:
+      radial-gradient(120% 140% at 80% -10%, rgba(47,94,138,.35), transparent 55%),
+      linear-gradient(160deg, #16263b 0%, #1f3a5f 55%, #25496f 100%);
+    color: #fff;
+    padding: 64px 0 88px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* alpine peak silhouette */
+  header::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -1px;
+    height: 120px;
+    background: var(--bg);
+    clip-path: polygon(0 100%, 0 60%, 18% 18%, 30% 52%, 48% 6%, 64% 50%, 78% 26%, 100% 64%, 100% 100%);
+    opacity: 1;
+  }
+  .brand {
+    display: inline-flex; align-items: center; gap: 11px;
+    font-weight: 700; letter-spacing: .04em; font-size: 14px;
+    text-transform: uppercase;
+    color: #eaf1f9;
+  }
+  .brand .mk {
+    width: 26px; height: 26px; display: inline-block;
+  }
+  .brand .mk svg { display: block; }
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(32px, 6vw, 56px);
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    margin: 26px 0 16px;
+    font-weight: 700;
+    max-width: 16ch;
+  }
+  h1 .alt { color: var(--accent); }
+  .lede {
+    font-size: clamp(16px, 2.4vw, 19px);
+    color: #cdd9e6;
+    max-width: 58ch;
+  }
+
+  /* Grid */
+  main { padding: 0 0 80px; position: relative; }
+  .grid {
+    margin-top: -44px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px;
+    position: relative;
+    z-index: 2;
+  }
+  @media (max-width: 760px) {
+    .grid { grid-template-columns: 1fr; gap: 22px; margin-top: -30px; }
+    header { padding: 52px 0 84px; }
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow);
+    transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease, border-color .35s ease;
+  }
+  .card:hover, .card:focus-visible {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: #d4dbe4;
+    outline: none;
+  }
+  .thumb {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #eef1f5;
+  }
+  .thumb img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: top center;
+    display: block;
+    transition: transform .6s cubic-bezier(.2,.7,.2,1);
+  }
+  .card:hover .thumb img { transform: scale(1.035); }
+  .badge {
+    position: absolute; top: 14px; left: 14px;
+    background: rgba(16,21,28,.62);
+    backdrop-filter: blur(6px);
+    color: #fff;
+    font-size: 11px; font-weight: 600; letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 6px 11px; border-radius: 999px;
+  }
+
+  .body { padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .style-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 22px; font-weight: 700; letter-spacing: -0.01em;
+  }
+  .vibe { color: var(--ink); font-weight: 500; font-size: 15.5px; }
+  .example { color: var(--slate); font-size: 14.5px; }
+  .specs {
+    display: flex; align-items: center; gap: 10px;
+    margin-top: 4px; flex-wrap: wrap;
+    color: var(--slate); font-size: 13px;
+  }
+  .swatches { display: inline-flex; gap: 6px; }
+  .sw { width: 16px; height: 16px; border-radius: 5px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); }
+  .font-tag { font-weight: 600; color: var(--ink); }
+  .view {
+    margin-top: auto;
+    padding-top: 16px;
+    display: inline-flex; align-items: center; gap: 7px;
+    color: var(--peak-2); font-weight: 600; font-size: 15px;
+  }
+  .view .arrow { transition: transform .3s ease; }
+  .card:hover .view .arrow { transform: translateX(5px); }
+
+  /* Footer note */
+  .note {
+    margin-top: 46px;
+    text-align: center;
+    color: var(--slate);
+    font-size: 15px;
+    max-width: 62ch;
+    margin-left: auto; margin-right: auto;
+    line-height: 1.7;
+  }
+  .note strong { color: var(--ink); font-weight: 600; }
+  .foot {
+    margin-top: 34px; padding-top: 26px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    color: #9aa5b2; font-size: 13px;
+    letter-spacing: .02em;
+  }
+
+  /* entrance motion */
+  @media (prefers-reduced-motion: no-preference) {
+    .card { opacity: 0; transform: translateY(18px); animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+    .card:nth-child(1){ animation-delay: .05s; }
+    .card:nth-child(2){ animation-delay: .14s; }
+    .card:nth-child(3){ animation-delay: .23s; }
+    .card:nth-child(4){ animation-delay: .32s; }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <span class="brand">
+        <span class="mk">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 22L9.5 7l4 7 3-5L24 22H2Z" fill="#eaf1f9"/>
+            <path d="M9.5 7l4 7 3-5-2.7 0L13 11.2 11.1 7H9.5Z" fill="#c9a14a"/>
+          </svg>
+        </span>
+        Peak 11 Media
+      </span>
+      <h1>Template <span class="alt">styles</span>.<br>Pick the vibe, not the mold.</h1>
+      <p class="lede">These are four distinct premium design directions. We don't ship one cookie-cutter template — we match the right look and feel to each client. Tap any style to explore it live.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="grid">
+
+        <a class="card" href="dark-luxe/" target="_blank" rel="noopener">
+          <div class="thumb">
+            <span class="badge">Dark Luxe</span>
+            <img src="previews/dark-luxe.jpg" alt="The Ember Room — candlelit steakhouse template" loading="lazy" />
+          </div>
+          <div class="body">
+            <div class="style-name">Dark Luxe</div>
+            <div class="vibe">Moody, candlelit, expensive — built for fire.</div>
+            <div class="example">Example: <em>The Ember Room</em> · steakhouse / chophouse</div>
+            <div class="specs">
+              <span class="swatches">
+                <span class="sw" style="background:#0c0a08"></span>
+                <span class="sw" style="background:#1a1612"></span>
+                <span class="sw" style="background:#c9a14a"></span>
+              </span>
+              <span>Obsidian + brass-gold</span>
+              <span>·</span>
+              <span class="font-tag">Cormorant</span>
+            </div>
+            <span class="view">View live <span class="arrow">→</span></span>
+          </div>
+        </a>
+
+        <a class="card" href="bright-modern/" target="_blank" rel="noopener">
+          <div class="thumb">
+            <span class="badge">Bright Modern</span>
+            <img src="previews/bright-modern.jpg" alt="Lumen Dental Co. — clean modern template" loading="lazy" />
+          </div>
+          <div class="body">
+            <div class="style-name">Bright Modern</div>
+            <div class="vibe">Clean, calm, confident — fresh and approachable.</div>
+            <div class="example">Example: <em>Lumen Dental Co.</em> · dental / health</div>
+            <div class="specs">
+              <span class="swatches">
+                <span class="sw" style="background:#ffffff"></span>
+                <span class="sw" style="background:#f1f1fb"></span>
+                <span class="sw" style="background:#4f46e5"></span>
+              </span>
+              <span>White + vibrant indigo</span>
+              <span>·</span>
+              <span class="font-tag">Space Grotesk</span>
+            </div>
+            <span class="view">View live <span class="arrow">→</span></span>
+          </div>
+        </a>
+
+        <a class="card" href="warm-boutique/" target="_blank" rel="noopener">
+          <div class="thumb">
+            <span class="badge">Warm Boutique</span>
+            <img src="previews/warm-boutique.jpg" alt="Marigold & Oat — warm boutique coffee roaster template" loading="lazy" />
+          </div>
+          <div class="body">
+            <div class="style-name">Warm Boutique</div>
+            <div class="vibe">Cozy, handcrafted, neighborhood-warm.</div>
+            <div class="example">Example: <em>Marigold &amp; Oat</em> · coffee roaster / bakery</div>
+            <div class="specs">
+              <span class="swatches">
+                <span class="sw" style="background:#f7efe4"></span>
+                <span class="sw" style="background:#e9d9c3"></span>
+                <span class="sw" style="background:#c4603a"></span>
+              </span>
+              <span>Cream + terracotta</span>
+              <span>·</span>
+              <span class="font-tag">Fraunces</span>
+            </div>
+            <span class="view">View live <span class="arrow">→</span></span>
+          </div>
+        </a>
+
+        <a class="card" href="editorial-luxe/" target="_blank" rel="noopener">
+          <div class="thumb">
+            <span class="badge">Editorial Luxe</span>
+            <img src="previews/editorial-luxe.jpg" alt="Maison Verbena — fashion-editorial aesthetics atelier template" loading="lazy" />
+          </div>
+          <div class="body">
+            <div class="style-name">Editorial Luxe</div>
+            <div class="vibe">Quiet, refined, fashion-magazine restraint.</div>
+            <div class="example">Example: <em>Maison Verbena</em> · aesthetics atelier / spa</div>
+            <div class="specs">
+              <span class="swatches">
+                <span class="sw" style="background:#efe7da"></span>
+                <span class="sw" style="background:#d8c7b3"></span>
+                <span class="sw" style="background:#9a6a4f"></span>
+              </span>
+              <span>Warm bone + clay</span>
+              <span>·</span>
+              <span class="font-tag">Fraunces</span>
+            </div>
+            <span class="view">View live <span class="arrow">→</span></span>
+          </div>
+        </a>
+
+      </div>
+
+      <p class="note">
+        These four are a starting point — <strong>more styles can be added anytime</strong>. Every template is fully mobile-first, fast, and built with subtle motion that feels premium without getting in the way. We tailor the chosen direction to your brand, content, and goals.
+      </p>
+      <div class="foot">Peak 11 Media — custom websites for businesses that want to look the part.</div>
+    </div>
+  </main>
+</body>
+</html>
