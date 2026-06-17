@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1a1411">
+<title>Menu</title>
+<meta name="description" content="View our full menu.">
+
+<!--
+  ============================================================================
+  PEAK 11 MEDIA  ·  QR DIGITAL-MENU TEMPLATE  (reusable, self-contained)
+  ----------------------------------------------------------------------------
+  HOW TO USE THIS FILE FOR A NEW RESTAURANT:
+    1. Edit the MENU object below (the <script id="menu-data"> block). It is the
+       ONLY thing you change. Everything else is generic and reusable.
+    2. Set brand.name, brand.tagline, brand.phone, brand.address, brand.hours.
+    3. Optionally set brand.accent (hex) to match the restaurant's color.
+    4. List sections, each with a title + items {name, price, desc, tags}.
+       tags are short notes like "GF", "V" (vegetarian), "VG" (vegan),
+       "Spicy", "Contains nuts" — shown as small chips for allergens/notes.
+    5. Mark badges: set item.badge = "Popular" or "New" to highlight it.
+    6. Save, upload anywhere static (GitHub Pages, Netlify, Vercel). Generate a
+       QR code that points at the page's URL. Done. ~$0/mo to run.
+  No build step. No dependencies. One file. Loads instantly on any phone.
+  ============================================================================
+-->
+
+<style>
+  :root{
+    --ink:#1a1411; --steel:#5e554b; --fog:#a9a094;
+    --paper:#faf6ee; --chalk:#f1e9da; --line:#e3d9c7;
+    --accent:#d39a1e; --accent-soft:rgba(211,154,30,.12);
+    --card:#ffffff;
+    --shadow:0 1px 2px rgba(26,20,17,.04), 0 8px 24px rgba(26,20,17,.06);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Barlow',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    background:var(--paper); color:var(--ink);
+    line-height:1.5; font-size:16px;
+    padding-bottom:env(safe-area-inset-bottom);
+    overflow-x:hidden;
+  }
+  .wrap{max-width:520px;margin:0 auto;background:var(--paper);min-height:100vh}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative; padding:38px 22px 26px;
+    text-align:center;
+    background:
+      radial-gradient(120% 80% at 50% -10%, var(--accent-soft), transparent 60%),
+      var(--paper);
+    border-bottom:1px solid var(--line);
+  }
+  .hero .est{
+    font-family:'Barlow Condensed',sans-serif; font-weight:600;
+    letter-spacing:.22em; text-transform:uppercase;
+    font-size:12px; color:var(--accent); margin-bottom:10px;
+  }
+  .hero h1{
+    font-family:'Fraunces',Georgia,serif; font-weight:500;
+    font-size:clamp(30px,9vw,40px); line-height:1.05;
+    letter-spacing:-.01em; color:var(--ink);
+  }
+  .hero .tagline{
+    margin-top:10px; color:var(--steel); font-size:15px; max-width:34ch;
+    margin-left:auto;margin-right:auto;
+  }
+  .hero .meta{
+    margin-top:18px; display:flex; flex-wrap:wrap; gap:8px;
+    justify-content:center;
+  }
+  .chip-meta{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:13px;color:var(--steel);
+    background:var(--chalk);border:1px solid var(--line);
+    padding:7px 12px;border-radius:999px;
+  }
+
+  /* ---------- ACTION BAR ---------- */
+  .actions{
+    display:flex; gap:10px; padding:16px 18px 4px;
+    position:sticky; top:0; z-index:20;
+    background:linear-gradient(var(--paper) 78%, transparent);
+    backdrop-filter:blur(2px);
+  }
+  .btn{
+    flex:1; display:inline-flex;align-items:center;justify-content:center;gap:7px;
+    font-family:'Barlow',sans-serif; font-weight:600; font-size:14.5px;
+    padding:13px 14px; border-radius:13px; text-decoration:none;
+    border:1px solid var(--line); color:var(--ink); background:var(--card);
+    box-shadow:var(--shadow); transition:transform .08s ease;
+  }
+  .btn:active{transform:scale(.97)}
+  .btn.primary{background:var(--ink); color:#fff; border-color:var(--ink)}
+  .btn svg{width:16px;height:16px;flex:0 0 auto}
+
+  /* ---------- SECTION NAV (sticky pills) ---------- */
+  .secnav{
+    position:sticky; top:62px; z-index:15;
+    display:flex; gap:8px; overflow-x:auto; scrollbar-width:none;
+    padding:10px 18px 12px; margin-bottom:2px;
+    -webkit-overflow-scrolling:touch;
+    background:linear-gradient(var(--paper) 70%, transparent);
+  }
+  .secnav::-webkit-scrollbar{display:none}
+  .secnav a{
+    flex:0 0 auto; font-family:'Barlow Condensed',sans-serif;
+    text-transform:uppercase; letter-spacing:.06em; font-weight:600;
+    font-size:14px; color:var(--steel); text-decoration:none;
+    padding:7px 14px; border-radius:999px; border:1px solid var(--line);
+    background:var(--card); transition:.15s;
+  }
+  .secnav a.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+  /* ---------- MENU ---------- */
+  main{padding:6px 18px 40px}
+  .section{margin-top:30px; scroll-margin-top:120px}
+  .section-head{
+    display:flex; align-items:baseline; gap:12px; margin-bottom:4px;
+  }
+  .section-head h2{
+    font-family:'Fraunces',Georgia,serif; font-weight:500;
+    font-size:25px; letter-spacing:-.01em;
+  }
+  .section-head .rule{flex:1;height:1px;background:var(--line)}
+  .section-sub{color:var(--fog);font-size:13.5px;margin-bottom:6px}
+
+  .item{
+    display:flex; gap:12px; align-items:flex-start;
+    padding:16px 0; border-bottom:1px solid var(--line);
+  }
+  .item:last-child{border-bottom:none}
+  .item-body{flex:1;min-width:0}
+  .item-top{display:flex;align-items:baseline;gap:8px}
+  .item-name{
+    font-family:'Fraunces',Georgia,serif; font-weight:500;
+    font-size:17.5px; line-height:1.2;
+  }
+  .badge{
+    font-family:'Barlow Condensed',sans-serif; font-weight:600;
+    text-transform:uppercase; letter-spacing:.05em; font-size:10.5px;
+    color:var(--accent); background:var(--accent-soft);
+    padding:2px 7px; border-radius:6px; transform:translateY(-1px);
+    white-space:nowrap;
+  }
+  .item-desc{color:var(--steel); font-size:14px; margin-top:3px; line-height:1.45}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+  .tag{
+    font-size:11px; font-weight:600; letter-spacing:.02em;
+    color:var(--steel); background:var(--chalk);
+    border:1px solid var(--line); padding:2px 7px; border-radius:6px;
+  }
+  .tag.spicy{color:#a33; background:#fbeceb; border-color:#f3d4d2}
+  .dots{
+    flex:1; align-self:flex-end; margin-bottom:5px;
+    border-bottom:1.5px dotted var(--line); min-width:14px; height:1px;
+  }
+  .price{
+    font-family:'Barlow',sans-serif; font-weight:600; font-size:16.5px;
+    white-space:nowrap; color:var(--ink); padding-top:1px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .legend{
+    margin:26px 0 0; padding:14px 16px; border-radius:14px;
+    background:var(--chalk); border:1px solid var(--line);
+    font-size:12.5px; color:var(--steel); line-height:1.7;
+  }
+  .legend b{color:var(--ink)}
+  footer{
+    text-align:center; padding:30px 22px 40px; color:var(--fog);
+    font-size:12.5px; border-top:1px solid var(--line); margin-top:30px;
+  }
+  footer .fname{font-family:'Fraunces',serif;color:var(--steel);font-size:15px}
+  footer a{color:var(--steel)}
+  .sample-note{
+    margin:14px 0 0; padding:12px 14px; border-radius:12px;
+    background:#fff7e6; border:1px solid #f0dcae; color:#7a5e1f;
+    font-size:12.5px; line-height:1.55;
+  }
+
+  @media (prefers-color-scheme:dark){
+    :root{
+      --ink:#f3ede2; --steel:#b9af9f; --fog:#7d7466;
+      --paper:#15110d; --chalk:#211b14; --line:#332a20;
+      --card:#1d1812; --accent:#e3ab33; --accent-soft:rgba(227,171,51,.14);
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
+    }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Barlow:wght@400;600&family=Barlow+Condensed:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="est" id="b-est"></p>
+    <h1 id="b-name"></h1>
+    <p class="tagline" id="b-tagline"></p>
+    <div class="meta" id="b-meta"></div>
+  </header>
+
+  <div class="actions" id="actions"></div>
+  <nav class="secnav" id="secnav" aria-label="Menu sections"></nav>
+
+  <main id="menu"></main>
+
+  <footer>
+    <p class="fname" id="f-name"></p>
+    <p id="f-address" style="margin-top:4px"></p>
+    <p id="f-hours" style="margin-top:4px"></p>
+    <p style="margin-top:18px;opacity:.8">Menu by <a href="#">Peak 11 Media</a></p>
+  </footer>
+</div>
+
+<!-- ======================== EDIT BELOW THIS LINE ONLY ======================== -->
+<script id="menu-data" type="application/json">
+{
+  "brand": {
+    "name": "Ogie's Cafe",
+    "est": "Est. 1983 · West Valley City",
+    "tagline": "A family-owned greasy spoon. Big breakfasts, small prices, coffee that never goes cold.",
+    "phone": "(801) 973-6455",
+    "address": "3515 S Redwood Rd, West Valley City, UT 84119",
+    "mapUrl": "https://maps.google.com/?q=Ogie%27s+Cafe+3515+S+Redwood+Rd+West+Valley+City+UT",
+    "hours": "Mon–Fri 6am–2pm · Sat–Sun 6am–3pm",
+    "accent": "#d39a1e",
+    "sampleNote": "Sample menu — prices and full lunch lineup to be confirmed with the owners. Confirmed signature items and breakfast prices are from Ogie's published menu; additional lunch/drink items shown here are representative of the diner and ready to swap for the real list."
+  },
+  "sections": [
+    {
+      "title": "Breakfast",
+      "subtitle": "Served all day",
+      "items": [
+        {"name":"Ogie's Special","price":"$12.25","desc":"Two eggs, sausage, ham & bacon over hashbrowns, with toast.","tags":[],"badge":"Signature"},
+        {"name":"Special Burrito","price":"$12.25","desc":"Ham, hashbrowns & scrambled eggs smothered in green chili and cheese.","tags":["Spicy"],"badge":"Popular"},
+        {"name":"Veggie Skillet","price":"$11.75","desc":"Peppers, onions, mushrooms, tomatoes & avocado over hashbrowns.","tags":["V"]},
+        {"name":"Huevos Rancheros","price":"$12.25","desc":"Flour tortilla with beans, cheese, eggs, hashbrowns & sour cream.","tags":[]},
+        {"name":"Tall Stack Buttermilk Pancakes","price":"$8.99","desc":"Three from-scratch cakes. Add two eggs & bacon.","tags":["V"]},
+        {"name":"French Toast, Full Order","price":"$6.99","desc":"Thick-cut, dusted, served with real syrup.","tags":["V"]},
+        {"name":"Three-Egg Omelet","price":"$11.50","desc":"Build your own — cheese, ham, peppers, onions & more. With hashbrowns & toast.","tags":[]},
+        {"name":"Country Fried Steak & Eggs","price":"$12.99","desc":"Hand-breaded steak, country gravy, two eggs & hashbrowns.","tags":[]},
+        {"name":"Belgian Waffle","price":"$8.49","desc":"Golden, crisp-edged, with butter & syrup. Add fresh fruit.","tags":["V"]}
+      ]
+    },
+    {
+      "title": "Lunch",
+      "subtitle": "From 11am",
+      "items": [
+        {"name":"Ogie's Cheeseburger","price":"$11.50","desc":"Quarter-pound patty, American cheese, all the fixings, hand-cut fries.","tags":[],"badge":"Popular"},
+        {"name":"Patty Melt","price":"$11.75","desc":"Grilled rye, Swiss, grilled onions & beef patty, with fries.","tags":[]},
+        {"name":"Club Sandwich","price":"$11.25","desc":"Triple-decker turkey, bacon, lettuce & tomato, with fries.","tags":[]},
+        {"name":"Patty's BLT","price":"$9.50","desc":"Crisp bacon, lettuce & tomato on toasted sourdough.","tags":[]},
+        {"name":"Grilled Cheese & Tomato Soup","price":"$8.50","desc":"Buttery grilled cheese with a cup of house tomato soup.","tags":["V"]},
+        {"name":"Hand-Cut Fries","price":"$4.50","desc":"Fresh-cut, never frozen. Add gravy or cheese.","tags":["V"]}
+      ]
+    },
+    {
+      "title": "Drinks",
+      "items": [
+        {"name":"Bottomless Coffee","price":"$2.95","desc":"Fresh-brewed. Your cup never goes cold here.","tags":[],"badge":"A Tradition"},
+        {"name":"Fresh Orange Juice","price":"$3.50","desc":"Small or large.","tags":["VG","GF"]},
+        {"name":"Milk · Chocolate Milk","price":"$2.50","desc":"Ice cold.","tags":["GF"]},
+        {"name":"Hot Tea · Hot Cocoa","price":"$2.50","desc":"","tags":["V"]},
+        {"name":"Fountain Soda","price":"$2.95","desc":"Free refills.","tags":["VG","GF"]}
+      ]
+    }
+  ]
+}
+</script>
+<!-- ======================== EDIT ABOVE THIS LINE ONLY ======================== -->
+
+<script>
+(function(){
+  var ICON = {
+    phone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg>',
+    map:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+    clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'
+  };
+  var TAG_LABEL = {GF:'Gluten-free',V:'Vegetarian',VG:'Vegan',DF:'Dairy-free'};
+  var data, esc=function(s){var d=document.createElement('div');d.textContent=s==null?'':s;return d.innerHTML;};
+  function telHref(p){return 'tel:'+String(p).replace(/[^0-9+]/g,'');}
+  function mapHref(b){return b.mapUrl||('https://maps.google.com/?q='+encodeURIComponent((b.name||'')+' '+(b.address||'')));}
+
+  try{ data = JSON.parse(document.getElementById('menu-data').textContent); }
+  catch(e){ document.getElementById('menu').innerHTML='<p>Menu data error.</p>'; return; }
+
+  var b = data.brand||{};
+  if(b.accent){ document.documentElement.style.setProperty('--accent', b.accent); }
+  document.title = (b.name||'Menu') + ' — Menu';
+  document.getElementById('b-est').textContent = b.est||'';
+  document.getElementById('b-name').textContent = b.name||'Menu';
+  document.getElementById('b-tagline').textContent = b.tagline||'';
+
+  var meta='';
+  if(b.hours) meta+='<span class="chip-meta">'+ICON.clock+esc(b.hours)+'</span>';
+  if(b.phone) meta+='<span class="chip-meta">'+ICON.phone+esc(b.phone)+'</span>';
+  document.getElementById('b-meta').innerHTML=meta;
+
+  var acts='';
+  if(b.phone) acts+='<a class="btn primary" href="'+telHref(b.phone)+'">'+ICON.phone+'Call to order</a>';
+  if(b.address||b.mapUrl) acts+='<a class="btn" href="'+esc(mapHref(b))+'" target="_blank" rel="noopener">'+ICON.map+'Directions</a>';
+  document.getElementById('actions').innerHTML=acts;
+
+  var slug=function(t){return 'sec-'+String(t).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');};
+  var nav='', body='', used={};
+  (data.sections||[]).forEach(function(sec){
+    var id=slug(sec.title); if(used[id])id+='-'+Math.random().toString(36).slice(2,5); used[id]=1;
+    nav+='<a href="#'+id+'" data-sec="'+id+'">'+esc(sec.title)+'</a>';
+    var items='';
+    (sec.items||[]).forEach(function(it){
+      var tags='';
+      (it.tags||[]).forEach(function(t){
+        var cls=/spicy|hot/i.test(t)?'tag spicy':'tag';
+        var lab=TAG_LABEL[t]||t;
+        tags+='<span class="'+cls+'">'+esc(lab)+'</span>';
+      });
+      items+=''
+        +'<div class="item"><div class="item-body">'
+        +'<div class="item-top"><span class="item-name">'+esc(it.name)+'</span>'
+        +(it.badge?'<span class="badge">'+esc(it.badge)+'</span>':'')+'</div>'
+        +(it.desc?'<p class="item-desc">'+esc(it.desc)+'</p>':'')
+        +(tags?'<div class="tags">'+tags+'</div>':'')
+        +'</div><span class="dots"></span>'
+        +'<span class="price">'+esc(it.price||'')+'</span></div>';
+    });
+    body+='<section class="section" id="'+id+'">'
+      +'<div class="section-head"><h2>'+esc(sec.title)+'</h2><span class="rule"></span></div>'
+      +(sec.subtitle?'<p class="section-sub">'+esc(sec.subtitle)+'</p>':'')
+      +items+'</section>';
+  });
+
+  document.getElementById('secnav').innerHTML=nav;
+  var legend='<div class="legend"><b>Notes:</b> Prices and items subject to change. '
+    +'<b>V</b> Vegetarian · <b>VG</b> Vegan · <b>GF</b> Gluten-free. '
+    +'Please tell your server about any allergies — we cook in a shared kitchen.</div>';
+  var sample = b.sampleNote?'<div class="sample-note">'+esc(b.sampleNote)+'</div>':'';
+  document.getElementById('menu').innerHTML=body+legend+sample;
+
+  document.getElementById('f-name').textContent=b.name||'';
+  document.getElementById('f-address').textContent=b.address||'';
+  document.getElementById('f-hours').textContent=b.hours||'';
+
+  // active section highlight on scroll
+  var links=[].slice.call(document.querySelectorAll('.secnav a'));
+  var map={}; links.forEach(function(l){map[l.getAttribute('data-sec')]=l;});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          links.forEach(function(l){l.classList.remove('active');});
+          var l=map[en.target.id]; if(l){l.classList.add('active');
+            l.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});}
+        }
+      });
+    },{rootMargin:'-130px 0px -65% 0px',threshold:0});
+    document.querySelectorAll('.section').forEach(function(s){io.observe(s);});
+  }
+})();
+</script>
+</body>
+</html>
