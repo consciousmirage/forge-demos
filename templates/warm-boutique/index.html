@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" class="wb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marigold &amp; Oat — Neighborhood Coffee Roaster &amp; Bakery | Salt Lake City</title>
+<meta name="description" content="A warm little coffee roaster and bakery in Salt Lake City. Small-batch beans roasted in-house, sourdough &amp; pastry baked at dawn, and a sunny corner to slow down in.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   MARIGOLD & OAT — WARM BOUTIQUE template (Peak 11 Media, v4)
+   Self-contained. Warm cream canvas + terracotta/olive/honey earth palette.
+   Fraunces (soft optical serif) + Nunito Sans (rounded humanist sans).
+   Soft rounded forms, warm-tinted shadows, organic varied sections.
+   ============================================================ */
+:root{
+  --cream:#FBF6EC;      /* page canvas */
+  --oat:#F3E9D6;        /* deeper warm band */
+  --linen:#FFFDF8;      /* card surface */
+  --espresso:#3A2A20;   /* warm near-black ink */
+  --cocoa:#6F5A4B;      /* muted body text */
+  --cocoa-soft:#8C7868; /* tertiary text */
+  --clay:#C56A3D;       /* terracotta accent (CTA, links) */
+  --clay-deep:#A8542C;  /* clay hover */
+  --olive:#7C7A4E;      /* secondary earth accent */
+  --honey:#E2A65A;      /* warm highlight / stars */
+  --line:#E8DCC6;       /* hairline on cream */
+  --line-soft:#EFE6D5;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Nunito Sans',system-ui,-apple-system,sans-serif;
+  --max:1180px;
+  --shadow-sm:0 2px 8px rgba(110,80,55,.06), 0 8px 22px -14px rgba(110,80,55,.18);
+  --shadow-md:0 6px 18px rgba(110,80,55,.08), 0 22px 48px -22px rgba(110,80,55,.28);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--cream); color:var(--espresso);
+  font-family:var(--sans); font-weight:400; line-height:1.65;
+  font-size:16px; -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+
+/* ---- type ---- */
+.eyebrow{
+  font-family:var(--sans);font-weight:700;font-size:12px;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--clay);
+  display:inline-flex;align-items:center;gap:.65em;
+}
+.eyebrow::before{content:"";width:22px;height:2px;border-radius:2px;background:var(--clay);opacity:.85}
+.eyebrow.center{justify-content:center}
+.eyebrow.light{color:var(--honey)}
+.eyebrow.light::before{background:var(--honey)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;letter-spacing:-.015em;color:var(--espresso)}
+h1{font-size:clamp(40px,9.5vw,78px);font-weight:500;letter-spacing:-.025em;line-height:1.02}
+h2{font-size:clamp(31px,5.4vw,52px);font-weight:500;letter-spacing:-.02em}
+h3{font-size:22px;font-weight:600;letter-spacing:-.01em}
+.serif-em{font-style:italic;color:var(--clay)}
+p{color:var(--cocoa)}
+.lede{font-size:clamp(17px,2.2vw,20px);color:var(--cocoa);line-height:1.62}
+
+/* ---- buttons (soft full pill) ---- */
+.btn{
+  font-family:var(--sans);font-weight:700;font-size:15px;letter-spacing:.01em;
+  display:inline-flex;align-items:center;justify-content:center;gap:.55em;
+  padding:15px 28px;border-radius:999px;cursor:pointer;border:1.5px solid transparent;
+  line-height:1;white-space:nowrap;
+}
+.btn svg{width:18px;height:18px}
+.btn-clay{background:var(--clay);color:#FFF7EF;border-color:var(--clay);box-shadow:var(--shadow-sm)}
+.btn-clay:hover{background:var(--clay-deep);border-color:var(--clay-deep)}
+.btn-ghost{background:transparent;color:var(--espresso);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--espresso)}
+.btn-ghost.on-dark{color:#FFF7EF;border-color:rgba(255,247,239,.4)}
+.btn-ghost.on-dark:hover{border-color:#FFF7EF;background:rgba(255,247,239,.08)}
+
+/* ---- nav ---- */
+.nav{
+  position:sticky;top:0;z-index:60;background:rgba(251,246,236,.86);
+  backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);
+  border-bottom:1px solid var(--line-soft);
+}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;flex-direction:column;line-height:1}
+.brand b{font-family:var(--serif);font-weight:600;font-size:22px;letter-spacing:-.02em;color:var(--espresso)}
+.brand b i{font-style:normal;color:var(--clay)}
+.brand span{font-family:var(--sans);font-weight:700;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--cocoa-soft);margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-weight:600;font-size:15px;color:var(--cocoa)}
+.nav-links a:hover{color:var(--espresso)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav .btn{padding:11px 20px;font-size:14px}
+
+/* ---- hero ---- */
+.hero{position:relative;padding:64px 0 36px}
+.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:44px;align-items:center}
+.hero-copy{max-width:540px}
+.hero h1{margin:18px 0 0}
+.hero .lede{margin:22px 0 30px;max-width:46ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.hero-meta{margin-top:30px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.stars{display:inline-flex;gap:3px}
+.stars svg{width:17px;height:17px;fill:var(--honey)}
+.hero-meta .m-txt{font-size:14px;color:var(--cocoa);font-weight:600}
+.hero-meta .m-txt b{color:var(--espresso)}
+/* arched product image */
+.hero-art{position:relative}
+.hero-img{
+  border-radius:240px 240px 26px 26px;overflow:hidden;
+  box-shadow:var(--shadow-md);border:8px solid var(--linen);
+  aspect-ratio:5/6;
+}
+.hero-img img{width:100%;height:100%;object-fit:cover;filter:saturate(1.03) contrast(1.02)}
+.hero-badge{
+  position:absolute;left:-14px;bottom:34px;background:var(--linen);
+  border:1px solid var(--line);border-radius:20px;padding:14px 18px;
+  box-shadow:var(--shadow-md);display:flex;align-items:center;gap:12px;
+}
+.hero-badge .ico{width:40px;height:40px;border-radius:50%;background:var(--oat);display:grid;place-items:center;color:var(--clay)}
+.hero-badge .ico svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.7}
+.hero-badge b{font-family:var(--serif);font-weight:600;font-size:16px;display:block;color:var(--espresso);line-height:1.1}
+.hero-badge span{font-size:12px;color:var(--cocoa-soft);font-weight:600}
+
+/* ---- marquee value strip ---- */
+.strip{background:var(--espresso);color:#F4E9DB;overflow:hidden;margin-top:30px}
+.strip-track{display:flex;gap:0;white-space:nowrap;animation:slide 34s linear infinite;will-change:transform}
+.strip-track span{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(20px,3vw,30px);padding:20px 30px;display:inline-flex;align-items:center;gap:30px}
+.strip-track span::after{content:"✦";color:var(--honey);font-style:normal;font-size:.7em}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.strip-track{animation:none}}
+
+/* ---- section scaffold ---- */
+section{padding:84px 0}
+.sec-head{max-width:620px}
+.sec-head.center{margin:0 auto;text-align:center}
+.sec-head h2{margin:14px 0 0}
+.sec-head p{margin-top:16px}
+
+/* ---- feature offset rows ("what we do") ---- */
+.features{display:flex;flex-direction:column;gap:26px;margin-top:54px}
+.feat{
+  display:grid;grid-template-columns:64px 1fr auto;gap:24px;align-items:center;
+  background:var(--linen);border:1px solid var(--line);border-radius:26px;padding:26px 30px;
+  box-shadow:var(--shadow-sm);
+}
+.feat:nth-child(even){margin-left:auto;background:var(--oat);border-color:var(--line)}
+.feat-ico{width:64px;height:64px;border-radius:20px;background:var(--cream);display:grid;place-items:center;color:var(--clay)}
+.feat:nth-child(even) .feat-ico{background:var(--linen)}
+.feat-ico svg{width:30px;height:30px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.feat-txt h3{margin-bottom:5px}
+.feat-txt p{font-size:15px;line-height:1.55}
+.feat-num{font-family:var(--serif);font-weight:500;font-size:34px;color:var(--line);font-style:italic}
+
+/* ---- menu (cards on oat band) ---- */
+.band-oat{background:var(--oat)}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.mat{
+  background:var(--linen);border:1px solid var(--line);border-radius:28px;overflow:hidden;
+  box-shadow:var(--shadow-sm);display:flex;flex-direction:column;
+}
+.mat-img{aspect-ratio:4/3;overflow:hidden}
+.mat-img img{width:100%;height:100%;object-fit:cover;filter:saturate(1.02) contrast(1.02)}
+.mat-body{padding:24px 24px 26px}
+.mat-row{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.mat-row h3{font-size:20px}
+.mat-price{font-family:var(--serif);font-weight:600;font-size:19px;color:var(--clay);white-space:nowrap}
+.mat-body p{font-size:14.5px;line-height:1.55;margin-top:8px;color:var(--cocoa)}
+.mat-tag{display:inline-block;margin-top:14px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--olive);background:rgba(124,122,78,.1);padding:5px 11px;border-radius:999px}
+
+/* ---- roastery story split ---- */
+.story-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:54px;align-items:center}
+.story-art{
+  border-radius:30px 30px 160px 30px;overflow:hidden;aspect-ratio:4/5;
+  box-shadow:var(--shadow-md);border:8px solid var(--linen);
+}
+.story-art img{width:100%;height:100%;object-fit:cover;filter:saturate(1.02) contrast(1.02)}
+.story-copy p{margin-top:18px;line-height:1.7}
+.story-stats{display:flex;gap:40px;margin-top:34px;flex-wrap:wrap}
+.stat b{font-family:var(--serif);font-weight:500;font-size:clamp(38px,5vw,54px);color:var(--clay);display:block;line-height:1;letter-spacing:-.02em}
+.stat span{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cocoa-soft);margin-top:8px;display:block}
+
+/* ---- testimonials (warm clay band) ---- */
+.band-clay{background:linear-gradient(160deg,#6B3A22,#52301E);color:#F6E9DC}
+.band-clay h2{color:#FFF7EF}
+.band-clay .sec-head p{color:rgba(246,233,220,.82)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.rev-card{
+  background:rgba(255,247,239,.06);border:1px solid rgba(255,247,239,.14);
+  border-radius:26px;padding:30px;display:flex;flex-direction:column;
+}
+.rev-card .stars svg{fill:var(--honey)}
+.rev-card blockquote{font-family:var(--serif);font-weight:400;font-size:18px;line-height:1.55;color:#FBF1E6;margin:16px 0 22px}
+.rev-attr{display:flex;align-items:center;gap:12px;margin-top:auto}
+.rev-av{width:42px;height:42px;border-radius:50%;background:var(--honey);color:#52301E;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:18px}
+.rev-attr b{display:block;font-size:15px;font-weight:700;color:#FFF7EF}
+.rev-attr span{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(246,233,220,.6)}
+
+/* ---- visit / hours + map ---- */
+.visit-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:48px;align-items:stretch}
+.visit-card{background:var(--linen);border:1px solid var(--line);border-radius:30px;padding:36px;box-shadow:var(--shadow-sm)}
+.v-row{display:flex;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.v-row:last-of-type{border-bottom:none}
+.v-row .v-ico{width:40px;height:40px;flex:none;border-radius:50%;background:var(--oat);display:grid;place-items:center;color:var(--clay)}
+.v-ico svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.v-row .v-lbl{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--cocoa-soft)}
+.v-row .v-val{font-family:var(--serif);font-weight:500;font-size:19px;color:var(--espresso);margin-top:2px}
+.v-phone{font-family:var(--serif);font-weight:600;font-size:clamp(26px,4vw,34px);color:var(--clay);letter-spacing:-.01em}
+.hours{margin-top:4px}
+.hours div{display:flex;justify-content:space-between;font-size:15px;padding:6px 0;color:var(--cocoa)}
+.hours div b{color:var(--espresso);font-weight:600}
+.map{border-radius:30px;overflow:hidden;border:8px solid var(--linen);box-shadow:var(--shadow-md);min-height:380px}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;filter:saturate(.92) sepia(.12)}
+
+/* ---- footer ---- */
+.footer{background:var(--espresso);color:#E9DCCD;padding:64px 0 28px}
+.footer .ft-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:36px;border-bottom:1px solid rgba(255,247,239,.12)}
+.footer .brand b{color:#FFF7EF}
+.footer .brand b i{color:var(--honey)}
+.footer .brand span{color:rgba(233,220,205,.6)}
+.ft-tag{font-family:var(--serif);font-style:italic;font-size:20px;color:#F4E9DB;max-width:30ch}
+.ft-links{display:flex;gap:28px;flex-wrap:wrap}
+.ft-links a{font-weight:600;font-size:15px;color:rgba(233,220,205,.78)}
+.ft-links a:hover{color:#FFF7EF}
+.ft-bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:24px;font-size:13px;color:rgba(233,220,205,.55);font-weight:600}
+
+/* ---- sticky mobile call bar ---- */
+.callbar{display:none}
+
+/* ---- responsive ---- */
+@media (max-width:920px){
+  .hero-grid{grid-template-columns:1fr;gap:38px}
+  .hero-art{max-width:440px;margin:0 auto}
+  .story-grid,.visit-grid{grid-template-columns:1fr;gap:36px}
+  .story-art{max-width:460px;margin:0 auto;border-radius:30px 30px 140px 30px}
+  .menu-grid,.rev-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:760px){
+  .nav-links{display:none}
+  .nav-cta .btn{display:inline-flex}
+  section{padding:62px 0}
+  .hero{padding:40px 0 24px}
+  .feat{grid-template-columns:54px 1fr;gap:18px;padding:22px}
+  .feat-num{display:none}
+  .feat:nth-child(even){margin-left:0}
+  .menu-grid,.rev-grid{grid-template-columns:1fr;gap:20px}
+  .body-pad{padding-bottom:64px}
+  .callbar{
+    display:flex;position:fixed;left:0;right:0;bottom:0;z-index:80;
+    background:var(--clay);color:#FFF7EF;height:64px;align-items:center;justify-content:center;
+    gap:10px;font-family:var(--sans);font-weight:700;font-size:16px;letter-spacing:.01em;
+    box-shadow:0 -8px 28px rgba(58,42,32,.22);border-top:1px solid var(--clay-deep);
+  }
+  .callbar svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.9}
+}
+@media (max-width:430px){
+  .wrap{padding:0 18px}
+  .hero-img{border-radius:180px 180px 22px 22px}
+  .hero-badge{left:-6px;padding:12px 14px}
+  .story-stats{gap:28px}
+}
+
+<!--p11-motion-css-->
+.svc-card,.rev-card,.review-card,.work-card{transition:transform .25s cubic-bezier(.2,.6,.2,1),box-shadow .25s cubic-bezier(.2,.6,.2,1),border-color .15s ease}
+.svc-card:hover,.rev-card:hover,.review-card:hover,.work-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px -12px rgba(110,80,55,.28)}
+.mat,.feat,.visit-card{transition:transform .25s cubic-bezier(.2,.6,.2,1),box-shadow .25s cubic-bezier(.2,.6,.2,1),border-color .15s ease}
+.mat:hover,.feat:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.btn{transition:background .15s ease,border-color .15s ease,color .15s ease,transform .2s cubic-bezier(.2,.6,.2,1),box-shadow .2s cubic-bezier(.2,.6,.2,1)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.js-anim [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .6s cubic-bezier(.2,.6,.2,1),transform .6s cubic-bezier(.2,.6,.2,1);transition-delay:var(--reveal-delay,0ms);will-change:opacity,transform}
+.js-anim [data-reveal].is-in{opacity:1;transform:none;will-change:auto}
+@media (max-width:640px){.js-anim [data-reveal]{transform:translateY(12px);transition-duration:.45s}.mat:hover,.feat:hover,.svc-card:hover,.rev-card:hover,.review-card:hover,.work-card:hover,.btn:hover{transform:none;box-shadow:var(--shadow-sm)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.js-anim [data-reveal]{opacity:1!important;transform:none!important;transition:none!important;will-change:auto}.mat,.feat,.svc-card,.rev-card,.review-card,.work-card,.btn{transition:border-color .15s ease,background .15s ease,color .15s ease!important}.mat:hover,.feat:hover,.svc-card:hover,.rev-card:hover,.review-card:hover,.work-card:hover,.btn:hover,.btn:active{transform:none!important;box-shadow:var(--shadow-sm)!important}}
+<!--/p11-motion-css-->
+</style>
+</head>
+<body class="body-pad">
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Marigold and Oat home">
+      <b>Marigold&nbsp;<i>&amp;</i>&nbsp;Oat</b>
+      <span>Roaster · Bakery · SLC</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#menu">Menu</a>
+      <a href="#story">Our Roastery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-clay" href="tel:+18015550147">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        (801) 555-0147
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Salt Lake City · Est. 2016</span>
+        <h1>Small-batch coffee &amp; <span class="serif-em">bread baked at dawn</span>.</h1>
+        <p class="lede">A warm little roaster and bakery on 9th &amp; 9th. We roast every bean in-house, pull the sourdough out of the oven before sunrise, and keep a sunny corner open for you to slow down in.</p>
+        <div class="hero-cta">
+          <a class="btn btn-clay" href="#menu">See the menu</a>
+          <a class="btn btn-ghost" href="#visit">Plan your visit</a>
+        </div>
+        <div class="hero-meta">
+          <span class="stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg>
+          </span>
+          <span class="m-txt"><b>4.9</b> from 600+ neighborhood reviews</span>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-img">
+          <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=900&q=80" alt="A warm latte with leaf latte art beside a fresh-baked croissant on a wooden table">
+        </div>
+        <div class="hero-badge">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 8h13a4 4 0 0 1 0 8h-1"/><path d="M3 8v8a4 4 0 0 0 4 4h5a4 4 0 0 0 4-4"/><path d="M6 1v3M9.5 1v3M13 1v3"/></svg></span>
+          <div><b>Roasted in-house</b><span>fresh every Tuesday</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE MARQUEE -->
+  <div class="strip" aria-hidden="true">
+    <div class="strip-track">
+      <span>Single-origin beans</span><span>Wild sourdough</span><span>Oat &amp; almond milk on the house</span><span>Pastry baked at dawn</span>
+      <span>Single-origin beans</span><span>Wild sourdough</span><span>Oat &amp; almond milk on the house</span><span>Pastry baked at dawn</span>
+    </div>
+  </div>
+
+  <!-- WHAT WE DO -->
+  <section id="craft">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">The craft</span>
+        <h2>Everything made a little slower, a little better.</h2>
+        <p class="lede">No shortcuts and no syrup-from-a-pump fakery. Just good beans, real butter, and people who actually care how your morning goes.</p>
+      </div>
+      <div class="features">
+        <article class="feat">
+          <div class="feat-ico"><svg viewBox="0 0 24 24"><path d="M3 8h13a4 4 0 0 1 0 8h-1"/><path d="M3 8v8a4 4 0 0 0 4 4h5a4 4 0 0 0 4-4"/><path d="M6 1v3M9.5 1v3M13 1v3"/></svg></div>
+          <div class="feat-txt"><h3>Roasted on a 12kg drum</h3><p>We roast small batches in the back twice a week, so the bag you take home was warm days ago — never months.</p></div>
+          <span class="feat-num">01</span>
+        </article>
+        <article class="feat">
+          <div class="feat-ico"><svg viewBox="0 0 24 24"><path d="M4 21V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v13"/><path d="M4 21h16M8 4V2M16 4V2M9 12h6"/></svg></div>
+          <div class="feat-txt"><h3>Sourdough &amp; pastry at dawn</h3><p>Our baker starts at 4am with a 9-year-old starter. Croissants, morning buns and country loaves out by seven.</p></div>
+          <span class="feat-num">02</span>
+        </article>
+        <article class="feat">
+          <div class="feat-ico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10a7 7 0 0 1 14 0c0 5.65-7 10-7 10z"/><circle cx="12" cy="11" r="2.4"/></svg></div>
+          <div class="feat-txt"><h3>A corner that's actually yours</h3><p>Free refills on drip, fast wifi, and big tables that nobody will rush you off of. Stay as long as you like.</p></div>
+          <span class="feat-num">03</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="band-oat">
+    <div class="wrap">
+      <div class="sec-head center">
+        <span class="eyebrow center">On the counter today</span>
+        <h2>A few of the things we're proud of.</h2>
+        <p class="lede">The board changes with the seasons — here's what most folks come back for.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="mat">
+          <div class="mat-img"><img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=700&q=80" alt="A flat white coffee with delicate latte art in a ceramic cup"></div>
+          <div class="mat-body">
+            <div class="mat-row"><h3>The Marigold Latte</h3><span class="mat-price">$5.25</span></div>
+            <p>Our house espresso, steamed milk, and a whisper of honey &amp; orange blossom. The one we named the place after.</p>
+            <span class="mat-tag">House Favorite</span>
+          </div>
+        </article>
+        <article class="mat">
+          <div class="mat-img"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" alt="A rack of golden, flaky butter croissants fresh from the oven"></div>
+          <div class="mat-body">
+            <div class="mat-row"><h3>Morning Croissant</h3><span class="mat-price">$4.50</span></div>
+            <p>72-hour laminated dough, real European butter, baked until the layers shatter. Worth getting here early for.</p>
+            <span class="mat-tag">Baked at Dawn</span>
+          </div>
+        </article>
+        <article class="mat">
+          <div class="mat-img"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80" alt="A round loaf of crusty artisan sourdough bread"></div>
+          <div class="mat-body">
+            <div class="mat-row"><h3>Country Sourdough</h3><span class="mat-price">$8.00</span></div>
+            <p>Wild-fermented for two days with a 9-year starter. Crackly crust, open crumb, a tang you'll taste all day.</p>
+            <span class="mat-tag">Whole Loaf</span>
+          </div>
+        </article>
+        <article class="mat">
+          <div class="mat-img"><img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=700&q=80" alt="A glass of iced coffee with cold foam on top"></div>
+          <div class="mat-body">
+            <div class="mat-row"><h3>Cold Brew, On Tap</h3><span class="mat-price">$4.75</span></div>
+            <p>Steeped 18 hours, poured cold and smooth. Add a float of salted maple cold foam if the sun's out.</p>
+            <span class="mat-tag">Summer Pick</span>
+          </div>
+        </article>
+        <article class="mat">
+          <div class="mat-img"><img src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=700&q=80" alt="A cinnamon morning bun with caramelized sugar"></div>
+          <div class="mat-body">
+            <div class="mat-row"><h3>Cardamom Morning Bun</h3><span class="mat-price">$5.00</span></div>
+            <p>Croissant dough rolled with brown sugar and cardamom, tossed in citrus sugar while still warm.</p>
+            <span class="mat-tag">Sells Out</span>
+          </div>
+        </article>
+        <article class="mat">
+          <div class="mat-img"><img src="https://images.unsplash.com/photo-1610889556528-9a770e32642f?auto=format&fit=crop&w=700&q=80" alt="A bag of whole roasted coffee beans"></div>
+          <div class="mat-body">
+            <div class="mat-row"><h3>Beans to Take Home</h3><span class="mat-price">$18.00</span></div>
+            <p>This week's single-origin, roasted Tuesday. Ground for your setup or whole — your call at the counter.</p>
+            <span class="mat-tag">Roasted Tuesdays</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROASTERY STORY -->
+  <section id="story">
+    <div class="wrap story-grid">
+      <div class="story-art">
+        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=700&q=80" alt="A barista carefully pouring water over coffee grounds in a pour-over setup">
+      </div>
+      <div class="story-copy">
+        <span class="eyebrow">Our roastery</span>
+        <h2>Started by two neighbors who just wanted a better cup.</h2>
+        <p>Marigold &amp; Oat opened in 2016 in a tiny corner shop with one secondhand roaster and a borrowed mixer. We didn't know much except that the coffee in our neighborhood could be a lot better — so we learned, batch by batch.</p>
+        <p>Eight years later we're still on the same corner, still roasting by hand, and still tasting every batch before it hits the shelf. The only thing that's grown is the line out the door on Saturday mornings.</p>
+        <div class="story-stats">
+          <div class="stat"><b>9 yrs</b><span>On 9th &amp; 9th</span></div>
+          <div class="stat"><b>12kg</b><span>Drum roaster</span></div>
+          <div class="stat"><b>4am</b><span>Baking starts</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="band-clay">
+    <div class="wrap">
+      <div class="sec-head center">
+        <span class="eyebrow center light">Loved by the block</span>
+        <h2>The neighborhood says it best.</h2>
+        <p class="lede">A few words from regulars who've made us part of their morning.</p>
+      </div>
+      <div class="rev-grid">
+        <article class="rev-card">
+          <span class="stars" aria-label="5 stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg>
+          </span>
+          <blockquote>"The Marigold latte ruined every other coffee for me. I drive across town for it now and I'm not even mad about it."</blockquote>
+          <div class="rev-attr"><span class="rev-av">D</span><div><b>Dana R.</b><span>Google Review</span></div></div>
+        </article>
+        <article class="rev-card">
+          <span class="stars" aria-label="5 stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg>
+          </span>
+          <blockquote>"That sourdough has a real crust and a tang you don't find here. We buy two loaves every Saturday — one never makes it home."</blockquote>
+          <div class="rev-attr"><span class="rev-av">M</span><div><b>Marcus T.</b><span>Google Review</span></div></div>
+        </article>
+        <article class="rev-card">
+          <span class="stars" aria-label="5 stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.7 1.3 7L12 17.8 5.7 21l1.3-7-5-4.7 7-.9z"/></svg>
+          </span>
+          <blockquote>"My remote-work spot for three years. Nobody rushes you, the wifi's quick, and the staff remembers your order. It's home."</blockquote>
+          <div class="rev-attr"><span class="rev-av">P</span><div><b>Priya N.</b><span>Google Review</span></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section id="visit">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Come say hi</span>
+        <h2>Find us on the corner of 9th &amp; 9th.</h2>
+      </div>
+      <div class="visit-grid" style="margin-top:48px">
+        <div class="visit-card">
+          <div class="v-row">
+            <span class="v-ico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10a7 7 0 0 1 14 0c0 5.65-7 10-7 10z"/><circle cx="12" cy="11" r="2.4"/></svg></span>
+            <div><div class="v-lbl">Where</div><div class="v-val">915 E 900 South<br>Salt Lake City, UT 84105</div></div>
+          </div>
+          <div class="v-row">
+            <span class="v-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+            <div><div class="v-lbl">Call or text</div><a class="v-phone" href="tel:+18015550147">(801) 555-0147</a></div>
+          </div>
+          <div class="v-row">
+            <span class="v-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <div style="flex:1">
+              <div class="v-lbl">Hours</div>
+              <div class="hours">
+                <div><span>Mon – Fri</span><b>6:30am – 5:00pm</b></div>
+                <div><span>Saturday</span><b>7:00am – 5:00pm</b></div>
+                <div><span>Sunday</span><b>7:30am – 3:00pm</b></div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:26px">
+            <a class="btn btn-clay" href="tel:+18015550147" style="width:100%">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+              Call the shop
+            </a>
+          </div>
+        </div>
+        <div class="map">
+          <iframe title="Map to Marigold and Oat on 9th and 9th, Salt Lake City" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=915+E+900+S+Salt+Lake+City+UT&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="ft-top">
+      <div>
+        <span class="brand">
+          <b>Marigold&nbsp;<i>&amp;</i>&nbsp;Oat</b>
+          <span style="font-family:var(--sans);font-weight:700;font-size:10px;letter-spacing:.22em;text-transform:uppercase;display:block;margin-top:4px">Roaster · Bakery · SLC</span>
+        </span>
+        <p class="ft-tag" style="margin-top:16px">Coffee roasted by hand and bread baked at dawn, on the same corner since 2016.</p>
+      </div>
+      <nav class="ft-links" aria-label="Footer">
+        <a href="#menu">Menu</a>
+        <a href="#story">Our Roastery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
+        <a href="tel:+18015550147">(801) 555-0147</a>
+      </nav>
+    </div>
+    <div class="ft-bot">
+      <span>915 E 900 South, Salt Lake City, UT 84105</span>
+      <span>© 2026 Marigold &amp; Oat. Family-owned &amp; independent.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="callbar" href="tel:+18015550147" aria-label="Call Marigold and Oat">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+  Call the shop — (801) 555-0147
+</a>
+
+<!--p11-motion-js-->
+<script>
+(function(){var doc=document,root=doc.documentElement;var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;var TARGETS=['main > section','.svc-card','.rev-card','.review-card','.work-card','.step','.trust-cell','.mat','.feat','.visit-card','.story-art'].join(',');function tag(){var picked=doc.querySelectorAll(TARGETS),els=[];for(var i=0;i<picked.length;i++){var el=picked[i];if(el.closest&&el.closest('.hero'))continue;if(el.classList&&el.classList.contains('hero'))continue;if(!el.hasAttribute('data-reveal'))el.setAttribute('data-reveal','');els.push(el);}return els;}function run(){if(reduce||!('IntersectionObserver'in window)){root.classList.add('js-anim');var all=tag();for(var i=0;i<all.length;i++)all[i].classList.add('is-in');return;}root.classList.add('js-anim');var els=tag();var io=new IntersectionObserver(function(entries){for(var i=0;i<entries.length;i++){var e=entries[i];if(!e.isIntersecting)continue;var el=e.target;var sibs=el.parentNode?el.parentNode.children:null,idx=0;if(sibs&&el.classList&&/-card|trust-cell|mat|feat|step/.test(el.className)){for(var s=0;s<sibs.length&&sibs[s]!==el;s++){if(sibs[s].hasAttribute&&sibs[s].hasAttribute('data-reveal'))idx++;}}var delay=Math.min(idx,5)*60;el.style.setProperty('--reveal-delay',delay+'ms');el.classList.add('is-in');io.unobserve(el);}},{rootMargin:'0px 0px -10% 0px',threshold:0.08});for(var j=0;j<els.length;j++)io.observe(els[j]);setTimeout(function(){var hidden=doc.querySelectorAll('.js-anim [data-reveal]:not(.is-in)');for(var k=0;k<hidden.length;k++)hidden[k].classList.add('is-in');},3000);}if(doc.readyState==='loading'){doc.addEventListener('DOMContentLoaded',run);}else{run();}})();
+</script>
+<!--/p11-motion-js-->
+</body>
+</html>
