@@ -306,6 +306,17 @@ footer{background:var(--ink);color:#fff;padding:64px 0 56px}
   .callbar{display:none}
 }
 </style>
+<!--p11-motion-css--><style>
+.svc-card,.rev-card,.review-card,.work-card{transition:transform .25s cubic-bezier(.2,.6,.2,1),box-shadow .25s cubic-bezier(.2,.6,.2,1),border-color .15s ease}
+.svc-card:hover,.rev-card:hover,.review-card:hover,.work-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px -12px rgba(10,11,13,.22)}
+.btn{transition:background .15s ease,border-color .15s ease,color .15s ease,transform .2s cubic-bezier(.2,.6,.2,1),box-shadow .2s cubic-bezier(.2,.6,.2,1)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px -12px rgba(10,11,13,.35)}
+.btn:active{transform:translateY(0);box-shadow:none}
+.js-anim [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .55s cubic-bezier(.2,.6,.2,1),transform .55s cubic-bezier(.2,.6,.2,1);transition-delay:var(--reveal-delay,0ms);will-change:opacity,transform}
+.js-anim [data-reveal].is-in{opacity:1;transform:none;will-change:auto}
+@media (max-width:640px){.js-anim [data-reveal]{transform:translateY(12px);transition-duration:.45s}.svc-card:hover,.rev-card:hover,.review-card:hover,.work-card:hover,.btn:hover{transform:none;box-shadow:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto !important}.js-anim [data-reveal]{opacity:1 !important;transform:none !important;transition:none !important;will-change:auto}.svc-card,.rev-card,.review-card,.work-card,.btn{transition:border-color .15s ease,background .15s ease,color .15s ease !important}.svc-card:hover,.rev-card:hover,.review-card:hover,.work-card:hover,.btn:hover,.btn:active{transform:none !important;box-shadow:none !important}}
+</style><!--/p11-motion-css-->
 </head>
 <body>
 
@@ -719,5 +730,11 @@ footer{background:var(--ink);color:#fff;padding:64px 0 56px}
   Call Juan &amp; Dulce — (801) 597-9590
 </a>
 
+<!--p11-motion-js--><script>
+(function(){var d=document,r=d.documentElement;var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;var T='main > section,main > div.trust,main > div.mats,.svc-card,.rev-card,.review-card,.work-card,.step,.trust-cell,.mat';
+function tag(){var p=d.querySelectorAll(T),o=[];for(var i=0;i<p.length;i++){var e=p[i];if(e.closest&&e.closest('.hero'))continue;if(e.classList&&e.classList.contains('hero'))continue;if(!e.hasAttribute('data-reveal'))e.setAttribute('data-reveal','');o.push(e)}return o}
+function run(){if(rm||!('IntersectionObserver' in window)){r.classList.add('js-anim');var a=tag();for(var i=0;i<a.length;i++)a[i].classList.add('is-in');return}r.classList.add('js-anim');var els=tag();var io=new IntersectionObserver(function(en){for(var i=0;i<en.length;i++){var e=en[i];if(!e.isIntersecting)continue;var el=e.target,sb=el.parentNode?el.parentNode.children:null,ix=0;if(sb&&el.className&&/-card|trust-cell|mat|step/.test(el.className)){for(var s=0;s<sb.length&&sb[s]!==el;s++){if(sb[s].hasAttribute&&sb[s].hasAttribute('data-reveal'))ix++}}el.style.setProperty('--reveal-delay',Math.min(ix,5)*60+'ms');el.classList.add('is-in');io.unobserve(el)}},{rootMargin:'0px 0px -10% 0px',threshold:.08});for(var j=0;j<els.length;j++)io.observe(els[j]);setTimeout(function(){var h=d.querySelectorAll('.js-anim [data-reveal]:not(.is-in)');for(var k=0;k<h.length;k++)h[k].classList.add('is-in')},3000)}
+if(d.readyState==='loading'){d.addEventListener('DOMContentLoaded',run)}else{run()}})();
+</script><!--/p11-motion-js-->
 </body>
 </html>
