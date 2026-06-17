@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Peak 11 Media Vault</title>
+<style>
+  :root{
+    --bg:#0b1620; --bg2:#0f1f2e; --panel:#13283a; --panel2:#173249;
+    --line:rgba(255,255,255,.08); --ink:#eaf2f8; --muted:#8ba6bd;
+    --accent:#5ec8f2; --accent2:#9fe0ff; --snow:#f4f9fc;
+    --pdf:#ff6b5e; --xlsx:#3ecf8e;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:
+      radial-gradient(1200px 600px at 50% -10%, rgba(94,200,242,.16), transparent 60%),
+      linear-gradient(180deg,#0b1620 0%, #0a121b 100%);
+    min-height:100vh;
+  }
+  /* ===== GATE ===== */
+  #gate{
+    position:fixed; inset:0; z-index:50;
+    display:flex; align-items:center; justify-content:center;
+    padding:24px;
+    background:
+      radial-gradient(900px 500px at 50% 0%, rgba(94,200,242,.18), transparent 65%),
+      linear-gradient(180deg,#0b1620,#070d14);
+  }
+  .gate-card{
+    width:100%; max-width:380px; text-align:center;
+    background:linear-gradient(180deg,var(--panel),var(--bg2));
+    border:1px solid var(--line); border-radius:22px;
+    padding:36px 26px; box-shadow:0 30px 80px rgba(0,0,0,.55);
+  }
+  .peak{font-size:40px; line-height:1; margin-bottom:14px;}
+  .gate-card h1{font-size:21px; letter-spacing:.18em; margin:0 0 4px; font-weight:700;}
+  .gate-card .sub{color:var(--muted); font-size:12.5px; letter-spacing:.05em; margin-bottom:24px;}
+  .gate-card input{
+    width:100%; padding:15px 16px; font-size:16px; text-align:center;
+    border-radius:14px; border:1px solid var(--line);
+    background:#0a1622; color:var(--ink); outline:none; letter-spacing:.04em;
+  }
+  .gate-card input:focus{border-color:var(--accent); box-shadow:0 0 0 3px rgba(94,200,242,.18);}
+  .gate-card button{
+    margin-top:14px; width:100%; padding:15px; font-size:15px; font-weight:700;
+    letter-spacing:.04em; border:none; border-radius:14px; cursor:pointer;
+    color:#062130; background:linear-gradient(180deg,var(--accent2),var(--accent));
+  }
+  .gate-card button:active{transform:translateY(1px);}
+  .err{color:#ff8a7e; font-size:13px; height:16px; margin-top:12px;}
+  /* ===== APP ===== */
+  #app{display:none; max-width:1080px; margin:0 auto; padding:0 18px 80px;}
+  header.hero{
+    text-align:center; padding:44px 10px 26px;
+    border-bottom:1px solid var(--line); margin-bottom:8px;
+  }
+  .hero .peak{font-size:34px; margin-bottom:8px;}
+  .hero h1{margin:0; font-size:25px; letter-spacing:.16em; font-weight:800;}
+  .hero .tagline{color:var(--muted); font-size:13px; letter-spacing:.06em; margin-top:8px;}
+  .hero .count{
+    display:inline-block; margin-top:16px; padding:6px 16px; border-radius:999px;
+    background:rgba(94,200,242,.12); border:1px solid rgba(94,200,242,.3);
+    color:var(--accent2); font-size:12.5px; letter-spacing:.08em; font-weight:600;
+  }
+  .searchbar{position:sticky; top:0; z-index:10; padding:16px 0 10px; background:linear-gradient(180deg,#0a121b 70%, transparent);}
+  .searchbar input{
+    width:100%; padding:14px 16px; font-size:16px; border-radius:14px;
+    border:1px solid var(--line); background:#0c1a28; color:var(--ink); outline:none;
+  }
+  .searchbar input:focus{border-color:var(--accent); box-shadow:0 0 0 3px rgba(94,200,242,.15);}
+  .block{margin-top:26px;}
+  .block-head{display:flex; align-items:baseline; gap:12px; margin:0 2px 14px; flex-wrap:wrap;}
+  .block-head h2{margin:0; font-size:17px; letter-spacing:.1em; font-weight:700; text-transform:uppercase;}
+  .block-tag{margin:0; color:var(--muted); font-size:12.5px; letter-spacing:.04em;}
+  .grid{display:grid; grid-template-columns:1fr; gap:12px;}
+  @media(min-width:620px){.grid{grid-template-columns:1fr 1fr;}}
+  @media(min-width:920px){.grid{grid-template-columns:1fr 1fr 1fr;}}
+  .card{
+    display:block; text-decoration:none; color:inherit;
+    background:linear-gradient(180deg,var(--panel),var(--bg2));
+    border:1px solid var(--line); border-radius:16px; padding:16px;
+    transition:transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+  }
+  .card:active{transform:scale(.985);}
+  @media(hover:hover){.card:hover{transform:translateY(-2px); border-color:rgba(94,200,242,.4); box-shadow:0 14px 36px rgba(0,0,0,.4);}}
+  .card-top{display:flex; align-items:center; justify-content:space-between; margin-bottom:11px;}
+  .ext{font-size:11px; font-weight:800; letter-spacing:.06em; padding:4px 9px; border-radius:7px; color:#06141f;}
+  .ext-pdf{background:var(--pdf);}
+  .ext-xlsx{background:var(--xlsx);}
+  .size{color:var(--muted); font-size:11.5px;}
+  .card-name{font-size:15px; font-weight:650; line-height:1.3; margin-bottom:6px;}
+  .card-desc{color:var(--muted); font-size:12.8px; line-height:1.45;}
+  .noresults{display:none; text-align:center; color:var(--muted); padding:50px 0; font-size:14px;}
+  footer{text-align:center; color:var(--muted); font-size:11.5px; letter-spacing:.04em; margin-top:48px; opacity:.7;}
+</style>
+</head>
+<body>
+
+  <div id="gate">
+    <form class="gate-card" id="gateForm" autocomplete="off">
+      <div class="peak">&#9650;</div>
+      <h1>PEAK 11</h1>
+      <div class="sub">MEDIA VAULT &middot; PRIVATE</div>
+      <input id="pw" type="password" inputmode="text" placeholder="Enter access code" aria-label="Access code" autocomplete="off">
+      <button type="submit">Unlock</button>
+      <div class="err" id="err"></div>
+    </form>
+  </div>
+
+  <div id="app">
+    <header class="hero">
+      <div class="peak">&#9650;</div>
+      <h1>PEAK 11 MEDIA VAULT</h1>
+      <div class="tagline">Everything in one place &middot; built for the field</div>
+      <div class="count">37 DOCUMENTS</div>
+    </header>
+
+    <div class="searchbar">
+      <input id="search" type="search" placeholder="Search documents..." aria-label="Search documents">
+    </div>
+
+    
+      <section class="block" data-block>
+        <div class="block-head">
+          <h2>Start Here</h2>
+          <p class="block-tag">Begin here every day</p>
+        </div>
+        <div class="grid">
+        <a class="card" href="00_START_HERE/What%27s%20In%20This%20Folder.pdf" target="_blank" rel="noopener" data-search="what&#x27;s in this folder.pdf map of everything in this vault and how to use it. start here">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">52 KB</span>
+          </div>
+          <div class="card-name">What&#x27;s In This Folder.pdf</div>
+          <div class="card-desc">Map of everything in this vault and how to use it.</div>
+        </a>
+        <a class="card" href="00_START_HERE/Morning%20Report.pdf" target="_blank" rel="noopener" data-search="morning report.pdf your daily snapshot — what to do first each morning. start here">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">10 KB</span>
+          </div>
+          <div class="card-name">Morning Report.pdf</div>
+          <div class="card-desc">Your daily snapshot — what to do first each morning.</div>
+        </a>
+        <a class="card" href="00_START_HERE/Pricing.pdf" target="_blank" rel="noopener" data-search="pricing.pdf current package pricing: starter, standard, care plan. start here">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">56 KB</span>
+          </div>
+          <div class="card-name">Pricing.pdf</div>
+          <div class="card-desc">Current package pricing: Starter, Standard, Care Plan.</div>
+        </a>
+        </div>
+      </section>
+      <section class="block" data-block>
+        <div class="block-head">
+          <h2>Playbooks &amp; SOPs</h2>
+          <p class="block-tag">How the business runs</p>
+        </div>
+        <div class="grid">
+        <a class="card" href="Playbooks_and_SOPs/Operations%20Playbook.pdf" target="_blank" rel="noopener" data-search="operations playbook.pdf the master playbook — how the whole operation works end to end. playbooks &amp;amp; sops">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">48 KB</span>
+          </div>
+          <div class="card-name">Operations Playbook.pdf</div>
+          <div class="card-desc">The master playbook — how the whole operation works end to end.</div>
+        </a>
+        <a class="card" href="Playbooks_and_SOPs/Lead-Gen%20SOP.pdf" target="_blank" rel="noopener" data-search="lead-gen sop.pdf step-by-step process for sourcing and qualifying leads. playbooks &amp;amp; sops">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">12 KB</span>
+          </div>
+          <div class="card-name">Lead-Gen SOP.pdf</div>
+          <div class="card-desc">Step-by-step process for sourcing and qualifying leads.</div>
+        </a>
+        <a class="card" href="Playbooks_and_SOPs/Follow-Up%20SOP.pdf" target="_blank" rel="noopener" data-search="follow-up sop.pdf exactly how and when to follow up with prospects. playbooks &amp;amp; sops">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">16 KB</span>
+          </div>
+          <div class="card-name">Follow-Up SOP.pdf</div>
+          <div class="card-desc">Exactly how and when to follow up with prospects.</div>
+        </a>
+        <a class="card" href="Playbooks_and_SOPs/Sales%20Scripts.pdf" target="_blank" rel="noopener" data-search="sales scripts.pdf word-for-word call scripts that convert. playbooks &amp;amp; sops">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">27 KB</span>
+          </div>
+          <div class="card-name">Sales Scripts.pdf</div>
+          <div class="card-desc">Word-for-word call scripts that convert.</div>
+        </a>
+        <a class="card" href="Playbooks_and_SOPs/Go-Live%20SOP.pdf" target="_blank" rel="noopener" data-search="go-live sop.pdf checklist for launching a client site live. playbooks &amp;amp; sops">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">16 KB</span>
+          </div>
+          <div class="card-name">Go-Live SOP.pdf</div>
+          <div class="card-desc">Checklist for launching a client site live.</div>
+        </a>
+        <a class="card" href="Playbooks_and_SOPs/Build%20Runbook.pdf" target="_blank" rel="noopener" data-search="build runbook.pdf technical runbook for building a client site fast. playbooks &amp;amp; sops">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">23 KB</span>
+          </div>
+          <div class="card-name">Build Runbook.pdf</div>
+          <div class="card-desc">Technical runbook for building a client site fast.</div>
+        </a>
+        <a class="card" href="Playbooks_and_SOPs/Onboarding%20Templates.pdf" target="_blank" rel="noopener" data-search="onboarding templates.pdf ready-to-send templates for onboarding new clients. playbooks &amp;amp; sops">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">11 KB</span>
+          </div>
+          <div class="card-name">Onboarding Templates.pdf</div>
+          <div class="card-desc">Ready-to-send templates for onboarding new clients.</div>
+        </a>
+        <a class="card" href="Playbooks_and_SOPs/Payments%20SOP.pdf" target="_blank" rel="noopener" data-search="payments sop.pdf how to collect payments and set up billing. playbooks &amp;amp; sops">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">14 KB</span>
+          </div>
+          <div class="card-name">Payments SOP.pdf</div>
+          <div class="card-desc">How to collect payments and set up billing.</div>
+        </a>
+        <a class="card" href="Playbooks_and_SOPs/Management%20SOP.pdf" target="_blank" rel="noopener" data-search="management sop.pdf how to manage the team and day-to-day operations. playbooks &amp;amp; sops">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">18 KB</span>
+          </div>
+          <div class="card-name">Management SOP.pdf</div>
+          <div class="card-desc">How to manage the team and day-to-day operations.</div>
+        </a>
+        <a class="card" href="Playbooks_and_SOPs/Hiring%20Plan.pdf" target="_blank" rel="noopener" data-search="hiring plan.pdf when and how to hire as you scale. playbooks &amp;amp; sops">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">29 KB</span>
+          </div>
+          <div class="card-name">Hiring Plan.pdf</div>
+          <div class="card-desc">When and how to hire as you scale.</div>
+        </a>
+        <a class="card" href="Playbooks_and_SOPs/Quota%20System.pdf" target="_blank" rel="noopener" data-search="quota system.pdf the quota framework that keeps output on target. playbooks &amp;amp; sops">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">8 KB</span>
+          </div>
+          <div class="card-name">Quota System.pdf</div>
+          <div class="card-desc">The quota framework that keeps output on target.</div>
+        </a>
+        <a class="card" href="Playbooks_and_SOPs/Automation%20Map.pdf" target="_blank" rel="noopener" data-search="automation map.pdf map of every automation in the business. playbooks &amp;amp; sops">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">17 KB</span>
+          </div>
+          <div class="card-name">Automation Map.pdf</div>
+          <div class="card-desc">Map of every automation in the business.</div>
+        </a>
+        <a class="card" href="Playbooks_and_SOPs/Financial%20Model.pdf" target="_blank" rel="noopener" data-search="financial model.pdf the financial model in readable pdf form. playbooks &amp;amp; sops">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">15 KB</span>
+          </div>
+          <div class="card-name">Financial Model.pdf</div>
+          <div class="card-desc">The financial model in readable PDF form.</div>
+        </a>
+        <a class="card" href="Playbooks_and_SOPs/QR-Menu%20Add-On.pdf" target="_blank" rel="noopener" data-search="qr-menu add-on.pdf upsell add-on: qr digital menus for restaurants. playbooks &amp;amp; sops">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">5 KB</span>
+          </div>
+          <div class="card-name">QR-Menu Add-On.pdf</div>
+          <div class="card-desc">Upsell add-on: QR digital menus for restaurants.</div>
+        </a>
+        </div>
+      </section>
+      <section class="block" data-block>
+        <div class="block-head">
+          <h2>Leads</h2>
+          <p class="block-tag">Who to call</p>
+        </div>
+        <div class="grid">
+        <a class="card" href="Leads/Call%20First%20-%20Top%2025.pdf" target="_blank" rel="noopener" data-search="call first - top 25.pdf your hottest 25 prospects — call these first. leads">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">22 KB</span>
+          </div>
+          <div class="card-name">Call First - Top 25.pdf</div>
+          <div class="card-desc">Your hottest 25 prospects — call these first.</div>
+        </a>
+        <a class="card" href="Leads/Leads%20-%20Qualified.xlsx" target="_blank" rel="noopener" data-search="leads - qualified.xlsx pre-qualified leads ready for outreach. leads">
+          <div class="card-top">
+            <span class="ext ext-xlsx">XLSX</span>
+            <span class="size">37 KB</span>
+          </div>
+          <div class="card-name">Leads - Qualified.xlsx</div>
+          <div class="card-desc">Pre-qualified leads ready for outreach.</div>
+        </a>
+        <a class="card" href="Leads/Leads%20-%20Batch%202%20Provo-Ogden.xlsx" target="_blank" rel="noopener" data-search="leads - batch 2 provo-ogden.xlsx lead batch 2 covering provo and ogden. leads">
+          <div class="card-top">
+            <span class="ext ext-xlsx">XLSX</span>
+            <span class="size">14 KB</span>
+          </div>
+          <div class="card-name">Leads - Batch 2 Provo-Ogden.xlsx</div>
+          <div class="card-desc">Lead batch 2 covering Provo and Ogden.</div>
+        </a>
+        <a class="card" href="Leads/Leads%20-%20Batch%203.xlsx" target="_blank" rel="noopener" data-search="leads - batch 3.xlsx lead batch 3. leads">
+          <div class="card-top">
+            <span class="ext ext-xlsx">XLSX</span>
+            <span class="size">25 KB</span>
+          </div>
+          <div class="card-name">Leads - Batch 3.xlsx</div>
+          <div class="card-desc">Lead batch 3.</div>
+        </a>
+        <a class="card" href="Leads/Leads%20-%20Master%20Batch%203.xlsx" target="_blank" rel="noopener" data-search="leads - master batch 3.xlsx master combined list for batch 3. leads">
+          <div class="card-top">
+            <span class="ext ext-xlsx">XLSX</span>
+            <span class="size">24 KB</span>
+          </div>
+          <div class="card-name">Leads - Master Batch 3.xlsx</div>
+          <div class="card-desc">Master combined list for batch 3.</div>
+        </a>
+        <a class="card" href="Leads/Leads%20-%20Batch%204.xlsx" target="_blank" rel="noopener" data-search="leads - batch 4.xlsx lead batch 4. leads">
+          <div class="card-top">
+            <span class="ext ext-xlsx">XLSX</span>
+            <span class="size">11 KB</span>
+          </div>
+          <div class="card-name">Leads - Batch 4.xlsx</div>
+          <div class="card-desc">Lead batch 4.</div>
+        </a>
+        <a class="card" href="Leads/Leads%20-%20Batch%205.xlsx" target="_blank" rel="noopener" data-search="leads - batch 5.xlsx lead batch 5. leads">
+          <div class="card-top">
+            <span class="ext ext-xlsx">XLSX</span>
+            <span class="size">10 KB</span>
+          </div>
+          <div class="card-name">Leads - Batch 5.xlsx</div>
+          <div class="card-desc">Lead batch 5.</div>
+        </a>
+        </div>
+      </section>
+      <section class="block" data-block>
+        <div class="block-head">
+          <h2>CRM &amp; Financials</h2>
+          <p class="block-tag">Track the money</p>
+        </div>
+        <div class="grid">
+        <a class="card" href="CRM_and_Financials/CRM%20Tracker.xlsx" target="_blank" rel="noopener" data-search="crm tracker.xlsx live tracker for every deal in your pipeline. crm &amp;amp; financials">
+          <div class="card-top">
+            <span class="ext ext-xlsx">XLSX</span>
+            <span class="size">13 KB</span>
+          </div>
+          <div class="card-name">CRM Tracker.xlsx</div>
+          <div class="card-desc">Live tracker for every deal in your pipeline.</div>
+        </a>
+        <a class="card" href="CRM_and_Financials/Financial%20Model.xlsx" target="_blank" rel="noopener" data-search="financial model.xlsx the working financial model spreadsheet. crm &amp;amp; financials">
+          <div class="card-top">
+            <span class="ext ext-xlsx">XLSX</span>
+            <span class="size">16 KB</span>
+          </div>
+          <div class="card-name">Financial Model.xlsx</div>
+          <div class="card-desc">The working financial model spreadsheet.</div>
+        </a>
+        </div>
+      </section>
+      <section class="block" data-block>
+        <div class="block-head">
+          <h2>Contracts</h2>
+          <p class="block-tag">Sign &amp; protect</p>
+        </div>
+        <div class="grid">
+        <a class="card" href="Contracts_and_Legal/Service%20Agreement.pdf" target="_blank" rel="noopener" data-search="service agreement.pdf standard client service agreement. contracts">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">76 KB</span>
+          </div>
+          <div class="card-name">Service Agreement.pdf</div>
+          <div class="card-desc">Standard client service agreement.</div>
+        </a>
+        <a class="card" href="Contracts_and_Legal/Care%20Plan%20Terms.pdf" target="_blank" rel="noopener" data-search="care plan terms.pdf terms for the $149/mo care plan. contracts">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">83 KB</span>
+          </div>
+          <div class="card-name">Care Plan Terms.pdf</div>
+          <div class="card-desc">Terms for the $149/mo Care Plan.</div>
+        </a>
+        <a class="card" href="Contracts_and_Legal/Refund%20Policy.pdf" target="_blank" rel="noopener" data-search="refund policy.pdf your refund policy in writing. contracts">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">68 KB</span>
+          </div>
+          <div class="card-name">Refund Policy.pdf</div>
+          <div class="card-desc">Your refund policy in writing.</div>
+        </a>
+        </div>
+      </section>
+      <section class="block" data-block>
+        <div class="block-head">
+          <h2>Clients</h2>
+          <p class="block-tag">Active client work</p>
+        </div>
+        <div class="grid">
+        <a class="card" href="Clients/Avalanche%20Roofing%20-%20Build%20Brief.pdf" target="_blank" rel="noopener" data-search="avalanche roofing - build brief.pdf build brief for the avalanche roofing project. clients">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">219 KB</span>
+          </div>
+          <div class="card-name">Avalanche Roofing - Build Brief.pdf</div>
+          <div class="card-desc">Build brief for the Avalanche Roofing project.</div>
+        </a>
+        <a class="card" href="Clients/Avalanche%20Roofing%20-%20Live%20Links.pdf" target="_blank" rel="noopener" data-search="avalanche roofing - live links.pdf live links and deliverables for avalanche roofing. clients">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">49 KB</span>
+          </div>
+          <div class="card-name">Avalanche Roofing - Live Links.pdf</div>
+          <div class="card-desc">Live links and deliverables for Avalanche Roofing.</div>
+        </a>
+        </div>
+      </section>
+      <section class="block" data-block>
+        <div class="block-head">
+          <h2>Portfolio</h2>
+          <p class="block-tag">Show your work</p>
+        </div>
+        <div class="grid">
+        <a class="card" href="Portfolio/Portfolio%20-%20Live%20Demos%20%26%20Templates.pdf" target="_blank" rel="noopener" data-search="portfolio - live demos &amp; templates.pdf live demo sites and templates to show prospects. portfolio">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">85 KB</span>
+          </div>
+          <div class="card-name">Portfolio - Live Demos &amp; Templates.pdf</div>
+          <div class="card-desc">Live demo sites and templates to show prospects.</div>
+        </a>
+        </div>
+      </section>
+      <section class="block" data-block>
+        <div class="block-head">
+          <h2>Sales Tools</h2>
+          <p class="block-tag">Close the deal</p>
+        </div>
+        <div class="grid">
+        <a class="card" href="Sales_Tools/Call%20Sheet.pdf" target="_blank" rel="noopener" data-search="call sheet.pdf print-ready call sheet for working the phones. sales tools">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">758 KB</span>
+          </div>
+          <div class="card-name">Call Sheet.pdf</div>
+          <div class="card-desc">Print-ready call sheet for working the phones.</div>
+        </a>
+        <a class="card" href="Sales_Tools/Outreach%20Drafts%20-%20Web%20Design.pdf" target="_blank" rel="noopener" data-search="outreach drafts - web design.pdf ready-to-send outreach copy for web design offers. sales tools">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">242 KB</span>
+          </div>
+          <div class="card-name">Outreach Drafts - Web Design.pdf</div>
+          <div class="card-desc">Ready-to-send outreach copy for web design offers.</div>
+        </a>
+        <a class="card" href="Sales_Tools/Outreach%20Drafts%20-%20Creative%20Packs.pdf" target="_blank" rel="noopener" data-search="outreach drafts - creative packs.pdf ready-to-send outreach copy for creative packs. sales tools">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">89 KB</span>
+          </div>
+          <div class="card-name">Outreach Drafts - Creative Packs.pdf</div>
+          <div class="card-desc">Ready-to-send outreach copy for creative packs.</div>
+        </a>
+        <a class="card" href="Sales_Tools/Stripe%20Payment%20Links.pdf" target="_blank" rel="noopener" data-search="stripe payment links.pdf your stripe payment links for fast checkout. sales tools">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">68 KB</span>
+          </div>
+          <div class="card-name">Stripe Payment Links.pdf</div>
+          <div class="card-desc">Your Stripe payment links for fast checkout.</div>
+        </a>
+        <a class="card" href="Sales_Tools/Quota%20Dashboard%20Note.pdf" target="_blank" rel="noopener" data-search="quota dashboard note.pdf notes on the quota dashboard. sales tools">
+          <div class="card-top">
+            <span class="ext ext-pdf">PDF</span>
+            <span class="size">64 KB</span>
+          </div>
+          <div class="card-name">Quota Dashboard Note.pdf</div>
+          <div class="card-desc">Notes on the quota dashboard.</div>
+        </a>
+        </div>
+      </section>
+
+    <div class="noresults" id="noresults">No documents match your search.</div>
+
+    <footer>Peak 11 &middot; Private operating vault. Do not share this link.</footer>
+  </div>
+
+<script>
+(function(){
+  var PW = "peak11media";
+  var gate = document.getElementById("gate");
+  var app = document.getElementById("app");
+  var form = document.getElementById("gateForm");
+  var err = document.getElementById("err");
+  var pwInput = document.getElementById("pw");
+
+  function unlock(){
+    gate.style.display = "none";
+    app.style.display = "block";
+    try{ sessionStorage.setItem("p11_ok","1"); }catch(e){}
+  }
+  if(sessionStorage.getItem("p11_ok")==="1"){ unlock(); }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    if(pwInput.value === PW){ unlock(); }
+    else { err.textContent = "Incorrect code"; pwInput.value=""; pwInput.focus(); }
+  });
+
+  var search = document.getElementById("search");
+  var cards = Array.prototype.slice.call(document.querySelectorAll(".card"));
+  var blocks = Array.prototype.slice.call(document.querySelectorAll("[data-block]"));
+  var noresults = document.getElementById("noresults");
+  search.addEventListener("input", function(){
+    var q = search.value.trim().toLowerCase();
+    var anyShown = false;
+    cards.forEach(function(c){
+      var match = !q || c.getAttribute("data-search").indexOf(q) !== -1;
+      c.style.display = match ? "block" : "none";
+      if(match) anyShown = true;
+    });
+    blocks.forEach(function(b){
+      var visible = b.querySelectorAll('.card:not([style*="display: none"])').length > 0;
+      b.style.display = visible ? "block" : "none";
+    });
+    noresults.style.display = anyShown ? "none" : "block";
+  });
+})();
+</script>
+</body>
+</html>
