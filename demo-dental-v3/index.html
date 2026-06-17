@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Larson Family Dental — Downtown Salt Lake City Dentist, 3rd-Generation Family Practice Since 1954</title>
+<meta name="description" content="Larson Family Dental — Dr. Matt Larson and a third-generation Salt Lake City family practice on 100 South since 1954. 4.9 stars across 94 Google reviews. New patients welcome. Call (801) 355-5558.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Larson Family Dental",
+  "telephone": "+18013555558",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "928 E 100 S, Suite A",
+    "addressLocality": "Salt Lake City",
+    "addressRegion": "UT",
+    "postalCode": "84102"
+  },
+  "areaServed": ["Salt Lake City", "9th & 9th", "Sugar House", "Avenues", "Millcreek"],
+  "foundingDate": "1954",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "94"
+  },
+  "openingHours": ["Mo-Fr 08:00-17:00"]
+}
+</script>
+<style>
+/* ============ tokens ============ */
+:root{
+  --ink:#14181c;
+  --ink-2:#1d2228;
+  --steel:#566069;
+  --fog:#a3acb4;
+  --paper:#ffffff;
+  --chalk:#f3f5f6;
+  --line:#e3e7ea;
+  --line-dark:#2a3037;
+  --accent:#0f8a8d;        /* teal — dental trust, matches their brand */
+  --accent-hover:#0b6e70;
+  --max:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Barlow',ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:16px;line-height:1.6;color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:60px; /* mobile call bar */
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* ============ type voices (mobile-first) ============ */
+.label{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;
+  font-size:13px;letter-spacing:.14em;text-transform:uppercase;line-height:1.25;
+}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--steel)}
+.eyebrow::before{content:"";width:18px;height:2px;background:var(--accent);flex:none}
+h1{font-size:clamp(36px,8.6vw,76px);font-weight:700;line-height:1.05;letter-spacing:-.026em}
+h2{font-size:clamp(29px,7vw,50px);font-weight:700;line-height:1.08;letter-spacing:-.022em}
+h3{font-size:20px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.lead{font-size:17px;color:var(--steel);max-width:56ch}
+@media(min-width:768px){.lead{font-size:18px}}
+
+/* ============ buttons ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;
+  font-weight:600;font-size:16px;letter-spacing:.01em;line-height:1.1;text-align:center;
+  min-height:56px;padding:0 26px;transition:background .15s,border-color .15s,color .15s;
+}
+.btn svg{flex:none}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-hover)}
+.btn-ghost{border:1px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+
+/* ============ topbar ============ */
+.topbar{background:var(--ink);color:var(--fog)}
+.topbar-inner{
+  max-width:var(--max);margin:0 auto;padding:9px 20px;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.topbar .label{font-size:12px;letter-spacing:.12em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .tb-r{display:none}
+.topbar .tb-x{display:none}
+@media(min-width:768px){
+  .topbar .tb-r{display:block;flex:none}
+  .topbar .tb-x{display:inline}
+}
+
+/* ============ nav ============ */
+.nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.nav-inner{
+  height:64px;display:flex;align-items:center;gap:24px;
+  max-width:var(--max);margin:0 auto;padding:0 20px;
+}
+.wordmark{display:flex;flex-direction:column;line-height:1;min-width:0}
+.wm-name{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;
+  letter-spacing:.02em;text-transform:uppercase;
+}
+.wm-name span{color:var(--accent)}
+.wm-sub{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--steel);margin-top:4px;white-space:nowrap;
+}
+.nav-links{display:none;gap:28px;margin-left:auto}
+.nav-links a{font-weight:500;font-size:15px;color:var(--ink);padding:8px 0}
+.nav-links a:hover{color:var(--steel)}
+.nav-call{
+  margin-left:auto;display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent);color:#fff;border-radius:999px;
+  font-weight:600;font-size:15px;min-height:44px;padding:0 18px;
+}
+.nav-call:hover{background:var(--accent-hover)}
+.nav-call .num{display:none}
+@media(min-width:480px){
+  .nav-call .num{display:inline}
+  .nav-call .word{display:none}
+}
+@media(min-width:768px){
+  .nav-links{display:flex;gap:18px}
+  .nav-links .nl-x{display:none}
+  .nav-call{margin-left:0}
+}
+@media(min-width:1024px){
+  .nav-links{gap:28px}
+  .nav-links .nl-x{display:block}
+  .nav-inner{height:68px;padding:0 24px}
+  .wm-name{font-size:26px}
+}
+
+/* ============ hero ============ */
+.hero{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:82svh;background:var(--ink);overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%;filter:saturate(.92) contrast(1.03)}
+.hero-scrim{position:absolute;inset:0;background:
+  linear-gradient(to top,rgba(12,16,18,.88) 0%,rgba(12,16,18,.38) 50%,rgba(12,16,18,.42) 100%),
+  linear-gradient(78deg,rgba(12,16,18,.82) 0%,rgba(12,16,18,.46) 56%,rgba(12,16,18,.18) 100%);
+}
+.hero-content{position:relative;width:100%;max-width:var(--max);margin:0 auto;padding:64px 20px 22px}
+.hero .eyebrow{color:rgba(255,255,255,.80);margin-bottom:18px}
+.hero h1{color:#fff;max-width:17ch}
+.hero .lead{color:rgba(255,255,255,.84);margin-top:18px}
+.hero-ctas{display:flex;flex-direction:column;gap:12px;margin-top:30px}
+.hero-ctas .btn{width:100%}
+.hero-tag{
+  position:relative;display:flex;align-items:center;gap:10px;
+  max-width:var(--max);margin:0 auto;width:100%;padding:0 20px 18px;
+  color:rgba(255,255,255,.62);
+}
+.hero-tag::before{content:"";width:8px;height:8px;background:rgba(255,255,255,.62);flex:none}
+@media(min-width:768px){
+  .hero{min-height:88vh}
+  .hero-content{padding:140px 24px 56px}
+  .hero-ctas{flex-direction:row;gap:16px;margin-top:40px}
+  .hero-ctas .btn{width:auto}
+  .hero-tag{padding:0 24px 24px}
+}
+
+/* ============ trust strip ============ */
+.trust{border-bottom:1px solid var(--line);background:var(--paper)}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;max-width:var(--max);margin:0 auto}
+.trust-cell{padding:20px;border-top:1px solid var(--line)}
+.trust-cell:nth-child(-n+2){border-top:none}
+.trust-cell:nth-child(even){border-left:1px solid var(--line)}
+.trust-cell .label{color:var(--steel);margin-bottom:8px}
+.trust-cell strong{font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.2;display:block}
+.trust-cell .sub{font-size:13px;color:var(--steel);margin-top:3px}
+.stars{display:inline-flex;gap:2px;margin-right:6px;vertical-align:-2px}
+.stars svg{width:15px;height:15px;fill:var(--accent)}
+@media(min-width:768px){
+  .trust-grid{grid-template-columns:repeat(4,1fr)}
+  .trust-cell{padding:30px 24px;border-top:none!important;border-left:1px solid var(--line)}
+  .trust-cell:first-child{border-left:none}
+  .trust-cell strong{font-size:20px}
+}
+
+/* ============ sections ============ */
+section{padding:64px 0}
+@media(min-width:768px){section{padding:112px 0}}
+.sec-head{max-width:62ch;margin-bottom:40px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head p{margin-top:16px}
+@media(min-width:768px){.sec-head{margin-bottom:64px}.sec-head .eyebrow{margin-bottom:20px}.sec-head p{margin-top:20px}}
+.band-chalk{background:var(--chalk)}
+.dark{background:var(--ink);color:#fff}
+.dark .lead{color:var(--fog)}
+.dark .eyebrow{color:var(--fog)}
+
+/* ============ services (dense menu — 2-col mobile) ============ */
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.svc-card{background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:18px 16px;transition:border-color .15s}
+.svc-card:hover{border-color:var(--ink)}
+.svc-card svg{width:26px;height:26px;stroke:var(--accent);margin-bottom:14px}
+.svc-card h3{font-size:17px;margin-bottom:7px}
+.svc-card p{font-size:14px;color:var(--steel)}
+@media(min-width:640px){.svc-grid{gap:24px}.svc-card{padding:28px 24px}.svc-card h3{font-size:20px}.svc-card p{font-size:15px}}
+@media(min-width:1040px){.svc-grid{grid-template-columns:repeat(4,1fr)}}
+
+/* ============ promise band ============ */
+.storm{position:relative;background:var(--ink);overflow:hidden;padding:72px 0}
+.storm-content{position:relative;max-width:var(--max);margin:0 auto;padding:0 20px}
+.storm .eyebrow{color:rgba(255,255,255,.80);margin-bottom:16px}
+.storm h2{color:#fff;max-width:18ch}
+.storm blockquote{margin-top:24px;max-width:54ch}
+.storm blockquote p{font-size:18px;line-height:1.6;color:rgba(255,255,255,.92)}
+.storm blockquote footer{margin-top:10px;color:rgba(255,255,255,.64)}
+.storm .btn{margin-top:32px;width:100%}
+@media(min-width:768px){
+  .storm{padding:112px 0}
+  .storm-content{padding:0 24px}
+  .storm .btn{width:auto}
+}
+
+/* ============ new patient process ============ */
+.steps{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
+.step{padding:28px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:64px 1fr;gap:16px;align-items:start}
+.step-num{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:44px;line-height:1;
+  color:var(--accent);letter-spacing:-.01em;
+}
+.step h3{margin-bottom:6px}
+.step p{font-size:15px;color:var(--steel);max-width:52ch}
+.proof{
+  margin-top:40px;border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:2px;padding:24px;background:var(--chalk);
+}
+.proof p{font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.4}
+.proof footer{margin-top:10px;color:var(--steel)}
+@media(min-width:768px){
+  .step{grid-template-columns:96px 1fr;padding:36px 0}
+  .step-num{font-size:56px}
+  .proof{padding:32px;margin-top:56px}
+  .proof p{font-size:21px}
+}
+@media(min-width:1024px){
+  .steps{grid-template-columns:1fr 1fr;column-gap:64px}
+}
+
+/* ============ heritage / family split ============ */
+.owner-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+.owner-photo{border-radius:2px;overflow:hidden;border:1px solid var(--line)}
+.owner-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 50%;filter:saturate(.9) contrast(1.04)}
+.owner-copy .eyebrow{margin-bottom:16px}
+.owner-copy h2{max-width:16ch}
+.owner-copy p{color:var(--steel);margin-top:16px;max-width:54ch}
+.owner-stats{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
+.stat-num{font-size:clamp(40px,11vw,72px);font-weight:700;line-height:1;letter-spacing:-.025em}
+.stat .label{color:var(--steel);margin-top:10px;max-width:16ch}
+@media(min-width:768px){
+  .owner-copy p{margin-top:20px}
+  .owner-stats{grid-template-columns:repeat(3,1fr);gap:0;margin-top:48px;padding-top:40px}
+  .owner-stats .stat{border-left:1px solid var(--line);padding-left:28px}
+  .owner-stats .stat:first-child{border-left:none;padding-left:0}
+}
+@media(min-width:1024px){
+  .owner-grid{grid-template-columns:1.05fr .95fr;gap:64px}
+  .owner-photo img{aspect-ratio:auto;min-height:520px}
+}
+
+/* ============ insurance / credentials strip ============ */
+.mats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)}
+.mats-inner{max-width:var(--max);margin:0 auto;padding:32px 20px}
+.mats .label{color:var(--steel);margin-bottom:18px}
+.mats-row{display:grid;grid-template-columns:1fr;gap:0}
+.mat{padding:16px 0;border-top:1px solid var(--line)}
+.mat:first-child{border-top:none}
+.mat strong{font-size:21px;font-weight:700;letter-spacing:-.015em;display:block}
+.mat span{font-size:14px;color:var(--steel)}
+@media(min-width:768px){
+  .mats-inner{padding:40px 24px}
+  .mats-row{grid-template-columns:repeat(4,1fr);gap:24px}
+  .mat{border-top:none;border-left:1px solid var(--line);padding:8px 0 8px 24px}
+  .mat:first-child{border-left:none;padding-left:0}
+  .mat strong{font-size:23px}
+}
+
+/* ============ reviews ============ */
+.rev-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.rev-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:2px;padding:24px;display:flex;flex-direction:column}
+.rev-card .stars{margin-bottom:16px}
+.rev-quote{font-size:16px;line-height:1.6;color:rgba(255,255,255,.92);flex:1}
+.rev-meta{margin-top:24px;padding-top:16px;border-top:1px solid var(--line-dark)}
+.rev-name{font-weight:600;font-size:14px;color:#fff}
+.rev-src{display:block;margin-top:5px;color:var(--fog)}
+.rev-link{
+  display:inline-flex;align-items:center;gap:10px;margin-top:40px;min-height:44px;
+  font-weight:600;font-size:15px;color:#fff;border-bottom:1px solid var(--line-dark);transition:border-color .15s;
+}
+.rev-link:hover{border-color:#fff}
+.rev-link svg{stroke:currentColor}
+@media(min-width:640px){.rev-grid{grid-template-columns:1fr 1fr;gap:24px}.rev-card{padding:32px}}
+@media(min-width:1024px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ============ faq ============ */
+.faq-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
+.faq-photo{display:none;border-radius:2px;overflow:hidden}
+.faq-photo img{width:100%;height:100%;min-height:520px;object-fit:cover;filter:saturate(.9) contrast(1.04)}
+.faq-list{border-top:1px solid var(--line)}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list summary{
+  list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:20px 0;font-size:17px;font-weight:600;letter-spacing:-.01em;min-height:56px;
+}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";font-size:24px;font-weight:400;color:var(--accent);flex:none;line-height:1}
+.faq-list details[open] summary::after{content:"\2013"}
+.faq-list details p{padding:0 0 22px;color:var(--steel);max-width:58ch}
+@media(min-width:1024px){
+  .faq-grid{grid-template-columns:1fr 1.4fr;gap:64px}
+  .faq-photo{display:block}
+  .faq-list summary{font-size:19px;padding:24px 0}
+}
+
+/* ============ contact ============ */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:stretch}
+.c-row{padding:22px 0;border-top:1px solid var(--line)}
+.c-row:last-child{border-bottom:1px solid var(--line)}
+.c-row .label{color:var(--steel);margin-bottom:6px}
+.c-row p,.c-row a{font-size:17px;font-weight:500}
+.c-phone a{font-size:clamp(32px,9vw,44px);font-weight:700;letter-spacing:-.02em;line-height:1.1;display:inline-block;padding:4px 0}
+.c-phone a:hover{color:var(--accent)}
+.hours-tbl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:16px}
+.hours-tbl .d{color:var(--steel)}
+.map{border-radius:2px;overflow:hidden;border:1px solid var(--line);min-height:320px}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(1) contrast(1.05);transition:filter .3s}
+.map:hover iframe{filter:none}
+@media(min-width:1024px){
+  .contact-grid{grid-template-columns:1fr 1fr;gap:64px}
+  .map,.map iframe{min-height:460px}
+}
+
+/* ============ footer ============ */
+footer.site{background:var(--ink);color:#fff;padding:56px 0}
+.foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
+.foot-fact{margin-top:14px;color:var(--fog);font-size:15px;max-width:46ch}
+.foot-meta .label{color:var(--fog)}
+.foot-meta a{font-weight:600;font-size:18px;display:inline-block;padding:6px 0}
+.foot-meta a:hover{color:var(--fog)}
+.foot-legal{
+  margin-top:48px;padding-top:24px;border-top:1px solid var(--line-dark);
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--fog);
+}
+.foot-credit{color:#fff}
+@media(min-width:768px){footer.site{padding:72px 0}}
+
+/* ============ mobile call bar ============ */
+.callbar{
+  display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;
+  background:var(--accent);color:#fff;height:60px;
+  align-items:center;justify-content:center;gap:10px;
+  font-weight:700;font-size:17px;letter-spacing:.01em;
+  box-shadow:0 -8px 24px rgba(0,0,0,.16);
+}
+.callbar svg{stroke:#fff}
+@media(min-width:768px){
+  .callbar{display:none}
+  body{padding-bottom:0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <p class="label">3rd-Generation Family Practice &nbsp;&middot;&nbsp; Same SLC Location Since 1954<span class="tb-x"> &nbsp;&middot;&nbsp; New Patients Welcome</span></p>
+    <p class="label tb-r">Downtown &middot; 100 South</p>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="wordmark" aria-label="Larson Family Dental — home">
+      <span class="wm-name">Larson<span>.</span></span>
+      <span class="wm-sub">Family Dental &middot; Salt Lake City</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#new-patients" class="nl-x">New Patients</a>
+      <a href="#heritage">Our Family</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Visit</a>
+    </nav>
+    <a href="tel:+18013555558" class="nav-call">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="num">(801) 355-5558</span><span class="word">Call</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO — real Larson treatment room -->
+<section class="hero" style="padding:0">
+  <img class="hero-img" src="assets/treatment-room.jpg" alt="A hygienist at Larson Family Dental caring for a patient in the practice's downtown Salt Lake City treatment room">
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="label eyebrow">Family-Owned in Salt Lake City Since 1954</p>
+    <h1>The family dentist three generations of SLC have trusted.</h1>
+    <p class="lead">Larson Family Dental has cared for downtown Salt Lake City from the same chair on 100 South for over 70 years. Gentle, unhurried dentistry for the whole family &mdash; with a 4.9-star reputation we&rsquo;ve earned one patient at a time.</p>
+    <div class="hero-ctas">
+      <a href="tel:+18013555558" class="btn btn-accent">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        New patients welcome &mdash; (801) 355-5558
+      </a>
+      <a href="#services" class="btn btn-ghost">See our services</a>
+    </div>
+  </div>
+  <p class="hero-tag label">Pictured: inside Larson Family Dental &mdash; 928 E 100 South, Salt Lake City</p>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust" role="region" aria-label="Credentials and ratings">
+  <div class="trust-grid">
+    <div class="trust-cell">
+      <p class="label">Patient rating</p>
+      <strong><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>4.9</strong>
+      <p class="sub">94 Google reviews</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Established</p>
+      <strong>1954</strong>
+      <p class="sub">70+ years, same location</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Family practice</p>
+      <strong>3rd generation</strong>
+      <p class="sub">The Larson family of dentists</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">For the whole family</p>
+      <strong>Ages 2 to 102</strong>
+      <p class="sub">Kids, adults &amp; seniors welcome</p>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="band-chalk" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">What we do</p>
+      <h2>Complete dentistry, all under one downtown roof.</h2>
+      <p class="lead">From a child&rsquo;s first cleaning to full-mouth reconstruction, the Larson family handles it in-house &mdash; including implants and sedation, so you rarely need a referral across town.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5.5c-1.5-2-4-2.5-5.5-1.5C4 5.5 4.5 9 5.5 12s1 6 2.5 6 1.5-3 4-3 2.5 3 4 3 1.5-3 2.5-6 1.5-6.5-1-8c-1.5-1-4-.5-5.5 1.5z"/></svg>
+        <h3>General &amp; Preventive</h3>
+        <p>Cleanings, exams, X-rays and gum care to keep small problems small &mdash; the visit families come back for year after year.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg>
+        <h3>Restorative</h3>
+        <p>Tooth-colored fillings, crowns, bridges and full-mouth rehab &mdash; including complex crown-and-bridge work done in-house.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2 4 4 .6-3 3 .7 4-3.7-2-3.7 2 .7-4-3-3 4-.6z"/></svg>
+        <h3>Cosmetic &amp; Smile Design</h3>
+        <p>Veneers, bonding and full smile makeovers planned around the smile you actually want &mdash; not a one-size template.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v6"/><path d="M9 8h6l-1 12a2 2 0 0 1-2 2 2 2 0 0 1-2-2z"/></svg>
+        <h3>Dental Implants</h3>
+        <p>Single implants to full-arch &mdash; Dr. Matt has advanced training in implant surgery, so placement and restoration stay in one office.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12s3-7 9-7 9 7 9 7-3 7-9 7-9-7-9-7z"/><circle cx="12" cy="12" r="2.5"/></svg>
+        <h3>Sedation Dentistry</h3>
+        <p>IV and relaxation options for anxious patients &mdash; so you can finally get the care you&rsquo;ve been putting off, comfortably.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4h12v6a6 6 0 0 1-12 0z"/><path d="M6 20h12"/><path d="M9 20v-2"/><path d="M15 20v-2"/></svg>
+        <h3>Dentures &amp; Implant Dentures</h3>
+        <p>Traditional and implant-supported dentures, fitted with the patience that keeps our retired patients coming back.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8a7 7 0 0 1 14 0v3l1 4H4l1-4z"/><path d="M9 20a3 3 0 0 0 6 0"/></svg>
+        <h3>Clear Aligners</h3>
+        <p>Straighten your smile with clear, removable aligners &mdash; planned and monitored right here at home in SLC.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 13h6l-1 9 9-11h-6z"/></svg>
+        <h3>Emergency Dental</h3>
+        <p>Toothache, broken tooth or lost crown? Call us first &mdash; established patients are seen fast, often the same day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE BAND -->
+<section class="storm dark">
+  <div class="storm-content">
+    <p class="label eyebrow">Why families stay for decades</p>
+    <h2>You&rsquo;ll see the same faces every visit.</h2>
+    <blockquote>
+      <p>&ldquo;My kids and I have been seeing Dr. Matt Larson and his staff for over 13 years. We feel so welcome and supported and, quite literally, always leave the office with a smile on our faces.&rdquo;</p>
+      <footer class="label">Erica Lemke &mdash; Google review</footer>
+    </blockquote>
+    <a href="tel:+18013555558" class="btn btn-accent">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Become a patient today
+    </a>
+  </div>
+</section>
+
+<!-- NEW PATIENTS -->
+<section id="new-patients">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">New patients</p>
+      <h2>Switching dentists is easier than you think.</h2>
+      <p class="lead">No pressure, no upsell &mdash; just a calm first visit and a straight answer about what your teeth actually need.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <p class="step-num" aria-hidden="true">01</p>
+        <div>
+          <h3>Call or book online</h3>
+          <p>One quick call to (801) 355-5558. We&rsquo;ll find a time that fits and tell you exactly what to bring.</p>
+        </div>
+      </div>
+      <div class="step">
+        <p class="step-num" aria-hidden="true">02</p>
+        <div>
+          <h3>We verify your insurance</h3>
+          <p>Bring your card and we&rsquo;ll handle the paperwork &mdash; we file with most major PPO plans so you know your costs up front.</p>
+        </div>
+      </div>
+      <div class="step">
+        <p class="step-num" aria-hidden="true">03</p>
+        <div>
+          <h3>A gentle, unhurried exam</h3>
+          <p>A full exam, cleaning and a clear picture of your smile &mdash; with the reasoning behind every recommendation explained.</p>
+        </div>
+      </div>
+      <div class="step">
+        <p class="step-num" aria-hidden="true">04</p>
+        <div>
+          <h3>A plan that fits your life</h3>
+          <p>We prioritize what matters now and map the rest over time. You leave knowing the next step, not feeling sold to.</p>
+        </div>
+      </div>
+    </div>
+    <div class="proof">
+      <p>&ldquo;I have never had a bad experience and Dr. Matt is incredibly knowledgeable and helpful with our whole family. 10/10 would recommend this dentist!&rdquo;</p>
+      <footer class="label">Tea Johnson &mdash; Google review (patient since 2016)</footer>
+    </div>
+  </div>
+</section>
+
+<!-- HERITAGE / FAMILY -->
+<section class="band-chalk" id="heritage">
+  <div class="wrap">
+    <div class="owner-grid">
+      <div class="owner-photo">
+        <img src="assets/building-sign.jpg" alt="The 928 Midtown Dental Center sign in Salt Lake City listing the Larson family dentists: Scott S. Larson DDS, Eric A. Larson DDS, Nathan A. Larson DDS and Brent A. Larson DDS">
+      </div>
+      <div class="owner-copy">
+        <p class="label eyebrow">The Larson family</p>
+        <h2>Three generations. One corner of 100 South.</h2>
+        <p>Larson Family Dental has practiced from the same Salt Lake City address since 1954 &mdash; now into its third generation of Larson dentists. Dr. Matt Larson joined his father, Dr. Brent Larson, downtown after training at Creighton University and a residency at the VA Hospital.</p>
+        <p>The promise hasn&rsquo;t changed in 70 years: treat every patient like family, use the best materials and labs, and explain the reasoning behind every recommendation. That&rsquo;s how a neighborhood practice holds a 4.9-star average across 94 reviews.</p>
+        <div class="owner-stats">
+          <div class="stat">
+            <p class="stat-num">70+</p>
+            <p class="label">Years on 100 South in SLC</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num">3</p>
+            <p class="label">Generations of Larson dentists</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num">4.9&#9733;</p>
+            <p class="label">Across 94 Google reviews</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSURANCE / WHAT TO EXPECT STRIP -->
+<div class="mats" role="region" aria-label="Insurance and practice facts">
+  <div class="mats-inner">
+    <p class="label">Insurance, financing &amp; what to expect</p>
+    <div class="mats-row">
+      <div class="mat"><strong>Most PPOs filed</strong><span>We submit to major insurance for you</span></div>
+      <div class="mat"><strong>New patients welcome</strong><span>Kids, adults &amp; seniors, all ages</span></div>
+      <div class="mat"><strong>In-house implants</strong><span>Placement &amp; restoration in one office</span></div>
+      <div class="mat"><strong>Sedation available</strong><span>For anxious &amp; complex cases</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<section class="dark" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Reviews</p>
+      <h2>4.9 stars, earned one patient at a time.</h2>
+      <p class="lead">Every word below is quoted verbatim from a real Larson Family Dental patient review on Google.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;My kids and I have been seeing Dr. Matt Larson and his staff for over 13 years. We feel so welcome and supported and, quite literally, always leave the office with a smile on our faces. I recommend Larson Dental without hesitation!&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Erica Lemke</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Dr. Matt and Sydney are the best!! I trust Larson dental with my teeth, and I don&rsquo;t trust just anybody with my teeth! Thank you for always making me feel comfortable and not stressed when I am there!&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Taylor Conkey</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;I have been coming to this dentist since I moved to Salt Lake City in 2016. I have never had a bad experience and Dr. Matt is incredibly knowledgeable and helpful with our whole family. 10/10 would recommend this dentist!&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Tea Johnson</p>
+          <span class="rev-src label">Google review &middot; Local Guide</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;He&rsquo;s a super friendly guy and his staff is great to work with.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Verified patient</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Highly recommend this office &mdash; receptionists, hygienists, dentists &mdash; all solid!&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Verified patient</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Recently, I took my retired mother into Dr. Matt&rsquo;s office for dentures.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Verified patient</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+    </div>
+    <a class="rev-link" href="https://www.google.com/maps/place/Larson+Family+Dental/@40.7668767,-111.8642784,17z/data=!4m6!3m5!1s0x8752f5649545b0b9:0x7af58b941183793b!8m2!3d40.7668767!4d-111.8642784!16s%2Fg%2F1td25y51" target="_blank" rel="noopener">
+      Read all 94 reviews on Google
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-photo">
+      <img src="assets/larson-headshot.jpg" alt="A dentist at Larson Family Dental, the third-generation Salt Lake City family practice">
+    </div>
+    <div>
+      <div class="sec-head">
+        <p class="label eyebrow">Good to know</p>
+        <h2>Questions new patients ask first.</h2>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>Are you taking new patients?</summary>
+          <p>Yes &mdash; new patients of every age are welcome, from a toddler&rsquo;s first visit to seniors needing dentures. Call (801) 355-5558 and we&rsquo;ll get you scheduled.</p>
+        </details>
+        <details>
+          <summary>Do you take my insurance?</summary>
+          <p>We file with most major PPO dental plans and submit the claim for you. Bring your card to your first visit and we&rsquo;ll verify your benefits and explain any out-of-pocket cost before we begin.</p>
+        </details>
+        <details>
+          <summary>I&rsquo;m anxious about the dentist. Can you help?</summary>
+          <p>Absolutely. Patients consistently mention how comfortable and unhurried our team makes them feel, and we offer sedation options for those who need them. Tell us at booking and we&rsquo;ll plan around it.</p>
+        </details>
+        <details>
+          <summary>Do you do implants and bigger work, or just cleanings?</summary>
+          <p>Both. Alongside routine care, Dr. Matt has advanced training in implants, sedation and full-mouth reconstruction &mdash; so most treatment stays in this office instead of being referred across town.</p>
+        </details>
+        <details>
+          <summary>How long has the practice been here?</summary>
+          <p>Since 1954, in the same downtown Salt Lake City location &mdash; now in its third generation of Larson dentists. Many families have trusted us for decades.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="band-chalk" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Visit us</p>
+      <h2>Right downtown, just off 900 East.</h2>
+      <p class="lead">Calling is the fastest way to book &mdash; a real person at the front desk will get you scheduled and answer any insurance questions.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="c-row c-phone">
+          <p class="label">Call us</p>
+          <a href="tel:+18013555558">(801) 355-5558</a>
+        </div>
+        <div class="c-row">
+          <p class="label">Find us</p>
+          <p>928 E 100 S, Suite A, Salt Lake City, UT 84102</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Neighborhood</p>
+          <p>Downtown SLC &middot; near 9th &amp; 9th, the Avenues &amp; Sugar House</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Hours</p>
+          <div class="hours-tbl">
+            <span class="d">Mon&ndash;Fri</span><span>8:00 AM &ndash; 5:00 PM</span>
+            <span class="d">Saturday</span><span>Closed</span>
+            <span class="d">Sunday</span><span>Closed</span>
+          </div>
+        </div>
+      </div>
+      <div class="map">
+        <iframe src="https://maps.google.com/maps?q=928+E+100+S+Salt+Lake+City+UT+84102&z=15&output=embed" title="Map showing Larson Family Dental at 928 E 100 S, Salt Lake City, Utah" referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="wordmark" style="color:#fff">
+          <span class="wm-name">Larson<span style="color:var(--accent)">.</span></span>
+          <span class="wm-sub" style="color:var(--fog)">Family Dental &middot; Salt Lake City</span>
+        </div>
+        <p class="foot-fact">A third-generation Salt Lake City family practice on 100 South since 1954. 4.9&#9733; across 94 Google reviews. New patients of all ages welcome.</p>
+      </div>
+      <div class="foot-meta">
+        <p class="label">928 E 100 S, Suite A &middot; SLC, UT 84102</p>
+        <p style="margin-top:6px"><a href="tel:+18013555558">(801) 355-5558</a></p>
+      </div>
+    </div>
+    <div class="foot-legal label">
+      <span>&copy; 2026 Larson Family Dental</span>
+      <span class="foot-credit">Site by Peak 11 Media</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+18013555558" class="callbar" aria-label="Call Larson Family Dental at (801) 355-5558">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call &mdash; (801) 355-5558
+</a>
+
+</body>
+</html>
