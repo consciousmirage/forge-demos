@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>your skin by: Tas — Master Esthetician &amp; Corrective Facials, Salt Lake City</title>
+<meta name="description" content="A personable, advanced approach to clear skin. Master esthetician Tasneem offers corrective facials, dermaplaning, microdermabrasion, enzyme treatments &amp; BioRePeel in a private Salt Lake City spa suite. 5.0 stars across 110 reviews.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DaySpa",
+  "name": "your skin by: Tas",
+  "image": "https://consciousmirage.github.io/forge-demos/demo-med-spa-v3/assets/hero-facial.jpg",
+  "telephone": "+16072965604",
+  "email": "your.skin.by.tas@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6405 South 3000 East, Suite 100",
+    "addressLocality": "Salt Lake City",
+    "addressRegion": "UT",
+    "postalCode": "84121"
+  },
+  "areaServed": ["Salt Lake City", "Holladay", "Cottonwood Heights", "Millcreek"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "110"
+  },
+  "openingHours": ["Mo,Tu,Th 09:00-19:00", "We,Fr 10:00-20:00", "Sa 10:00-16:00"]
+}
+</script>
+<style>
+/* ============ tokens ============ */
+:root{
+  --ink:#221d18;
+  --ink-2:#2b251f;
+  --steel:#6a615a;
+  --fog:#b3aaa0;
+  --paper:#faf7f1;
+  --chalk:#f1eae0;
+  --line:#e6ddcf;
+  --line-dark:#3a332c;
+  --accent:#a07d4f;
+  --accent-hover:#876440;
+  --max:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Barlow',ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:16px;line-height:1.6;color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:60px; /* mobile call bar */
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* ============ type voices (mobile-first) ============ */
+.serif{font-family:'Fraunces',Georgia,serif}
+.label{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;
+  font-size:13px;letter-spacing:.16em;text-transform:uppercase;line-height:1.25;
+}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--steel)}
+.eyebrow::before{content:"";width:18px;height:2px;background:var(--accent);flex:none}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(38px,9.2vw,80px);font-weight:500;line-height:1.05;letter-spacing:-.018em}
+h2{font-family:'Fraunces',Georgia,serif;font-size:clamp(29px,6.6vw,50px);font-weight:500;line-height:1.1;letter-spacing:-.014em}
+h3{font-size:20px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.lead{font-size:17px;color:var(--steel);max-width:56ch}
+@media(min-width:768px){.lead{font-size:18px}}
+
+/* ============ buttons ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;
+  font-weight:600;font-size:16px;letter-spacing:.01em;line-height:1.1;text-align:center;
+  min-height:56px;padding:0 26px;transition:background .15s,border-color .15s,color .15s;
+}
+.btn svg{flex:none}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-hover)}
+.btn-ghost{border:1px solid rgba(255,255,255,.6);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.07)}
+
+/* ============ topbar ============ */
+.topbar{background:var(--ink);color:var(--fog)}
+.topbar-inner{
+  max-width:var(--max);margin:0 auto;padding:9px 20px;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.topbar .label{font-size:12px;letter-spacing:.13em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .tb-r{display:none}
+.topbar .tb-x{display:none}
+@media(min-width:768px){
+  .topbar .tb-r{display:block;flex:none}
+  .topbar .tb-x{display:inline}
+}
+
+/* ============ nav ============ */
+.nav{position:sticky;top:0;z-index:50;background:rgba(250,247,241,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{
+  height:64px;display:flex;align-items:center;gap:24px;
+  max-width:var(--max);margin:0 auto;padding:0 20px;
+}
+.wordmark{display:flex;flex-direction:column;line-height:1;min-width:0}
+.wm-name{
+  font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:23px;
+  letter-spacing:-.01em;
+}
+.wm-name span{color:var(--accent)}
+.wm-sub{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin-top:5px;white-space:nowrap;
+}
+.nav-links{display:none;gap:28px;margin-left:auto}
+.nav-links a{font-weight:500;font-size:15px;color:var(--ink);padding:8px 0}
+.nav-links a:hover{color:var(--accent)}
+.nav-call{
+  margin-left:auto;display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent);color:#fff;border-radius:999px;
+  font-weight:600;font-size:15px;min-height:44px;padding:0 18px;
+}
+.nav-call:hover{background:var(--accent-hover)}
+.nav-call .num{display:none}
+@media(min-width:480px){
+  .nav-call .num{display:inline}
+  .nav-call .word{display:none}
+}
+@media(min-width:768px){
+  .nav-links{display:flex;gap:18px}
+  .nav-links .nl-x{display:none}
+  .nav-call{margin-left:0}
+}
+@media(min-width:1024px){
+  .nav-links{gap:28px}
+  .nav-links .nl-x{display:block}
+  .nav-inner{height:68px;padding:0 24px}
+  .wm-name{font-size:25px}
+}
+
+/* ============ hero ============ */
+.hero{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:84svh;background:var(--ink);overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%;filter:saturate(.92) contrast(1.02)}
+.hero-scrim{position:absolute;inset:0;background:
+  linear-gradient(to top,rgba(28,22,17,.88) 0%,rgba(28,22,17,.36) 48%,rgba(28,22,17,.30) 100%),
+  linear-gradient(78deg,rgba(28,22,17,.78) 0%,rgba(28,22,17,.40) 55%,rgba(28,22,17,.12) 100%);
+}
+.hero-content{position:relative;width:100%;max-width:var(--max);margin:0 auto;padding:84px 20px 26px}
+.hero .eyebrow{color:rgba(255,255,255,.82);margin-bottom:18px}
+.hero .eyebrow::before{background:var(--accent)}
+.hero h1{color:#fff;max-width:16ch}
+.hero .lead{color:rgba(255,255,255,.84);margin-top:18px}
+.hero-ctas{display:flex;flex-direction:column;gap:12px;margin-top:30px}
+.hero-ctas .btn{width:100%}
+.hero-tag{
+  position:relative;display:flex;align-items:center;gap:10px;
+  max-width:var(--max);margin:0 auto;width:100%;padding:0 20px 18px;
+  color:rgba(255,255,255,.6);
+}
+.hero-tag::before{content:"";width:8px;height:8px;background:rgba(255,255,255,.6);flex:none}
+@media(min-width:768px){
+  .hero{min-height:88vh}
+  .hero-content{padding:140px 24px 54px}
+  .hero-ctas{flex-direction:row;gap:16px;margin-top:40px}
+  .hero-ctas .btn{width:auto}
+  .hero-tag{padding:0 24px 24px}
+}
+
+/* ============ trust strip ============ */
+.trust{border-bottom:1px solid var(--line);background:var(--paper)}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;max-width:var(--max);margin:0 auto}
+.trust-cell{padding:20px;border-top:1px solid var(--line)}
+.trust-cell:nth-child(-n+2){border-top:none}
+.trust-cell:nth-child(even){border-left:1px solid var(--line)}
+.trust-cell .label{color:var(--steel);margin-bottom:8px}
+.trust-cell strong{font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.2;display:block}
+.trust-cell .sub{font-size:13px;color:var(--steel);margin-top:3px}
+.stars{display:inline-flex;gap:2px;margin-right:6px;vertical-align:-2px}
+.stars svg{width:15px;height:15px;fill:var(--accent)}
+@media(min-width:768px){
+  .trust-grid{grid-template-columns:repeat(4,1fr)}
+  .trust-cell{padding:30px 24px;border-top:none!important;border-left:1px solid var(--line)}
+  .trust-cell:first-child{border-left:none}
+  .trust-cell strong{font-size:20px}
+}
+
+/* ============ sections ============ */
+section{padding:64px 0}
+@media(min-width:768px){section{padding:108px 0}}
+.sec-head{max-width:62ch;margin-bottom:40px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head p{margin-top:16px}
+@media(min-width:768px){.sec-head{margin-bottom:60px}.sec-head .eyebrow{margin-bottom:20px}.sec-head p{margin-top:20px}}
+.band-chalk{background:var(--chalk)}
+.dark{background:var(--ink);color:#fff}
+.dark .lead{color:var(--fog)}
+.dark .eyebrow{color:var(--fog)}
+
+/* ============ services ============ */
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.svc-card{background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:20px 18px;transition:border-color .15s}
+.svc-card:hover{border-color:var(--accent)}
+.svc-card svg{width:26px;height:26px;stroke:var(--accent);margin-bottom:14px}
+.svc-card h3{margin-bottom:7px;font-size:17px}
+.svc-card p{font-size:14px;color:var(--steel);line-height:1.55}
+@media(min-width:640px){.svc-grid{gap:24px}.svc-card{padding:30px 26px}.svc-card h3{font-size:19px}.svc-card p{font-size:15px}}
+@media(min-width:1040px){.svc-grid{grid-template-columns:repeat(4,1fr)}}
+
+/* ============ experience / quote band ============ */
+.exp{position:relative;background:var(--ink);overflow:hidden;padding:72px 0}
+.exp-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:saturate(.85) contrast(1.03)}
+.exp-scrim{position:absolute;inset:0;background:linear-gradient(82deg,rgba(28,22,17,.93) 0%,rgba(28,22,17,.74) 52%,rgba(28,22,17,.46) 100%)}
+.exp-content{position:relative;max-width:var(--max);margin:0 auto;padding:0 20px}
+.exp .eyebrow{color:rgba(255,255,255,.8);margin-bottom:16px}
+.exp .eyebrow::before{background:var(--accent)}
+.exp h2{color:#fff;max-width:18ch}
+.exp blockquote{margin-top:24px;max-width:54ch}
+.exp blockquote p{font-size:18px;line-height:1.6;color:rgba(255,255,255,.92)}
+.exp blockquote footer{margin-top:12px;color:rgba(255,255,255,.64)}
+.exp .btn{margin-top:32px;width:100%}
+@media(min-width:768px){
+  .exp{padding:112px 0}
+  .exp-content{padding:0 24px}
+  .exp blockquote p{font-size:20px}
+  .exp .btn{width:auto}
+}
+
+/* ============ owner split ============ */
+.owner-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+.owner-photo{border-radius:2px;overflow:hidden;border:1px solid var(--line)}
+.owner-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;filter:saturate(.92) contrast(1.03)}
+.owner-copy .eyebrow{margin-bottom:16px}
+.owner-copy h2{max-width:17ch}
+.owner-copy p{color:var(--steel);margin-top:16px;max-width:54ch}
+.owner-stats{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px;padding-top:30px;border-top:1px solid var(--line)}
+.stat-num{font-family:'Fraunces',Georgia,serif;font-size:clamp(38px,11vw,64px);font-weight:500;line-height:1;letter-spacing:-.02em}
+.stat .label{color:var(--steel);margin-top:10px;max-width:18ch}
+@media(min-width:768px){
+  .owner-copy p{margin-top:20px}
+  .owner-stats{grid-template-columns:repeat(3,1fr);gap:0;margin-top:44px;padding-top:38px}
+  .owner-stats .stat{border-left:1px solid var(--line);padding-left:26px}
+  .owner-stats .stat:first-child{border-left:none;padding-left:0}
+}
+@media(min-width:1024px){
+  .owner-grid{grid-template-columns:0.92fr 1.08fr;gap:60px}
+  .owner-photo img{aspect-ratio:auto;min-height:540px}
+}
+
+/* ============ gallery ============ */
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.work-card{border-radius:2px;overflow:hidden;border:1px solid var(--line);background:var(--paper)}
+.work-ph{overflow:hidden;aspect-ratio:1/1}
+.work-ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.03)}
+.work-cap{display:flex;align-items:center;gap:9px;padding:14px 16px;color:var(--steel)}
+.work-cap::before{content:"";width:7px;height:7px;background:var(--accent);flex:none}
+.work-cap .label{font-size:12px}
+@media(min-width:768px){
+  .work-grid{grid-template-columns:repeat(3,1fr);gap:24px}
+  .work-ph{aspect-ratio:4/5}
+  .work-cap{padding:16px 18px}
+  .work-cap .label{font-size:13px}
+}
+
+/* ============ reviews ============ */
+.rev-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.rev-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:2px;padding:24px;display:flex;flex-direction:column}
+.rev-card .stars{margin-bottom:16px}
+.rev-quote{font-size:16px;line-height:1.62;color:rgba(255,255,255,.93);flex:1}
+.rev-meta{margin-top:24px;padding-top:16px;border-top:1px solid var(--line-dark)}
+.rev-name{font-weight:600;font-size:14px;color:#fff}
+.rev-src{display:block;margin-top:5px;color:var(--fog)}
+.rev-link{
+  display:inline-flex;align-items:center;gap:10px;margin-top:40px;min-height:44px;
+  font-weight:600;font-size:15px;color:#fff;border-bottom:1px solid var(--line-dark);transition:border-color .15s;
+}
+.rev-link:hover{border-color:#fff}
+.rev-link svg{stroke:currentColor}
+@media(min-width:640px){.rev-grid{grid-template-columns:1fr 1fr;gap:24px}.rev-card{padding:32px}}
+@media(min-width:1024px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ============ faq ============ */
+.faq-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
+.faq-photo{display:none;border-radius:2px;overflow:hidden}
+.faq-photo img{width:100%;height:100%;min-height:520px;object-fit:cover;filter:saturate(.9) contrast(1.03)}
+.faq-list{border-top:1px solid var(--line)}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list summary{
+  list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:20px 0;font-size:17px;font-weight:600;letter-spacing:-.01em;min-height:56px;
+}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";font-size:24px;font-weight:400;color:var(--accent);flex:none;line-height:1}
+.faq-list details[open] summary::after{content:"\2013"}
+.faq-list details p{padding:0 0 22px;color:var(--steel);max-width:58ch}
+@media(min-width:1024px){
+  .faq-grid{grid-template-columns:1fr 1.4fr;gap:60px}
+  .faq-photo{display:block}
+  .faq-list summary{font-size:19px;padding:24px 0}
+}
+
+/* ============ contact ============ */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:stretch}
+.c-row{padding:22px 0;border-top:1px solid var(--line)}
+.c-row:last-child{border-bottom:1px solid var(--line)}
+.c-row .label{color:var(--steel);margin-bottom:6px}
+.c-row p,.c-row a{font-size:17px;font-weight:500}
+.c-phone a{font-family:'Fraunces',Georgia,serif;font-size:clamp(31px,8.6vw,42px);font-weight:500;letter-spacing:-.01em;line-height:1.1;display:inline-block;padding:4px 0}
+.c-phone a:hover{color:var(--accent)}
+.hours-tbl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:16px}
+.hours-tbl .d{color:var(--steel)}
+.map{border-radius:2px;overflow:hidden;border:1px solid var(--line);min-height:320px}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(.7) contrast(1.04) sepia(.12);transition:filter .3s}
+.map:hover iframe{filter:none}
+@media(min-width:1024px){
+  .contact-grid{grid-template-columns:1fr 1fr;gap:60px}
+  .map,.map iframe{min-height:460px}
+}
+
+/* ============ footer ============ */
+footer.site{background:var(--ink);color:#fff;padding:56px 0}
+.foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
+.foot-fact{margin-top:14px;color:var(--fog);font-size:15px;max-width:48ch}
+.foot-meta .label{color:var(--fog)}
+.foot-meta a{font-weight:600;font-size:18px;display:inline-block;padding:6px 0}
+.foot-meta a:hover{color:var(--fog)}
+.foot-legal{
+  margin-top:48px;padding-top:24px;border-top:1px solid var(--line-dark);
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--fog);
+}
+.foot-credit a{color:#fff;border-bottom:1px solid var(--accent)}
+@media(min-width:768px){footer.site{padding:72px 0}}
+
+/* ============ mobile call bar ============ */
+.callbar{
+  display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;
+  background:var(--accent);color:#fff;height:60px;
+  align-items:center;justify-content:center;gap:10px;
+  font-weight:700;font-size:17px;letter-spacing:.01em;
+  box-shadow:0 -8px 24px rgba(0,0,0,.16);
+}
+.callbar svg{stroke:#fff}
+@media(min-width:768px){
+  .callbar{display:none}
+  body{padding-bottom:0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <p class="label">Master Esthetician &nbsp;&middot;&nbsp; 5.0&#9733; / 110 reviews<span class="tb-x"> &nbsp;&middot;&nbsp; Woman-owned, women-only suite</span></p>
+    <p class="label tb-r">Salt Lake City &middot; Holladay</p>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="wordmark" aria-label="your skin by: Tas — home">
+      <span class="wm-name serif">your skin<span>.</span></span>
+      <span class="wm-sub">by Tas &middot; Master Esthetician</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Treatments</a>
+      <a href="#experience" class="nl-x">Experience</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">Meet Tas</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a href="tel:+16072965604" class="nav-call">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="num">(607) 296-5604</span><span class="word">Call</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" style="padding:0">
+  <img class="hero-img" src="assets/hero-facial.jpg" alt="A client receiving a corrective treatment mask facial at your skin by: Tas in Salt Lake City">
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="label eyebrow">Private spa suite &middot; Salt Lake City</p>
+    <h1>A personable, advanced approach to clear skin.</h1>
+    <p class="lead">your skin is the private suite of master esthetician Tasneem &mdash; corrective, results-driven facials and medical-grade care, customized to your skin and yours alone. Clinical results. Genuine calm.</p>
+    <div class="hero-ctas">
+      <a href="tel:+16072965604" class="btn btn-accent">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Book your facial — (607) 296-5604
+      </a>
+      <a href="#services" class="btn btn-ghost">See treatments</a>
+    </div>
+  </div>
+  <p class="hero-tag label">Pictured: a corrective treatment facial in the your skin suite</p>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust" role="region" aria-label="Credentials and ratings">
+  <div class="trust-grid">
+    <div class="trust-cell">
+      <p class="label">Client rating</p>
+      <strong><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>5.0</strong>
+      <p class="sub">110 Google reviews</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Your provider</p>
+      <strong>Master Esthetician</strong>
+      <p class="sub">One-on-one with Tasneem</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">The setting</p>
+      <strong>Private suite</strong>
+      <p class="sub">Woman-owned, women-only</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">The products</p>
+      <strong>Medical-grade</strong>
+      <p class="sub">Results that last</p>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="band-chalk" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">The menu</p>
+      <h2>Treatments customized to your skin.</h2>
+      <p class="lead">Every appointment begins with a careful analysis of your skin type and concerns, then a plan built around your goals. No two facials are the same &mdash; and there&rsquo;s never a hard sell, just honest guidance.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 10a1.5 1.5 0 0 1 3 0M12 10a1.5 1.5 0 0 1 3 0"/><path d="M8.5 15c1 1.2 2.2 1.8 3.5 1.8s2.5-.6 3.5-1.8"/></svg>
+        <h3>Corrective Facials</h3>
+        <p>Results-driven, deeply customized facials that treat congestion, texture, and tone &mdash; both clinical and restorative in one visit.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14.5 4.5 5 5L8 21l-5 .9.9-5z"/><path d="m12.5 6.5 5 5"/></svg>
+        <h3>Dermaplaning</h3>
+        <p>A gentle exfoliating treatment that removes dull surface cells and fine vellus hair, leaving skin smooth, bright, and flawless for makeup.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg>
+        <h3>Microdermabrasion</h3>
+        <p>Resurfacing exfoliation that softens fine lines, refines pores, and reveals fresher skin &mdash; with no downtime.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c2.5 3 4 5.5 4 8a4 4 0 0 1-8 0c0-2.5 1.5-5 4-8z"/></svg>
+        <h3>Enzyme Treatments</h3>
+        <p>Fruit-enzyme facials that dissolve buildup and brighten the complexion &mdash; a softer path to clarity for sensitive skin.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="13" rx="3"/><path d="M12 15v5"/><path d="M9 20h6"/></svg>
+        <h3>BioRePeel &amp; Peels</h3>
+        <p>Advanced BioRePeel sessions and chemical peels that target tone, texture, and visible damage for clearer, more even skin.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13c3-3 6-4.5 9-4.5s6 1.5 9 4.5"/><path d="M3 17c3-3 6-4.5 9-4.5s6 1.5 9 4.5"/></svg>
+        <h3>Brow Lamination &amp; Tint</h3>
+        <p>Brow lamination with hybrid tint for fuller, perfectly groomed brows that hold their shape for weeks.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14c4-5 12-5 16 0"/><path d="M5 11l-1-2M9 9l-.5-2.2M15 9l.5-2.2M19 11l1-2"/></svg>
+        <h3>Lash Lifts</h3>
+        <p>A lash lift that curls and lifts your natural lashes from the base &mdash; wide-awake eyes with zero daily upkeep.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="3"/></svg>
+        <h3>Medical-Grade Skincare</h3>
+        <p>Hand-selected, professional home-care &mdash; the daily products that protect your results between visits and slow visible aging.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE / QUOTE BAND -->
+<section class="exp" id="experience">
+  <img class="exp-img" src="assets/skincare-detail.jpg" alt="An esthetician applying a corrective treatment mask to a relaxed client at your skin by: Tas">
+  <div class="exp-scrim" aria-hidden="true"></div>
+  <div class="exp-content">
+    <p class="label eyebrow">The experience</p>
+    <h2>Results without compromise. Luxury without limits.</h2>
+    <blockquote>
+      <p>&ldquo;Tas is such a personable aesthetician and a wonderful friend. Her passion for her work is so evident &mdash; she shares her in-depth knowledge through clear, step-by-step communication during the facial.&rdquo;</p>
+      <footer class="label">Areej Qazi &mdash; Google review (Local Guide)</footer>
+    </blockquote>
+    <a href="tel:+16072965604" class="btn btn-accent">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Book your appointment
+    </a>
+  </div>
+</section>
+
+<!-- MEET TAS -->
+<section id="about">
+  <div class="wrap">
+    <div class="owner-grid">
+      <div class="owner-photo">
+        <img src="assets/glowing-skin.jpg" alt="A client with healthy, glowing, clear skin after treatment at your skin by: Tas">
+      </div>
+      <div class="owner-copy">
+        <p class="label eyebrow">Meet your esthetician</p>
+        <h2>Pouring everything into one client at a time.</h2>
+        <p>your skin was founded by Tasneem &mdash; a master esthetician with a passion for transforming skin through personalized, results-driven treatments. She works one-on-one in a private suite, so every appointment is unhurried, attentive, and built entirely around you.</p>
+        <p>From the moment you arrive, every detail is intentional. Clients describe the same thing review after review: clear, step-by-step communication, genuine care, and skin that looks measurably better. That&rsquo;s how a one-woman suite earns a perfect 5.0 across 110 reviews.</p>
+        <div class="owner-stats">
+          <div class="stat">
+            <p class="stat-num serif">5.0&#9733;</p>
+            <p class="label">Across 110 client reviews</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num serif">1:1</p>
+            <p class="label">Private, one-client-at-a-time care</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num serif">100%</p>
+            <p class="label">Customized to your skin</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="band-chalk" id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Inside the suite</p>
+      <h2>Calm, clinical, and entirely yours.</h2>
+      <p class="lead">A private space designed so results and relaxation never have to be a trade-off &mdash; you deserve both.</p>
+    </div>
+    <div class="work-grid">
+      <figure class="work-card">
+        <div class="work-ph"><img src="assets/facial-treatment.jpg" alt="A relaxed client receiving a customized corrective facial at your skin by: Tas"></div>
+        <figcaption class="work-cap label">Corrective facial in progress</figcaption>
+      </figure>
+      <figure class="work-card">
+        <div class="work-ph"><img src="assets/treatment-room.jpg" alt="Spa detail at your skin by: Tas — fresh towel, candle, and medical-grade skincare"></div>
+        <figcaption class="work-cap label">Every detail, intentional</figcaption>
+      </figure>
+      <figure class="work-card">
+        <div class="work-ph"><img src="assets/spa-room.jpg" alt="A restorative treatment at your skin by: Tas, clinical results in a relaxing setting"></div>
+        <figcaption class="work-cap label">Restorative &amp; results-driven</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="dark" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Reviews</p>
+      <h2>5.0 stars, one face at a time.</h2>
+      <p class="lead">Every word below is quoted verbatim from a real client review on Google.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;I&rsquo;ve had one personalized facial and three BioRePeel sessions with Tasneem, and she is truly very knowledgeable and professional. She takes the time to explain everything clearly and makes sure you feel comfortable throughout the treatment.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Alaa Soliman</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Tas is such a personable aesthetician and a wonderful friend. Her passion for her work is so evident she shares her in-depth knowledge through clear, step-by-step communication during the facial.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Areej Qazi</p>
+          <span class="rev-src label">Google review &middot; Local Guide</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;I cannot recommend this place enough. I&rsquo;m usually not one to spend $$$ on skin care products &mdash; but because I&rsquo;ve seen the before and afters, and I personally know how much she pours into her work.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Melissa Luevano</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Tasneem is very knowledgable in a variety of skin treatments.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Verified client</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;The entire facial was so relaxing and I enjoyed it so much.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Verified client</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Highly recommend &mdash; and a facial would be a great gift to give to someone.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Verified client</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+    </div>
+    <a class="rev-link" href="https://www.google.com/maps/place/your+skin+by:+Tas/@40.6346074,-111.8044891,17z" target="_blank" rel="noopener">
+      Read all 110 reviews on Google
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-photo">
+      <img src="assets/esthetician.jpg" alt="A relaxing, restorative treatment at your skin by: Tas in Salt Lake City">
+    </div>
+    <div>
+      <div class="sec-head">
+        <p class="label eyebrow">Good to know</p>
+        <h2>Before your first visit.</h2>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>I&rsquo;ve never had a professional facial. Where do I start?</summary>
+          <p>With a corrective facial. Tasneem analyzes your skin and concerns first, then builds a plan around your goals &mdash; it&rsquo;s the best way to understand your skin and where it can go.</p>
+        </details>
+        <details>
+          <summary>What treatments do you offer?</summary>
+          <p>Corrective facials, dermaplaning, microdermabrasion, enzyme treatments, BioRePeel and chemical peels, brow lamination with hybrid tint, and lash lifts &mdash; plus medical-grade home-care to protect your results.</p>
+        </details>
+        <details>
+          <summary>Is this a private setting?</summary>
+          <p>Yes. your skin is a private, woman-owned suite where you&rsquo;re seen one-on-one. It&rsquo;s a women-only clinic, designed to feel calm and unhurried from the moment you arrive.</p>
+        </details>
+        <details>
+          <summary>Do at-home products really matter?</summary>
+          <p>They do &mdash; what you use daily makes up the majority of the results you see. Tasneem recommends only medical-grade products, chosen specifically for your skin, never an upsell.</p>
+        </details>
+        <details>
+          <summary>How do I book?</summary>
+          <p>Call or text (607) 296-5604, or email your.skin.by.tas@gmail.com. The suite is at 6405 South 3000 East, Suite 100 in Salt Lake City.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT / CONTACT -->
+<section class="band-chalk" id="visit">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Book your visit</p>
+      <h2>Come see what your skin can do.</h2>
+      <p class="lead">Calling or texting is the fastest way to book &mdash; you&rsquo;ll reach Tasneem directly.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="c-row c-phone">
+          <p class="label">Call or text</p>
+          <a href="tel:+16072965604">(607) 296-5604</a>
+        </div>
+        <div class="c-row">
+          <p class="label">Email</p>
+          <a href="mailto:your.skin.by.tas@gmail.com">your.skin.by.tas@gmail.com</a>
+        </div>
+        <div class="c-row">
+          <p class="label">The suite</p>
+          <p>6405 South 3000 East, Suite 100, Salt Lake City, UT 84121</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Hours</p>
+          <div class="hours-tbl">
+            <span class="d">Mon, Tue, Thu</span><span>9:00 AM &ndash; 7:00 PM</span>
+            <span class="d">Wed, Fri</span><span>10:00 AM &ndash; 8:00 PM</span>
+            <span class="d">Saturday</span><span>10:00 AM &ndash; 4:00 PM</span>
+            <span class="d">Sunday</span><span>Closed</span>
+          </div>
+        </div>
+      </div>
+      <div class="map">
+        <iframe src="https://maps.google.com/maps?q=6405%20S%203000%20E%20Suite%20100%20Salt%20Lake%20City%20UT%2084121&z=14&output=embed" title="Map showing your skin by: Tas at 6405 South 3000 East, Salt Lake City" referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="wordmark" style="color:#fff">
+          <span class="wm-name serif">your skin<span style="color:var(--accent)">.</span></span>
+          <span class="wm-sub" style="color:var(--fog)">by Tas &middot; Master Esthetician</span>
+        </div>
+        <p class="foot-fact">A private, woman-owned spa suite in Salt Lake City. Corrective, results-driven facials &amp; medical-grade skincare &mdash; 5.0&#9733; across 110 reviews.</p>
+      </div>
+      <div class="foot-meta">
+        <p class="label">6405 S 3000 E, Suite 100 &middot; Salt Lake City, UT 84121</p>
+        <p style="margin-top:6px"><a href="tel:+16072965604">(607) 296-5604</a></p>
+      </div>
+    </div>
+    <div class="foot-legal label">
+      <span>&copy; 2026 your skin by: Tas</span>
+      <span class="foot-credit">Site by <a href="#">Peak 11 Media</a></span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+16072965604" class="callbar" aria-label="Call your skin by: Tas at (607) 296-5604">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call or text — (607) 296-5604
+</a>
+
+</body>
+</html>
