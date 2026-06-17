@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mott&rsquo;s Landscaping &mdash; Salt Lake City Landscape Design, Build &amp; Maintenance · Family-Owned</title>
+<meta name="description" content="Family-owned landscape design, installation, and maintenance for the Salt Lake Valley. 4.5 stars across 90 Google reviews. Patios, sod, sprinklers, water features &amp; more. Call (801) 915-5897.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LandscapingBusiness",
+  "name": "Mott's Landscaping",
+  "telephone": "+18019155897",
+  "email": "mottslandscaping@me.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "8367 S Creek Hollow Cove",
+    "addressLocality": "Sandy",
+    "addressRegion": "UT",
+    "postalCode": "84093"
+  },
+  "areaServed": ["Salt Lake City", "Sandy", "Holladay", "Salt Lake Valley"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "90"
+  },
+  "openingHours": ["Mo-Fr 08:00-18:00"]
+}
+</script>
+<style>
+/* ============ tokens ============ */
+:root{
+  --ink:#16191a;
+  --ink-2:#1e2322;
+  --steel:#586059;
+  --fog:#a5ada4;
+  --paper:#ffffff;
+  --chalk:#f3f5f1;
+  --line:#e3e7df;
+  --line-dark:#2b302b;
+  --accent:#3f7d3a;
+  --accent-hover:#336330;
+  --max:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Barlow',ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:16px;line-height:1.6;color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:60px;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* ============ type voices (mobile-first) ============ */
+.label{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;
+  font-size:13px;letter-spacing:.14em;text-transform:uppercase;line-height:1.25;
+}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--steel)}
+.eyebrow::before{content:"";width:18px;height:2px;background:var(--accent);flex:none}
+h1{font-size:clamp(37px,9.2vw,80px);font-weight:700;line-height:1.04;letter-spacing:-.026em}
+h2{font-size:clamp(30px,7.2vw,52px);font-weight:700;line-height:1.08;letter-spacing:-.022em}
+h3{font-size:20px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.lead{font-size:17px;color:var(--steel);max-width:56ch}
+@media(min-width:768px){.lead{font-size:18px}}
+
+/* ============ buttons ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;
+  font-weight:600;font-size:16px;letter-spacing:.01em;line-height:1.1;text-align:center;
+  min-height:56px;padding:0 26px;transition:background .15s,border-color .15s,color .15s;
+}
+.btn svg{flex:none}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-hover)}
+.btn-ghost{border:1px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+
+/* ============ topbar ============ */
+.topbar{background:var(--ink);color:var(--fog)}
+.topbar-inner{
+  max-width:var(--max);margin:0 auto;padding:9px 20px;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.topbar .label{font-size:12px;letter-spacing:.12em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .tb-r{display:none}
+.topbar .tb-x{display:none}
+@media(min-width:768px){
+  .topbar .tb-r{display:block;flex:none}
+  .topbar .tb-x{display:inline}
+}
+
+/* ============ nav ============ */
+.nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.nav-inner{
+  height:64px;display:flex;align-items:center;gap:24px;
+  max-width:var(--max);margin:0 auto;padding:0 20px;
+}
+.wordmark{display:flex;flex-direction:column;line-height:1;min-width:0}
+.wm-name{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;
+  letter-spacing:.03em;text-transform:uppercase;
+}
+.wm-name span{color:var(--accent)}
+.wm-sub{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--steel);margin-top:4px;white-space:nowrap;
+}
+.nav-links{display:none;gap:28px;margin-left:auto}
+.nav-links a{font-weight:500;font-size:15px;color:var(--ink);padding:8px 0}
+.nav-links a:hover{color:var(--steel)}
+.nav-call{
+  margin-left:auto;display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent);color:#fff;border-radius:999px;
+  font-weight:600;font-size:15px;min-height:44px;padding:0 18px;
+}
+.nav-call:hover{background:var(--accent-hover)}
+.nav-call .num{display:none}
+@media(min-width:480px){
+  .nav-call .num{display:inline}
+  .nav-call .word{display:none}
+}
+@media(min-width:768px){
+  .nav-links{display:flex;gap:18px}
+  .nav-links .nl-x{display:none}
+  .nav-call{margin-left:0}
+}
+@media(min-width:1024px){
+  .nav-links{gap:28px}
+  .nav-links .nl-x{display:block}
+  .nav-inner{height:68px;padding:0 24px}
+  .wm-name{font-size:26px}
+}
+
+/* ============ hero ============ */
+.hero{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:84svh;background:var(--ink);overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%}
+.hero-scrim{position:absolute;inset:0;background:
+  linear-gradient(to top,rgba(10,12,10,.86) 0%,rgba(10,12,10,.34) 46%,rgba(10,12,10,.32) 100%),
+  linear-gradient(78deg,rgba(10,12,10,.82) 0%,rgba(10,12,10,.44) 55%,rgba(10,12,10,.14) 100%);
+}
+.hero-content{position:relative;width:100%;max-width:var(--max);margin:0 auto;padding:84px 20px 28px}
+.hero .eyebrow{color:rgba(255,255,255,.78);margin-bottom:18px}
+.hero h1{color:#fff;max-width:18ch}
+.hero .lead{color:rgba(255,255,255,.82);margin-top:18px}
+.hero-ctas{display:flex;flex-direction:column;gap:12px;margin-top:30px}
+.hero-ctas .btn{width:100%}
+.hero-tag{
+  position:relative;display:flex;align-items:center;gap:10px;
+  max-width:var(--max);margin:0 auto;width:100%;padding:0 20px 18px;
+  color:rgba(255,255,255,.6);
+}
+.hero-tag::before{content:"";width:8px;height:8px;background:rgba(255,255,255,.6);flex:none}
+@media(min-width:768px){
+  .hero{min-height:88vh}
+  .hero-content{padding:140px 24px 56px}
+  .hero-ctas{flex-direction:row;gap:16px;margin-top:40px}
+  .hero-ctas .btn{width:auto}
+  .hero-tag{padding:0 24px 24px}
+}
+
+/* ============ trust strip ============ */
+.trust{border-bottom:1px solid var(--line);background:var(--paper)}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;max-width:var(--max);margin:0 auto}
+.trust-cell{padding:20px;border-top:1px solid var(--line)}
+.trust-cell:nth-child(-n+2){border-top:none}
+.trust-cell:nth-child(even){border-left:1px solid var(--line)}
+.trust-cell .label{color:var(--steel);margin-bottom:8px}
+.trust-cell strong{font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.2;display:block}
+.trust-cell .sub{font-size:13px;color:var(--steel);margin-top:3px}
+.stars{display:inline-flex;gap:2px;margin-right:6px;vertical-align:-2px}
+.stars svg{width:15px;height:15px;fill:var(--accent)}
+@media(min-width:768px){
+  .trust-grid{grid-template-columns:repeat(4,1fr)}
+  .trust-cell{padding:30px 24px;border-top:none!important;border-left:1px solid var(--line)}
+  .trust-cell:first-child{border-left:none}
+  .trust-cell strong{font-size:20px}
+}
+
+/* ============ sections ============ */
+section{padding:64px 0}
+@media(min-width:768px){section{padding:112px 0}}
+.sec-head{max-width:62ch;margin-bottom:40px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head p{margin-top:16px}
+@media(min-width:768px){.sec-head{margin-bottom:64px}.sec-head .eyebrow{margin-bottom:20px}.sec-head p{margin-top:20px}}
+.band-chalk{background:var(--chalk)}
+.dark{background:var(--ink);color:#fff}
+.dark .lead{color:var(--fog)}
+.dark .eyebrow{color:var(--fog)}
+
+/* ============ services ============ */
+.svc-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.svc-card{background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:24px;transition:border-color .15s}
+.svc-card:hover{border-color:var(--ink)}
+.svc-card svg{width:28px;height:28px;stroke:var(--ink);margin-bottom:16px}
+.svc-card h3{margin-bottom:8px}
+.svc-card p{font-size:15px;color:var(--steel)}
+@media(min-width:640px){.svc-grid{grid-template-columns:1fr 1fr;gap:24px}.svc-card{padding:32px}}
+@media(min-width:1024px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ============ promise band ============ */
+.storm{position:relative;background:var(--ink);overflow:hidden;padding:72px 0}
+.storm-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 50%;filter:saturate(.85) contrast(1.05)}
+.storm-scrim{position:absolute;inset:0;background:linear-gradient(82deg,rgba(10,12,10,.92) 0%,rgba(10,12,10,.72) 55%,rgba(10,12,10,.45) 100%)}
+.storm-content{position:relative;max-width:var(--max);margin:0 auto;padding:0 20px}
+.storm .eyebrow{color:rgba(255,255,255,.78);margin-bottom:16px}
+.storm h2{color:#fff;max-width:18ch}
+.storm blockquote{margin-top:24px;max-width:52ch}
+.storm blockquote p{font-size:17px;line-height:1.6;color:rgba(255,255,255,.9)}
+.storm blockquote footer{margin-top:10px;color:rgba(255,255,255,.62)}
+.storm .btn{margin-top:32px;width:100%}
+@media(min-width:768px){
+  .storm{padding:112px 0}
+  .storm-content{padding:0 24px}
+  .storm .btn{width:auto}
+}
+
+/* ============ process ============ */
+.steps{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
+.step{padding:28px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:64px 1fr;gap:16px;align-items:start}
+.step-num{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:44px;line-height:1;
+  color:var(--ink);letter-spacing:-.01em;
+}
+.step h3{margin-bottom:6px}
+.step p{font-size:15px;color:var(--steel);max-width:52ch}
+.proof{
+  margin-top:40px;border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:2px;padding:24px;background:var(--chalk);
+}
+.proof p{font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.4}
+.proof footer{margin-top:10px;color:var(--steel)}
+@media(min-width:768px){
+  .step{grid-template-columns:96px 1fr;padding:36px 0}
+  .step-num{font-size:56px}
+  .proof{padding:32px;margin-top:56px}
+  .proof p{font-size:21px}
+}
+@media(min-width:1024px){
+  .steps{grid-template-columns:1fr 1fr;column-gap:64px}
+}
+
+/* ============ work gallery ============ */
+.work-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.work-card{border-radius:2px;overflow:hidden;border:1px solid var(--line);background:var(--paper)}
+.work-ph{overflow:hidden;aspect-ratio:4/3}
+.work-ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.92) contrast(1.04)}
+.work-cap{display:flex;align-items:center;gap:10px;padding:16px 18px;color:var(--steel)}
+.work-cap::before{content:"";width:8px;height:8px;background:var(--accent);flex:none}
+.work-quote{margin-top:32px;max-width:62ch}
+.work-quote .stars svg{width:16px;height:16px}
+.work-quote p{font-size:19px;line-height:1.55;letter-spacing:-.01em;font-weight:500;margin-top:12px}
+.work-quote footer{margin-top:12px;color:var(--steel)}
+@media(min-width:768px){
+  .work-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .work-quote{margin-top:48px}
+  .work-quote p{font-size:22px}
+}
+@media(min-width:1024px){
+  .work-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* ============ owner split ============ */
+.owner-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+.owner-photo{border-radius:2px;overflow:hidden;border:1px solid var(--line)}
+.owner-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 55%;filter:saturate(.92) contrast(1.04)}
+.owner-copy .eyebrow{margin-bottom:16px}
+.owner-copy h2{max-width:16ch}
+.owner-copy p{color:var(--steel);margin-top:16px;max-width:54ch}
+.owner-stats{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
+.stat-num{font-size:clamp(40px,11vw,72px);font-weight:700;line-height:1;letter-spacing:-.025em}
+.stat .label{color:var(--steel);margin-top:10px;max-width:16ch}
+@media(min-width:768px){
+  .owner-copy p{margin-top:20px}
+  .owner-stats{grid-template-columns:repeat(3,1fr);gap:0;margin-top:48px;padding-top:40px}
+  .owner-stats .stat{border-left:1px solid var(--line);padding-left:28px}
+  .owner-stats .stat:first-child{border-left:none;padding-left:0}
+}
+@media(min-width:1024px){
+  .owner-grid{grid-template-columns:0.95fr 1.05fr;gap:64px}
+  .owner-photo img{aspect-ratio:auto;min-height:520px}
+}
+
+/* ============ green commitment strip ============ */
+.mats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)}
+.mats-inner{max-width:var(--max);margin:0 auto;padding:32px 20px}
+.mats .label{color:var(--steel);margin-bottom:18px}
+.mats-row{display:grid;grid-template-columns:1fr;gap:0}
+.mat{padding:16px 0;border-top:1px solid var(--line)}
+.mat:first-child{border-top:none}
+.mat strong{font-size:19px;font-weight:700;letter-spacing:-.015em;display:block}
+.mat span{font-size:14px;color:var(--steel)}
+@media(min-width:768px){
+  .mats-inner{padding:40px 24px}
+  .mats-row{grid-template-columns:repeat(4,1fr);gap:24px}
+  .mat{border-top:none;border-left:1px solid var(--line);padding:8px 0 8px 24px}
+  .mat:first-child{border-left:none;padding-left:0}
+  .mat strong{font-size:20px}
+}
+
+/* ============ reviews ============ */
+.rev-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.rev-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:2px;padding:24px;display:flex;flex-direction:column}
+.rev-card .stars{margin-bottom:16px}
+.rev-quote{font-size:16px;line-height:1.6;color:rgba(255,255,255,.92);flex:1}
+.rev-meta{margin-top:24px;padding-top:16px;border-top:1px solid var(--line-dark)}
+.rev-name{font-weight:600;font-size:14px;color:#fff}
+.rev-src{display:block;margin-top:5px;color:var(--fog)}
+.rev-link{
+  display:inline-flex;align-items:center;gap:10px;margin-top:40px;min-height:44px;
+  font-weight:600;font-size:15px;color:#fff;border-bottom:1px solid var(--line-dark);transition:border-color .15s;
+}
+.rev-link:hover{border-color:#fff}
+.rev-link svg{stroke:currentColor}
+@media(min-width:640px){.rev-grid{grid-template-columns:1fr 1fr;gap:24px}.rev-card{padding:32px}}
+@media(min-width:1024px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ============ faq ============ */
+.faq-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
+.faq-photo{display:none;border-radius:2px;overflow:hidden}
+.faq-photo img{width:100%;height:100%;min-height:520px;object-fit:cover;filter:saturate(.92) contrast(1.04)}
+.faq-list{border-top:1px solid var(--line)}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list summary{
+  list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:20px 0;font-size:17px;font-weight:600;letter-spacing:-.01em;min-height:56px;
+}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";font-size:24px;font-weight:400;color:var(--steel);flex:none;line-height:1}
+.faq-list details[open] summary::after{content:"\2013"}
+.faq-list details p{padding:0 0 22px;color:var(--steel);max-width:58ch}
+@media(min-width:1024px){
+  .faq-grid{grid-template-columns:1fr 1.4fr;gap:64px}
+  .faq-photo{display:block}
+  .faq-list summary{font-size:19px;padding:24px 0}
+}
+
+/* ============ contact ============ */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:stretch}
+.c-row{padding:22px 0;border-top:1px solid var(--line)}
+.c-row:last-child{border-bottom:1px solid var(--line)}
+.c-row .label{color:var(--steel);margin-bottom:6px}
+.c-row p,.c-row a{font-size:17px;font-weight:500}
+.c-phone a{font-size:clamp(32px,9vw,44px);font-weight:700;letter-spacing:-.02em;line-height:1.1;display:inline-block;padding:4px 0}
+.c-phone a:hover{color:var(--accent)}
+.hours-tbl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:16px}
+.hours-tbl .d{color:var(--steel)}
+.map{border-radius:2px;overflow:hidden;border:1px solid var(--line);min-height:320px}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(1) contrast(1.05);transition:filter .3s}
+.map:hover iframe{filter:none}
+@media(min-width:1024px){
+  .contact-grid{grid-template-columns:1fr 1fr;gap:64px}
+  .map,.map iframe{min-height:460px}
+}
+
+/* ============ footer ============ */
+footer.site{background:var(--ink);color:#fff;padding:56px 0}
+.foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
+.foot-fact{margin-top:14px;color:var(--fog);font-size:15px;max-width:46ch}
+.foot-meta .label{color:var(--fog)}
+.foot-meta a{font-weight:600;font-size:18px;display:inline-block;padding:6px 0}
+.foot-meta a:hover{color:var(--fog)}
+.foot-legal{
+  margin-top:48px;padding-top:24px;border-top:1px solid var(--line-dark);
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--fog);
+}
+@media(min-width:768px){footer.site{padding:72px 0}}
+
+/* ============ mobile call bar ============ */
+.callbar{
+  display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;
+  background:var(--accent);color:#fff;height:60px;
+  align-items:center;justify-content:center;gap:10px;
+  font-weight:700;font-size:17px;letter-spacing:.01em;
+  box-shadow:0 -8px 24px rgba(0,0,0,.16);
+}
+.callbar svg{stroke:#fff}
+@media(min-width:768px){
+  .callbar{display:none}
+  body{padding-bottom:0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <p class="label">Family-owned &amp; operated<span class="tb-x"> &nbsp;&middot;&nbsp; Design &middot; Build &middot; Maintain</span></p>
+    <p class="label tb-r">Sandy &middot; Holladay &middot; Salt Lake Valley</p>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="wordmark" aria-label="Mott's Landscaping — home">
+      <span class="wm-name">Mott&rsquo;s<span>.</span></span>
+      <span class="wm-sub">Landscaping &amp; Maintenance &middot; Salt Lake City</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#process" class="nl-x">Process</a>
+      <a href="#work">Our Work</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:+18019155897" class="nav-call">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="num">(801) 915-5897</span><span class="word">Call</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO — real Mott's project: modern SLC home at dusk, full front landscape -->
+<section class="hero" style="padding:0">
+  <img class="hero-img" src="assets/harnsberger.jpg" alt="A modern Salt Lake City home at dusk with a full front-yard landscape installed by Mott's Landscaping — fresh sod, boulders, mulch beds, and water-wise plantings">
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="label eyebrow">Family-owned &middot; Salt Lake City, Utah</p>
+    <h1>Built with intention. Rooted in care.</h1>
+    <p class="lead">Mott&rsquo;s Landscaping designs, builds, and maintains yards that actually fit your life &mdash; and your lot. Detail-driven outdoor living for the Salt Lake Valley, with a free consultation and a detailed bid before we break ground.</p>
+    <div class="hero-ctas">
+      <a href="tel:+18019155897" class="btn btn-accent">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Free consultation &mdash; (801) 915-5897
+      </a>
+      <a href="#work" class="btn btn-ghost">See our work</a>
+    </div>
+  </div>
+  <p class="hero-tag label">Pictured: a Mott&rsquo;s front-yard install &mdash; Salt Lake Valley</p>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust" role="region" aria-label="Credentials and ratings">
+  <div class="trust-grid">
+    <div class="trust-cell">
+      <p class="label">Customer rating</p>
+      <strong><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>4.5</strong>
+      <p class="sub">90 Google reviews</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">What we do</p>
+      <strong>Design, Build &amp; Maintain</strong>
+      <p class="sub">One crew, start to finish</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Every project</p>
+      <strong>Free consultation</strong>
+      <p class="sub">Detailed bid before we break ground</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Our promise</p>
+      <strong>Zero-waste minded</strong>
+      <p class="sub">Water-wise, Utah-friendly plants</p>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="band-chalk" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">What we do</p>
+      <h2>Custom landscape design, installation &amp; year-round care.</h2>
+      <p class="lead">No cookie-cutter designs here. Every project is customized to your taste and your property&rsquo;s specific needs &mdash; balancing what you love with what actually works in Utah&rsquo;s climate.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v6"/><path d="M5 8l7 6 7-6"/><path d="M3 14h18"/><path d="M5 14v6h14v-6"/></svg>
+        <h3>Landscape Design &amp; Installation</h3>
+        <p>Full custom landscapes built from scratch &mdash; new installs, updates, and refreshes designed around your lot, your taste, and Utah&rsquo;s climate.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18"/><path d="M5 18l1.5-7h11L19 18"/><path d="M9 11l.5-3h5l.5 3"/></svg>
+        <h3>Patios &amp; Walkways</h3>
+        <p>Paver patios, flagstone paths, and stone walkways that tie the whole yard together and stand up to a Utah winter.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V9l8-6 8 6v12"/><path d="M4 9h16"/><path d="M9 21v-6h6v6"/></svg>
+        <h3>Outdoor Structures &amp; Lighting</h3>
+        <p>Pergolas, gazebos, and outdoor lighting &mdash; the features that turn a yard into a place you actually want to spend the evening.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-3-2.5-6-7-11-4.5 5-7 8-7 11a7 7 0 0 0 7 7z"/></svg>
+        <h3>Water Features</h3>
+        <p>Ponds, streams, and water features built into the landscape &mdash; a focal point that brings the whole yard to life.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4"/><path d="M12 22v-6"/><path d="M7 9a5 5 0 0 1 10 0c0 4-5 7-5 7s-5-3-5-7z"/><path d="M3 14c2 0 3 1 3 3"/><path d="M21 14c-2 0-3 1-3 3"/></svg>
+        <h3>Sprinklers &amp; Sod</h3>
+        <p>Sprinkler system installation and repair, plus fresh sod &mdash; the foundation of a healthy, water-wise lawn.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="M6 20V10"/><path d="M10 20V6"/><path d="M14 20v-9"/><path d="M18 20V8"/></svg>
+        <h3>Maintenance Programs</h3>
+        <p>Weekly mowing, trimming &amp; edging, spring &amp; fall clean-ups, aerating, power raking, mulch, and tree &amp; hedge pruning &mdash; year-round.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE / WATER-FEATURE BAND -->
+<section class="storm">
+  <img class="storm-img" src="assets/kalinin.jpg" alt="A Mott's Landscaping backyard at golden hour with fresh sod, a flagstone path, river-rock edging, and the Wasatch foothills behind">
+  <div class="storm-scrim" aria-hidden="true"></div>
+  <div class="storm-content">
+    <p class="label eyebrow">A yard that fits your life</p>
+    <h2>Detail-driven, start to finish.</h2>
+    <blockquote>
+      <p>&ldquo;Mott&rsquo;s is amazing! They show up &amp; go above and beyond to make my yard look beautiful.&rdquo;</p>
+      <footer class="label">Sharon Peake &mdash; Google review</footer>
+    </blockquote>
+    <a href="tel:+18019155897" class="btn btn-accent">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Book a free consultation
+    </a>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">How it works</p>
+      <h2>Designing together, building better.</h2>
+      <p class="lead">Every great landscape is grown from conversation. We work side by side with you, from the first walk-through to ongoing care.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <p class="step-num" aria-hidden="true">01</p>
+        <div>
+          <h3>Consultation</h3>
+          <p>An on-site walk with you to understand your vision, needs, and budget &mdash; then a detailed bid before anything begins.</p>
+        </div>
+      </div>
+      <div class="step">
+        <p class="step-num" aria-hidden="true">02</p>
+        <div>
+          <h3>Design</h3>
+          <p>We work with your designer or ours to develop a plan tailored to your property &mdash; no cookie-cutter layouts.</p>
+        </div>
+      </div>
+      <div class="step">
+        <p class="step-num" aria-hidden="true">03</p>
+        <div>
+          <h3>Installation</h3>
+          <p>Our experienced crew brings the landscape to life, using eco-conscious methods every step of the way.</p>
+        </div>
+      </div>
+      <div class="step">
+        <p class="step-num" aria-hidden="true">04</p>
+        <div>
+          <h3>Walkthrough &amp; maintenance</h3>
+          <p>We review the finished space with you in detail &mdash; then keep it thriving with ongoing care if you&rsquo;d like.</p>
+        </div>
+      </div>
+    </div>
+    <div class="proof">
+      <p>&ldquo;We did a complete re-landscape of our property. The experience with Mott&rsquo;s was great. Jordan, Jeff, and the whole crew&hellip;&rdquo;</p>
+      <footer class="label">jon brewer &mdash; Google review</footer>
+    </div>
+  </div>
+</section>
+
+<!-- OUR WORK -->
+<section class="band-chalk" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Recent work</p>
+      <h2>A living portfolio of possibility.</h2>
+      <p class="lead">Real Mott&rsquo;s projects around the Salt Lake Valley &mdash; lush, efficient, and uniquely theirs. Native plants, hardscape, and the kind of detail that lasts.</p>
+    </div>
+    <div class="work-grid">
+      <figure class="work-card">
+        <div class="work-ph"><img src="assets/farell.jpg" alt="A white cedar pergola over a flagstone patio and fire pit, built by Mott's Landscaping in a shaded Salt Lake side yard"></div>
+        <figcaption class="work-cap label">Pergola, fire pit &amp; flagstone patio</figcaption>
+      </figure>
+      <figure class="work-card">
+        <div class="work-ph"><img src="assets/acker.jpg" alt="A new paver patio with potted plantings and a fresh cedar fence in a Salt Lake City backyard by Mott's Landscaping"></div>
+        <figcaption class="work-cap label">Paver patio &amp; planting beds</figcaption>
+      </figure>
+      <figure class="work-card">
+        <div class="work-ph"><img src="assets/carver-huftalin.jpg" alt="A water-wise xeriscape front yard with boulders, gravel mulch, and drought-friendly plants by Mott's Landscaping"></div>
+        <figcaption class="work-cap label">Water-wise xeriscape front yard</figcaption>
+      </figure>
+      <figure class="work-card">
+        <div class="work-ph"><img src="assets/van-arnim.jpg" alt="A backyard with fresh sod, river-rock borders, a stamped-concrete patio, and a mature shade tree by Mott's Landscaping"></div>
+        <figcaption class="work-cap label">Sod, river-rock &amp; patio</figcaption>
+      </figure>
+      <figure class="work-card">
+        <div class="work-ph"><img src="assets/kennedy.jpg" alt="Layered planting beds with boulders, ornamental grasses, and seasonal color along a black metal fence, by Mott's Landscaping"></div>
+        <figcaption class="work-cap label">Planting beds &amp; seasonal color</figcaption>
+      </figure>
+      <figure class="work-card">
+        <div class="work-ph"><img src="assets/oakley-ranch.jpg" alt="A backyard natural pond and water feature with a white pergola and stone edging, built by Mott's Landscaping"></div>
+        <figcaption class="work-cap label">Backyard pond &amp; water feature</figcaption>
+      </figure>
+    </div>
+    <div class="work-quote">
+      <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+      <p>&ldquo;Jeff did a terrific job planning my yard, making recommendations, and answering all my questions!&rdquo;</p>
+      <footer class="label">Carolyn Dennis &mdash; Google review</footer>
+    </div>
+  </div>
+</section>
+
+<!-- OWNER / FAMILY -->
+<section id="about">
+  <div class="wrap">
+    <div class="owner-grid">
+      <div class="owner-photo">
+        <img src="assets/kalinin.jpg" alt="A finished Mott's Landscaping backyard at golden hour with fresh sod, a flagstone path, and the Wasatch foothills behind">
+      </div>
+      <div class="owner-copy">
+        <p class="label eyebrow">The Mott family</p>
+        <h2>Run by the people on your project.</h2>
+        <p>Mott&rsquo;s Landscaping is family-owned and detail-driven. Co-owner Jordan Mott oversees the installation side, and Jeff Mott leads design &mdash; both names customers single out review after review for being responsive, honest, and genuinely invested in the outcome.</p>
+        <p>We balance what you love with what works in Utah&rsquo;s climate, so your landscape isn&rsquo;t just pretty &mdash; it&rsquo;s practical. That&rsquo;s how Mott&rsquo;s holds a 4.5-star average across 90 Google reviews.</p>
+        <div class="owner-stats">
+          <div class="stat">
+            <p class="stat-num">4.5&#9733;</p>
+            <p class="label">Across 90 Google reviews</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num">90+</p>
+            <p class="label">Salt Lake Valley yards reviewed</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num">0</p>
+            <p class="label">Cookie-cutter designs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GREEN COMMITMENT STRIP -->
+<div class="mats" role="region" aria-label="Our green commitment">
+  <div class="mats-inner">
+    <p class="label">Built to last, built responsibly</p>
+    <div class="mats-row">
+      <div class="mat"><strong>Green waste composted</strong><span>Returned to the soil, not the landfill</span></div>
+      <div class="mat"><strong>Concrete reused</strong><span>Crushed and reborn in new designs</span></div>
+      <div class="mat"><strong>Water-wise plants</strong><span>Low-water, Utah-friendly choices</span></div>
+      <div class="mat"><strong>Local materials</strong><span>Zero waste wherever possible</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<section class="dark" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Reviews</p>
+      <h2>4.5 stars, earned one yard at a time.</h2>
+      <p class="lead">Every word below is quoted from a real Mott&rsquo;s Landscaping customer review on Google.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Mott&rsquo;s is amazing! They show up &amp; go above and beyond to make my yard look beautiful. Highly recommend&hellip;&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Sharon Peake</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Excellent outcome that matched our vision. Incredible hard work by Fidel, Gabby and Miriam!&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Todd Monson</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Working with Mott Landscaping was a Great experience. Owners Jordan and Jeff were helpful and confident&hellip;&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Budd Bingham</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Excellent work!! Parking strip and other areas look fantastic!! Oscar, Mario and the entire team were&hellip;&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Jan Hurst</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;I can&rsquo;t speak highly enough of the work Alfredo did in our backyard, including building a sitting wall&hellip;&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Hannah Moores</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Jeff and Jordan were so great to work with. Jordan came the day before the work was to start&hellip;&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Laura Christensen</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+    </div>
+    <a class="rev-link" href="https://www.google.com/maps/search/Mott%27s+Landscaping+Salt+Lake+City" target="_blank" rel="noopener">
+      Read all 90 reviews on Google
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-photo">
+      <img src="assets/bullough.jpg" alt="A gravel pathway winding through fresh mulch beds beside a white deck in a Salt Lake City backyard by Mott's Landscaping">
+    </div>
+    <div>
+      <div class="sec-head">
+        <p class="label eyebrow">Straight answers</p>
+        <h2>What homeowners ask first.</h2>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>How do I get started?</summary>
+          <p>Every project starts with a consultation &mdash; an on-site walk with you to understand your vision, needs, and budget. You&rsquo;ll get a detailed bid before we break ground, so let&rsquo;s talk through your ideas first.</p>
+        </details>
+        <details>
+          <summary>Do you do both design/build and maintenance?</summary>
+          <p>Yes. We design and install full custom landscapes, and we maintain them &mdash; whether we built your yard or you just need help keeping what you&rsquo;ve got looking its best year-round.</p>
+        </details>
+        <details>
+          <summary>What does a full landscape include?</summary>
+          <p>Water features, patios &amp; walkways, outdoor lighting, structures like pergolas and gazebos, sprinkler installs, sod, new installations, and refreshes &mdash; customized to your taste and your lot.</p>
+        </details>
+        <details>
+          <summary>Are your designs eco-conscious?</summary>
+          <p>We put sustainability into practice on every project: green waste gets composted and returned to the soil, concrete is crushed and reused, and we prioritize low-water, Utah-friendly plants. Nothing hits the landfill unless it absolutely has to.</p>
+        </details>
+        <details>
+          <summary>What maintenance services do you offer?</summary>
+          <p>Weekly mowing, trimming &amp; edging, sprinkler repairs, spring &amp; fall clean-ups, hauling and debris removal, lawn aerating &amp; power raking, soil &amp; mulch installation, and tree trimming and hedge pruning.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="band-chalk" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Free consultation</p>
+      <h2>Let&rsquo;s build something beautiful.</h2>
+      <p class="lead">Calling is the fastest way to reach us &mdash; tell us what your landscape needs and we&rsquo;ll handle the rest.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="c-row c-phone">
+          <p class="label">Call us</p>
+          <a href="tel:+18019155897">(801) 915-5897</a>
+        </div>
+        <div class="c-row">
+          <p class="label">Email</p>
+          <a href="mailto:mottslandscaping@me.com">mottslandscaping@me.com</a>
+        </div>
+        <div class="c-row">
+          <p class="label">Based in</p>
+          <p>8367 S Creek Hollow Cove, Sandy, UT 84093</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Service area</p>
+          <p>Salt Lake City &middot; Sandy &middot; Holladay &middot; the Salt Lake Valley</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Hours</p>
+          <div class="hours-tbl">
+            <span class="d">Mon&ndash;Fri</span><span>8:00 AM &ndash; 6:00 PM</span>
+            <span class="d">Saturday</span><span>Closed</span>
+            <span class="d">Sunday</span><span>Closed</span>
+          </div>
+        </div>
+      </div>
+      <div class="map">
+        <iframe src="https://maps.google.com/maps?q=Sandy+UT+84093&z=11&output=embed" title="Map showing Mott's Landscaping service area in the Salt Lake Valley, Utah" referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="wordmark" style="color:#fff">
+          <span class="wm-name">Mott&rsquo;s<span style="color:var(--accent)">.</span></span>
+          <span class="wm-sub" style="color:var(--fog)">Landscaping &amp; Maintenance &middot; Salt Lake City</span>
+        </div>
+        <p class="foot-fact">Family-owned, detail-driven landscaping for memorable outdoor living in the Salt Lake Valley. Design, build &amp; maintain &middot; 4.5&#9733; across 90 Google reviews.</p>
+      </div>
+      <div class="foot-meta">
+        <p class="label">Sandy, UT 84093 &middot; Serving the Salt Lake Valley</p>
+        <p style="margin-top:6px"><a href="tel:+18019155897">(801) 915-5897</a></p>
+      </div>
+    </div>
+    <div class="foot-legal label">
+      <span>&copy; 2026 Mott&rsquo;s Landscaping, LLC</span>
+      <span>Design &middot; Build &middot; Maintain &mdash; Salt Lake Valley</span>
+    </div>
+    <div class="foot-legal label" style="margin-top:0;border-top:none;padding-top:0">
+      <span>Website demo by Peak 11 Media</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+18019155897" class="callbar" aria-label="Call Mott's Landscaping at (801) 915-5897">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call &mdash; (801) 915-5897
+</a>
+
+</body>
+</html>
