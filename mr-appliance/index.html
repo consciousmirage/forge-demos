@@ -3,760 +3,244 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mr. Appliance of Salt Lake City — 24-Hour Appliance Repair, 4.7★ Across 1,400+ Reviews</title>
-<meta name="description" content="Salt Lake's most-reviewed appliance repair. Washers, dryers, fridges, ovens & more — fixed right, backed by the one-year Neighborly Done Right Promise. Open 24 hours. Call (801) 895-3356.">
+<title>Mr. Appliance of Salt Lake City | 24-Hour Appliance Repair, 4.7★ on Google</title>
+<meta name="description" content="Family-owned appliance repair in Salt Lake City — washers, dryers, fridges, ovens & more. Upfront flat-rate pricing, background-checked techs, open 24 hours, 1-year guarantee. 4.7★ across 1,400+ reviews. Call (801) 895-3356.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "ApplianceRepairService",
-  "name": "Mr. Appliance of Salt Lake City",
-  "telephone": "+18018953356",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "3565 S West Temple St",
-    "addressLocality": "Salt Lake City",
-    "addressRegion": "UT",
-    "addressCountry": "US"
-  },
-  "areaServed": ["Salt Lake City", "Holladay", "Murray", "Sandy", "Cottonwood Heights", "Millcreek", "South Salt Lake", "Taylorsville", "West Valley City", "Draper"],
-  "openingHours": "Mo-Su 00:00-23:59",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "reviewCount": "1454"
-  }
+  "@context":"https://schema.org","@type":"ApplianceRepairService",
+  "name":"Mr. Appliance of Salt Lake City","telephone":"+18018953356",
+  "address":{"@type":"PostalAddress","streetAddress":"3565 S West Temple St","addressLocality":"Salt Lake City","addressRegion":"UT","postalCode":"84119","addressCountry":"US"},
+  "areaServed":["Salt Lake City","Holladay","Murray","Sandy","Cottonwood Heights","Millcreek","South Salt Lake","Taylorsville","West Valley City","Draper"],
+  "openingHours":"Mo-Su 00:00-23:59",
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"1454"}
 }
 </script>
-<style>
-/* ============ tokens ============ */
-:root{
-  --ink:#16181d;
-  --ink-2:#1d2026;
-  --steel:#575c68;
-  --fog:#a6abb6;
-  --paper:#ffffff;
-  --chalk:#f4f5f7;
-  --line:#e5e7ec;
-  --line-dark:#2b2f38;
-  --accent:#d83a2f;
-  --accent-hover:#bb2c22;
-  --star:#f5a623;
-  --max:1200px;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  font-family:'Barlow',ui-sans-serif,system-ui,-apple-system,sans-serif;
-  font-size:16px;line-height:1.6;color:var(--ink);background:var(--paper);
-  -webkit-font-smoothing:antialiased;
-  padding-bottom:60px; /* mobile call bar */
-}
-img{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-
-/* ============ type voices (mobile-first) ============ */
-.label{
-  font-family:'Barlow Condensed',sans-serif;font-weight:600;
-  font-size:13px;letter-spacing:.14em;text-transform:uppercase;line-height:1.25;
-}
-.eyebrow{display:flex;align-items:center;gap:10px;color:var(--steel)}
-.eyebrow::before{content:"";width:18px;height:2px;background:var(--accent);flex:none}
-h1{font-size:clamp(37px,9.2vw,80px);font-weight:700;line-height:1.04;letter-spacing:-.026em}
-h2{font-size:clamp(30px,7.2vw,52px);font-weight:700;line-height:1.08;letter-spacing:-.022em}
-h3{font-size:20px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
-.lead{font-size:17px;color:var(--steel);max-width:56ch}
-@media(min-width:768px){.lead{font-size:18px}}
-
-/* ============ buttons ============ */
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;
-  font-weight:600;font-size:16px;letter-spacing:.01em;line-height:1.1;text-align:center;
-  min-height:56px;padding:0 26px;transition:background .15s,border-color .15s,color .15s;
-}
-.btn svg{flex:none}
-.btn-accent{background:var(--accent);color:#fff}
-.btn-accent:hover{background:var(--accent-hover)}
-.btn-ghost{border:1px solid rgba(255,255,255,.55);color:#fff}
-.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
-
-/* ============ topbar ============ */
-.topbar{background:var(--ink);color:var(--fog)}
-.topbar-inner{
-  max-width:var(--max);margin:0 auto;padding:9px 20px;
-  display:flex;justify-content:space-between;align-items:center;gap:16px;
-}
-.topbar .label{font-size:12px;letter-spacing:.12em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.topbar .tb-r{display:none}
-.topbar .tb-x{display:none}
-@media(min-width:768px){
-  .topbar .tb-r{display:block;flex:none}
-  .topbar .tb-x{display:inline}
-}
-
-/* ============ nav ============ */
-.nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
-.nav-inner{
-  height:64px;display:flex;align-items:center;gap:24px;
-  max-width:var(--max);margin:0 auto;padding:0 20px;
-}
-.wordmark{display:flex;flex-direction:column;line-height:1;min-width:0}
-.wm-name{
-  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;
-  letter-spacing:.03em;text-transform:uppercase;
-}
-.wm-name span{color:var(--accent)}
-.wm-sub{
-  font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;
-  letter-spacing:.18em;text-transform:uppercase;color:var(--steel);margin-top:4px;white-space:nowrap;
-}
-.nav-links{display:none;gap:28px;margin-left:auto}
-.nav-links a{font-weight:500;font-size:15px;color:var(--ink);padding:8px 0}
-.nav-links a:hover{color:var(--steel)}
-.nav-call{
-  margin-left:auto;display:inline-flex;align-items:center;gap:8px;
-  background:var(--accent);color:#fff;border-radius:999px;
-  font-weight:600;font-size:15px;min-height:44px;padding:0 18px;
-}
-.nav-call:hover{background:var(--accent-hover)}
-.nav-call .num{display:none}
-@media(min-width:480px){
-  .nav-call .num{display:inline}
-  .nav-call .word{display:none}
-}
-@media(min-width:768px){
-  .nav-links{display:flex;gap:18px}
-  .nav-links .nl-x{display:none}
-  .nav-call{margin-left:0}
-}
-@media(min-width:1024px){
-  .nav-links{gap:28px}
-  .nav-links .nl-x{display:block}
-  .nav-inner{height:68px;padding:0 24px}
-  .wm-name{font-size:26px}
-}
-
-/* ============ hero ============ */
-.hero{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:82svh;background:var(--ink);overflow:hidden}
-.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:saturate(.9) contrast(1.04)}
-.hero-scrim{position:absolute;inset:0;background:
-  linear-gradient(to top,rgba(16,18,23,.90) 0%,rgba(16,18,23,.40) 46%,rgba(16,18,23,.34) 100%),
-  linear-gradient(78deg,rgba(16,18,23,.84) 0%,rgba(16,18,23,.46) 55%,rgba(16,18,23,.14) 100%);
-}
-.hero-content{position:relative;width:100%;max-width:var(--max);margin:0 auto;padding:84px 20px 28px}
-.hero .eyebrow{color:rgba(255,255,255,.80);margin-bottom:18px}
-.hero h1{color:#fff;max-width:17ch}
-.hero .lead{color:rgba(255,255,255,.85);margin-top:18px}
-.hero-rating{display:flex;align-items:center;gap:11px;margin-top:24px;color:#fff}
-.hero-rating .stars{display:inline-flex;gap:2px}
-.hero-rating .stars svg{width:18px;height:18px;fill:var(--star)}
-.hero-rating b{font-weight:700}
-.hero-rating span{color:rgba(255,255,255,.72);font-size:15px}
-.hero-ctas{display:flex;flex-direction:column;gap:12px;margin-top:28px}
-.hero-ctas .btn{width:100%}
-.hero-tag{
-  position:relative;display:flex;align-items:center;gap:10px;
-  max-width:var(--max);margin:0 auto;width:100%;padding:0 20px 18px;
-  color:rgba(255,255,255,.6);
-}
-.hero-tag::before{content:"";width:8px;height:8px;background:var(--accent);flex:none}
-@media(min-width:768px){
-  .hero{min-height:88vh}
-  .hero-content{padding:140px 24px 56px}
-  .hero-ctas{flex-direction:row;gap:16px;margin-top:36px}
-  .hero-ctas .btn{width:auto}
-  .hero-tag{padding:0 24px 24px}
-}
-
-/* ============ trust strip ============ */
-.trust{border-bottom:1px solid var(--line);background:var(--paper)}
-.trust-grid{display:grid;grid-template-columns:1fr 1fr;max-width:var(--max);margin:0 auto}
-.trust-cell{padding:20px;border-top:1px solid var(--line)}
-.trust-cell:nth-child(-n+2){border-top:none}
-.trust-cell:nth-child(even){border-left:1px solid var(--line)}
-.trust-cell .label{color:var(--steel);margin-bottom:8px}
-.trust-cell strong{font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.2;display:block}
-.trust-cell .sub{font-size:13px;color:var(--steel);margin-top:3px}
-.stars{display:inline-flex;gap:2px;margin-right:6px;vertical-align:-2px}
-.stars svg{width:15px;height:15px;fill:var(--star)}
-@media(min-width:768px){
-  .trust-grid{grid-template-columns:repeat(4,1fr)}
-  .trust-cell{padding:30px 24px;border-top:none!important;border-left:1px solid var(--line)}
-  .trust-cell:first-child{border-left:none}
-  .trust-cell strong{font-size:20px}
-}
-
-/* ============ sections ============ */
-section{padding:64px 0}
-@media(min-width:768px){section{padding:112px 0}}
-.sec-head{max-width:62ch;margin-bottom:40px}
-.sec-head .eyebrow{margin-bottom:16px}
-.sec-head p{margin-top:16px}
-@media(min-width:768px){.sec-head{margin-bottom:64px}.sec-head .eyebrow{margin-bottom:20px}.sec-head p{margin-top:20px}}
-.band-chalk{background:var(--chalk)}
-.dark{background:var(--ink);color:#fff}
-.dark .lead{color:var(--fog)}
-.dark .eyebrow{color:var(--fog)}
-
-/* ============ services ============ */
-.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.svc-card{background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:20px 18px;transition:border-color .15s}
-.svc-card:hover{border-color:var(--ink)}
-.svc-card svg{width:26px;height:26px;stroke:var(--ink);margin-bottom:14px}
-.svc-card h3{margin-bottom:7px;font-size:17px}
-.svc-card p{font-size:14px;color:var(--steel)}
-@media(min-width:640px){.svc-grid{grid-template-columns:repeat(3,1fr);gap:20px}.svc-card{padding:28px 24px}.svc-card h3{font-size:20px}.svc-card p{font-size:15px}.svc-card svg{width:28px;height:28px;margin-bottom:16px}}
-@media(min-width:1040px){.svc-grid{grid-template-columns:repeat(3,1fr);gap:24px}.svc-card{padding:32px}}
-.svc-note{margin-top:24px;color:var(--steel);font-size:15px;display:flex;align-items:center;gap:10px}
-.svc-note::before{content:"";width:18px;height:2px;background:var(--accent);flex:none}
-@media(min-width:768px){.svc-note{margin-top:32px}}
-
-/* ============ promise band ============ */
-.storm{position:relative;background:var(--ink);overflow:hidden;padding:72px 0}
-.storm-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:saturate(.82) contrast(1.05)}
-.storm-scrim{position:absolute;inset:0;background:linear-gradient(82deg,rgba(16,18,23,.94) 0%,rgba(16,18,23,.76) 55%,rgba(16,18,23,.48) 100%)}
-.storm-content{position:relative;max-width:var(--max);margin:0 auto;padding:0 20px}
-.storm .eyebrow{color:rgba(255,255,255,.80);margin-bottom:16px}
-.storm h2{color:#fff;max-width:18ch}
-.storm blockquote{margin-top:24px;max-width:52ch}
-.storm blockquote p{font-size:17px;line-height:1.6;color:rgba(255,255,255,.9)}
-.storm blockquote footer{margin-top:10px;color:rgba(255,255,255,.62)}
-.storm .btn{margin-top:32px;width:100%}
-@media(min-width:768px){
-  .storm{padding:112px 0}
-  .storm-content{padding:0 24px}
-  .storm .btn{width:auto}
-}
-
-/* ============ process ============ */
-.steps{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
-.step{padding:28px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:64px 1fr;gap:16px;align-items:start}
-.step-num{
-  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:44px;line-height:1;
-  color:var(--accent);letter-spacing:-.01em;
-}
-.step h3{margin-bottom:6px}
-.step p{font-size:15px;color:var(--steel);max-width:52ch}
-.proof{
-  margin-top:40px;border:1px solid var(--line);border-left:3px solid var(--accent);
-  border-radius:2px;padding:24px;background:var(--chalk);
-}
-.proof p{font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.4}
-.proof footer{margin-top:10px;color:var(--steel)}
-@media(min-width:768px){
-  .step{grid-template-columns:96px 1fr;padding:36px 0}
-  .step-num{font-size:56px}
-  .proof{padding:32px;margin-top:56px}
-  .proof p{font-size:21px}
-}
-@media(min-width:1024px){
-  .steps{grid-template-columns:1fr 1fr;column-gap:64px}
-}
-
-/* ============ owner split ============ */
-.owner-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
-.owner-photo{border-radius:2px;overflow:hidden;border:1px solid var(--line)}
-.owner-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 50%;filter:saturate(.9) contrast(1.04)}
-.owner-copy .eyebrow{margin-bottom:16px}
-.owner-copy h2{max-width:16ch}
-.owner-copy p{color:var(--steel);margin-top:16px;max-width:54ch}
-.owner-stats{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
-.stat-num{font-size:clamp(40px,11vw,72px);font-weight:700;line-height:1;letter-spacing:-.025em}
-.stat .label{color:var(--steel);margin-top:10px;max-width:16ch}
-@media(min-width:768px){
-  .owner-copy p{margin-top:20px}
-  .owner-stats{grid-template-columns:repeat(3,1fr);gap:0;margin-top:48px;padding-top:40px}
-  .owner-stats .stat{border-left:1px solid var(--line);padding-left:28px}
-  .owner-stats .stat:first-child{border-left:none;padding-left:0}
-}
-@media(min-width:1024px){
-  .owner-grid{grid-template-columns:0.95fr 1.05fr;gap:64px}
-  .owner-photo img{aspect-ratio:auto;min-height:520px}
-}
-
-/* ============ credentials strip ============ */
-.mats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)}
-.mats-inner{max-width:var(--max);margin:0 auto;padding:32px 20px}
-.mats .label{color:var(--steel);margin-bottom:18px}
-.mats-row{display:grid;grid-template-columns:1fr;gap:0}
-.mat{padding:16px 0;border-top:1px solid var(--line)}
-.mat:first-child{border-top:none}
-.mat strong{font-size:21px;font-weight:700;letter-spacing:-.015em;display:block}
-.mat span{font-size:14px;color:var(--steel)}
-@media(min-width:768px){
-  .mats-inner{padding:40px 24px}
-  .mats-row{grid-template-columns:repeat(4,1fr);gap:24px}
-  .mat{border-top:none;border-left:1px solid var(--line);padding:8px 0 8px 24px}
-  .mat:first-child{border-left:none;padding-left:0}
-  .mat strong{font-size:23px}
-}
-
-/* ============ reviews ============ */
-.rev-grid{display:grid;grid-template-columns:1fr;gap:16px}
-.rev-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:2px;padding:24px;display:flex;flex-direction:column}
-.rev-card .stars{margin-bottom:16px}
-.rev-quote{font-size:16px;line-height:1.6;color:rgba(255,255,255,.92);flex:1}
-.rev-meta{margin-top:24px;padding-top:16px;border-top:1px solid var(--line-dark)}
-.rev-name{font-weight:600;font-size:14px;color:#fff}
-.rev-src{display:block;margin-top:5px;color:var(--fog)}
-.rev-link{
-  display:inline-flex;align-items:center;gap:10px;margin-top:40px;min-height:44px;
-  font-weight:600;font-size:15px;color:#fff;border-bottom:1px solid var(--line-dark);transition:border-color .15s;
-}
-.rev-link:hover{border-color:#fff}
-.rev-link svg{stroke:currentColor}
-@media(min-width:640px){.rev-grid{grid-template-columns:1fr 1fr;gap:24px}.rev-card{padding:32px}}
-@media(min-width:1024px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
-
-/* ============ faq ============ */
-.faq-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
-.faq-photo{display:none;border-radius:2px;overflow:hidden}
-.faq-photo img{width:100%;height:100%;min-height:520px;object-fit:cover;filter:saturate(.9) contrast(1.04)}
-.faq-list{border-top:1px solid var(--line)}
-.faq-list details{border-bottom:1px solid var(--line)}
-.faq-list summary{
-  list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;
-  padding:20px 0;font-size:17px;font-weight:600;letter-spacing:-.01em;min-height:56px;
-}
-.faq-list summary::-webkit-details-marker{display:none}
-.faq-list summary::after{content:"+";font-size:24px;font-weight:400;color:var(--steel);flex:none;line-height:1}
-.faq-list details[open] summary::after{content:"\2013"}
-.faq-list details p{padding:0 0 22px;color:var(--steel);max-width:58ch}
-@media(min-width:1024px){
-  .faq-grid{grid-template-columns:1fr 1.4fr;gap:64px}
-  .faq-photo{display:block}
-  .faq-list summary{font-size:19px;padding:24px 0}
-}
-
-/* ============ contact ============ */
-.contact-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:stretch}
-.c-row{padding:22px 0;border-top:1px solid var(--line)}
-.c-row:last-child{border-bottom:1px solid var(--line)}
-.c-row .label{color:var(--steel);margin-bottom:6px}
-.c-row p,.c-row a{font-size:17px;font-weight:500}
-.c-phone a{font-size:clamp(32px,9vw,44px);font-weight:700;letter-spacing:-.02em;line-height:1.1;display:inline-block;padding:4px 0}
-.c-phone a:hover{color:var(--accent-hover)}
-.hours-tbl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:16px}
-.hours-tbl .d{color:var(--steel)}
-.map{border-radius:2px;overflow:hidden;border:1px solid var(--line);min-height:320px}
-.map iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(1) contrast(1.05);transition:filter .3s}
-.map:hover iframe{filter:none}
-@media(min-width:1024px){
-  .contact-grid{grid-template-columns:1fr 1fr;gap:64px}
-  .map,.map iframe{min-height:460px}
-}
-
-/* ============ footer ============ */
-footer.site{background:var(--ink);color:#fff;padding:56px 0}
-.foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
-.foot-fact{margin-top:14px;color:var(--fog);font-size:15px;max-width:46ch}
-.foot-meta .label{color:var(--fog)}
-.foot-meta a{font-weight:600;font-size:18px;display:inline-block;padding:6px 0}
-.foot-meta a:hover{color:var(--fog)}
-.foot-legal{
-  margin-top:48px;padding-top:24px;border-top:1px solid var(--line-dark);
-  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--fog);
-}
-@media(min-width:768px){footer.site{padding:72px 0}}
-
-/* ============ mobile call bar ============ */
-.callbar{
-  display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;
-  background:var(--accent);color:#fff;height:60px;
-  align-items:center;justify-content:center;gap:10px;
-  font-weight:700;font-size:17px;letter-spacing:.01em;
-  box-shadow:0 -8px 24px rgba(0,0,0,.16);
-}
-.callbar svg{stroke:#fff}
-@media(min-width:768px){
-  .callbar{display:none}
-  body{padding-bottom:0}
-}
-</style>
-
-<!--p11-motion-css--><style>
-.svc-card,.rev-card,.review-card,.work-card{transition:transform .25s cubic-bezier(.2,.6,.2,1),box-shadow .25s cubic-bezier(.2,.6,.2,1),border-color .15s ease}
-.svc-card:hover,.rev-card:hover,.review-card:hover,.work-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px -12px rgba(16,18,23,.22)}
-.btn{transition:background .15s ease,border-color .15s ease,color .15s ease,transform .2s cubic-bezier(.2,.6,.2,1),box-shadow .2s cubic-bezier(.2,.6,.2,1)}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px -12px rgba(16,18,23,.35)}
-.btn:active{transform:translateY(0);box-shadow:none}
-.js-anim [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .55s cubic-bezier(.2,.6,.2,1),transform .55s cubic-bezier(.2,.6,.2,1);transition-delay:var(--reveal-delay,0ms);will-change:opacity,transform}
-.js-anim [data-reveal].is-in{opacity:1;transform:none;will-change:auto}
-@media (max-width:640px){.js-anim [data-reveal]{transform:translateY(12px);transition-duration:.45s}.svc-card:hover,.rev-card:hover,.review-card:hover,.work-card:hover,.btn:hover{transform:none;box-shadow:none}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto !important}.js-anim [data-reveal]{opacity:1 !important;transform:none !important;transition:none !important;will-change:auto}.svc-card,.rev-card,.review-card,.work-card,.btn{transition:border-color .15s ease,background .15s ease,color .15s ease !important}.svc-card:hover,.rev-card:hover,.review-card:hover,.work-card:hover,.btn:hover,.btn:active{transform:none !important;box-shadow:none !important}}
-</style><!--/p11-motion-css-->
 </head>
 <body>
 
-<div class="topbar">
-  <div class="topbar-inner">
-    <p class="label">Family-owned &amp; operated &nbsp;&middot;&nbsp; Open 24 hours<span class="tb-x"> &nbsp;&middot;&nbsp; Background-checked technicians</span></p>
-    <p class="label tb-r">Salt Lake Valley &middot; Holladay &amp; surrounding</p>
+<!-- UTILITY BAR -->
+<div class="utility">
+  <div class="utility-inner">
+    <span class="u-left">Open 24 hours&nbsp; &middot; &nbsp;Family-owned&nbsp; &middot; &nbsp;Background-checked technicians</span>
+    <a class="u-right" href="https://www.mrappliance.com/schedule-service/?utm_source=gmb&utm_medium=organic&utm_campaign=google_reserve&location=10307&rwg_token=AE37R_i1AhYbJe9FZ5Kl808wjkWy8cTZ0ImjMXbpr-ZuXMuxAnioe5TQEhtKRKS_M1hejPH1RBafeDzohVWyMcv7dSC15iwKFFgmGMdrDoJCobFVNb_zvTt1spDzTHgpWskyo-OdjG3-" target="_blank" rel="noopener">Schedule online <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
   </div>
 </div>
 
-<header class="nav">
-  <div class="nav-inner">
-    <a href="#" class="wordmark" aria-label="Mr. Appliance of Salt Lake City — home">
-      <span class="wm-name">Mr. Appliance<span>.</span></span>
-      <span class="wm-sub">Salt Lake City &middot; 18+ Years</span>
+<!-- HEADER -->
+<header class="head">
+  <div class="head-inner">
+    <a href="index.html" class="brand" aria-label="Mr. Appliance of Salt Lake City — home">
+      <span class="bn">Mr. Appliance<span class="dot" aria-hidden="true"></span></span>
+      <span class="bt">Salt Lake City</span>
     </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#services">Services</a>
-      <a href="#how" class="nl-x">How It Works</a>
-      <a href="#about">Why Us</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <a href="tel:+18018953356" class="nav-call">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <span class="num">(801) 895-3356</span><span class="word">Call</span>
-    </a>
+    <div class="head-cta">
+      <a href="tel:+18018953356" class="btn btn-ghost call-ghost" aria-label="Call (801) 895-3356">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call
+      </a>
+      <a href="https://www.mrappliance.com/schedule-service/?utm_source=gmb&utm_medium=organic&utm_campaign=google_reserve&location=10307&rwg_token=AE37R_i1AhYbJe9FZ5Kl808wjkWy8cTZ0ImjMXbpr-ZuXMuxAnioe5TQEhtKRKS_M1hejPH1RBafeDzohVWyMcv7dSC15iwKFFgmGMdrDoJCobFVNb_zvTt1spDzTHgpWskyo-OdjG3-" target="_blank" rel="noopener" class="btn btn-primary">Book online</a>
+    </div>
   </div>
+  <nav class="mnav" aria-label="Primary mobile">
+    <a href="index.html" class="active" aria-current="page">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-<main>
+<main class="js-reveal">
 
 <!-- HERO -->
-<section class="hero" style="padding:0">
-  <img class="hero-img" src="assets/washer-dryer.jpg" alt="A clean front-load washer and dryer in a tidy home laundry room">
-  <div class="hero-scrim" aria-hidden="true"></div>
-  <div class="hero-content">
-    <p class="label eyebrow">Family-owned &middot; Serving Salt Lake &amp; Holladay &middot; 18+ years</p>
-    <h1>Salt Lake&rsquo;s most-reviewed appliance repair.</h1>
-    <p class="lead">Washers, dryers, fridges, ovens and more &mdash; fixed right the first time and backed by our one-year Neighborly Done Right Promise. Upfront pricing, background-checked technicians, and we&rsquo;re open 24 hours.</p>
-    <div class="hero-rating">
-      <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
-      <b>4.7</b> <span>across 1,400+ Google reviews</span>
-    </div>
-    <div class="hero-ctas">
-      <a href="tel:+18018953356" class="btn btn-accent">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Call now — (801) 895-3356
-      </a>
-      <a href="#services" class="btn btn-ghost">What we fix</a>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow" data-reveal>Salt Lake City &amp; the valley</span>
+        <h1 data-reveal>Appliance acting up? We can have it fixed today.</h1>
+        <p class="lead" data-reveal>Washers, dryers, fridges, ovens and more — repaired right the first time by background-checked technicians, at an upfront flat-rate price. We&rsquo;re open 24 hours.</p>
+        <div class="rating-row" data-reveal>
+          <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+          <b>4.7</b><span class="rr-sub">across 1,400+ Google reviews</span>
+        </div>
+        <div class="hero-ctas" data-reveal>
+          <a href="https://www.mrappliance.com/schedule-service/?utm_source=gmb&utm_medium=organic&utm_campaign=google_reserve&location=10307&rwg_token=AE37R_i1AhYbJe9FZ5Kl808wjkWy8cTZ0ImjMXbpr-ZuXMuxAnioe5TQEhtKRKS_M1hejPH1RBafeDzohVWyMcv7dSC15iwKFFgmGMdrDoJCobFVNb_zvTt1spDzTHgpWskyo-OdjG3-" target="_blank" rel="noopener" class="btn btn-primary">Book online</a>
+          <a href="tel:+18018953356" class="btn btn-ghost">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call (801) 895-3356
+          </a>
+        </div>
+        <div class="chips" data-reveal>
+          <span class="chip"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Upfront pricing</span>
+          <span class="chip"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>1-year guarantee</span>
+          <span class="chip"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Open 24/7</span>
+        </div>
+      </div>
+
+      <div class="book-card" data-reveal>
+        <p class="bc-tag">Schedule your repair</p>
+        <h3>Book in under a minute</h3>
+        <p class="bc-sub">Pick a time online or call us — a technician arrives with a clear, flat-rate quote before any work starts.</p>
+        <div class="appliance-tags">
+          <span>Washer</span><span>Dryer</span><span>Refrigerator</span><span>Oven</span><span>Dishwasher</span>
+        </div>
+        <a href="https://www.mrappliance.com/schedule-service/?utm_source=gmb&utm_medium=organic&utm_campaign=google_reserve&location=10307&rwg_token=AE37R_i1AhYbJe9FZ5Kl808wjkWy8cTZ0ImjMXbpr-ZuXMuxAnioe5TQEhtKRKS_M1hejPH1RBafeDzohVWyMcv7dSC15iwKFFgmGMdrDoJCobFVNb_zvTt1spDzTHgpWskyo-OdjG3-" target="_blank" rel="noopener" class="btn btn-primary">Book online</a>
+        <p class="bc-call">or call <a href="tel:+18018953356">(801) 895-3356</a></p>
+      </div>
     </div>
   </div>
-  <p class="hero-tag label">Repairing every major appliance across the Salt Lake Valley &mdash; 24 hours a day</p>
 </section>
 
-<!-- TRUST STRIP -->
-<div class="trust" role="region" aria-label="Credentials and ratings">
-  <div class="trust-grid">
-    <div class="trust-cell">
-      <p class="label">Google rating</p>
-      <strong><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>4.7</strong>
-      <p class="sub">1,400+ Google reviews</p>
-    </div>
-    <div class="trust-cell">
-      <p class="label">In business</p>
-      <strong>18+ years</strong>
-      <p class="sub">Serving the Salt Lake Valley</p>
-    </div>
-    <div class="trust-cell">
-      <p class="label">Availability</p>
-      <strong>Open 24 hours</strong>
-      <p class="sub">Day, night &amp; weekends</p>
-    </div>
-    <div class="trust-cell">
-      <p class="label">Every repair</p>
-      <strong>1-Year Guarantee</strong>
-      <p class="sub">Neighborly Done Right Promise&reg;</p>
-    </div>
+<!-- BRAND STRIP -->
+<div class="brandstrip" data-reveal>
+  <div class="brandstrip-inner">
+    <span class="bs-label">We service all major brands</span>
+    <span class="bs-name">Whirlpool</span><span class="bs-name">GE</span><span class="bs-name">Samsung</span><span class="bs-name">LG</span><span class="bs-name">Maytag</span><span class="bs-name">KitchenAid</span><span class="bs-name">Frigidaire</span><span class="bs-name">Bosch</span><span class="bs-name">Sub-Zero</span><span class="bs-name">Viking</span>
   </div>
 </div>
 
-<!-- SERVICES -->
-<section class="band-chalk" id="services">
+<!-- SYMPTOM GRID -->
+<section>
   <div class="wrap">
     <div class="sec-head">
-      <p class="label eyebrow">What we fix</p>
-      <h2>Every major appliance in your home.</h2>
-      <p class="lead">From the fridge to the laundry room, we repair it all &mdash; expert service at an upfront price. If it runs in your kitchen or laundry room, chances are we&rsquo;ve fixed one before.</p>
+      <span class="eyebrow" data-reveal>What&rsquo;s going on?</span>
+      <h2 data-reveal>Tell us the symptom — we&rsquo;ve fixed it before.</h2>
+      <p class="lead" data-reveal>Most appliance trouble falls into a handful of patterns. Pick what&rsquo;s happening and we&rsquo;ll take it from there.</p>
     </div>
-    <div class="svc-grid">
-      <div class="svc-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="1.5"/><circle cx="12" cy="13" r="5"/><circle cx="12" cy="13" r="1.5"/><path d="M7 6h2"/></svg>
-        <h3>Washers</h3>
-        <p>Won&rsquo;t spin, won&rsquo;t drain, leaking or off-balance &mdash; we diagnose and fix front- and top-loaders fast.</p>
-      </div>
-      <div class="svc-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="1.5"/><circle cx="12" cy="13" r="5"/><path d="M9.5 13a2.5 2.5 0 0 1 2.5-2.5"/><path d="M7 6h2"/></svg>
-        <h3>Dryers</h3>
-        <p>No heat, no tumble, loud or taking forever to dry &mdash; gas and electric dryers serviced and repaired.</p>
-      </div>
-      <div class="svc-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="1.5"/><path d="M5 10h14"/><path d="M8.5 5.5v2"/><path d="M8.5 13v3"/></svg>
-        <h3>Refrigerators &amp; Freezers</h3>
-        <p>Not cooling, ice maker out, frost build-up or strange noises &mdash; keep your food cold and your fridge running.</p>
-      </div>
-      <div class="svc-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1.5"/><path d="M3 8h18"/><circle cx="7" cy="5.5" r="1"/><circle cx="11" cy="5.5" r="1"/><path d="M8 14.5h8"/></svg>
-        <h3>Ovens, Ranges &amp; Cooktops</h3>
-        <p>Burners not heating, uneven baking or a dead control board &mdash; gas and electric stoves, ovens and cooktops.</p>
-      </div>
-      <div class="svc-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="1.5"/><path d="M4 7h16"/><circle cx="8" cy="4.75" r="0.6"/><path d="M9 14a3 3 0 0 0 6 0"/></svg>
-        <h3>Dishwashers</h3>
-        <p>Not draining, not cleaning, leaking onto the floor &mdash; we pinpoint the issue and get it running like new.</p>
-      </div>
-      <div class="svc-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a10 10 0 1 0-10-10"/><path d="M2 12h4"/><path d="m12 7 0 5 3 2"/></svg>
-        <h3>24-Hour Service</h3>
-        <p>Appliance gone down at the worst possible time? We&rsquo;re open around the clock &mdash; call any hour, day or night.</p>
-      </div>
+    <div class="symptom-grid">
+      <a class="symptom" href="services.html" data-reveal>
+        <span class="si"><svg viewBox="0 0 24 24" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64A9 9 0 1 1 5.64 6.64"/><path d="M12 2v8"/></svg></span>
+        <span><h3>Won&rsquo;t turn on</h3><span class="s-sub">No power or dead controls</span></span>
+        <span class="s-arrow"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+      </a>
+      <a class="symptom" href="services.html" data-reveal>
+        <span class="si"><svg viewBox="0 0 24 24" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5S5 13 5 15a7 7 0 0 0 7 7z"/></svg></span>
+        <span><h3>Leaking</h3><span class="s-sub">Water on the floor</span></span>
+        <span class="s-arrow"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+      </a>
+      <a class="symptom" href="services.html" data-reveal>
+        <span class="si"><svg viewBox="0 0 24 24" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.5a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/></svg></span>
+        <span><h3>Not heating or cooling</h3><span class="s-sub">Fridge warm, oven cold</span></span>
+        <span class="s-arrow"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+      </a>
+      <a class="symptom" href="services.html" data-reveal>
+        <span class="si"><svg viewBox="0 0 24 24" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M16 9a3 3 0 0 1 0 6"/><path d="M19 6a7 7 0 0 1 0 12"/></svg></span>
+        <span><h3>Strange noises</h3><span class="s-sub">Banging, grinding, squealing</span></span>
+        <span class="s-arrow"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+      </a>
+      <a class="symptom" href="services.html" data-reveal>
+        <span class="si"><svg viewBox="0 0 24 24" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="m5 9 3 3"/><path d="m19 9-3 3"/><path d="M5 16h14l-2 5H7l-2-5z"/></svg></span>
+        <span><h3>Won&rsquo;t drain</h3><span class="s-sub">Standing water inside</span></span>
+        <span class="s-arrow"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+      </a>
+      <a class="symptom" href="services.html" data-reveal>
+        <span class="si"><svg viewBox="0 0 24 24" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
+        <span><h3>Error codes</h3><span class="s-sub">Flashing lights or beeps</span></span>
+        <span class="s-arrow"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+      </a>
     </div>
-    <p class="svc-note">All major makes &amp; models &mdash; Whirlpool, GE, Samsung, LG, Maytag, KitchenAid, Frigidaire, Bosch, Sub-Zero, Viking and more.</p>
   </div>
 </section>
 
-<!-- PROMISE BAND -->
-<section class="storm">
-  <img class="storm-img" src="assets/repair-tools.jpg" alt="Professional repair tools laid out on a workbench">
-  <div class="storm-scrim" aria-hidden="true"></div>
-  <div class="storm-content">
-    <p class="label eyebrow">The Neighborly Done Right Promise&reg;</p>
-    <h2>Fixed right, or we make it right.</h2>
-    <blockquote>
-      <p>Every repair is backed by a one-year guarantee on parts and service &mdash; and you get an upfront, flat-rate price before any work begins. No surprises, no overtime charges, no mess left behind.</p>
-      <footer class="label">18+ years &middot; 4.7&#9733; across 1,400+ reviews</footer>
-    </blockquote>
-    <a href="tel:+18018953356" class="btn btn-accent">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      Schedule a repair — (801) 895-3356
-    </a>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section id="how">
+<!-- STATS BAND -->
+<section class="band-charcoal">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="label eyebrow">How it works</p>
-      <h2>From broken to fixed, the easy way.</h2>
-      <p class="lead">No call center runaround. Book in minutes, get an upfront price, and have a courteous, background-checked technician on the job.</p>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <p class="step-num" aria-hidden="true">01</p>
-        <div>
-          <h3>Call or book — any hour</h3>
-          <p>Reach us at (801) 895-3356, 24 hours a day. Tell us what&rsquo;s acting up and we&rsquo;ll get you on the schedule fast.</p>
-        </div>
-      </div>
-      <div class="step">
-        <p class="step-num" aria-hidden="true">02</p>
-        <div>
-          <h3>Upfront price, no surprises</h3>
-          <p>A background-checked technician arrives on time, diagnoses the problem, and gives you a clear, flat-rate quote before any work starts.</p>
-        </div>
-      </div>
-      <div class="step">
-        <p class="step-num" aria-hidden="true">03</p>
-        <div>
-          <h3>Repaired right</h3>
-          <p>We service all major brands and carry common parts, so most repairs are done quickly &mdash; cleanly, and done right.</p>
-        </div>
-      </div>
-      <div class="step">
-        <p class="step-num" aria-hidden="true">04</p>
-        <div>
-          <h3>Backed for a full year</h3>
-          <p>Every part and every repair is covered by our one-year Neighborly Done Right Promise&reg;. Peace of mind, guaranteed.</p>
-        </div>
-      </div>
-    </div>
-    <div class="proof">
-      <p>&ldquo;Our technician, Randy, arrived on time and was very friendly and professional and honest. He got the job done quickly!&rdquo;</p>
-      <footer class="label">Cynthia Matherly &mdash; Google review</footer>
+    <div class="stats-band">
+      <div class="stat" data-reveal><div class="sn">18+</div><div class="sl">Years in business</div></div>
+      <div class="stat" data-reveal><div class="sn">4.7<span class="star">&#9733;</span></div><div class="sl">1,400+ Google reviews</div></div>
+      <div class="stat" data-reveal><div class="sn">24/7</div><div class="sl">Open around the clock</div></div>
+      <div class="stat" data-reveal><div class="sn">1&nbsp;yr</div><div class="sl">Done Right guarantee</div></div>
     </div>
   </div>
 </section>
 
 <!-- WHY US -->
-<section class="band-chalk" id="about">
+<section>
   <div class="wrap">
-    <div class="owner-grid">
-      <div class="owner-photo">
-        <img src="assets/kitchen-modern.jpg" alt="A modern home kitchen with a built-in wall oven, microwave and gas cooktop">
+    <div class="sec-head">
+      <span class="eyebrow" data-reveal>Why homeowners choose us</span>
+      <h2 data-reveal>Repair you can trust, the first time.</h2>
+      <p class="lead" data-reveal>Eighteen years serving Salt Lake homes has earned us a reputation built on honest pricing, courteous techs and work that holds up.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat" data-reveal>
+        <span class="fi"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg></span>
+        <h3>Upfront flat-rate pricing</h3>
+        <p>You get a clear, flat-rate quote before any work begins — no surprises, no overtime charges. Discounts available, too.</p>
       </div>
-      <div class="owner-copy">
-        <p class="label eyebrow">Why Salt Lake calls us first</p>
-        <h2>Eighteen years. 1,400+ five-star reasons.</h2>
-        <p>Mr. Appliance of Salt Lake City is a family-owned, locally operated business that has been keeping Salt Lake Valley homes running for more than 18 years &mdash; from Holladay to Sandy, Murray to Millcreek.</p>
-        <p>Every technician is background-checked and uniformed, every quote is upfront and flat-rate, and every repair is backed by our one-year guarantee. It&rsquo;s why more than 1,400 neighbors have rated us 4.7 stars &mdash; and why we answer the phone 24 hours a day.</p>
-        <div class="owner-stats">
-          <div class="stat">
-            <p class="stat-num">18+</p>
-            <p class="label">Years serving Salt Lake</p>
-          </div>
-          <div class="stat">
-            <p class="stat-num">4.7&#9733;</p>
-            <p class="label">Across 1,400+ reviews</p>
-          </div>
-          <div class="stat">
-            <p class="stat-num">24/7</p>
-            <p class="label">Open around the clock</p>
-          </div>
-        </div>
+      <div class="feat" data-reveal>
+        <span class="fi"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <h3>Background-checked techs</h3>
+        <p>Every uniformed technician is background-checked and trained — courteous professionals you&rsquo;ll feel comfortable having in your home.</p>
+      </div>
+      <div class="feat" data-reveal>
+        <span class="fi"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M9 21l3-3 3 3-1-7"/><path d="m10 14-1 7"/></svg></span>
+        <h3>One-year Done Right Promise</h3>
+        <p>Every repair is backed by the Neighborly Done Right Promise — a full year on parts and service. If it&rsquo;s not right, we make it right.</p>
+      </div>
+      <div class="feat" data-reveal>
+        <span class="fi"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <h3>Open 24 hours</h3>
+        <p>Appliances never break at a convenient time. Reach a real person any hour, day or night, including weekends and holidays.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CREDENTIALS STRIP -->
-<div class="mats" role="region" aria-label="Credentials and service facts">
-  <div class="mats-inner">
-    <p class="label">Trusted across the Salt Lake Valley</p>
-    <div class="mats-row">
-      <div class="mat"><strong>18+ years</strong><span>Family-owned &amp; operated</span></div>
-      <div class="mat"><strong>4.7&#9733; / 1,400+</strong><span>Google customer reviews</span></div>
-      <div class="mat"><strong>Open 24 hrs</strong><span>Day, night &amp; weekends</span></div>
-      <div class="mat"><strong>1-Year Guarantee</strong><span>On parts &amp; service</span></div>
-    </div>
-  </div>
-</div>
-
-<!-- REVIEWS -->
-<section class="dark" id="reviews">
+<!-- REVIEWS PREVIEW -->
+<section class="band-surface">
   <div class="wrap">
     <div class="sec-head">
-      <p class="label eyebrow">Reviews</p>
-      <h2>4.7 stars, earned one repair at a time.</h2>
-      <p class="lead">Every word below is quoted verbatim from a real Mr. Appliance of Salt Lake City customer.</p>
+      <span class="eyebrow" data-reveal>From our neighbors</span>
+      <h2 data-reveal>4.7 stars, earned one repair at a time.</h2>
+      <p class="lead" data-reveal>Every word below is quoted verbatim from a real Mr. Appliance of Salt Lake City customer on Google.</p>
     </div>
     <div class="rev-grid">
-      <div class="rev-card">
-        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
-        <p class="rev-quote">&ldquo;Our technician, Randy, arrived on time and was very friendly and professional and honest. He got the job done quickly!&rdquo;</p>
-        <div class="rev-meta">
-          <p class="rev-name">Cynthia Matherly</p>
-          <span class="rev-src label">Google review</span>
-        </div>
+      <div class="rev-card" data-reveal>
+        <span class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-q">&ldquo;Our technician, Randy, arrived on time and was very friendly and professional and honest. He got the job done quickly!&rdquo;</p>
+        <div class="rev-meta"><span class="rev-av" aria-hidden="true">C</span><div><div class="rev-name">Cynthia Matherly</div><div class="rev-src"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f2a93b" d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>Google review</div></div></div>
       </div>
-      <div class="rev-card">
-        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
-        <p class="rev-quote">&ldquo;Lee showed up about 30 minutes later! Diagnosed my problem, ordered my parts. Very professional young man!&rdquo;</p>
-        <div class="rev-meta">
-          <p class="rev-name">Karen Goode Anderson</p>
-          <span class="rev-src label">Google review</span>
-        </div>
+      <div class="rev-card" data-reveal>
+        <span class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-q">&ldquo;Lee showed up about 30 minutes later! Diagnosed my problem, ordered my parts. Very professional young man!&rdquo;</p>
+        <div class="rev-meta"><span class="rev-av" aria-hidden="true">K</span><div><div class="rev-name">Karen Goode Anderson</div><div class="rev-src"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f2a93b" d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>Google review</div></div></div>
       </div>
-      <div class="rev-card">
-        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
-        <p class="rev-quote">&ldquo;Great service! Ask for Edward, he knows his appliances. Very professional and a pleasure to work with.&rdquo;</p>
-        <div class="rev-meta">
-          <p class="rev-name">Chaunise Avanessian</p>
-          <span class="rev-src label">Google review</span>
-        </div>
-      </div>
-      <div class="rev-card">
-        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
-        <p class="rev-quote">&ldquo;Did a great job. Was in and out in an hr. Installed my supplied part and now the dishwasher is running well.&rdquo;</p>
-        <div class="rev-meta">
-          <p class="rev-name">Steve Junior</p>
-          <span class="rev-src label">Google review</span>
-        </div>
-      </div>
-      <div class="rev-card">
-        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
-        <p class="rev-quote">&ldquo;Very good experience! Prompt and knowledgeable. We would call them again.&rdquo;</p>
-        <div class="rev-meta">
-          <p class="rev-name">Christine Roundtree</p>
-          <span class="rev-src label">Google review</span>
-        </div>
-      </div>
-      <div class="rev-card">
-        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
-        <p class="rev-quote">&ldquo;Fast and professional &mdash; had the part needed right in his truck and finished the repair without an extra call-out fee. Couldn&rsquo;t ask for more.&rdquo;</p>
-        <div class="rev-meta">
-          <p class="rev-name">Verified Google customer</p>
-          <span class="rev-src label">Google review</span>
-        </div>
+      <div class="rev-card" data-reveal>
+        <span class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-q">&ldquo;Great service! Ask for Edward, he knows his appliances. Very professional and a pleasure to work with.&rdquo;</p>
+        <div class="rev-meta"><span class="rev-av" aria-hidden="true">C</span><div><div class="rev-name">Chaunise Avanessian</div><div class="rev-src"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f2a93b" d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>Google review</div></div></div>
       </div>
     </div>
-    <a class="rev-link" href="https://www.google.com/search?q=Mr.+Appliance+of+Salt+Lake+City+reviews" target="_blank" rel="noopener">
-      Read all 1,400+ reviews on Google
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-    </a>
+    <a class="rev-link" href="reviews.html" data-reveal>Read more reviews <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq">
-  <div class="wrap faq-grid">
-    <div class="faq-photo">
-      <img src="assets/oven-range.jpg" alt="A gas cooktop and range in a bright home kitchen">
-    </div>
-    <div>
-      <div class="sec-head">
-        <p class="label eyebrow">Straight answers</p>
-        <h2>What folks ask first.</h2>
-      </div>
-      <div class="faq-list">
-        <details open>
-          <summary>What appliances do you repair?</summary>
-          <p>Washers, dryers, refrigerators, freezers, dishwashers, ranges, stoves, ovens and cooktops &mdash; gas and electric. Don&rsquo;t see yours listed? Give us a call, we probably still repair it.</p>
-        </details>
-        <details>
-          <summary>Are you really open 24 hours?</summary>
-          <p>Yes. You can reach us at (801) 895-3356 any hour, day or night, including weekends &mdash; because appliances never break at a convenient time.</p>
-        </details>
-        <details>
-          <summary>How does your pricing work?</summary>
-          <p>We provide an upfront, flat-rate quote for the work that needs to be done before we start &mdash; so you approve the price first. No surprises and no overtime charges. Discounts are available, too.</p>
-        </details>
-        <details>
-          <summary>Is your work guaranteed?</summary>
-          <p>It is. Every repair is backed by our one-year Neighborly Done Right Promise&reg; covering both parts and service. If something isn&rsquo;t right, we make it right.</p>
-        </details>
-        <details>
-          <summary>What areas do you serve?</summary>
-          <p>The Salt Lake Valley &mdash; including Salt Lake City, Holladay, Murray, Sandy, Cottonwood Heights, Millcreek, South Salt Lake, Taylorsville, West Valley City and Draper.</p>
-        </details>
-        <details>
-          <summary>How do I get started?</summary>
-          <p>Call (801) 895-3356 any time and we&rsquo;ll get a background-checked technician scheduled to diagnose and fix your appliance.</p>
-        </details>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="band-chalk" id="contact">
+<!-- CLOSING CTA -->
+<section>
   <div class="wrap">
-    <div class="sec-head">
-      <p class="label eyebrow">Get it fixed</p>
-      <h2>We&rsquo;re ready when you are.</h2>
-      <p class="lead">Calling is the fastest way to reach us &mdash; we answer 24 hours a day and can usually get a technician out fast.</p>
-    </div>
-    <div class="contact-grid">
-      <div>
-        <div class="c-row c-phone">
-          <p class="label">Call us — 24 hours</p>
-          <a href="tel:+18018953356">(801) 895-3356</a>
-        </div>
-        <div class="c-row">
-          <p class="label">Service area</p>
-          <p>Salt Lake Valley &middot; Holladay &middot; Murray &middot; Sandy &middot; Millcreek &amp; more</p>
-        </div>
-        <div class="c-row">
-          <p class="label">Hours</p>
-          <div class="hours-tbl">
-            <span class="d">Mon&ndash;Sun</span><span>Open 24 hours</span>
-          </div>
-        </div>
-        <div class="c-row">
-          <p class="label">The promise</p>
-          <p>Upfront pricing &middot; Background-checked techs &middot; 1-year guarantee</p>
-        </div>
-      </div>
-      <div class="map">
-        <iframe src="https://maps.google.com/maps?q=Salt+Lake+City+UT&z=10&output=embed" title="Map showing Mr. Appliance of Salt Lake City service area" referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
+    <div class="cta-band" data-reveal>
+      <span class="eyebrow">Ready when you are</span>
+      <h2>Ready to get it fixed?</h2>
+      <p>Book online in under a minute or call us 24/7. A background-checked technician will arrive with an upfront price and the parts to get it done.</p>
+      <div class="cta-btns">
+        <a href="https://www.mrappliance.com/schedule-service/?utm_source=gmb&utm_medium=organic&utm_campaign=google_reserve&location=10307&rwg_token=AE37R_i1AhYbJe9FZ5Kl808wjkWy8cTZ0ImjMXbpr-ZuXMuxAnioe5TQEhtKRKS_M1hejPH1RBafeDzohVWyMcv7dSC15iwKFFgmGMdrDoJCobFVNb_zvTt1spDzTHgpWskyo-OdjG3-" target="_blank" rel="noopener" class="btn btn-primary">Book online</a>
+        <a href="tel:+18018953356" class="btn btn-ghost-light">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (801) 895-3356
+        </a>
       </div>
     </div>
   </div>
@@ -764,40 +248,66 @@ footer.site{background:var(--ink);color:#fff;padding:56px 0}
 
 </main>
 
-<footer class="site">
+<!-- FOOTER -->
+<footer class="footer">
   <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <div class="wordmark" style="color:#fff">
-          <span class="wm-name">Mr. Appliance<span style="color:var(--accent)">.</span></span>
-          <span class="wm-sub" style="color:var(--fog)">Salt Lake City &middot; Family-Owned</span>
-        </div>
-        <p class="foot-fact">Family-owned &amp; operated for 18+ years, serving the Salt Lake Valley. Open 24 hours, upfront pricing, and every repair backed by the one-year Neighborly Done Right Promise&reg; &mdash; 4.7&#9733; across 1,400+ reviews.</p>
+    <div class="footer-grid">
+      <div class="f-brand">
+        <span class="bn">Mr. Appliance<span class="dot" aria-hidden="true"></span></span>
+        <p class="f-blurb">Family-owned &amp; operated for 18+ years across the Salt Lake Valley. Open 24 hours, 4.7&#9733; across 1,400+ Google reviews — every repair backed by the one-year Done Right Promise.</p>
       </div>
-      <div class="foot-meta">
-        <p class="label">Salt Lake Valley, Utah</p>
-        <p style="margin-top:6px"><a href="tel:+18018953356">(801) 895-3356</a></p>
-        <p style="margin-top:2px"><span class="label" style="color:var(--fog)">Open 24 hours</span></p>
+      <div class="f-col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About / Why Us</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact &amp; Book</a>
+      </div>
+      <div class="f-col">
+        <h4>Get in touch</h4>
+        <a href="tel:+18018953356" class="f-phone">(801) 895-3356</a>
+        <p>Open 24 hours · Mon–Sun</p>
+        <p>Salt Lake City, Holladay, Murray, Sandy, Cottonwood Heights, Millcreek, South Salt Lake, Taylorsville, West Valley City &amp; Draper</p>
       </div>
     </div>
-    <div class="foot-legal label">
+    <div class="footer-legal">
       <span>&copy; 2026 Mr. Appliance of Salt Lake City</span>
       <span>Site by Peak 11 Media</span>
     </div>
   </div>
 </footer>
 
-<a href="tel:+18018953356" class="callbar" aria-label="Call Mr. Appliance of Salt Lake City at (801) 895-3356">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-  Call 24/7 — (801) 895-3356
-</a>
+<!-- MOBILE STICKY BAR -->
+<nav class="mbar" aria-label="Quick actions">
+  <a href="tel:+18018953356" class="mb-call" aria-label="Call (801) 895-3356">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call
+  </a>
+  <a href="https://www.mrappliance.com/schedule-service/?utm_source=gmb&utm_medium=organic&utm_campaign=google_reserve&location=10307&rwg_token=AE37R_i1AhYbJe9FZ5Kl808wjkWy8cTZ0ImjMXbpr-ZuXMuxAnioe5TQEhtKRKS_M1hejPH1RBafeDzohVWyMcv7dSC15iwKFFgmGMdrDoJCobFVNb_zvTt1spDzTHgpWskyo-OdjG3-" target="_blank" rel="noopener" class="mb-book" aria-label="Book online">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+    Book online
+  </a>
+</nav>
 
-
-<!--p11-motion-js--><script>
-(function(){var d=document,r=d.documentElement;var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;var T='main > section,main > div.trust,main > div.mats,.svc-card,.rev-card,.review-card,.work-card,.step,.trust-cell,.mat';
-function tag(){var p=d.querySelectorAll(T),o=[];for(var i=0;i<p.length;i++){var e=p[i];if(e.closest&&e.closest('.hero'))continue;if(e.classList&&e.classList.contains('hero'))continue;if(!e.hasAttribute('data-reveal'))e.setAttribute('data-reveal','');o.push(e)}return o}
-function run(){if(rm||!('IntersectionObserver' in window)){r.classList.add('js-anim');var a=tag();for(var i=0;i<a.length;i++)a[i].classList.add('is-in');return}r.classList.add('js-anim');var els=tag();var io=new IntersectionObserver(function(en){for(var i=0;i<en.length;i++){var e=en[i];if(!e.isIntersecting)continue;var el=e.target,sb=el.parentNode?el.parentNode.children:null,ix=0;if(sb&&el.className&&/-card|trust-cell|mat|step/.test(el.className)){for(var s=0;s<sb.length&&sb[s]!==el;s++){if(sb[s].hasAttribute&&sb[s].hasAttribute('data-reveal'))ix++}}el.style.setProperty('--reveal-delay',Math.min(ix,5)*60+'ms');el.classList.add('is-in');io.unobserve(el)}},{rootMargin:'0px 0px -10% 0px',threshold:.08});for(var j=0;j<els.length;j++)io.observe(els[j]);setTimeout(function(){var h=d.querySelectorAll('.js-anim [data-reveal]:not(.is-in)');for(var k=0;k<h.length;k++)h[k].classList.add('is-in')},3000)}
-if(d.readyState==='loading'){d.addEventListener('DOMContentLoaded',run)}else{run()}})();
-</script><!--/p11-motion-js-->
+<script>
+(function(){
+  var d=document,root=d.documentElement;
+  var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=[].slice.call(d.querySelectorAll('[data-reveal]'));
+  if(!els.length)return;
+  if(rm||!('IntersectionObserver' in window)){for(var i=0;i<els.length;i++)els[i].classList.add('in');return}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var el=e.target,sibs=el.parentNode?el.parentNode.children:[],ix=0;
+      for(var s=0;s<sibs.length;s++){if(sibs[s]===el)break;if(sibs[s].hasAttribute&&sibs[s].hasAttribute('data-reveal'))ix++}
+      el.style.setProperty('--rd',Math.min(ix,6)*70+'ms');
+      el.classList.add('in');io.unobserve(el);
+    });
+  },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(el){io.observe(el)});
+})();
+</script>
 </body>
 </html>
