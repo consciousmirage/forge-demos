@@ -134,6 +134,9 @@ section{padding:64px 0}
 .phero .lead{margin-top:18px}
 .phero-rating{display:flex;align-items:center;gap:10px;margin-top:22px;font-size:15px;color:var(--muted)}
 .phero-rating b{color:var(--ink);font-weight:700;font-size:17px}
+.phero-photo{margin-top:36px;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);position:relative;z-index:1}
+.phero-photo img{width:100%;aspect-ratio:21/9;object-fit:cover}
+@media(min-width:768px){.phero-photo{margin-top:42px}}
 
 /* ============ HOME hero ============ */
 .hero{padding:58px 0 48px;position:relative;overflow:hidden}
@@ -292,6 +295,34 @@ section{padding:64px 0}
 .split-copy p{color:var(--muted);margin-top:16px;font-size:16px;line-height:1.75;max-width:56ch}
 @media(min-width:980px){.split{grid-template-columns:1fr 1fr;gap:60px}.split-photo img{aspect-ratio:auto;min-height:480px}}
 .split.rev{direction:rtl}.split.rev>*{direction:ltr}
+
+/* ============ trust band (home image+text) ============ */
+.trust-band{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+.trust-photo{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.trust-photo img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.trust-copy .eyebrow{margin-bottom:18px}
+.trust-copy h2{margin-bottom:0}
+.trust-copy p{color:var(--muted);margin-top:16px;font-size:16px;line-height:1.75;max-width:56ch}
+.trust-points{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.trust-points span{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:500;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 14px}
+.trust-points svg{width:15px;height:15px;stroke:var(--red);fill:none}
+@media(min-width:980px){.trust-band{grid-template-columns:.95fr 1.05fr;gap:60px}.trust-photo img{aspect-ratio:auto;min-height:440px}}
+
+/* ============ photo gallery strip (home) ============ */
+.gallery-strip{display:grid;grid-template-columns:1fr;gap:16px;margin-top:40px}
+.gallery-strip figure{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.gallery-strip img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:transform .4s cubic-bezier(.2,.6,.2,1)}
+.gallery-strip figure:hover img{transform:scale(1.04)}
+@media(min-width:680px){.gallery-strip{grid-template-columns:repeat(3,1fr);gap:18px}}
+
+/* ============ craft portrait (about) ============ */
+.craft{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+.craft-photo{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);max-width:420px}
+.craft-photo img{width:100%;aspect-ratio:3/4;max-height:560px;object-fit:cover;object-position:center 28%}
+.craft-copy .eyebrow{margin-bottom:18px}
+.craft-copy h2{margin-bottom:0}
+.craft-copy p{color:var(--muted);margin-top:16px;font-size:16px;line-height:1.75;max-width:56ch}
+@media(min-width:980px){.craft{grid-template-columns:.8fr 1.2fr;gap:60px}.craft-photo{max-width:none}.craft-photo img{aspect-ratio:3/4;height:520px;max-height:520px}}
 
 /* ============ city list ============ */
 .cities{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
