@@ -306,7 +306,7 @@ section{padding:64px 0}
 .trust-points{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 .trust-points span{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:500;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 14px}
 .trust-points svg{width:15px;height:15px;stroke:var(--red);fill:none}
-@media(min-width:980px){.trust-band{max-width:760px;margin:0 auto;gap:0}}
+@media(min-width:980px){.trust-band{grid-template-columns:.9fr 1.1fr;gap:56px}.trust-photo img{aspect-ratio:4/3;max-height:400px}}
 @media(max-width:979px){.trust-photo img,.split-photo img{aspect-ratio:16/9;max-height:210px}.phero-photo img{aspect-ratio:16/9;max-height:200px}}
 
 /* ============ photo gallery strip (home) ============ */
