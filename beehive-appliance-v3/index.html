@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beehive Appliance Service — Salt Lake's Appliance Repair Since 1946, Family-Owned</title>
+<meta name="description" content="Family-owned appliance repair across the Salt Lake Valley since 1946. Washers, dryers, fridges, ovens, dishwashers & freezers — 4.3 stars on Google, BBB A+. Call (801) 523-8184.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ApplianceRepairService",
+  "name": "Beehive Appliance Service",
+  "telephone": "+18015238184",
+  "email": "info@beehiveappliance.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Salt Lake City",
+    "addressRegion": "UT",
+    "addressCountry": "US"
+  },
+  "areaServed": ["Salt Lake City", "Murray", "Sandy", "Draper", "West Jordan", "South Jordan", "Riverton", "Taylorsville", "Davis County", "Utah County"],
+  "foundingDate": "1946",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.3",
+    "reviewCount": "50"
+  }
+}
+</script>
+<style>
+/* ============ tokens ============ */
+:root{
+  --ink:#161412;
+  --ink-2:#211e1a;
+  --steel:#5d574e;
+  --fog:#aaa39a;
+  --paper:#ffffff;
+  --chalk:#f6f3ec;
+  --line:#e7e2d8;
+  --line-dark:#322d27;
+  --accent:#f0a500;
+  --accent-hover:#d59300;
+  --max:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Barlow',ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:16px;line-height:1.6;color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:60px; /* mobile call bar */
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* ============ type voices (mobile-first) ============ */
+.label{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;
+  font-size:13px;letter-spacing:.14em;text-transform:uppercase;line-height:1.25;
+}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--steel)}
+.eyebrow::before{content:"";width:18px;height:2px;background:var(--accent);flex:none}
+h1{font-size:clamp(37px,9.2vw,80px);font-weight:700;line-height:1.04;letter-spacing:-.026em}
+h2{font-size:clamp(30px,7.2vw,52px);font-weight:700;line-height:1.08;letter-spacing:-.022em}
+h3{font-size:20px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.lead{font-size:17px;color:var(--steel);max-width:56ch}
+@media(min-width:768px){.lead{font-size:18px}}
+
+/* ============ buttons ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;
+  font-weight:600;font-size:16px;letter-spacing:.01em;line-height:1.1;text-align:center;
+  min-height:56px;padding:0 26px;transition:background .15s,border-color .15s,color .15s;
+}
+.btn svg{flex:none}
+.btn-accent{background:var(--accent);color:var(--ink)}
+.btn-accent:hover{background:var(--accent-hover)}
+.btn-ghost{border:1px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+
+/* ============ topbar ============ */
+.topbar{background:var(--ink);color:var(--fog)}
+.topbar-inner{
+  max-width:var(--max);margin:0 auto;padding:9px 20px;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.topbar .label{font-size:12px;letter-spacing:.12em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .tb-r{display:none}
+.topbar .tb-x{display:none}
+@media(min-width:768px){
+  .topbar .tb-r{display:block;flex:none}
+  .topbar .tb-x{display:inline}
+}
+
+/* ============ nav ============ */
+.nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.nav-inner{
+  height:64px;display:flex;align-items:center;gap:24px;
+  max-width:var(--max);margin:0 auto;padding:0 20px;
+}
+.wordmark{display:flex;flex-direction:column;line-height:1;min-width:0}
+.wm-name{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;
+  letter-spacing:.03em;text-transform:uppercase;
+}
+.wm-name span{color:var(--accent)}
+.wm-sub{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--steel);margin-top:4px;white-space:nowrap;
+}
+.nav-links{display:none;gap:28px;margin-left:auto}
+.nav-links a{font-weight:500;font-size:15px;color:var(--ink);padding:8px 0}
+.nav-links a:hover{color:var(--steel)}
+.nav-call{
+  margin-left:auto;display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent);color:var(--ink);border-radius:999px;
+  font-weight:600;font-size:15px;min-height:44px;padding:0 18px;
+}
+.nav-call:hover{background:var(--accent-hover)}
+.nav-call .num{display:none}
+@media(min-width:480px){
+  .nav-call .num{display:inline}
+  .nav-call .word{display:none}
+}
+@media(min-width:768px){
+  .nav-links{display:flex;gap:18px}
+  .nav-links .nl-x{display:none}
+  .nav-call{margin-left:0}
+}
+@media(min-width:1024px){
+  .nav-links{gap:28px}
+  .nav-links .nl-x{display:block}
+  .nav-inner{height:68px;padding:0 24px}
+  .wm-name{font-size:26px}
+}
+
+/* ============ hero ============ */
+.hero{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:82svh;background:var(--ink);overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:saturate(.9) contrast(1.04)}
+.hero-scrim{position:absolute;inset:0;background:
+  linear-gradient(to top,rgba(14,12,10,.88) 0%,rgba(14,12,10,.36) 46%,rgba(14,12,10,.32) 100%),
+  linear-gradient(78deg,rgba(14,12,10,.82) 0%,rgba(14,12,10,.44) 55%,rgba(14,12,10,.14) 100%);
+}
+.hero-content{position:relative;width:100%;max-width:var(--max);margin:0 auto;padding:84px 20px 28px}
+.hero .eyebrow{color:rgba(255,255,255,.80);margin-bottom:18px}
+.hero h1{color:#fff;max-width:18ch}
+.hero .lead{color:rgba(255,255,255,.84);margin-top:18px}
+.hero-ctas{display:flex;flex-direction:column;gap:12px;margin-top:30px}
+.hero-ctas .btn{width:100%}
+.hero-tag{
+  position:relative;display:flex;align-items:center;gap:10px;
+  max-width:var(--max);margin:0 auto;width:100%;padding:0 20px 18px;
+  color:rgba(255,255,255,.6);
+}
+.hero-tag::before{content:"";width:8px;height:8px;background:rgba(255,255,255,.6);flex:none}
+@media(min-width:768px){
+  .hero{min-height:88vh}
+  .hero-content{padding:140px 24px 56px}
+  .hero-ctas{flex-direction:row;gap:16px;margin-top:40px}
+  .hero-ctas .btn{width:auto}
+  .hero-tag{padding:0 24px 24px}
+}
+
+/* ============ trust strip ============ */
+.trust{border-bottom:1px solid var(--line);background:var(--paper)}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;max-width:var(--max);margin:0 auto}
+.trust-cell{padding:20px;border-top:1px solid var(--line)}
+.trust-cell:nth-child(-n+2){border-top:none}
+.trust-cell:nth-child(even){border-left:1px solid var(--line)}
+.trust-cell .label{color:var(--steel);margin-bottom:8px}
+.trust-cell strong{font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.2;display:block}
+.trust-cell .sub{font-size:13px;color:var(--steel);margin-top:3px}
+.stars{display:inline-flex;gap:2px;margin-right:6px;vertical-align:-2px}
+.stars svg{width:15px;height:15px;fill:var(--accent)}
+@media(min-width:768px){
+  .trust-grid{grid-template-columns:repeat(4,1fr)}
+  .trust-cell{padding:30px 24px;border-top:none!important;border-left:1px solid var(--line)}
+  .trust-cell:first-child{border-left:none}
+  .trust-cell strong{font-size:20px}
+}
+
+/* ============ sections ============ */
+section{padding:64px 0}
+@media(min-width:768px){section{padding:112px 0}}
+.sec-head{max-width:62ch;margin-bottom:40px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head p{margin-top:16px}
+@media(min-width:768px){.sec-head{margin-bottom:64px}.sec-head .eyebrow{margin-bottom:20px}.sec-head p{margin-top:20px}}
+.band-chalk{background:var(--chalk)}
+.dark{background:var(--ink);color:#fff}
+.dark .lead{color:var(--fog)}
+.dark .eyebrow{color:var(--fog)}
+
+/* ============ services ============ */
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.svc-card{background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:20px 18px;transition:border-color .15s}
+.svc-card:hover{border-color:var(--ink)}
+.svc-card svg{width:26px;height:26px;stroke:var(--ink);margin-bottom:14px}
+.svc-card h3{margin-bottom:7px;font-size:17px}
+.svc-card p{font-size:14px;color:var(--steel)}
+@media(min-width:640px){.svc-grid{grid-template-columns:repeat(3,1fr);gap:20px}.svc-card{padding:28px 24px}.svc-card h3{font-size:20px}.svc-card p{font-size:15px}.svc-card svg{width:28px;height:28px;margin-bottom:16px}}
+@media(min-width:1040px){.svc-grid{grid-template-columns:repeat(3,1fr);gap:24px}.svc-card{padding:32px}}
+.svc-note{margin-top:24px;color:var(--steel);font-size:15px;display:flex;align-items:center;gap:10px}
+.svc-note::before{content:"";width:18px;height:2px;background:var(--accent);flex:none}
+@media(min-width:768px){.svc-note{margin-top:32px}}
+
+/* ============ heritage / promise band ============ */
+.storm{position:relative;background:var(--ink);overflow:hidden;padding:72px 0}
+.storm-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:saturate(.82) contrast(1.05)}
+.storm-scrim{position:absolute;inset:0;background:linear-gradient(82deg,rgba(14,12,10,.93) 0%,rgba(14,12,10,.74) 55%,rgba(14,12,10,.46) 100%)}
+.storm-content{position:relative;max-width:var(--max);margin:0 auto;padding:0 20px}
+.storm .eyebrow{color:rgba(255,255,255,.80);margin-bottom:16px}
+.storm h2{color:#fff;max-width:18ch}
+.storm blockquote{margin-top:24px;max-width:52ch}
+.storm blockquote p{font-size:17px;line-height:1.6;color:rgba(255,255,255,.9)}
+.storm blockquote footer{margin-top:10px;color:rgba(255,255,255,.62)}
+.storm .btn{margin-top:32px;width:100%}
+@media(min-width:768px){
+  .storm{padding:112px 0}
+  .storm-content{padding:0 24px}
+  .storm .btn{width:auto}
+}
+
+/* ============ process ============ */
+.steps{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
+.step{padding:28px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:64px 1fr;gap:16px;align-items:start}
+.step-num{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:44px;line-height:1;
+  color:var(--ink);letter-spacing:-.01em;
+}
+.step h3{margin-bottom:6px}
+.step p{font-size:15px;color:var(--steel);max-width:52ch}
+.proof{
+  margin-top:40px;border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:2px;padding:24px;background:var(--chalk);
+}
+.proof p{font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.4}
+.proof footer{margin-top:10px;color:var(--steel)}
+@media(min-width:768px){
+  .step{grid-template-columns:96px 1fr;padding:36px 0}
+  .step-num{font-size:56px}
+  .proof{padding:32px;margin-top:56px}
+  .proof p{font-size:21px}
+}
+@media(min-width:1024px){
+  .steps{grid-template-columns:1fr 1fr;column-gap:64px}
+}
+
+/* ============ owner split ============ */
+.owner-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+.owner-photo{border-radius:2px;overflow:hidden;border:1px solid var(--line)}
+.owner-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 50%;filter:saturate(.9) contrast(1.04)}
+.owner-copy .eyebrow{margin-bottom:16px}
+.owner-copy h2{max-width:16ch}
+.owner-copy p{color:var(--steel);margin-top:16px;max-width:54ch}
+.owner-stats{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
+.stat-num{font-size:clamp(40px,11vw,72px);font-weight:700;line-height:1;letter-spacing:-.025em}
+.stat .label{color:var(--steel);margin-top:10px;max-width:16ch}
+@media(min-width:768px){
+  .owner-copy p{margin-top:20px}
+  .owner-stats{grid-template-columns:repeat(3,1fr);gap:0;margin-top:48px;padding-top:40px}
+  .owner-stats .stat{border-left:1px solid var(--line);padding-left:28px}
+  .owner-stats .stat:first-child{border-left:none;padding-left:0}
+}
+@media(min-width:1024px){
+  .owner-grid{grid-template-columns:0.95fr 1.05fr;gap:64px}
+  .owner-photo img{aspect-ratio:auto;min-height:520px}
+}
+
+/* ============ credentials strip ============ */
+.mats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)}
+.mats-inner{max-width:var(--max);margin:0 auto;padding:32px 20px}
+.mats .label{color:var(--steel);margin-bottom:18px}
+.mats-row{display:grid;grid-template-columns:1fr;gap:0}
+.mat{padding:16px 0;border-top:1px solid var(--line)}
+.mat:first-child{border-top:none}
+.mat strong{font-size:21px;font-weight:700;letter-spacing:-.015em;display:block}
+.mat span{font-size:14px;color:var(--steel)}
+@media(min-width:768px){
+  .mats-inner{padding:40px 24px}
+  .mats-row{grid-template-columns:repeat(4,1fr);gap:24px}
+  .mat{border-top:none;border-left:1px solid var(--line);padding:8px 0 8px 24px}
+  .mat:first-child{border-left:none;padding-left:0}
+  .mat strong{font-size:23px}
+}
+
+/* ============ reviews ============ */
+.rev-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.rev-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:2px;padding:24px;display:flex;flex-direction:column}
+.rev-card .stars{margin-bottom:16px}
+.rev-quote{font-size:16px;line-height:1.6;color:rgba(255,255,255,.92);flex:1}
+.rev-meta{margin-top:24px;padding-top:16px;border-top:1px solid var(--line-dark)}
+.rev-name{font-weight:600;font-size:14px;color:#fff}
+.rev-src{display:block;margin-top:5px;color:var(--fog)}
+.rev-link{
+  display:inline-flex;align-items:center;gap:10px;margin-top:40px;min-height:44px;
+  font-weight:600;font-size:15px;color:#fff;border-bottom:1px solid var(--line-dark);transition:border-color .15s;
+}
+.rev-link:hover{border-color:#fff}
+.rev-link svg{stroke:currentColor}
+@media(min-width:640px){.rev-grid{grid-template-columns:1fr 1fr;gap:24px}.rev-card{padding:32px}}
+@media(min-width:1024px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ============ faq ============ */
+.faq-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
+.faq-photo{display:none;border-radius:2px;overflow:hidden}
+.faq-photo img{width:100%;height:100%;min-height:520px;object-fit:cover;filter:saturate(.9) contrast(1.04)}
+.faq-list{border-top:1px solid var(--line)}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list summary{
+  list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:20px 0;font-size:17px;font-weight:600;letter-spacing:-.01em;min-height:56px;
+}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";font-size:24px;font-weight:400;color:var(--steel);flex:none;line-height:1}
+.faq-list details[open] summary::after{content:"\2013"}
+.faq-list details p{padding:0 0 22px;color:var(--steel);max-width:58ch}
+@media(min-width:1024px){
+  .faq-grid{grid-template-columns:1fr 1.4fr;gap:64px}
+  .faq-photo{display:block}
+  .faq-list summary{font-size:19px;padding:24px 0}
+}
+
+/* ============ contact ============ */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:stretch}
+.c-row{padding:22px 0;border-top:1px solid var(--line)}
+.c-row:last-child{border-bottom:1px solid var(--line)}
+.c-row .label{color:var(--steel);margin-bottom:6px}
+.c-row p,.c-row a{font-size:17px;font-weight:500}
+.c-phone a{font-size:clamp(32px,9vw,44px);font-weight:700;letter-spacing:-.02em;line-height:1.1;display:inline-block;padding:4px 0}
+.c-phone a:hover{color:var(--accent-hover)}
+.hours-tbl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:16px}
+.hours-tbl .d{color:var(--steel)}
+.map{border-radius:2px;overflow:hidden;border:1px solid var(--line);min-height:320px}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(1) contrast(1.05);transition:filter .3s}
+.map:hover iframe{filter:none}
+@media(min-width:1024px){
+  .contact-grid{grid-template-columns:1fr 1fr;gap:64px}
+  .map,.map iframe{min-height:460px}
+}
+
+/* ============ footer ============ */
+footer.site{background:var(--ink);color:#fff;padding:56px 0}
+.foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
+.foot-fact{margin-top:14px;color:var(--fog);font-size:15px;max-width:46ch}
+.foot-meta .label{color:var(--fog)}
+.foot-meta a{font-weight:600;font-size:18px;display:inline-block;padding:6px 0}
+.foot-meta a:hover{color:var(--fog)}
+.foot-legal{
+  margin-top:48px;padding-top:24px;border-top:1px solid var(--line-dark);
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--fog);
+}
+@media(min-width:768px){footer.site{padding:72px 0}}
+
+/* ============ mobile call bar ============ */
+.callbar{
+  display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;
+  background:var(--accent);color:var(--ink);height:60px;
+  align-items:center;justify-content:center;gap:10px;
+  font-weight:700;font-size:17px;letter-spacing:.01em;
+  box-shadow:0 -8px 24px rgba(0,0,0,.16);
+}
+.callbar svg{stroke:var(--ink)}
+@media(min-width:768px){
+  .callbar{display:none}
+  body{padding-bottom:0}
+}
+</style>
+
+<!--p11-motion-css--><style>
+.svc-card,.rev-card,.review-card,.work-card{transition:transform .25s cubic-bezier(.2,.6,.2,1),box-shadow .25s cubic-bezier(.2,.6,.2,1),border-color .15s ease}
+.svc-card:hover,.rev-card:hover,.review-card:hover,.work-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px -12px rgba(14,12,10,.22)}
+.btn{transition:background .15s ease,border-color .15s ease,color .15s ease,transform .2s cubic-bezier(.2,.6,.2,1),box-shadow .2s cubic-bezier(.2,.6,.2,1)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px -12px rgba(14,12,10,.35)}
+.btn:active{transform:translateY(0);box-shadow:none}
+.js-anim [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .55s cubic-bezier(.2,.6,.2,1),transform .55s cubic-bezier(.2,.6,.2,1);transition-delay:var(--reveal-delay,0ms);will-change:opacity,transform}
+.js-anim [data-reveal].is-in{opacity:1;transform:none;will-change:auto}
+@media (max-width:640px){.js-anim [data-reveal]{transform:translateY(12px);transition-duration:.45s}.svc-card:hover,.rev-card:hover,.review-card:hover,.work-card:hover,.btn:hover{transform:none;box-shadow:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto !important}.js-anim [data-reveal]{opacity:1 !important;transform:none !important;transition:none !important;will-change:auto}.svc-card,.rev-card,.review-card,.work-card,.btn{transition:border-color .15s ease,background .15s ease,color .15s ease !important}.svc-card:hover,.rev-card:hover,.review-card:hover,.work-card:hover,.btn:hover,.btn:active{transform:none !important;box-shadow:none !important}}
+</style><!--/p11-motion-css-->
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <p class="label">Family-owned since 1946 &nbsp;&middot;&nbsp; BBB A+<span class="tb-x"> &nbsp;&middot;&nbsp; All major brands serviced</span></p>
+    <p class="label tb-r">Salt Lake Valley &middot; Davis &amp; Utah County</p>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="wordmark" aria-label="Beehive Appliance Service — home">
+      <span class="wm-name">Beehive<span>.</span></span>
+      <span class="wm-sub">Appliance Service &middot; Since 1946</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#how" class="nl-x">How It Works</a>
+      <a href="#about">Our Story</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:+18015238184" class="nav-call">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="num">(801) 523-8184</span><span class="word">Call</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" style="padding:0">
+  <img class="hero-img" src="assets/washer-dryer.jpg" alt="A clean front-load washing machine in a tidy home laundry room">
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="label eyebrow">Family-owned &middot; Salt Lake Valley &middot; Since 1946</p>
+    <h1>Salt Lake&rsquo;s appliance repair since 1946.</h1>
+    <p class="lead">Three generations fixing washers, dryers, fridges, ovens and more &mdash; honest work at a fair price, the way Grandpa taught us. One call and we&rsquo;ll &ldquo;bee&rdquo; right there.</p>
+    <div class="hero-ctas">
+      <a href="tel:+18015238184" class="btn btn-accent">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call now — (801) 523-8184
+      </a>
+      <a href="#services" class="btn btn-ghost">What we fix</a>
+    </div>
+  </div>
+  <p class="hero-tag label">Repairing every major appliance across the Wasatch Front for 80 years</p>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust" role="region" aria-label="Credentials and ratings">
+  <div class="trust-grid">
+    <div class="trust-cell">
+      <p class="label">Google rating</p>
+      <strong><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>4.3</strong>
+      <p class="sub">50 Google reviews</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">In business</p>
+      <strong>80 years</strong>
+      <p class="sub">Serving SLC since 1946</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Better Business Bureau</p>
+      <strong>A+ rating</strong>
+      <p class="sub">Established 1946</p>
+    </div>
+    <div class="trust-cell">
+      <p class="label">Brands serviced</p>
+      <strong>All major makes</strong>
+      <p class="sub">Whirlpool to Sub-Zero</p>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="band-chalk" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">What we fix</p>
+      <h2>Every major appliance in your home.</h2>
+      <p class="lead">From dishwashers to dryers, we repair it all &mdash; expert service at a reasonable price. If it runs in your kitchen or laundry room, chances are we&rsquo;ve fixed one before.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="1.5"/><circle cx="12" cy="13" r="5"/><circle cx="12" cy="13" r="1.5"/><path d="M7 6h2"/></svg>
+        <h3>Washers</h3>
+        <p>Won&rsquo;t spin, won&rsquo;t drain, leaking or off-balance &mdash; we diagnose and fix front- and top-loaders fast.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="1.5"/><circle cx="12" cy="13" r="5"/><path d="M9.5 13a2.5 2.5 0 0 1 2.5-2.5"/><path d="M7 6h2"/></svg>
+        <h3>Dryers</h3>
+        <p>No heat, no tumble, loud or taking forever to dry &mdash; gas and electric dryers serviced and repaired.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="1.5"/><path d="M5 10h14"/><path d="M8.5 5.5v2"/><path d="M8.5 13v3"/></svg>
+        <h3>Refrigerators &amp; Freezers</h3>
+        <p>Not cooling, ice maker out, frost build-up or strange noises &mdash; keep your food cold and your fridge running.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1.5"/><path d="M3 8h18"/><circle cx="7" cy="5.5" r="1"/><circle cx="11" cy="5.5" r="1"/><path d="M8 14.5h8"/></svg>
+        <h3>Ovens, Ranges &amp; Cooktops</h3>
+        <p>Burners not heating, uneven baking or a dead control board &mdash; gas and electric stoves, ovens and cooktops.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="1.5"/><path d="M4 7h16"/><circle cx="8" cy="4.75" r="0.6"/><path d="M9 14a3 3 0 0 0 6 0"/></svg>
+        <h3>Dishwashers</h3>
+        <p>Not draining, not cleaning, leaking onto the floor &mdash; we pinpoint the issue, often in minutes.</p>
+      </div>
+      <div class="svc-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M16 8.5h2"/><circle cx="9.5" cy="10.5" r="3"/><path d="M8 21h8"/></svg>
+        <h3>Microwaves &amp; More</h3>
+        <p>Built-in microwaves, trash compactors and garbage disposals too. Don&rsquo;t see it listed? We probably still repair it.</p>
+      </div>
+    </div>
+    <p class="svc-note">All major makes &amp; models &mdash; Whirlpool, GE, Maytag, Kenmore, KitchenAid, LG, Frigidaire, Sub-Zero, Viking, Wolf and more.</p>
+  </div>
+</section>
+
+<!-- HERITAGE / PROMISE BAND -->
+<section class="storm">
+  <img class="storm-img" src="assets/repair-tools.jpg" alt="Repair tools laid out on a workbench">
+  <div class="storm-scrim" aria-hidden="true"></div>
+  <div class="storm-content">
+    <p class="label eyebrow">Honesty &amp; integrity since 1946</p>
+    <h2>The way Grandpa taught us.</h2>
+    <blockquote>
+      <p>&ldquo;Dean is the best! He&rsquo;s honest and fair and will work hard to find the most cost effective way to fix your appliance. He will also let you know if replacing is the best option.&rdquo;</p>
+      <footer class="label">Sheri Casto &mdash; Google review</footer>
+    </blockquote>
+    <a href="tel:+18015238184" class="btn btn-accent">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Give us a buzz — (801) 523-8184
+    </a>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">How it works</p>
+      <h2>One call to a real person.</h2>
+      <p class="lead">No call center, no runaround. You reach the family that does the work &mdash; and you get a straight answer.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <p class="step-num" aria-hidden="true">01</p>
+        <div>
+          <h3>Give us a buzz</h3>
+          <p>Call (801) 523-8184 and Dean answers. Tell us what&rsquo;s acting up &mdash; he&rsquo;s usually able to size up the problem on the phone.</p>
+        </div>
+      </div>
+      <div class="step">
+        <p class="step-num" aria-hidden="true">02</p>
+        <div>
+          <h3>We come take a look</h3>
+          <p>Punctual, professional, and often pinpointing the issue in minutes &mdash; the benefit of decades doing this every day.</p>
+        </div>
+      </div>
+      <div class="step">
+        <p class="step-num" aria-hidden="true">03</p>
+        <div>
+          <h3>An honest recommendation</h3>
+          <p>We find the most cost-effective fix. And if your appliance isn&rsquo;t worth repairing, we&rsquo;ll tell you that too.</p>
+        </div>
+      </div>
+      <div class="step">
+        <p class="step-num" aria-hidden="true">04</p>
+        <div>
+          <h3>Fixed &amp; back in service</h3>
+          <p>We carry common parts and service all major brands, so most repairs are done quickly &mdash; and done right.</p>
+        </div>
+      </div>
+    </div>
+    <div class="proof">
+      <p>&ldquo;He was punctual, professional, and it quickly became apparent that he had years of experience, as he identified the problem fast by the sound.&rdquo;</p>
+      <footer class="label">Morelia H. &mdash; Google review (Local Guide)</footer>
+    </div>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="band-chalk" id="about">
+  <div class="wrap">
+    <div class="owner-grid">
+      <div class="owner-photo">
+        <img src="assets/kitchen-modern.jpg" alt="A modern home kitchen with a built-in wall oven, microwave and gas cooktop">
+      </div>
+      <div class="owner-copy">
+        <p class="label eyebrow">The Dahle family</p>
+        <h2>Eighty years, one promise.</h2>
+        <p>Beehive Appliance has been a family-owned business since 1946 &mdash; today run by Dean Dahle and family, who take great pride in honesty and integrity. We know the real value of a happy customer, and it shows in how we treat every call.</p>
+        <p>For 80 years we&rsquo;ve repaired major appliances along the Wasatch Front, all makes and models. From dishwashers to dryers, we repair it all &mdash; expert service at a reasonable price, the way Grandpa taught us.</p>
+        <div class="owner-stats">
+          <div class="stat">
+            <p class="stat-num">1946</p>
+            <p class="label">Family-owned since</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num">4.3&#9733;</p>
+            <p class="label">Across 50 Google reviews</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num">A+</p>
+            <p class="label">Better Business Bureau</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS STRIP -->
+<div class="mats" role="region" aria-label="Credentials and service facts">
+  <div class="mats-inner">
+    <p class="label">Trusted across the Salt Lake Valley</p>
+    <div class="mats-row">
+      <div class="mat"><strong>Since 1946</strong><span>Family-owned &amp; operated</span></div>
+      <div class="mat"><strong>BBB A+</strong><span>Better Business Bureau rating</span></div>
+      <div class="mat"><strong>4.3&#9733; / 50</strong><span>Google customer reviews</span></div>
+      <div class="mat"><strong>All major brands</strong><span>Whirlpool, GE, LG, Sub-Zero &amp; more</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<section class="dark" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Reviews</p>
+      <h2>4.3 stars, earned the old-fashioned way.</h2>
+      <p class="lead">Every word below is quoted verbatim from a real Beehive Appliance customer on Google.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Dean is awesome! He has been in business for many years and is very knowledgeable about appliance repair. He has great prices and gets your appliances fixed quickly.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Sheree Phung</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Dean was amazing! He has helped us a few times with different appliances and is so efficient and respectful. He fixed our fridges ice maker and pinpointed the issues with our washer in the matter of minutes. Definitely recommend!&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Margo Barton</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;We had Dean pay us a visit to check on our dishwasher. He was punctual, professional, and it quickly became apparent that he had years of experience&hellip; This is the 2nd time we have used this company and we are happy with their efficiency and honesty. We highly recommend.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Morelia H.</p>
+          <span class="rev-src label">Google review &middot; Local Guide</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;So grateful for Dean Dahle and Beehive Appliance Service!! Mom &amp; Dad&rsquo;s washer went out today, he promptly answered on my first call, he recommended what they need and Mom &amp; Dad will have a new washer on Friday!&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Aimee Christy</p>
+          <span class="rev-src label">Google review &middot; Local Guide</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Dean was so helpful as we had to repair both our washer and dryer within a month of each repair. He helped us in a way most people wouldn&rsquo;t. I highly recommend Beehive Appliance Service!&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Kevan Talbot</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+      <div class="rev-card">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <p class="rev-quote">&ldquo;Dean came out to fix my washing machine. The unit is 15 years old, and the cost to fix was almost as much as a new one, so Dean recommended that I not fix it and buy a new one&hellip; Honesty is a good policy, I&rsquo;ll call Dean again.&rdquo;</p>
+        <div class="rev-meta">
+          <p class="rev-name">Kevin Coyle</p>
+          <span class="rev-src label">Google review</span>
+        </div>
+      </div>
+    </div>
+    <a class="rev-link" href="https://www.google.com/maps/place/Beehive+Appliance+Service/@40.6550246,-111.8481184,10z/data=!4m8!3m7!1s0x87527dc19915fac3:0x1eb7fd390820cf19!9m1!1b1" target="_blank" rel="noopener">
+      Read all 50 reviews on Google
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-photo">
+      <img src="assets/oven-range.jpg" alt="A gas cooktop and range in a bright home kitchen">
+    </div>
+    <div>
+      <div class="sec-head">
+        <p class="label eyebrow">Straight answers</p>
+        <h2>What folks ask first.</h2>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>What appliances do you repair?</summary>
+          <p>Washers, dryers, refrigerators, freezers, dishwashers, ranges, stoves, ovens, cooktops, microwaves, trash compactors and disposals. Don&rsquo;t see yours listed? We probably still repair it &mdash; just give us a call.</p>
+        </details>
+        <details>
+          <summary>What brands do you service?</summary>
+          <p>All major makes and models &mdash; Whirlpool, GE, Maytag, Kenmore, KitchenAid, LG, Frigidaire, Electrolux, Sub-Zero, Viking, Wolf, Thermador and many more.</p>
+        </details>
+        <details>
+          <summary>What areas do you cover?</summary>
+          <p>The Salt Lake Valley, Southern Davis County and Northern Utah County &mdash; including Salt Lake City, Murray, Sandy, Draper, West Jordan, South Jordan, Riverton and Taylorsville.</p>
+        </details>
+        <details>
+          <summary>Will you tell me if it&rsquo;s not worth fixing?</summary>
+          <p>Yes. Customers thank us for this in review after review &mdash; if repairing your appliance would cost about as much as replacing it, we&rsquo;ll be straight with you and say so.</p>
+        </details>
+        <details>
+          <summary>How do I get started?</summary>
+          <p>Give us a buzz at (801) 523-8184. Dean answers, talks through what&rsquo;s wrong, and gets you scheduled &mdash; and we&rsquo;ll &ldquo;bee&rdquo; right there.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="band-chalk" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label eyebrow">Get it fixed</p>
+      <h2>Give us a buzz.</h2>
+      <p class="lead">Calling is the fastest way to reach us &mdash; the person who answers is part of the family that does the work.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="c-row c-phone">
+          <p class="label">Call us</p>
+          <a href="tel:+18015238184">(801) 523-8184</a>
+        </div>
+        <div class="c-row">
+          <p class="label">Email</p>
+          <a href="mailto:info@beehiveappliance.com">info@beehiveappliance.com</a>
+        </div>
+        <div class="c-row">
+          <p class="label">Service area</p>
+          <p>Salt Lake Valley &middot; Southern Davis County &middot; Northern Utah County</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Cities we serve</p>
+          <p>Salt Lake City, Murray, Sandy, Draper, West Jordan, South Jordan, Riverton, Taylorsville &amp; more</p>
+        </div>
+        <div class="c-row">
+          <p class="label">Hours</p>
+          <div class="hours-tbl">
+            <span class="d">Mon&ndash;Fri</span><span>Regular business hours &mdash; call to schedule</span>
+            <span class="d">Sat&ndash;Sun</span><span>Closed</span>
+          </div>
+        </div>
+      </div>
+      <div class="map">
+        <iframe src="https://maps.google.com/maps?q=Salt+Lake+City+UT&z=10&output=embed" title="Map showing Beehive Appliance Service area across the Salt Lake Valley" referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="wordmark" style="color:#fff">
+          <span class="wm-name">Beehive<span style="color:var(--accent)">.</span></span>
+          <span class="wm-sub" style="color:var(--fog)">Appliance Service &middot; Salt Lake City</span>
+        </div>
+        <p class="foot-fact">Family-owned &amp; operated since 1946 by the Dahle family. Repairing major appliances along the Wasatch Front for 80 years &mdash; BBB A+, 4.3&#9733; on Google.</p>
+      </div>
+      <div class="foot-meta">
+        <p class="label">Salt Lake Valley, Utah</p>
+        <p style="margin-top:6px"><a href="tel:+18015238184">(801) 523-8184</a></p>
+        <p style="margin-top:2px"><a href="mailto:info@beehiveappliance.com" style="font-size:15px;color:var(--fog)">info@beehiveappliance.com</a></p>
+      </div>
+    </div>
+    <div class="foot-legal label">
+      <span>&copy; 2026 Beehive Appliance Service</span>
+      <span>Site by Peak 11 Media</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+18015238184" class="callbar" aria-label="Call Beehive Appliance Service at (801) 523-8184">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call — (801) 523-8184
+</a>
+
+
+<!--p11-motion-js--><script>
+(function(){var d=document,r=d.documentElement;var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;var T='main > section,main > div.trust,main > div.mats,.svc-card,.rev-card,.review-card,.work-card,.step,.trust-cell,.mat';
+function tag(){var p=d.querySelectorAll(T),o=[];for(var i=0;i<p.length;i++){var e=p[i];if(e.closest&&e.closest('.hero'))continue;if(e.classList&&e.classList.contains('hero'))continue;if(!e.hasAttribute('data-reveal'))e.setAttribute('data-reveal','');o.push(e)}return o}
+function run(){if(rm||!('IntersectionObserver' in window)){r.classList.add('js-anim');var a=tag();for(var i=0;i<a.length;i++)a[i].classList.add('is-in');return}r.classList.add('js-anim');var els=tag();var io=new IntersectionObserver(function(en){for(var i=0;i<en.length;i++){var e=en[i];if(!e.isIntersecting)continue;var el=e.target,sb=el.parentNode?el.parentNode.children:null,ix=0;if(sb&&el.className&&/-card|trust-cell|mat|step/.test(el.className)){for(var s=0;s<sb.length&&sb[s]!==el;s++){if(sb[s].hasAttribute&&sb[s].hasAttribute('data-reveal'))ix++}}el.style.setProperty('--reveal-delay',Math.min(ix,5)*60+'ms');el.classList.add('is-in');io.unobserve(el)}},{rootMargin:'0px 0px -10% 0px',threshold:.08});for(var j=0;j<els.length;j++)io.observe(els[j]);setTimeout(function(){var h=d.querySelectorAll('.js-anim [data-reveal]:not(.is-in)');for(var k=0;k<h.length;k++)h[k].classList.add('is-in')},3000)}
+if(d.readyState==='loading'){d.addEventListener('DOMContentLoaded',run)}else{run()}})();
+</script><!--/p11-motion-js-->
+</body>
+</html>
