@@ -307,6 +307,7 @@ section{padding:64px 0}
 .trust-points span{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:500;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 14px}
 .trust-points svg{width:15px;height:15px;stroke:var(--red);fill:none}
 @media(min-width:980px){.trust-band{grid-template-columns:1fr 1.05fr;gap:60px}.trust-photo img{aspect-ratio:3/2;max-height:400px}}
+@media(max-width:979px){.trust-photo img,.split-photo img{aspect-ratio:16/9;max-height:210px}.phero-photo img{aspect-ratio:16/9;max-height:200px}}
 
 /* ============ photo gallery strip (home) ============ */
 .gallery-strip{display:grid;grid-template-columns:1fr;gap:16px;margin-top:40px}
