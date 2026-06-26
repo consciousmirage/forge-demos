@@ -8,9 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=1">
+<link rel="stylesheet" href="style.css?v=2">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"GeneralContractor","name":"Empire Builds","areaServed":["Salt Lake City","Sandy","Murray","West Valley City","West Jordan","Draper","Holladay","Millcreek"],"address":{"@type":"PostalAddress","addressLocality":"Salt Lake City","addressRegion":"UT","addressCountry":"US"},"openingHours":"Mo-Sa 08:00-18:00","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"1"},"knowsAbout":["Flooring","Drywall","Bathroom Remodeling","Kitchen Remodeling","Home Additions","Fire and Water Damage Rebuilds"]}
+{"@context":"https://schema.org","@type":"GeneralContractor","name":"Empire Builds","areaServed":["Salt Lake City","Sandy","Murray","West Valley City","West Jordan","Draper","Holladay","Millcreek"],"address":{"@type":"PostalAddress","addressLocality":"Salt Lake City","addressRegion":"UT","addressCountry":"US"},"openingHours":"Mo-Sa 08:00-18:00","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0"},"knowsAbout":["Flooring","Drywall","Bathroom Remodeling","Kitchen Remodeling","Home Additions","Fire and Water Damage Rebuilds"]}
 </script>
 </head>
 <body>
@@ -115,19 +115,29 @@
 <script>
 (function(){
   var d=document,rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function setFinal(el){var cs=el.querySelectorAll?el.querySelectorAll('.count'):[];for(var c=0;c<cs.length;c++)cs[c].textContent=cs[c].dataset.to+(cs[c].dataset.suffix||'');}
+  function countUp(el){var t=+el.dataset.to,s=el.dataset.suffix||'',dec=el.dataset.dec?+el.dataset.dec:0,st=performance.now();
+    (function f(now){var p=Math.min((now-st)/900,1),v=(t*(1-Math.pow(1-p,3)));el.textContent=v.toFixed(dec)+s;if(p<1)requestAnimationFrame(f);})(st);}
   var els=[].slice.call(d.querySelectorAll('[data-reveal]'));
-  if(!els.length)return;
-  if(rm||!('IntersectionObserver' in window)){for(var i=0;i<els.length;i++)els[i].classList.add('in');return}
+  if(rm||!('IntersectionObserver' in window)){for(var i=0;i<els.length;i++){els[i].classList.add('in');setFinal(els[i]);}return}
   var io=new IntersectionObserver(function(entries){
     entries.forEach(function(e){
       if(!e.isIntersecting)return;
       var el=e.target,sibs=el.parentNode?el.parentNode.children:[],ix=0;
       for(var s=0;s<sibs.length;s++){if(sibs[s]===el)break;if(sibs[s].hasAttribute&&sibs[s].hasAttribute('data-reveal'))ix++}
       el.style.setProperty('--rd',Math.min(ix,6)*70+'ms');
-      el.classList.add('in');io.unobserve(el);
+      el.classList.add('in');
+      var cs=el.querySelectorAll?el.querySelectorAll('.count'):[];for(var c=0;c<cs.length;c++)countUp(cs[c]);
+      io.unobserve(el);
     });
   },{rootMargin:'0px 0px -8% 0px',threshold:.08});
   els.forEach(function(el){io.observe(el)});
+  if(window.matchMedia('(pointer:fine)').matches){
+    var bp=d.querySelector('.bleed.has-parallax>img'),tick=false;
+    if(bp){addEventListener('scroll',function(){if(tick)return;tick=true;requestAnimationFrame(function(){
+      var r=bp.parentNode.getBoundingClientRect(),off=Math.max(-40,Math.min(40,(r.top/innerHeight)*-40));
+      bp.style.transform='translateY('+off+'px) scale(1.08)';tick=false;});},{passive:true});}
+  }
 })();
 </script>
 </body>
